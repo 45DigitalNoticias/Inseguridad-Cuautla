@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuautla: Anatomía de una Crisis — Análisis 2016-2025</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* NAV — vertical izquierda */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: 260px;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(13,17,23,0.98), rgba(22,27,34,0.98));
+    backdrop-filter: blur(12px);
+    border-right: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 14px;
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+  }
+  .nav-header {
+    padding: 4px 10px 18px;
+    border-bottom: 1px solid #30363d;
+    margin-bottom: 14px;
+  }
+  .nav-header .title {
+    font-size: 10px;
+    color: #d29922;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .nav-header .h1 {
+    font-size: 15px;
+    color: #e6edf3;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+  }
+  .nav-header .sub {
+    font-size: 10px;
+    color: #6e7681;
+    letter-spacing: 0.5px;
+  }
+  .nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    font-size: 11.5px;
+    color: #8b949e;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    transition: all 0.18s ease;
+    margin-bottom: 3px;
+    position: relative;
+  }
+  .nav a .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: #21262d;
+    color: #8b949e;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    flex-shrink: 0;
+    letter-spacing: 0;
+    transition: all 0.18s ease;
+  }
+  .nav a:hover {
+    background: rgba(248,81,73,0.10);
+    border-color: rgba(248,81,73,0.4);
+    color: #ff7b72;
+    transform: translateX(3px);
+  }
+  .nav a:hover .num {
+    background: #f85149;
+    color: #fff;
+    transform: scale(1.08);
+  }
+  .nav a.active {
+    background: linear-gradient(90deg, rgba(248,81,73,0.18), rgba(248,81,73,0.04));
+    border-color: #f85149;
+    color: #ff7b72;
+  }
+  .nav a.active .num {
+    background: #f85149;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(248,81,73,0.6);
+  }
+  .nav a.active::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: #f85149;
+    border-radius: 0 3px 3px 0;
+  }
+  .nav-footer {
+    margin-top: auto;
+    padding: 14px 10px 4px;
+    border-top: 1px solid #30363d;
+    font-size: 10px;
+    color: #6e7681;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .nav::-webkit-scrollbar { width: 6px; }
+  .nav::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+
+  /* SECTIONS */
+  section {
+    min-height: 100vh;
+    padding: 60px 60px 40px 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid #21262d;
+    page-break-after: always;
+    break-after: page;
+  }
+  section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+  section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #e6edf3;
+    letter-spacing: -0.5px;
+  }
+  section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #8b949e;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .footer-note {
+    margin-top: auto;
+    padding-top: 24px;
+    font-size: 13px;
+    color: #6e7681;
+    font-style: italic;
+    border-top: 1px solid #21262d;
+  }
+  .chart-container {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 420px;
+    max-height: 640px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* EXPLAINER SYSTEM — clickable numbers with popup */
+  .explain {
+    position: relative;
+    cursor: help;
+    border-bottom: 2px dotted #d29922;
+    transition: all 0.2s;
+  }
+  .explain:hover { color: #d29922; }
+  .explain:after {
+    content: "?";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    background: #d29922;
+    color: #0d1117;
+    border-radius: 50%;
+    margin-left: 6px;
+    vertical-align: super;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.78);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+    padding: 40px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-top: 4px solid #d29922;
+    border-radius: 12px;
+    max-width: 640px;
+    width: 100%;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    position: relative;
+  }
+  .modal-box h3 {
+    font-size: 18px;
+    color: #d29922;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .modal-box p {
+    font-size: 16px;
+    color: #c9d1d9;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  .modal-box .close {
+    position: absolute;
+    top: 14px; right: 14px;
+    background: #30363d;
+    color: #e6edf3;
+    border: none;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-box .close:hover { background: #f85149; }
+
+  /* COVER */
+  .cover {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(ellipse at center, #1a1f2e 0%, #0d1117 70%);
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-visual {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .cover-visual svg { width: 100%; height: 100%; display: block; }
+  .cover > *:not(.cover-visual) { position: relative; z-index: 2; }
+  .cover .card {
+    background: rgba(22,27,34,0.88);
+    backdrop-filter: blur(3px);
+  }
+  .cover .click-hint { backdrop-filter: blur(4px); }
+  .cover .brand-strip { backdrop-filter: blur(4px); }
+  .cover h1 {
+    font-size: 84px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #f85149 0%, #ff7b72 50%, #e6edf3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+  }
+  .cover .subtitle {
+    font-size: 22px;
+    color: #8b949e;
+    margin-bottom: 48px;
+    max-width: 900px;
+  }
+  .cover .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 28px;
+  }
+  .cover .card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+  }
+  .cover .card:hover {
+    transform: translateY(-3px);
+    border-color: #f85149;
+  }
+  .cover .card .num {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f85149;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .cover .card .lbl {
+    font-size: 13px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.45;
+  }
+  .cover .click-hint {
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 48px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 24px;
+    background: rgba(13,17,23,0.88);
+    border: 1.5px solid rgba(248,81,73,0.55);
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+  }
+  .cover .click-hint .dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: #f85149;
+    border-radius: 50%;
+    animation: pulse 1.6s infinite;
+    box-shadow: 0 0 8px rgba(248,81,73,0.7);
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  /* BRAND — 45 DIGITAL NOTICIAS */
+  .brand-45 {
+    display: inline-block;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1;
+  }
+  .brand-strip {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    background: rgba(13,17,23,0.92);
+    border: 1.5px solid rgba(88,166,255,0.4);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #c9d1d9;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .brand-strip .mini45 { width: 60px; height: 60px; flex-shrink: 0; }
+
+  /* BULLETS */
+  .bullets {
+    list-style: none;
+    padding: 0;
+    font-size: 22px;
+    max-width: 1100px;
+  }
+  .bullets li {
+    padding: 18px 0 18px 40px;
+    position: relative;
+    border-bottom: 1px solid #21262d;
+    color: #c9d1d9;
+  }
+  .bullets li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 20px;
+    height: 2px;
+    background: #f85149;
+  }
+  .bullets li strong {
+    color: #f85149;
+    font-weight: 700;
+  }
+  .bullets li em {
+    color: #d29922;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .bullets li .sub {
+    display: block;
+    font-size: 14px;
+    color: #8b949e;
+    margin-top: 6px;
+    font-weight: 400;
+    text-align: justify;
+    max-width: 900px;
+  }
+  .bullets.numbered {
+    counter-reset: item;
+  }
+  .bullets.numbered li {
+    padding-left: 60px;
+    counter-increment: item;
+  }
+  .bullets.numbered li:before {
+    content: counter(item);
+    width: auto;
+    height: auto;
+    top: 16px;
+    left: 0;
+    background: transparent;
+    font-size: 32px;
+    font-weight: 800;
+    color: #f85149;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  /* TWO-COL layout for slides with visual */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .two-col.balanced { grid-template-columns: 1fr 1fr; }
+  .visual-panel {
+    background: linear-gradient(145deg, #1a2332, #0d1117);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 28px;
+    position: relative;
+    min-height: 400px;
+  }
+  .visual-panel .panel-title {
+    font-size: 12px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .visual-panel .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #21262d;
+    font-size: 14px;
+  }
+  .visual-panel .stat-row:last-child { border-bottom: none; }
+  .visual-panel .stat-row span:first-child { color: #8b949e; }
+  .visual-panel .stat-row span:last-child {
+    color: #f85149;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* Info boxes */
+  .info-box {
+    background: rgba(210,153,34,0.08);
+    border-left: 3px solid #d29922;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #c9d1d9;
+    border-radius: 0 6px 6px 0;
+    text-align: justify;
+  }
+  .info-box strong { color: #d29922; }
+
+  .context-box {
+    background: rgba(88,166,255,0.08);
+    border: 1px solid #58a6ff;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    font-size: 15px;
+    color: #c9d1d9;
+    max-width: 1000px;
+    text-align: justify;
+  }
+  .context-box strong { color: #58a6ff; }
+
+  /* DISPROPORTION bars for slide 5 */
+  .dispro-bars { margin-top: 10px; }
+  .dispro-bars .row { margin-bottom: 24px; }
+  .dispro-bars .lab {
+    font-size: 13px;
+    color: #c9d1d9;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .dispro-bars .lab strong { color: #f85149; font-weight: 700; }
+  .dispro-bars .track {
+    height: 28px;
+    background: #21262d;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+  .dispro-bars .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f85149, #ff7b72);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 40px;
+  }
+  .dispro-bars .marker {
+    position: absolute;
+    top: -6px; bottom: -6px;
+    width: 2px;
+    background: #ffffff;
+    z-index: 2;
+  }
+  .dispro-bars .marker-label {
+    position: absolute;
+    top: -22px;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    background: #0d1117;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .dispro-bars .foot {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #21262d;
+    font-size: 12px;
+    color: #8b949e;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  /* HIGHLIGHT */
+  .highlight-banner {
+    background: linear-gradient(90deg, rgba(248,81,73,0.15), transparent);
+    border-left: 4px solid #f85149;
+    padding: 20px 28px;
+    margin: 24px 0;
+    font-size: 18px;
+    color: #e6edf3;
+  }
+  .highlight-banner strong { color: #f85149; }
+  .caveat-banner {
+    background: linear-gradient(90deg, rgba(63,185,113,0.12), transparent);
+    border-left: 4px solid #3fb950;
+    padding: 16px 22px;
+    margin: 16px 0;
+    font-size: 15px;
+    color: #c9d1d9;
+    border-radius: 0 6px 6px 0;
+    text-align: justify;
+  }
+  .caveat-banner strong { color: #3fb950; }
+
+  /* CONCLUSION CARDS (slide 14) */
+  .conclusion-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin: 18px 0 22px;
+  }
+  .conclusion-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-top: 3px solid #f85149;
+    border-radius: 10px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .conclusion-card:hover {
+    transform: translateY(-3px);
+    border-top-color: #ff7b72;
+  }
+  .conclusion-card .hero {
+    font-size: 46px;
+    font-weight: 900;
+    color: #f85149;
+    line-height: 1;
+    margin-bottom: 2px;
+    letter-spacing: -1px;
+  }
+  .conclusion-card .hero-sub {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: #d29922;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .conclusion-card p {
+    font-size: 13px;
+    color: #c9d1d9;
+    line-height: 1.6;
+    flex: 1;
+    text-align: justify;
+  }
+  .conclusion-card p strong { color: #ff7b72; font-weight: 700; }
+  .conclusion-card p em { color: #d29922; font-style: normal; font-weight: 600; }
+  .conclusion-card.emph {
+    background: linear-gradient(145deg, rgba(61,26,26,0.8), rgba(26,13,13,0.6));
+    border: 1px solid #f85149;
+    border-top: 3px solid #d29922;
+  }
+  .conclusion-card.emph .hero { color: #d29922; }
+
+  /* EXTORSIÓN — VISUAL ARTÍSTICO */
+  .extortion-visual {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    margin-bottom: 4px;
+    background: #0d1117;
+  }
+  .extortion-visual svg { width: 100%; height: 100%; display: block; }
+  .extortion-visual .overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    padding: 22px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .extortion-visual .tag-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .extortion-visual .msg-bubble {
+    max-width: 260px;
+    background: rgba(13,17,23,0.7);
+    border: 1px solid rgba(248,81,73,0.5);
+    border-radius: 10px;
+    padding: 10px 14px;
+    backdrop-filter: blur(4px);
+  }
+  .extortion-visual .msg-bubble .who {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #d29922;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .extortion-visual .msg-bubble .txt {
+    font-size: 13px;
+    color: #ff7b72;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .extortion-visual .counter {
+    text-align: right;
+    background: rgba(13,17,23,0.6);
+    border: 1px solid rgba(248,81,73,0.4);
+    border-radius: 8px;
+    padding: 8px 14px;
+    backdrop-filter: blur(4px);
+  }
+  .extortion-visual .counter .lbl {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #8b949e;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .extortion-visual .counter .big {
+    font-size: 28px;
+    font-weight: 900;
+    color: #f85149;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .extortion-visual .counter .small {
+    font-size: 10px;
+    color: #8b949e;
+  }
+  .extortion-visual .bottom-banner {
+    text-align: center;
+    padding: 10px 16px;
+    background: rgba(13,17,23,0.75);
+    border-top: 2px solid #f85149;
+    backdrop-filter: blur(4px);
+  }
+  .extortion-visual .bottom-banner .ttl {
+    font-size: 11px;
+    color: #ff7b72;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .extortion-visual .bottom-banner .sub {
+    font-size: 12px;
+    color: #c9d1d9;
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  /* LEGAL NOTICE */
+  .legal-notice {
+    margin-top: 16px;
+    padding: 14px 18px;
+    background: rgba(30,64,175,0.10);
+    border: 1px solid rgba(30,64,175,0.35);
+    border-radius: 6px;
+    font-size: 11px;
+    color: #8b949e;
+    line-height: 1.65;
+    text-align: justify;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .legal-notice .mini45 { width: 54px; height: 54px; flex-shrink: 0; }
+  .legal-notice strong { color: #e6edf3; font-weight: 700; }
+  .legal-notice .label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #d29922;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* CONCLUSIONS HEADER with logo corner */
+  .concl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .concl-header .corner-logo { width: 72px; height: 72px; flex-shrink: 0; }
+
+  /* CLOSING BRAND */
+  .closing-block {
+    background: linear-gradient(145deg, rgba(30,64,175,0.18), rgba(13,17,23,0.6));
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 32px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+  }
+  .closing-block .brand-45 { max-width: 260px; margin-bottom: 20px; }
+  .closing-block .tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8b949e;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .closing-block .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e6edf3;
+    margin-bottom: 6px;
+  }
+  .closing-block .sub {
+    font-size: 13px;
+    color: #8b949e;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+
+  /* PRINT */
+  @media print {
+    .nav { display: none; }
+    section {
+      min-height: 100vh;
+      height: 100vh;
+      page-break-after: always;
+      break-after: page;
+      padding: 40px;
+    }
+    .cover { padding: 40px !important; }
+    body { background: #0d1117 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .chart-container { page-break-inside: avoid; break-inside: avoid; }
+    .cover h1 { font-size: 64px; }
+    section h1 { font-size: 36px; }
+    section h2 { font-size: 28px; }
+    .modal-overlay { display: none !important; }
+    .explain:after { display: none; }
+    .explain { border-bottom: none; }
+    .cover .click-hint { display: none; }
+  }
+
+  @media (max-width: 1200px) {
+    .nav { width: 68px; padding: 20px 8px; }
+    .nav a { justify-content: center; font-size: 0; padding: 8px; letter-spacing: 0; }
+    .nav a .num { font-size: 11px; }
+    .nav a:hover { transform: none; }
+    .nav-header .title, .nav-header .h1, .nav-header .sub, .nav-footer { display: none; }
+    .nav-header { padding: 0 0 12px; margin-bottom: 10px; }
+    section { padding: 60px 28px 28px 96px; }
+    .cover .cards { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .two-col.balanced { grid-template-columns: 1fr; }
+    .conclusion-grid { grid-template-columns: repeat(2, 1fr); }
+    .cover h1 { font-size: 56px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- RE-USABLE SVG — 45 DIGITAL NOTICIAS (sin gorro) -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="logo45" viewBox="0 0 320 320">
+      <defs>
+        <radialGradient id="bg45grad" cx="28%" cy="22%" r="100%">
+          <stop offset="0%" stop-color="#3b72d9"/>
+          <stop offset="60%" stop-color="#1e40af"/>
+          <stop offset="100%" stop-color="#0f2a7a"/>
+        </radialGradient>
+      </defs>
+      <rect width="320" height="320" fill="url(#bg45grad)" rx="26"/>
+      <!-- subtle world map tint -->
+      <g opacity="0.12" fill="#ffffff">
+        <circle cx="60" cy="280" r="5"/>
+        <circle cx="80" cy="275" r="3"/>
+        <circle cx="100" cy="283" r="4"/>
+        <circle cx="255" cy="285" r="3"/>
+        <circle cx="275" cy="278" r="5"/>
+      </g>
+      <!-- Big 45 -->
+      <text x="160" y="230" text-anchor="middle" font-family="'Arial Black','Segoe UI Black',sans-serif" font-size="230" font-weight="900" fill="#ffffff" letter-spacing="-4">45</text>
+      <!-- DIGITAL red pill -->
+      <rect x="190" y="70" width="112" height="36" rx="18" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+      <text x="246" y="94" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#ffffff" letter-spacing="1.5">DIGITAL</text>
+      <!-- NOTICIAS yellow pill -->
+      <rect x="18" y="218" width="140" height="36" rx="18" fill="#facc15" stroke="#1e40af" stroke-width="2"/>
+      <text x="88" y="243" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#1e3a8a" letter-spacing="1.2">NOTICIAS</text>
+    </symbol>
+  </defs>
+</svg>
+
+<nav class="nav" id="nav">
+  <div class="nav-header">
+    <div class="title">45 Digital Noticias</div>
+    <div class="h1">Cuautla · Crisis de seguridad</div>
+    <div class="sub">Análisis 2016-2025</div>
+  </div>
+  <a href="#s1" data-target="s1"><span class="num">01</span>PORTADA</a>
+  <a href="#s2" data-target="s2"><span class="num">02</span>NACIONAL</a>
+  <a href="#s3" data-target="s3"><span class="num">03</span>RANKING</a>
+  <a href="#s4" data-target="s4"><span class="num">04</span>EVOLUCIÓN</a>
+  <a href="#s5" data-target="s5"><span class="num">05</span>ESTATAL</a>
+  <a href="#s6" data-target="s6"><span class="num">06</span>PARTICIPACIÓN</a>
+  <a href="#s7" data-target="s7"><span class="num">07</span>VS CUERNAVACA</a>
+  <a href="#s8" data-target="s8"><span class="num">08</span>SERIE DECENAL</a>
+  <a href="#s9" data-target="s9"><span class="num">09</span>HOMICIDIO</a>
+  <a href="#s10" data-target="s10"><span class="num">10</span>FEMINICIDIO</a>
+  <a href="#s11" data-target="s11"><span class="num">11</span>PICOS 2025</a>
+  <a href="#s12" data-target="s12"><span class="num">12</span>CONTRATENDENCIA</a>
+  <a href="#s13" data-target="s13"><span class="num">13</span>TASAS</a>
+  <a href="#s14" data-target="s14"><span class="num">14</span>CONCLUSIONES</a>
+  <div class="nav-footer">SESNSP · Dic 2025</div>
+</nav>
+
+<!-- MODAL GLOBAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <h3 id="modal-title">Título</h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- SECCIÓN 1 — PORTADA -->
+<section id="s1" class="cover">
+  <div class="cover-visual">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="coverGlow" cx="50%" cy="52%" r="55%">
+          <stop offset="0%" stop-color="rgba(240,180,41,0.42)"/>
+          <stop offset="35%" stop-color="rgba(240,180,41,0.14)"/>
+          <stop offset="100%" stop-color="rgba(240,180,41,0)"/>
+        </radialGradient>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(252,211,77,1)"/>
+          <stop offset="50%" stop-color="rgba(240,180,41,0.45)"/>
+          <stop offset="100%" stop-color="rgba(240,180,41,0)"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Resplandor general -->
+      <ellipse cx="800" cy="470" rx="780" ry="440" fill="url(#coverGlow)"/>
+
+      <!-- Puntos/estrellas de fondo -->
+      <g fill="#f0b429" opacity="0.22">
+        <circle cx="180" cy="140" r="1.5"/>
+        <circle cx="320" cy="80" r="1.2"/>
+        <circle cx="500" cy="150" r="1.5"/>
+        <circle cx="700" cy="90" r="1"/>
+        <circle cx="1100" cy="120" r="1.5"/>
+        <circle cx="1280" cy="80" r="1.2"/>
+        <circle cx="1420" cy="160" r="1.5"/>
+        <circle cx="120" cy="780" r="1.2"/>
+        <circle cx="280" cy="820" r="1"/>
+        <circle cx="1380" cy="800" r="1.5"/>
+        <circle cx="1500" cy="750" r="1.2"/>
+      </g>
+
+      <!-- Líneas radiales desde el epicentro (control territorial) -->
+      <g stroke="rgba(240,180,41,0.28)" stroke-width="1.2" fill="none">
+        <line x1="800" y1="470" x2="1550" y2="470"/>
+        <line x1="800" y1="470" x2="1450" y2="820"/>
+        <line x1="800" y1="470" x2="1180" y2="1000"/>
+        <line x1="800" y1="470" x2="800" y2="1000"/>
+        <line x1="800" y1="470" x2="420" y2="1000"/>
+        <line x1="800" y1="470" x2="150" y2="820"/>
+        <line x1="800" y1="470" x2="50" y2="470"/>
+        <line x1="800" y1="470" x2="150" y2="120"/>
+        <line x1="800" y1="470" x2="420" y2="-60"/>
+        <line x1="800" y1="470" x2="800" y2="-60"/>
+        <line x1="800" y1="470" x2="1180" y2="-60"/>
+        <line x1="800" y1="470" x2="1450" y2="120"/>
+      </g>
+
+      <!-- Ondas de choque expandiéndose -->
+      <circle cx="800" cy="470" r="50" fill="none" stroke="#f0b429" stroke-width="2.5">
+        <animate attributeName="r" values="50;450" dur="4.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.75;0" dur="4.5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="2.5;0.5" dur="4.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="470" r="50" fill="none" stroke="#f0b429" stroke-width="2.5">
+        <animate attributeName="r" values="50;450" dur="4.5s" begin="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.75;0" dur="4.5s" begin="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="2.5;0.5" dur="4.5s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="470" r="50" fill="none" stroke="#f0b429" stroke-width="2.5">
+        <animate attributeName="r" values="50;450" dur="4.5s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.75;0" dur="4.5s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="2.5;0.5" dur="4.5s" begin="3s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Halo interior -->
+      <circle cx="800" cy="470" r="100" fill="url(#coreGlow)" opacity="0.65">
+        <animate attributeName="r" values="100;130;100" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.65;0.4;0.65" dur="3s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Núcleo pulsante -->
+      <circle cx="800" cy="470" r="38" fill="#f0b429" opacity="0.4">
+        <animate attributeName="r" values="38;56;38" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.15;0.4" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="800" cy="470" r="18" fill="#f0b429"/>
+      <circle cx="800" cy="470" r="6" fill="#fff"/>
+
+    </svg>
+  </div>
+  <h1>CUAUTLA:<br>ANATOMÍA DE UNA CRISIS</h1>
+  <p class="subtitle">Análisis de incidencia delictiva 2016-2025<br>Perspectiva federal, estatal y municipal</p>
+  <div class="cards">
+    <div class="card" onclick="showExplain('7,543 delitos en 2025','Es el <strong>total de carpetas de investigación iniciadas</strong> en Cuautla durante 2025 según SESNSP. Una carpeta es cada vez que un delito se denuncia formalmente al Ministerio Público. La cifra es la más alta de los últimos 10 años en el municipio — por eso se le llama <strong>pico decenal</strong>. En contexto: Cuautla pasó de ~5,200 delitos/año en 2016 a 7,543 en 2025. Un crecimiento del 44% cuando la población apenas creció ~5%.')">
+      <div class="num">7,543</div><div class="lbl">Delitos 2025<br>(pico decenal)</div>
+    </div>
+    <div class="card" onclick="showExplain('#1 Nacional en extorsión','Cuautla ocupa el <strong>primer lugar nacional</strong> tanto en <strong>volumen absoluto</strong> (259 carpetas iniciadas en 2025) como en <strong>tasa por 100,000 habitantes</strong> (138.4). La tasa es la medida comparable: permite contrastar municipios chicos con grandes. Cuautla supera en esta métrica a las capitales estatales y a ciudades industriales que tradicionalmente concentran este delito.')">
+      <div class="num">#1</div><div class="lbl">Nacional<br>en extorsión</div>
+    </div>
+    <div class="card" onclick="showExplain('61.8% del estado','De cada 100 extorsiones registradas en todo Morelos durante 2025, <strong>casi 62 ocurrieron en Cuautla</strong>. Es una concentración extrema: un solo municipio absorbe 6 de cada 10 casos estatales. Esto no es estadísticamente normal — usualmente el delito se distribuye más homogéneamente. Indica <strong>captación territorial</strong> por un grupo criminal específico operando desde Cuautla.')">
+      <div class="num">61.8%</div><div class="lbl">Del estado<br>en extorsión</div>
+    </div>
+    <div class="card" onclick="showExplain('187K habitantes — 9.6% de Morelos','Cuautla tiene <strong>~187,000 habitantes</strong> (proyección CONAPO 2025). Morelos tiene ~1.95 millones. Esto significa que Cuautla representa el <strong>9.6% de la población estatal</strong>. Este porcentaje es el <strong>punto de referencia</strong>: si los delitos se distribuyeran proporcional a la población, Cuautla debería concentrar alrededor de ese 9.6% de cualquier delito. Concentrar 61.8% en extorsión es sobrerrepresentar por 6 veces el peso demográfico.')">
+      <div class="num">187K</div><div class="lbl">Habitantes<br>(9.6% de Morelos)</div>
+    </div>
+  </div>
+  <div class="click-hint"><span class="dot"></span>Haz clic en cualquier tarjeta para ver su explicación</div>
+  <div class="brand-strip" style="max-width:520px;margin-top:0;">
+    <svg class="mini45"><use href="#logo45"/></svg>
+    <div style="text-align:left;">
+      <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
+      <div>Fuente: SESNSP, corte diciembre 2025 (publicación febrero 2026)</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 2 — CONTEXTO NACIONAL -->
+<section id="s2">
+  <h3>02 — Contexto Nacional</h3>
+  <h1>Cuautla en el mapa nacional</h1>
+  <div class="two-col">
+    <ul class="bullets">
+      <li>Cuautla: <strong>#1 nacional en extorsión</strong> (volumen absoluto y tasa poblacional)
+        <span class="sub">De ~2,475 municipios del país, ninguno tiene más extorsiones por habitante.</span>
+      </li>
+      <li>Tasa por <span class="explain" onclick="showExplain('Tasa por 100,000 habitantes','La tasa por 100K es un <strong>indicador comparativo estándar</strong>: divide el número de delitos entre la población y multiplica por 100,000. Sirve para comparar municipios de distinto tamaño en condiciones iguales. Cuautla (187K hab) no puede compararse directamente con la CDMX (9 millones) en volumen — pero sí en tasa. Una tasa de 138.4 significa que en Cuautla hay 138 extorsiones por cada 100,000 habitantes; en la capital de Morelos apenas 4.')">100K hab</span>: <strong>138.4</strong> — aproximadamente <em>el doble del 2° lugar nacional</em>
+        <span class="sub">Tonatico (Edo. Méx.) tiene 77.0 por 100K. Cuautla casi duplica esa cifra.</span>
+      </li>
+      <li>Único municipio del top 5 con <em>menos de 400K habitantes</em>
+        <span class="sub">Los demás son ciudades grandes o zonas conurbadas. Cuautla es una anomalía geográfica-delictiva.</span>
+      </li>
+      <li>Morelos: <strong>2° estado</strong> con mayor tasa nacional de extorsión
+        <span class="sub">Solo superado por Guanajuato. Pero 61.8% de esa cifra estatal la aporta un solo municipio.</span>
+      </li>
+      <li>2025: <strong>récord nacional</strong> de extorsiones con <em>6,880+ víctimas</em>
+        <span class="sub">A nivel país. Cifra histórica: 2025 marca el año con más víctimas de extorsión registradas.</span>
+      </li>
+    </ul>
+    <div class="visual-panel">
+      <div class="panel-title">México — Top 5 extorsión 2025</div>
+      <svg viewBox="0 0 420 240" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin-bottom:18px;">
+        <path d="M 60,120 Q 68,95 94,85 Q 132,75 172,85 L 204,95 Q 224,88 246,92 L 276,105 Q 306,115 326,132 L 352,150 Q 370,170 358,190 Q 338,208 308,210 L 268,212 Q 228,216 198,210 L 168,202 Q 138,212 108,206 Q 80,196 66,175 Q 54,148 60,120 Z"
+              fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+        <circle cx="220" cy="168" r="20" fill="#f85149" opacity="0.22">
+          <animate attributeName="r" values="20;28;20" dur="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.22;0.05;0.22" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="220" cy="168" r="11" fill="#f85149"/>
+        <circle cx="220" cy="168" r="4" fill="#fff"/>
+        <text x="220" y="200" text-anchor="middle" fill="#f85149" font-size="14" font-weight="800" letter-spacing="1.2">CUAUTLA</text>
+        <text x="220" y="220" text-anchor="middle" fill="#f85149" font-size="20" font-weight="900">138.4</text>
+        <text x="220" y="232" text-anchor="middle" fill="#8b949e" font-size="9">por 100K hab · Morelos</text>
+        <circle cx="200" cy="150" r="4.5" fill="#6e7681"/>
+        <line x1="198" y1="148" x2="158" y2="128" stroke="#6e7681" stroke-width="0.9" opacity="0.6"/>
+        <text x="154" y="126" text-anchor="end" fill="#8b949e" font-size="10">Tonatico · 77.0</text>
+        <circle cx="185" cy="125" r="4.5" fill="#6e7681"/>
+        <line x1="183" y1="123" x2="138" y2="102" stroke="#6e7681" stroke-width="0.9" opacity="0.6"/>
+        <text x="134" y="100" text-anchor="end" fill="#8b949e" font-size="10">Salamanca · 65.0</text>
+        <circle cx="180" cy="108" r="4" fill="#6e7681"/>
+        <line x1="178" y1="106" x2="130" y2="78" stroke="#6e7681" stroke-width="0.9" opacity="0.6"/>
+        <text x="126" y="76" text-anchor="end" fill="#8b949e" font-size="10">S. M. Allende · 48.0</text>
+        <circle cx="210" cy="160" r="4.5" fill="#6e7681"/>
+        <line x1="213" y1="162" x2="290" y2="148" stroke="#6e7681" stroke-width="0.9" opacity="0.6"/>
+        <text x="294" y="150" text-anchor="start" fill="#8b949e" font-size="10">Toluca · 45.0</text>
+      </svg>
+      <div class="stat-row"><span>Municipios en México</span><span style="color:#8b949e;font-size:14px;">~2,475</span></div>
+      <div class="stat-row"><span>Cuautla ocupa</span><span>#1 nacional</span></div>
+      <div class="stat-row"><span>Distancia al 2° lugar</span><span>+79.7%</span></div>
+      <div class="stat-row"><span>Tamaño de Cuautla</span><span style="color:#58a6ff;font-size:14px;">187K hab (chico)</span></div>
+    </div>
+  </div>
+  <div class="footer-note">Fuente: SESNSP, cifras preliminares 2025. Clic en términos subrayados para explicación.</div>
+</section>
+
+<!-- SECCIÓN 3 — RANKING NACIONAL EXTORSIÓN -->
+<section id="s3">
+  <h3>03 — Ranking Nacional</h3>
+  <h1>Cuautla duplica al 2° lugar nacional</h1>
+  <h2 style="font-size:20px;color:#8b949e;font-weight:400;">Tasa de extorsión por cada 100,000 habitantes — 2025</h2>
+  <div class="context-box">
+    <strong>Lectura de la gráfica:</strong> Cuautla NO es una gran ciudad. Con apenas 187 mil habitantes
+    aparece en el #1 nacional, por encima de municipios 2-3 veces más poblados
+    (Toluca ~900K, Salamanca ~270K, San Miguel de Allende ~200K+).
+    La cifra no refleja tamaño urbano — refleja <strong>captación territorial del delito</strong>.
+  </div>
+  <div class="chart-container">
+    <canvas id="chart3"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2025. Estimados marcados (*) para municipios con cifra parcial.</div>
+</section>
+
+<!-- SECCIÓN 4 — EVOLUCIÓN EXTORSIÓN -->
+<section id="s4">
+  <h3>04 — Evolución Decenal</h3>
+  <h1>Extorsión en Cuautla 2016-2025</h1>
+  <div class="highlight-banner"><strong>+4,216%</strong> de 2018 (6 carpetas) a 2025 (259 carpetas). Crecimiento exponencial, no orgánico.</div>
+  <div class="info-box">
+    <strong>Cómo leer la gráfica:</strong> el fondo de color separa las tres administraciones.
+    Las <strong>zonas azul, naranja y roja</strong> marcan cada periodo de gobierno.
+    La línea roja muestra cómo se disparó la extorsión — especialmente a partir de 2022.
+  </div>
+  <div class="chart-container" style="min-height:480px;">
+    <canvas id="chart4"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP, carpetas de investigación iniciadas por extorsión, Cuautla, Morelos 2016-2025.</div>
+</section>
+
+<!-- SECCIÓN 5 — CONTEXTO ESTATAL -->
+<section id="s5">
+  <h3>05 — Contexto Estatal</h3>
+  <h1>Cuautla concentra el Morelos violento</h1>
+  <div class="two-col">
+    <ul class="bullets">
+      <li>Cuautla = <strong>9.6%</strong> de la población de Morelos
+        <span class="sub">Hay 36 municipios en el estado. Cuautla es uno de ellos. Tiene alrededor de 1 de cada 10 habitantes del estado.</span>
+      </li>
+      <li>Pero en 2025 concentra <strong>16.6%</strong> de todos los delitos del estado
+        <span class="sub">Casi el <em>doble</em> de lo que le correspondería si los delitos se distribuyeran proporcionalmente a la población.</span>
+      </li>
+      <li>Es <strong>#1 estatal</strong> en 4 delitos: <em>extorsión 61.8%, lesiones 27.3%, narcomenudeo 24.9%, feminicidio 11.4%</em>
+        <span class="sub">No es campeón en "todos" los delitos — es campeón en los específicos que acompañan control territorial por crimen organizado.</span>
+      </li>
+      <li>En 2025, mientras Morelos <strong style="color:#3fb950;">BAJÓ -1.3%</strong> en total de delitos, Cuautla <strong>SUBIÓ +18.6%</strong>
+        <span class="sub">El estado mejoró; Cuautla empeoró. Una <em>contratendencia</em>: el municipio va en dirección contraria al resto del estado.</span>
+      </li>
+      <li>La participación de Cuautla sobre el estado subió <em>2.8 puntos porcentuales</em> en un solo año
+        <span class="sub">En 2024 aportaba 13.8% de los delitos estatales; en 2025 aporta 16.6%. Cada vez concentra más el delito del estado.</span>
+      </li>
+    </ul>
+    <div class="visual-panel">
+      <div class="panel-title">La desproporción — Cuautla vs Morelos</div>
+      <div class="dispro-bars">
+        <div class="row">
+          <div class="lab"><span>Peso demográfico</span><strong>9.6%</strong></div>
+          <div class="track">
+            <div class="fill" style="width:9.6%;background:linear-gradient(90deg,#3fb950,#56d364);">9.6%</div>
+            <div class="marker" style="left:9.6%;"></div>
+            <div class="marker-label" style="left:9.6%;">línea base</div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:36px;">
+          <div class="lab"><span>Delitos totales estatales</span><strong>16.6%</strong></div>
+          <div class="track">
+            <div class="fill" style="width:16.6%;background:linear-gradient(90deg,#f0883e,#ff9f5c);">16.6%</div>
+            <div class="marker" style="left:9.6%;"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="lab"><span>Narcomenudeo estatal</span><strong>24.9%</strong></div>
+          <div class="track">
+            <div class="fill" style="width:24.9%;background:linear-gradient(90deg,#f0883e,#ff9f5c);">24.9%</div>
+            <div class="marker" style="left:9.6%;"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="lab"><span>Lesiones estatales</span><strong>27.3%</strong></div>
+          <div class="track">
+            <div class="fill" style="width:27.3%;background:linear-gradient(90deg,#f85149,#ff7b72);">27.3%</div>
+            <div class="marker" style="left:9.6%;"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="lab"><span>Extorsión estatal</span><strong>61.8%</strong></div>
+          <div class="track">
+            <div class="fill" style="width:61.8%;background:linear-gradient(90deg,#f85149,#ff7b72);">61.8%</div>
+            <div class="marker" style="left:9.6%;"></div>
+          </div>
+        </div>
+        <div class="foot">
+          La línea blanca vertical es la <strong style="color:#fff;">línea base esperada (9.6%)</strong>.
+          Cada barra que la rebasa es sobrerrepresentación. La extorsión está <strong style="color:#f85149;">6.4 veces</strong> arriba.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2024-2025, comparativo Morelos vs Cuautla.</div>
+</section>
+
+<!-- SECCIÓN 6 — PARTICIPACIÓN POR DELITO -->
+<section id="s6">
+  <h3>06 — Participación Estatal</h3>
+  <h1>Cuautla sobre Morelos — Top 10 delitos</h1>
+  <h2 style="font-size:18px;color:#e6edf3;font-weight:500;">Todo lo que está a la derecha de la línea blanca (9.6%) es sobrerrepresentación</h2>
+  <div class="info-box">
+    <strong>¿Qué es el 9.6%?</strong> Es el peso demográfico de Cuautla en Morelos
+    (cuántos habitantes tiene respecto al estado). Funciona como la <strong>línea base esperada</strong>:
+    si los delitos se repartieran uniformemente entre los 36 municipios por población,
+    a Cuautla le tocaría ~9.6% de cada delito. Cuando un delito supera esa línea,
+    Cuautla concentra <em>más de lo que le corresponde por tamaño</em>. La extorsión (61.8%)
+    está <strong>6.4 veces arriba</strong> de la línea — una sobrerrepresentación extrema.
+  </div>
+  <div class="chart-container" style="min-height:500px;">
+    <canvas id="chart6"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2025. % de carpetas de Cuautla sobre total estatal de Morelos por tipo de delito.</div>
+</section>
+
+<!-- SECCIÓN 7 — CUAUTLA VS CUERNAVACA -->
+<section id="s7">
+  <h3>07 — Comparativo Intraestatal</h3>
+  <h1>Cuautla (187K) supera a Cuernavaca (397K) en 4 delitos clave</h1>
+  <div class="chart-container">
+    <canvas id="chart7"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2025. Cuernavaca: capital de Morelos, ~397K hab. Cuautla: ~187K hab.</div>
+</section>
+
+<!-- SECCIÓN 8 — SERIE HISTÓRICA TOTAL -->
+<section id="s8">
+  <h3>08 — Serie Histórica</h3>
+  <h1>Total de delitos en Cuautla — 10 años, 3 administraciones</h1>
+  <div class="chart-container" style="min-height:500px;">
+    <canvas id="chart8"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2016-2025. Administraciones: previa (gris) / Corona I 2019-2021 (azul) / Arredondo 2022-2024 (naranja) / Corona II 2025 (rojo).</div>
+</section>
+
+<!-- SECCIÓN 9 — HOMICIDIO -->
+<section id="s9">
+  <h3>09 — Homicidio Doloso</h3>
+  <h1>Homicidio — Arredondo marca el peor año de la década</h1>
+  <div class="caveat-banner">
+    <strong>Importante:</strong> la caída de homicidio durante 2024-2025 refleja la
+    <strong>tendencia nacional</strong> (la estrategia federal de pacificación empezó a dar resultados
+    a nivel país). NO es un logro atribuible a la administración municipal de Cuautla:
+    el mismo patrón de descenso se ve en decenas de municipios del país simultáneamente.
+    El mérito municipal se mide en los delitos donde el gobierno local tiene <em>competencia directa</em>
+    (extorsión, narcomenudeo, lesiones) — y ahí Cuautla sube, no baja.
+  </div>
+  <div class="chart-container" style="min-height:460px;">
+    <canvas id="chart10"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2016-2025. Carpetas de investigación por homicidio doloso, Cuautla.</div>
+</section>
+
+<!-- SECCIÓN 10 — FEMINICIDIO -->
+<section id="s10">
+  <h3>10 — Feminicidio</h3>
+  <h1>Feminicidio — Arredondo triplica el promedio de Corona I</h1>
+  <div class="chart-container">
+    <canvas id="chart11"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2016-2025. Carpetas de investigación por feminicidio, Cuautla.</div>
+</section>
+
+<!-- SECCIÓN 11 — 15 DELITOS PICO 2025 -->
+<section id="s11">
+  <h3>11 — Picos Decenales 2025</h3>
+  <h1>Primer año de Corona II — 15 delitos en máximo histórico</h1>
+  <div class="chart-container">
+    <canvas id="chart12"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2016-2025. Delitos cuya cifra 2025 supera todos los años previos de la serie.</div>
+</section>
+
+<!-- SECCIÓN 12 — CONTRATENDENCIAS -->
+<section id="s12">
+  <h3>12 — Contratendencias</h3>
+  <h1>Donde Morelos baja, Cuautla sube</h1>
+  <h2 style="font-size:18px;color:#8b949e;font-weight:400;">Variación porcentual 2024 → 2025</h2>
+  <div class="info-box">
+    <strong>Cómo leer los porcentajes:</strong> cada barra mide <em>cuánto cambió</em> un delito entre 2024 y 2025.
+    Un valor de <strong>-7.1%</strong> significa que bajó 7.1% (mejoró). Un valor de <strong>+52.6%</strong> significa que subió 52.6% (empeoró).
+    Las barras verdes son Morelos (todo el estado, <em>todos los delitos bajaron</em>).
+    Las barras rojas son Cuautla (donde los mismos delitos <em>subieron</em>). Misma categoría, dirección opuesta.
+  </div>
+  <div class="chart-container" style="min-height:440px;">
+    <canvas id="chart13"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP. Variación % entre totales anuales 2024 y 2025 por delito.</div>
+</section>
+
+<!-- SECCIÓN 13 — TASAS POR 100K -->
+<section id="s13">
+  <h3>13 — Tasas Comparadas</h3>
+  <h1>Tasa por 100K hab — Cuautla triplica a Cuernavaca en lesiones, 20× en extorsión</h1>
+  <div class="chart-container">
+    <canvas id="chart14"></canvas>
+  </div>
+  <div class="footer-note">Fuente: SESNSP 2025 + estimación poblacional CONAPO. Comparativo municipios principales de Morelos.</div>
+</section>
+
+<!-- SECCIÓN 14 — CONCLUSIONES -->
+<section id="s14">
+  <div class="concl-header">
+    <div>
+      <h3>14 — Conclusiones</h3>
+      <h1>Lo que dicen los números</h1>
+    </div>
+    <svg class="corner-logo"><use href="#logo45"/></svg>
+  </div>
+
+  <div class="conclusion-grid">
+    <div class="conclusion-card">
+      <div class="hero">#1</div>
+      <div class="hero-sub">Nacional</div>
+      <p>Cuautla es hoy el <strong>municipio más violento de México</strong> en tasa de extorsión, con <strong>138.4 por 100K hab</strong>.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="hero">2</div>
+      <div class="hero-sub">Fases de crisis</div>
+      <p>Primero violencia letal bajo <strong>Arredondo</strong> (homicidio y feminicidio 2022-24); luego extorsión, lesiones y narcomenudeo bajo <strong>Corona II</strong> (2025).</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="hero">↓↑</div>
+      <div class="hero-sub">Descenso selectivo</div>
+      <p>Lo que baja (homicidio, feminicidio) sigue <em>tendencia federal</em>. Lo que depende del gobierno local <strong>se dispara</strong>.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="hero">6.4×</div>
+      <div class="hero-sub">Sobrerrepresentación</div>
+      <p>Cuautla concentra <strong>61.8%</strong> de la extorsión estatal con apenas <strong>9.6%</strong> de la población — una atipicidad estadística extrema.</p>
+    </div>
+    <div class="conclusion-card emph">
+      <div class="hero">≠</div>
+      <div class="hero-sub">No orgánico</div>
+      <p>La cifra no crece por evolución natural. El patrón implica <strong>captación territorial</strong> por grupo criminal, sumado a <em>colusión, omisión institucional o ambas</em>.</p>
+    </div>
+  </div>
+
+  <!-- VISUAL ARTÍSTICO — Alusión a la extorsión -->
+  <div class="extortion-visual">
+    <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad14" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0d1117"/>
+          <stop offset="55%" stop-color="#1a0d10"/>
+          <stop offset="100%" stop-color="#3d1a1a"/>
+        </linearGradient>
+        <radialGradient id="redGlow14" cx="50%" cy="100%" r="70%">
+          <stop offset="0%" stop-color="rgba(248,81,73,0.45)"/>
+          <stop offset="60%" stop-color="rgba(248,81,73,0.08)"/>
+          <stop offset="100%" stop-color="rgba(248,81,73,0)"/>
+        </radialGradient>
+        <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(248,81,73,0.9)"/>
+          <stop offset="60%" stop-color="rgba(248,81,73,0.3)"/>
+          <stop offset="100%" stop-color="rgba(248,81,73,0)"/>
+        </radialGradient>
+      </defs>
+
+      <rect width="900" height="280" fill="url(#skyGrad14)"/>
+      <ellipse cx="450" cy="280" rx="520" ry="120" fill="url(#redGlow14)"/>
+
+      <!-- Stars / dots de fondo -->
+      <g fill="#f85149" opacity="0.15">
+        <circle cx="80" cy="30" r="1"/>
+        <circle cx="150" cy="55" r="1.2"/>
+        <circle cx="230" cy="25" r="1"/>
+        <circle cx="310" cy="45" r="1"/>
+        <circle cx="390" cy="20" r="1.3"/>
+        <circle cx="490" cy="48" r="1"/>
+        <circle cx="570" cy="28" r="1.2"/>
+        <circle cx="660" cy="55" r="1"/>
+        <circle cx="750" cy="22" r="1.3"/>
+        <circle cx="830" cy="48" r="1"/>
+      </g>
+
+      <!-- Red de control territorial: líneas desde Cuautla a nodos periféricos -->
+      <g stroke="rgba(248,81,73,0.35)" stroke-width="1" fill="none">
+        <line x1="450" y1="150" x2="120" y2="90">
+          <animate attributeName="stroke-opacity" values="0.1;0.6;0.1" dur="3s" repeatCount="indefinite"/>
+        </line>
+        <line x1="450" y1="150" x2="230" y2="70">
+          <animate attributeName="stroke-opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
+        </line>
+        <line x1="450" y1="150" x2="340" y2="55"/>
+        <line x1="450" y1="150" x2="560" y2="55">
+          <animate attributeName="stroke-opacity" values="0.1;0.6;0.1" dur="3.5s" repeatCount="indefinite"/>
+        </line>
+        <line x1="450" y1="150" x2="680" y2="72"/>
+        <line x1="450" y1="150" x2="780" y2="95">
+          <animate attributeName="stroke-opacity" values="0.6;0.1;0.6" dur="2.8s" repeatCount="indefinite"/>
+        </line>
+        <line x1="450" y1="150" x2="90" y2="175"/>
+        <line x1="450" y1="150" x2="820" y2="175"/>
+      </g>
+
+      <!-- Nodos periféricos (víctimas / territorios capturados) -->
+      <g>
+        <circle cx="120" cy="90" r="3.5" fill="#6e7681"/>
+        <circle cx="230" cy="70" r="3.5" fill="#6e7681"/>
+        <circle cx="340" cy="55" r="3" fill="#6e7681"/>
+        <circle cx="560" cy="55" r="3" fill="#6e7681"/>
+        <circle cx="680" cy="72" r="3.5" fill="#6e7681"/>
+        <circle cx="780" cy="95" r="3.5" fill="#6e7681"/>
+        <circle cx="90" cy="175" r="3" fill="#6e7681"/>
+        <circle cx="820" cy="175" r="3" fill="#6e7681"/>
+      </g>
+
+      <!-- Nodo central: Cuautla, con glow y pulso -->
+      <circle cx="450" cy="150" r="45" fill="url(#nodeGlow)">
+        <animate attributeName="r" values="45;60;45" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="450" cy="150" r="18" fill="#f85149" opacity="0.35">
+        <animate attributeName="r" values="18;26;18" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.35;0.08;0.35" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="450" cy="150" r="10" fill="#f85149"/>
+      <circle cx="450" cy="150" r="3.5" fill="#fff"/>
+      <text x="450" y="182" text-anchor="middle" fill="#ff7b72" font-size="10" font-weight="800" letter-spacing="2" font-family="'Segoe UI',sans-serif">CUAUTLA</text>
+
+      <!-- Skyline silueta urbana en la base -->
+      <path d="M 0,280 L 0,225 L 25,225 L 25,210 L 50,210 L 50,220 L 78,220 L 78,195 L 100,195 L 100,208 L 125,208 L 125,185 L 150,185 L 150,200 L 175,200 L 175,180 L 200,180 L 200,195 L 225,195 L 225,170 L 252,170 L 252,188 L 280,188 L 280,200 L 305,200 L 305,180 L 332,180 L 332,200 L 358,200 L 358,190 L 388,190 L 388,205 L 420,205 L 420,188 L 455,188 L 455,205 L 490,205 L 490,185 L 522,185 L 522,200 L 552,200 L 552,178 L 582,178 L 582,192 L 612,192 L 612,168 L 642,168 L 642,195 L 670,195 L 670,182 L 700,182 L 700,202 L 732,202 L 732,188 L 760,188 L 760,205 L 790,205 L 790,198 L 820,198 L 820,215 L 855,215 L 855,205 L 880,205 L 880,220 L 900,220 L 900,280 Z"
+            fill="#0d1117" opacity="0.98"/>
+
+      <!-- Ventanas encendidas en el skyline (ambiente urbano nocturno) -->
+      <g fill="#d29922" opacity="0.55">
+        <rect x="105" y="198" width="2" height="3"/>
+        <rect x="112" y="202" width="2" height="3"/>
+        <rect x="155" y="192" width="2" height="3"/>
+        <rect x="205" y="188" width="2" height="3"/>
+        <rect x="260" y="195" width="2" height="3"/>
+        <rect x="315" y="192" width="2" height="3"/>
+        <rect x="395" y="200" width="2" height="3"/>
+        <rect x="462" y="195" width="2" height="3"/>
+        <rect x="525" y="195" width="2" height="3"/>
+        <rect x="592" y="182" width="2" height="3"/>
+        <rect x="648" y="180" width="2" height="3"/>
+        <rect x="712" y="195" width="2" height="3"/>
+        <rect x="795" y="210" width="2" height="3"/>
+      </g>
+
+      <!-- Silueta de teléfono amenazante en esquina superior derecha -->
+      <g transform="translate(780,22)" opacity="0.85">
+        <rect x="0" y="0" width="42" height="68" rx="6" fill="#0d1117" stroke="#f85149" stroke-width="1.3"/>
+        <rect x="4" y="8" width="34" height="50" fill="#1a0d0d"/>
+        <circle cx="21" cy="62" r="2" fill="#f85149"/>
+        <!-- Mensajes parpadeando -->
+        <rect x="7" y="14" width="22" height="3" fill="#f85149" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="7" y="22" width="16" height="3" fill="#f85149" opacity="0.6"/>
+        <rect x="7" y="30" width="28" height="3" fill="#f85149" opacity="0.8">
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.8s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="7" y="38" width="14" height="3" fill="#f85149" opacity="0.5"/>
+        <rect x="7" y="46" width="24" height="3" fill="#f85149" opacity="0.7"/>
+      </g>
+    </svg>
+
+    <div class="overlay">
+      <div class="tag-top">
+        <div class="msg-bubble">
+          <div class="who">Modalidad en Cuautla</div>
+          <div class="txt">"El famoso papelito…"</div>
+        </div>
+        <div class="counter">
+          <div class="lbl">Víctimas 2025 · México</div>
+          <div class="big">6,880+</div>
+          <div class="small">Récord nacional histórico</div>
+        </div>
+      </div>
+      <div class="bottom-banner">
+        <div class="ttl">EL CERCO DE CUAUTLA</div>
+        <div class="sub">Un punto en el mapa concentra el 61.8% de la extorsión estatal — la crisis tiene epicentro, no es difusa.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legal-notice">
+    <svg class="mini45"><use href="#logo45"/></svg>
+    <div>
+      <span class="label">Aviso editorial · marco jurídico</span>
+      Este material se difunde en ejercicio de la <strong>libertad de expresión e información</strong> reconocidas por los <strong>Artículos 6° y 7°</strong> de la Constitución Política de los Estados Unidos Mexicanos y el <strong>Artículo 13</strong> de la Convención Americana sobre Derechos Humanos. <strong>Fuente de datos:</strong> cifras oficiales del Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP, corte diciembre 2025) y proyecciones poblacionales de CONAPO, consultables en los portales institucionales correspondientes. <strong>Naturaleza del análisis:</strong> las gráficas reproducen datos oficiales sin alteración; las interpretaciones e inferencias son análisis editorial de 45 Digital Noticias sobre hechos estadísticamente verificables y <strong>no constituyen imputación personal, denuncia penal ni señalamiento directo contra persona alguna</strong>. Toda persona aludida conserva íntegra su <strong>presunción de inocencia</strong> constitucional. <strong>Derecho de réplica:</strong> cualquier persona o autoridad mencionada puede ejercerlo conforme a la Ley Reglamentaria del artículo 6° constitucional; el medio se compromete a publicarla en condiciones equivalentes. El contenido <strong>puede reproducirse, citarse y difundirse libremente</strong> con atribución a 45 Digital Noticias.
+    </div>
+  </div>
+</section>
+
+<script>
+// ============ SCROLL-SPY (resalta sección activa en nav) ============
+const navLinks = document.querySelectorAll('.nav a[data-target]');
+const navSections = Array.from(navLinks).map(a => document.getElementById(a.dataset.target));
+const spyObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector('.nav a[data-target="' + entry.target.id + '"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+navSections.forEach(s => s && spyObserver.observe(s));
+
+// ============ MODAL ============
+function showExplain(title, body) {
+  document.getElementById('modal-title').innerHTML = title;
+  document.getElementById('modal-body').innerHTML = '<p>' + body + '</p>';
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+document.getElementById('modal').addEventListener('click', (e) => { if (e.target.id === 'modal') closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+// ============ CHART.JS ============
+Chart.defaults.color = '#c9d1d9';
+Chart.defaults.borderColor = '#30363d';
+Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
+Chart.defaults.font.size = 13;
+
+const COLORS = {
+  red: '#f85149',
+  yellow: '#d29922',
+  green: '#3fb950',
+  blue: '#58a6ff',
+  orange: '#f0883e',
+  gray: '#6e7681',
+  white: '#ffffff',
+  bg: '#161b22',
+  txt: '#e6edf3',
+  muted: '#8b949e'
+};
+
+// SECCIÓN 3
+new Chart(document.getElementById('chart3'), {
+  type: 'bar',
+  data: {
+    labels: ['Cuautla (Mor) · 187K hab', 'Tonatico (Méx) · 13K hab', 'Salamanca (Gto) · 272K hab', 'San Miguel Allende (Gto)*', 'Toluca (Méx)* · 907K hab'],
+    datasets: [{
+      label: 'Tasa por 100K hab',
+      data: [138.4, 77.0, 65.0, 48.0, 45.0],
+      backgroundColor: ['#f85149', '#6e7681', '#6e7681', '#6e7681', '#6e7681'],
+      borderColor: ['#ff7b72', '#30363d', '#30363d', '#30363d', '#30363d'],
+      borderWidth: 2,
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: (c) => c.parsed.x.toFixed(1) + ' por 100K hab' } }
+    },
+    scales: {
+      x: { grid: { color: '#21262d' }, title: { display: true, text: 'Tasa por 100,000 habitantes', color: COLORS.muted } },
+      y: { grid: { display: false }, ticks: { font: { size: 13, weight: '600' } } }
+    }
+  }
+});
+
+// SECCIÓN 4 — Evolución extorsión + etiquetas (sin partidos)
+const adminBg4 = {
+  id: 'adminBg4',
+  beforeDraw(chart) {
+    const {ctx, chartArea: {top, bottom}, scales: {x}} = chart;
+    if (!x) return;
+    ctx.save();
+    ctx.fillStyle = 'rgba(110,118,129,0.10)';
+    ctx.fillRect(x.getPixelForValue(0) - 20, top, x.getPixelForValue(2) - x.getPixelForValue(0) + 40, bottom - top);
+    ctx.fillStyle = 'rgba(88,166,255,0.12)';
+    ctx.fillRect(x.getPixelForValue(3) - 20, top, x.getPixelForValue(5) - x.getPixelForValue(3) + 40, bottom - top);
+    ctx.fillStyle = 'rgba(240,136,62,0.12)';
+    ctx.fillRect(x.getPixelForValue(6) - 20, top, x.getPixelForValue(8) - x.getPixelForValue(6) + 40, bottom - top);
+    ctx.fillStyle = 'rgba(248,81,73,0.18)';
+    ctx.fillRect(x.getPixelForValue(9) - 20, top, 40, bottom - top);
+    ctx.restore();
+  }
+};
+
+const adminLabels4 = {
+  id: 'adminLabels4',
+  afterDatasetsDraw(chart) {
+    const {ctx, chartArea: {top}, scales: {x}} = chart;
+    ctx.save();
+    ctx.textAlign = 'center';
+    // Previa
+    ctx.font = 'bold 12px Segoe UI';
+    ctx.fillStyle = COLORS.gray;
+    const xPrev = (x.getPixelForValue(0) + x.getPixelForValue(2)) / 2;
+    ctx.fillText('Admón previa', xPrev, top + 16);
+    ctx.font = '11px Segoe UI';
+    ctx.fillText('2016-2018', xPrev, top + 32);
+    // Corona I
+    ctx.font = 'bold 12px Segoe UI';
+    ctx.fillStyle = COLORS.blue;
+    const xC1 = (x.getPixelForValue(3) + x.getPixelForValue(5)) / 2;
+    ctx.fillText('CORONA I', xC1, top + 16);
+    ctx.font = '11px Segoe UI';
+    ctx.fillText('2019-2021', xC1, top + 32);
+    // Arredondo
+    ctx.font = 'bold 12px Segoe UI';
+    ctx.fillStyle = COLORS.orange;
+    const xArr = (x.getPixelForValue(6) + x.getPixelForValue(8)) / 2;
+    ctx.fillText('ARREDONDO', xArr, top + 16);
+    ctx.font = '11px Segoe UI';
+    ctx.fillText('2022-2024', xArr, top + 32);
+    // Corona II
+    ctx.font = 'bold 12px Segoe UI';
+    ctx.fillStyle = COLORS.red;
+    const xC2 = x.getPixelForValue(9);
+    ctx.fillText('CORONA II', xC2, top + 16);
+    ctx.font = '11px Segoe UI';
+    ctx.fillText('2025-', xC2, top + 32);
+    ctx.restore();
+  }
+};
+
+new Chart(document.getElementById('chart4'), {
+  type: 'line',
+  data: {
+    labels: ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Carpetas por extorsión',
+      data: [17,6,6,14,16,24,24,78,150,259],
+      borderColor: COLORS.red,
+      backgroundColor: 'rgba(248,81,73,0.15)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 6,
+      pointBackgroundColor: COLORS.red,
+      pointBorderColor: '#fff',
+      pointBorderWidth: 2,
+      borderWidth: 3
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: { padding: { top: 48 } },
+    plugins: {
+      legend: { labels: { boxWidth: 12 } },
+      tooltip: { callbacks: { label: (c) => c.parsed.y + ' carpetas' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Carpetas iniciadas', color: COLORS.muted } },
+      x: { grid: { display: false } }
+    }
+  },
+  plugins: [adminBg4, adminLabels4]
+});
+
+// SECCIÓN 6 — Participación por delito (línea blanca)
+new Chart(document.getElementById('chart6'), {
+  type: 'bar',
+  data: {
+    labels: ['Extorsión','Lesiones','Narcomenudeo','Hostigamiento sexual','Falsedad','Abuso sexual','Violación simple','Otros fuero común','Daño a la propiedad','Fraude'],
+    datasets: [{
+      label: '% sobre Morelos',
+      data: [61.8, 27.3, 24.9, 23.1, 20.4, 19.9, 18.3, 17.5, 17.2, 16.2],
+      backgroundColor: (ctx) => {
+        const v = ctx.parsed?.x ?? ctx.raw;
+        if (v >= 25) return '#f85149';
+        if (v >= 15) return '#f0883e';
+        return '#58a6ff';
+      },
+      borderWidth: 0,
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    maintainAspectRatio: false,
+    layout: { padding: { right: 60 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: (c) => c.parsed.x.toFixed(1) + '% de Morelos' } }
+    },
+    scales: {
+      x: {
+        grid: { color: '#21262d' },
+        title: { display: true, text: '% del total estatal', color: COLORS.muted },
+        min: 0, max: 70
+      },
+      y: { grid: { display: false } }
+    }
+  },
+  plugins: [{
+    id: 'popLine',
+    afterDatasetsDraw(chart) {
+      const {ctx, chartArea: {top, bottom}, scales: {x}} = chart;
+      const xPos = x.getPixelForValue(9.6);
+      ctx.save();
+      // Banda verde (normal)
+      ctx.fillStyle = 'rgba(63,185,113,0.08)';
+      ctx.fillRect(x.getPixelForValue(0), top, xPos - x.getPixelForValue(0), bottom - top);
+      // Banda roja (sobrerrepresentación)
+      ctx.fillStyle = 'rgba(248,81,73,0.06)';
+      ctx.fillRect(xPos, top, x.getPixelForValue(70) - xPos, bottom - top);
+      // Línea blanca
+      ctx.strokeStyle = COLORS.white;
+      ctx.lineWidth = 3;
+      ctx.setLineDash([8,4]);
+      ctx.beginPath();
+      ctx.moveTo(xPos, top);
+      ctx.lineTo(xPos, bottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      // Marcador superior
+      ctx.fillStyle = COLORS.white;
+      ctx.fillRect(xPos - 2, top - 6, 4, 8);
+      // Etiqueta con fondo
+      ctx.font = 'bold 13px Segoe UI';
+      const labelText = '9.6% — peso demográfico de Cuautla';
+      const subText = '(línea base esperada)';
+      const textW = ctx.measureText(labelText).width;
+      ctx.fillStyle = 'rgba(13,17,23,0.85)';
+      ctx.fillRect(xPos + 6, top + 4, textW + 16, 40);
+      ctx.fillStyle = COLORS.white;
+      ctx.textAlign = 'left';
+      ctx.fillText(labelText, xPos + 14, top + 20);
+      ctx.font = '11px Segoe UI';
+      ctx.fillStyle = COLORS.muted;
+      ctx.fillText(subText, xPos + 14, top + 36);
+      // Valores al final de cada barra
+      const meta = chart.getDatasetMeta(0);
+      ctx.font = 'bold 12px Segoe UI';
+      ctx.textAlign = 'left';
+      meta.data.forEach((bar, i) => {
+        const v = chart.data.datasets[0].data[i];
+        ctx.fillStyle = v >= 25 ? COLORS.red : (v >= 15 ? COLORS.orange : COLORS.blue);
+        ctx.fillText(v.toFixed(1) + '%', bar.x + 6, bar.y + 4);
+      });
+      ctx.restore();
+    }
+  }]
+});
+
+// SECCIÓN 7 — Cuautla vs Cuernavaca (paleta alineada con el resto)
+new Chart(document.getElementById('chart7'), {
+  type: 'bar',
+  data: {
+    labels: ['Lesiones','Extorsión','Narcomenudeo','Feminicidio'],
+    datasets: [
+      { label: 'Cuernavaca (397K hab) — referencia', data: [828, 16, 187, 3], backgroundColor: '#6e7681', borderColor: '#8b949e', borderWidth: 1, borderRadius: 4 },
+      { label: 'Cuautla (187K hab)', data: [1124, 259, 263, 4], backgroundColor: '#f85149', borderColor: '#ff7b72', borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'top', labels: { boxWidth: 16, padding: 16 } },
+      tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + c.parsed.y + ' carpetas' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Carpetas 2025 (escala log)', color: COLORS.muted }, type: 'logarithmic' },
+      x: { grid: { display: false }, ticks: { font: { size: 14, weight: '600' } } }
+    }
+  }
+});
+
+// SECCIÓN 8 — Serie histórica
+new Chart(document.getElementById('chart8'), {
+  type: 'bar',
+  data: {
+    labels: ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Total delitos',
+      data: [5239,5522,6527,6077,5975,6406,6187,6338,6361,7543],
+      backgroundColor: [
+        COLORS.gray, COLORS.gray, COLORS.gray,
+        COLORS.blue, COLORS.blue, COLORS.blue,
+        COLORS.orange, COLORS.orange, COLORS.orange,
+        COLORS.red
+      ],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: { padding: { top: 48 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: (c) => c.parsed.y.toLocaleString() + ' delitos' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Carpetas iniciadas', color: COLORS.muted }, beginAtZero: true, max: 9000 },
+      x: { grid: { display: false } }
+    }
+  },
+  plugins: [{
+    id: 'annotations8',
+    afterDatasetsDraw(chart) {
+      const {ctx, scales: {x, y}} = chart;
+      ctx.save();
+      const x2020 = x.getPixelForValue(4);
+      const y2020 = y.getPixelForValue(5975);
+      ctx.fillStyle = COLORS.yellow;
+      ctx.font = 'bold 11px Segoe UI';
+      ctx.textAlign = 'center';
+      ctx.fillText('PANDEMIA', x2020, y2020 - 10);
+      const x2025 = x.getPixelForValue(9);
+      const y2025 = y.getPixelForValue(7543);
+      ctx.fillStyle = COLORS.red;
+      ctx.font = 'bold 12px Segoe UI';
+      ctx.fillText('PICO DECENAL', x2025, y2025 - 12);
+      ctx.fillText('7,543', x2025, y2025 - 28);
+      ctx.restore();
+    }
+  }, {
+    id: 'legend8',
+    afterDraw(chart) {
+      const {ctx, chartArea: {left, top}} = chart;
+      const items = [
+        {label: 'Previa', color: COLORS.gray},
+        {label: 'Corona I (2019-21)', color: COLORS.blue},
+        {label: 'Arredondo (2022-24)', color: COLORS.orange},
+        {label: 'Corona II (2025)', color: COLORS.red}
+      ];
+      ctx.save();
+      ctx.font = '12px Segoe UI';
+      let xCursor = left + 10;
+      let yCursor = top + 8;
+      items.forEach(it => {
+        ctx.fillStyle = it.color;
+        ctx.fillRect(xCursor, yCursor, 14, 14);
+        ctx.fillStyle = COLORS.txt;
+        ctx.textAlign = 'left';
+        ctx.fillText(it.label, xCursor + 20, yCursor + 11);
+        xCursor += ctx.measureText(it.label).width + 40;
+      });
+      ctx.restore();
+    }
+  }]
+});
+
+// SECCIÓN 9 — Homicidio (anotación reposicionada)
+new Chart(document.getElementById('chart10'), {
+  type: 'line',
+  data: {
+    labels: ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Homicidio doloso',
+      data: [84,77,103,108,82,123,145,237,197,141],
+      borderColor: COLORS.red,
+      backgroundColor: 'rgba(248,81,73,0.12)',
+      fill: true,
+      tension: 0.25,
+      pointRadius: 6,
+      pointBackgroundColor: (c) => c.parsed.y === 237 ? COLORS.yellow : COLORS.red,
+      pointBorderColor: '#fff',
+      pointBorderWidth: 2,
+      borderWidth: 3
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: { padding: { top: 48, right: 24 } },
+    plugins: {
+      legend: { labels: { boxWidth: 12 } },
+      tooltip: { callbacks: { label: (c) => c.parsed.y + ' homicidios' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Carpetas iniciadas', color: COLORS.muted }, beginAtZero: true, max: 280 },
+      x: { grid: { display: false } }
+    }
+  },
+  plugins: [adminBg4, {
+    id: 'peak10',
+    afterDatasetsDraw(chart) {
+      const {ctx, chartArea: {left, right, top, bottom}, scales: {x,y}} = chart;
+      ctx.save();
+      // Etiqueta del pico 2023
+      const xp = x.getPixelForValue(7);
+      const yp = y.getPixelForValue(237);
+      ctx.fillStyle = COLORS.yellow;
+      ctx.font = 'bold 12px Segoe UI';
+      ctx.textAlign = 'center';
+      ctx.fillText('2023: 237 — pico decenal (Arredondo)', xp, yp - 14);
+      // Callout verde con fondo (dentro del chart area, arriba a la derecha)
+      const boxW = 200;
+      const boxH = 56;
+      const boxX = right - boxW - 10;
+      const boxY = top + 8;
+      ctx.fillStyle = 'rgba(63,185,113,0.14)';
+      ctx.strokeStyle = COLORS.green;
+      ctx.lineWidth = 1.5;
+      ctx.fillRect(boxX, boxY, boxW, boxH);
+      ctx.strokeRect(boxX, boxY, boxW, boxH);
+      ctx.fillStyle = COLORS.green;
+      ctx.font = 'bold 11px Segoe UI';
+      ctx.textAlign = 'left';
+      ctx.fillText('DESCENSO 2024-2025', boxX + 12, boxY + 18);
+      ctx.fillStyle = '#c9d1d9';
+      ctx.font = '11px Segoe UI';
+      ctx.fillText('Refleja tendencia federal,', boxX + 12, boxY + 34);
+      ctx.fillText('NO logro municipal.', boxX + 12, boxY + 48);
+      // Flecha sutil hacia el último punto
+      const xf = x.getPixelForValue(9);
+      const yf = y.getPixelForValue(141);
+      ctx.strokeStyle = 'rgba(63,185,113,0.5)';
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([3,3]);
+      ctx.beginPath();
+      ctx.moveTo(boxX + boxW/2, boxY + boxH);
+      ctx.lineTo(xf, yf - 8);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
+    }
+  }]
+});
+
+// SECCIÓN 10 — Feminicidio
+new Chart(document.getElementById('chart11'), {
+  type: 'line',
+  data: {
+    labels: ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Feminicidio',
+      data: [2,1,3,2,2,3,6,8,9,4],
+      borderColor: '#ff7b72',
+      backgroundColor: 'rgba(255,123,114,0.25)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 6,
+      pointBackgroundColor: (c) => c.parsed.y === 9 ? COLORS.yellow : '#ff7b72',
+      pointBorderColor: '#fff',
+      pointBorderWidth: 2,
+      borderWidth: 3
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { labels: { boxWidth: 12 } },
+      tooltip: { callbacks: { label: (c) => c.parsed.y + ' feminicidios' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Carpetas iniciadas', color: COLORS.muted }, beginAtZero: true, max: 12 },
+      x: { grid: { display: false } }
+    }
+  },
+  plugins: [adminBg4, {
+    id: 'peak11',
+    afterDatasetsDraw(chart) {
+      const {ctx, scales: {x,y}} = chart;
+      const xp = x.getPixelForValue(8);
+      const yp = y.getPixelForValue(9);
+      ctx.save();
+      ctx.fillStyle = COLORS.yellow;
+      ctx.font = 'bold 12px Segoe UI';
+      ctx.textAlign = 'center';
+      ctx.fillText('2024: 9 — pico decenal', xp, yp - 14);
+      ctx.restore();
+    }
+  }]
+});
+
+// SECCIÓN 11 — 15 delitos pico
+new Chart(document.getElementById('chart12'), {
+  type: 'bar',
+  data: {
+    labels: [
+      'Lesiones','Amenazas','Violencia familiar','Otros fuero común','Fraude',
+      'Narcomenudeo','Extorsión','Abuso sexual','Otros contra vida','Otros libertad personal',
+      'Allanamiento','Otros contra patrimonio','Hostigamiento sexual','Otros contra sociedad','Tráfico de menores'
+    ],
+    datasets: [{
+      label: 'Máximo histórico 2025',
+      data: [1124,831,824,490,379,263,259,119,91,73,52,42,27,15,2],
+      backgroundColor: '#f85149',
+      borderColor: '#ff7b72',
+      borderWidth: 1,
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: (c) => c.parsed.x.toLocaleString() + ' carpetas (pico decenal)' } }
+    },
+    scales: {
+      x: { grid: { color: '#21262d' }, type: 'logarithmic', title: { display: true, text: 'Carpetas 2025 (escala log)', color: COLORS.muted } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// SECCIÓN 12 — Contratendencias
+new Chart(document.getElementById('chart13'), {
+  type: 'bar',
+  data: {
+    labels: ['Robo','Amenazas','Daño a la propiedad','Falsificación'],
+    datasets: [
+      { label: 'Morelos (variación %)', data: [-7.1, -5.6, -23.0, -7.1], backgroundColor: COLORS.green, borderRadius: 4 },
+      { label: 'Cuautla (variación %)', data: [9.4, 7.6, -1.9, 52.6], backgroundColor: COLORS.red, borderRadius: 4 }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: { padding: { top: 24, bottom: 24 } },
+    plugins: {
+      legend: { position: 'top', labels: { boxWidth: 16, padding: 16 } },
+      tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + (c.parsed.y>0?'+':'') + c.parsed.y.toFixed(1) + '%' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Variación % 2024 → 2025', color: COLORS.muted }, ticks: { callback: (v) => (v>0?'+':'') + v + '%' }, min: -30, max: 60 },
+      x: { grid: { display: false }, ticks: { font: { size: 13, weight: '600' } } }
+    }
+  },
+  plugins: [{
+    id: 'barLabels13',
+    afterDatasetsDraw(chart) {
+      const {ctx} = chart;
+      ctx.save();
+      ctx.font = 'bold 13px Segoe UI';
+      ctx.textAlign = 'center';
+      chart.data.datasets.forEach((ds, dsIdx) => {
+        const meta = chart.getDatasetMeta(dsIdx);
+        meta.data.forEach((bar, i) => {
+          const v = ds.data[i];
+          const label = (v > 0 ? '+' : '') + v.toFixed(1) + '%';
+          ctx.fillStyle = v > 0 ? COLORS.red : COLORS.green;
+          const y = v >= 0 ? bar.y - 8 : bar.y + 18;
+          ctx.fillText(label, bar.x, y);
+        });
+      });
+      ctx.restore();
+    }
+  }]
+});
+
+// SECCIÓN 13 — Tasas por 100K
+new Chart(document.getElementById('chart14'), {
+  type: 'bar',
+  data: {
+    labels: ['Lesiones','Extorsión','Narcomenudeo','Homicidio'],
+    datasets: [
+      { label: 'Cuernavaca', data: [208, 4, 47, 64], backgroundColor: COLORS.blue, borderRadius: 4 },
+      { label: 'Jiutepec',   data: [118, 6, 17, 41], backgroundColor: '#a5a2ff', borderRadius: 4 },
+      { label: 'Temixco',    data: [140, 6, 21, 100], backgroundColor: COLORS.orange, borderRadius: 4 },
+      { label: 'Cuautla',    data: [562, 129, 131, 70], backgroundColor: COLORS.red, borderWidth: 2, borderColor: '#ff7b72', borderRadius: 4 }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'top', labels: { boxWidth: 14, padding: 12 } },
+      tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + c.parsed.y.toFixed(1) + ' por 100K hab' } }
+    },
+    scales: {
+      y: { grid: { color: '#21262d' }, title: { display: true, text: 'Tasa por 100,000 habitantes', color: COLORS.muted } },
+      x: { grid: { display: false }, ticks: { font: { size: 14, weight: '600' } } }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
