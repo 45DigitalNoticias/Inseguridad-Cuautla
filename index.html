@@ -151,6 +151,7 @@
   /* SECTIONS */
   section {
     min-height: 100vh;
+    min-height: 100dvh; /* mobile Safari: descuenta URL bar dinamica */
     padding: 60px 60px 40px 300px;
     display: flex;
     flex-direction: column;
@@ -1256,6 +1257,57 @@
     .cover .subtitle { padding: 0 6px; font-size: 13px; }
   }
 
+  /* ============ RESPONSIVE TABLET (iPad portrait: 769px – 1024px) ============ */
+  /* Zona intermedia: nav ya esta colapsado (iconos 68px a partir de 1200px),
+     pero las proporciones internas necesitan ajustes porque el ancho util
+     es solo ~700px. Evita que el cover y hub se vean aplastados. */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    section { padding: 50px 36px 36px 100px; }
+    .cover h1 { font-size: 48px; line-height: 1.05; }
+    .cover .subtitle { font-size: 16px; max-width: 680px; }
+    .cover .cards { grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 620px; }
+    .kpi-cards { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .hub-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .conf-grid { grid-template-columns: repeat(2, 1fr); }
+    .pipeline-steps { grid-template-columns: repeat(2, 1fr); }
+    .glo-list { grid-template-columns: repeat(2, 1fr); }
+    .quad-matrix { grid-template-columns: 1fr 1fr; }
+    section h1 { font-size: 30px; }
+    section h2 { font-size: 19px; }
+    .hub-map-wrap svg.morelos-map { max-height: 520px; }
+    /* tablas: mantener minWidth pero asegurar contenedor con scroll */
+    .rk-table, .cross-table, table.heatmap { font-size: 12px; }
+  }
+
+  /* ============ SCROLL HINT — tablas anchas en movil ============ */
+  /* Indicador "desliza" cuando la tabla tiene overflow horizontal en mobile.
+     Se adjunta al contenedor padre de las tablas anchas (.hub-ranking-wrap para
+     ranking y cruce, .heatmap-wrap para heatmap, .menores-table para menores). */
+  @media (max-width: 768px) {
+    .hub-ranking-wrap, .heatmap-wrap, .menores-table {
+      position: relative;
+    }
+    .hub-ranking-wrap::after, .heatmap-wrap::after, .menores-table::after {
+      content: "← desliza →";
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 9.5px;
+      letter-spacing: 1.2px;
+      color: #d29922;
+      background: rgba(13,17,23,0.85);
+      padding: 3px 9px;
+      border-radius: 10px;
+      pointer-events: none;
+      opacity: 0.88;
+      font-weight: 700;
+      border: 1px solid rgba(210,153,34,0.35);
+      z-index: 2;
+    }
+    /* Lock body scroll when nav is open */
+    body.nav-open { overflow: hidden; position: fixed; width: 100%; }
+  }
+
   /* ============ v2.1 — heatmap + glosario + explicacion simple ============ */
   .simple-box {
     background: linear-gradient(135deg, rgba(63,185,113,0.09), rgba(88,166,255,0.06));
@@ -1716,6 +1768,7 @@
   /* ============ v2.1 — Hub interactivo de municipios Morelos ============ */
   section.map-hub {
     min-height: 100vh;
+    min-height: 100dvh;
     background: radial-gradient(ellipse at 40% 50%, #161b22 0%, #0d1117 80%);
     padding: 50px 60px 40px 300px;
     display: flex;
@@ -2722,6 +2775,48 @@
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+  }
+
+  /* ============================================================ */
+  /* OVERRIDES FINALES RESPONSIVE                                  */
+  /* Este bloque vive al FINAL del <style> para vencer por cascada */
+  /* a los defaults de .map-hub (line ~1769) y .meta-section       */
+  /* (line ~2605), que tienen la misma especificidad y estan       */
+  /* declarados despues de los bloques @media. Sin esto, mobile    */
+  /* hereda padding-left:300px del default y el contenido queda    */
+  /* pegado a la derecha.                                          */
+  /* ============================================================ */
+
+  @media (max-width: 1200px) {
+    section, section.map-hub, .meta-section { padding: 60px 28px 28px 96px; }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    section, section.map-hub, .meta-section { padding: 50px 36px 36px 100px; }
+  }
+  @media (max-width: 768px) {
+    section, section.map-hub, .meta-section { padding: 70px 16px 28px 16px !important; }
+    /* Asegurar que hub/ranking/cross no tengan anchos minimos que desborden */
+    .hub-map-wrap { padding: 10px !important; min-height: 0 !important; }
+    .hub-map-wrap svg.morelos-map { height: auto !important; min-height: 220px !important; }
+    .hub-ranking-wrap { padding: 10px !important; }
+    /* Overflow-x en contenedores de tablas */
+    .hub-ranking-wrap > div[style*="overflow-y"] {
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    /* Heatmap scroll horizontal */
+    .heatmap-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    /* Impedir que columnas de mas de 1 fr saquen contenido */
+    .two-col, .two-col.balanced, .conclusion-grid {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+    /* Charts: asegurar que el canvas no se cuelgue fuera */
+    .chart-container { padding: 12px; }
+    .chart-container canvas { max-width: 100% !important; height: auto !important; }
+  }
+  @media (max-width: 480px) {
+    section, section.map-hub, .meta-section { padding: 64px 12px 24px 12px !important; }
   }
 </style>
 </head>
@@ -5434,7 +5529,9 @@ function toggleMenu(open) {
   const isOpen = open !== undefined ? open : !nav.classList.contains('open');
   nav.classList.toggle('open', isOpen);
   navBackdrop.classList.toggle('open', isOpen);
+  document.body.classList.toggle('nav-open', isOpen);
   menuToggle.innerHTML = isOpen ? '×' : '☰';
+  menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
 }
 menuToggle.addEventListener('click', () => toggleMenu());
 navBackdrop.addEventListener('click', () => toggleMenu(false));
@@ -5443,6 +5540,16 @@ document.querySelectorAll('.nav a').forEach(a => {
   a.addEventListener('click', () => {
     if (window.innerWidth <= 768) toggleMenu(false);
   });
+});
+// Al rotar o redimensionar por encima de 768, asegurar que el nav no quede colgado
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768 && nav.classList.contains('open')) {
+    toggleMenu(false);
+  }
+});
+// Tecla ESC cierra el menu
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && nav.classList.contains('open')) toggleMenu(false);
 });
 
 // ============ FLAG DE NAVEGACIÓN PROGRAMÁTICA ============
