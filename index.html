@@ -164,10 +164,81 @@
   }
   #sHero .hero-kpis {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
     max-width: 1400px;
   }
+
+  /* Hero-crown · dato-corona doble ancho */
+  .hero-kpi.hero-crown {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 36px;
+    align-items: center;
+    padding: 38px 44px;
+    margin: 0 0 22px;
+    max-width: 1400px;
+    width: 100%;
+    min-height: auto;
+    background:
+      radial-gradient(ellipse at 15% 50%, rgba(248,81,73,0.18) 0%, rgba(13,17,23,0) 55%),
+      rgba(22,27,34,0.8);
+    border: 1.5px solid rgba(251,191,36,0.4);
+    position: relative;
+  }
+  .hero-kpi.hero-crown::before { height: 4px; }
+  .hero-kpi.hero-crown:hover {
+    border-color: rgba(251,191,36,0.75);
+    box-shadow: 0 14px 40px rgba(248,81,73,0.22), 0 0 0 1px rgba(251,191,36,0.2) inset;
+    transform: translateY(-4px);
+  }
+  .hero-kpi.hero-crown .glyph {
+    position: static;
+    width: 180px;
+    height: 180px;
+    opacity: 1;
+    filter: drop-shadow(0 0 24px rgba(248,81,73,0.35));
+  }
+  .hero-kpi.hero-crown .crown-text { display: flex; flex-direction: column; gap: 8px; }
+  .hero-kpi.hero-crown .medal {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #fbbf24;
+    font-weight: 800;
+    padding: 6px 14px;
+    background: rgba(251,191,36,0.12);
+    border: 1px solid rgba(251,191,36,0.4);
+    border-radius: 30px;
+    width: fit-content;
+    margin-bottom: 6px;
+  }
+  .hero-kpi.hero-crown .medal .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #fbbf24; box-shadow: 0 0 8px #fbbf24;
+  }
+  .hero-kpi.hero-crown .k {
+    max-width: 100%;
+    font-size: 11.5px;
+    letter-spacing: 2.5px;
+    margin-bottom: 4px;
+  }
+  .hero-kpi.hero-crown .v {
+    font-size: clamp(78px, 9vw, 128px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+    margin: 4px 0 14px;
+  }
+  .hero-kpi.hero-crown .t {
+    font-size: 17px;
+    line-height: 1.55;
+    color: #c9d1d9;
+    max-width: 640px;
+    margin-top: 0;
+  }
+  .hero-kpi.hero-crown .t strong { color: #fbbf24; }
   .hero-kpi {
     padding: 24px 22px 22px;
     background: rgba(22,27,34,0.7);
@@ -392,15 +463,16 @@
   }
   .share-strip .copy-ok.show { opacity: 1; }
 
-  /* Responsive del hero · 5 tarjetas → 3 → 2 → 1 */
-  @media (max-width: 1400px) {
-    #sHero .hero-kpis { grid-template-columns: repeat(3, 1fr); }
-  }
+  /* Responsive del hero · crown doble ancho + fila de 4 */
   @media (max-width: 1200px) {
     #sHero { padding: 70px 40px 50px 100px; }
+    #sHero .hero-kpis { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 900px) {
-    #sHero .hero-kpis { grid-template-columns: repeat(2, 1fr); }
+    .hero-kpi.hero-crown { grid-template-columns: 1fr; text-align: center; padding: 32px 28px; gap: 18px; }
+    .hero-kpi.hero-crown .glyph { width: 140px; height: 140px; margin: 0 auto; }
+    .hero-kpi.hero-crown .medal { margin: 0 auto; }
+    .hero-kpi.hero-crown .t { text-align: left; margin: 0 auto; }
   }
   @media (max-width: 768px) {
     #sHero { padding: 70px 20px 40px; gap: 28px; }
@@ -411,6 +483,9 @@
     .hero-kpi .v { font-size: 38px; }
     .hero-kpi.kpi-dual .v { font-size: 30px; }
     .hero-kpi .glyph { width: 72px; height: 72px; }
+    .hero-kpi.hero-crown { padding: 24px 20px; }
+    .hero-kpi.hero-crown .v { font-size: 68px; letter-spacing: -3px; }
+    .hero-kpi.hero-crown .t { font-size: 15px; }
     .hero-cta { padding: 12px 20px; font-size: 12.5px; }
     .share-strip { flex-wrap: wrap; padding: 10px 14px; }
   }
@@ -4476,35 +4551,37 @@
   <p class="hero-lead">
     Este análisis parte de fuentes oficiales — SESNSP, INEGI, RNPDNO, CONAPO — y triangula cifras con series decenales. Cinco hallazgos sostienen la argumentación completa.
   </p>
-  <div class="hero-kpis">
-    <!-- KPI 1 · PERCEPCIÓN · símbolo: ojo/iris con 90% de llenado -->
-    <a href="#sP" class="hero-kpi reveal" aria-label="Percepción de inseguridad 90.09 por ciento · Morelos número uno nacional">
-      <svg class="glyph glyph-eye" viewBox="0 0 100 100" aria-hidden="true">
-        <defs>
-          <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#fbbf24"/>
-            <stop offset="100%" stop-color="#f85149"/>
-          </linearGradient>
-          <clipPath id="eyeClip"><ellipse cx="50" cy="50" rx="42" ry="28"/></clipPath>
-        </defs>
-        <!-- Forma de ojo -->
-        <ellipse class="iris-bg" cx="50" cy="50" rx="42" ry="28"/>
-        <!-- Iris circular -->
-        <g clip-path="url(#eyeClip)">
-          <circle class="iris-fill" cx="50" cy="50" r="22"/>
-        </g>
-        <!-- Pupila -->
-        <circle class="pupil" cx="50" cy="50" r="8"/>
-        <circle class="pupil-dot" cx="47" cy="47" r="2"/>
-        <!-- Anillos de observación -->
-        <circle class="gaze-ring" cx="50" cy="50" r="32"/>
-        <circle class="gaze-ring" cx="50" cy="50" r="40"/>
-      </svg>
-      <div class="k">ENVIPE 2025 · Percepción</div>
+  <!-- KPI CORONA · PERCEPCIÓN 90.09% (hallazgo que sostiene la tesis completa) -->
+  <a href="#sP" class="hero-kpi hero-crown reveal" aria-label="Percepción de inseguridad 90.09 por ciento · Morelos número uno nacional de 32 estados">
+    <svg class="glyph glyph-eye" viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fbbf24"/>
+          <stop offset="100%" stop-color="#f85149"/>
+        </linearGradient>
+        <clipPath id="eyeClip"><ellipse cx="50" cy="50" rx="42" ry="28"/></clipPath>
+      </defs>
+      <ellipse class="iris-bg" cx="50" cy="50" rx="42" ry="28"/>
+      <g clip-path="url(#eyeClip)">
+        <circle class="iris-fill" cx="50" cy="50" r="22"/>
+      </g>
+      <circle class="pupil" cx="50" cy="50" r="8"/>
+      <circle class="pupil-dot" cx="47" cy="47" r="2"/>
+      <circle class="gaze-ring" cx="50" cy="50" r="32"/>
+      <circle class="gaze-ring" cx="50" cy="50" r="40"/>
+      <circle class="gaze-ring" cx="50" cy="50" r="47"/>
+    </svg>
+    <div class="crown-text">
+      <div class="medal"><span class="dot"></span>#1 NACIONAL · 32 ESTADOS</div>
+      <div class="k">ENVIPE 2025 · Percepción de inseguridad estatal</div>
       <div class="v counting" data-target="90.09" data-suffix="%">90.09%</div>
-      <div class="t">Morelos <strong>#1 nacional</strong> en percepción de inseguridad</div>
-    </a>
+      <div class="t">
+        El <strong>90.09%</strong> de los morelenses adultos considera inseguro vivir en su estado — <strong>14.5 puntos arriba</strong> del promedio nacional. Morelos lleva 15 años consecutivos por encima del país y en 2024-2025 alcanzó su propio pico histórico.
+      </div>
+    </div>
+  </a>
 
+  <div class="hero-kpis">
     <!-- KPI 2 · EXTORSIÓN · símbolo: ondas concéntricas con signo $ -->
     <a href="#sE" class="hero-kpi reveal" aria-label="259 extorsiones en Cuautla · número uno nacional en tasa per cápita">
       <svg class="glyph glyph-waves" viewBox="0 0 100 100" aria-hidden="true">
