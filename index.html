@@ -62,6 +62,58 @@
   /* Counter-animation: cuando el elemento es .counting, ocultamos temporalmente el separador entre dígitos */
   .counting { font-variant-numeric: tabular-nums; }
 
+  /* ============ JUSTIFICACIÓN EDITORIAL (texto alineado a ambos lados) ============ */
+  /* Aplica a párrafos largos de cuerpo · preserva labels, KPIs y centrados */
+  section p,
+  .hub-sub,
+  .hub-header p,
+  #sHero .hero-lead,
+  .simple-box p,
+  .simple-box li,
+  .method-body p,
+  .method-caveat,
+  .method-source,
+  .meta-subseccion p,
+  .meta-subseccion li,
+  .glo-item dd,
+  .rk-caveat,
+  .conclusion-text p,
+  .concl-body p,
+  .ay-card p,
+  .ay-card li,
+  .blindaje-legal p,
+  .footer-note,
+  .p-contrast .cap,
+  .p-isotype-wrap .cap,
+  .p-serie-wrap .cap,
+  .p-rank-wrap .cap {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphenate-limit-chars: 7 3 3;
+  }
+
+  /* Excepciones: elementos cortos o centrados NO deben justificarse */
+  .hero-kpi .t,
+  .hero-kpi .k,
+  .cover .subtitle,
+  .cover .click-hint,
+  .p-con-col .note,
+  .p-punch,
+  .badge, .badge-final,
+  .eyebrow, .p-sub, .brand-name,
+  td, th,
+  figcaption,
+  .share-strip,
+  .chip, .tag,
+  button, .btn,
+  .nav a, .nav-group-title {
+    text-align: initial;
+    hyphens: manual;
+  }
+
   /* ============ HERO EJECUTIVO (nueva sección sHERO · resumen 5 hallazgos) ============ */
   #sHero {
     padding: 80px 60px 60px 300px;
