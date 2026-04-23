@@ -24,6 +24,7 @@
 <script src="morelos_ranking.js"></script>
 <script src="morelos_cross.js"></script>
 <script src="morelos_series.js"></script>
+<script src="morelos_percepcion.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -2804,6 +2805,295 @@
     .e-rest { grid-template-columns: 1fr; }
   }
 
+  /* ============ SECCIÓN sP · PERCEPCIÓN DE INSEGURIDAD (#1 NACIONAL) ============ */
+  #sP {
+    background:
+      radial-gradient(ellipse at 50% 18%, rgba(248,81,73,0.14) 0%, rgba(13,17,23,0) 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(251,191,36,0.08) 0%, rgba(13,17,23,0) 45%),
+      #0d1117;
+  }
+  #sP .hub-header h3 { color: #fbbf24; }
+  #sP .hub-header h1 .accent-ember { background: linear-gradient(135deg,#fbbf24 10%,#f85149 70%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+  /* Bloque 1 — HERO #1 NACIONAL */
+  .p-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 36px;
+    align-items: center;
+    padding: 36px 32px 30px;
+    margin: 22px 0 30px;
+    border: 1px solid rgba(248,81,73,0.4);
+    border-radius: 14px;
+    background:
+      radial-gradient(ellipse at 25% 40%, rgba(248,81,73,0.12) 0%, rgba(13,17,23,0) 60%),
+      linear-gradient(180deg, rgba(248,81,73,0.05) 0%, rgba(13,17,23,0) 100%),
+      #0f1420;
+    position: relative;
+    overflow: hidden;
+  }
+  .p-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(135deg, rgba(248,81,73,0.03) 0 2px, transparent 2px 18px);
+    pointer-events: none;
+  }
+  .p-hero-left { text-align: center; position: relative; z-index: 1; }
+  .p-medal {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 14px; letter-spacing: 2.2px; font-weight: 800;
+    color: #fbbf24; padding: 6px 16px;
+    background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.4);
+    border-radius: 30px; margin-bottom: 18px;
+  }
+  .p-medal .star { margin-right: 8px; font-size: 15px; }
+  .p-big {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(82px, 12vw, 150px);
+    font-weight: 900; line-height: 0.95;
+    letter-spacing: -4px;
+    background: linear-gradient(180deg, #fbbf24 0%, #f85149 85%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+    text-shadow: 0 0 60px rgba(248,81,73,0.25);
+  }
+  .p-pct { font-size: 0.5em; color: #fbbf24; font-weight: 700; }
+  .p-sub {
+    font-size: 11px; color: #8b949e; letter-spacing: 2.5px;
+    text-transform: uppercase; font-weight: 700; margin-top: 10px;
+  }
+  .p-hero-right { position: relative; z-index: 1; }
+  .p-hero-right h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(26px, 3.2vw, 40px);
+    font-weight: 700; line-height: 1.05; margin: 0 0 14px;
+    color: #e6edf3; letter-spacing: -0.5px;
+  }
+  .p-hero-right h2 strong { color: #f85149; }
+  .p-hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 22px;
+  }
+  .p-stat {
+    padding: 12px 14px; background: rgba(13,17,23,0.6);
+    border: 1px solid rgba(251,191,36,0.22); border-radius: 8px;
+  }
+  .p-stat .k { font-size: 9.5px; color: #8b949e; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 700; }
+  .p-stat .v { font-family: 'Fraunces', serif; font-size: 24px; color: #fbbf24; font-weight: 800; line-height: 1; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .p-stat .v.red { color: #f85149; }
+  .p-stat .t { font-size: 11px; color: #c9d1d9; margin-top: 3px; }
+
+  /* Bloque 2 — ISOTYPE 10×10 */
+  .p-isotype-wrap {
+    margin: 28px 0 32px; padding: 26px 28px;
+    border: 1px solid #30363d; border-radius: 12px; background: #161b22;
+  }
+  .p-isotype-wrap h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    color: #e6edf3; margin: 0 0 4px;
+  }
+  .p-isotype-wrap .cap { color: #8b949e; font-size: 13px; margin-bottom: 20px; }
+  .p-isotype-grids {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;
+  }
+  .p-iso-card { text-align: center; }
+  .p-iso-card .t {
+    font-size: 10.5px; letter-spacing: 1.8px; text-transform: uppercase;
+    font-weight: 800; color: #8b949e; margin-bottom: 6px;
+  }
+  .p-iso-card .v {
+    font-family: 'Fraunces', serif; font-size: 56px; font-weight: 900;
+    line-height: 1; font-variant-numeric: tabular-nums; margin-bottom: 14px;
+  }
+  .p-iso-card.mor .v { color: #f85149; }
+  .p-iso-card.nac .v { color: #fbbf24; }
+  .p-iso-grid {
+    display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px;
+    max-width: 260px; margin: 0 auto;
+  }
+  .p-iso-grid .dot {
+    width: 100%; aspect-ratio: 1;
+    background: rgba(63,185,113,0.55);
+    border-radius: 2.5px;
+    transition: background 0.25s;
+  }
+  .p-iso-grid .dot.filled.mor { background: #f85149; box-shadow: 0 0 6px rgba(248,81,73,0.4); }
+  .p-iso-grid .dot.filled.nac { background: #fbbf24; box-shadow: 0 0 4px rgba(251,191,36,0.3); }
+  .p-iso-legend {
+    display: flex; gap: 14px; justify-content: center; margin-top: 12px;
+    font-size: 11px; color: #8b949e; letter-spacing: 0.8px;
+  }
+  .p-iso-legend .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .p-iso-legend .chip .sq {
+    width: 10px; height: 10px; border-radius: 2px; display: inline-block;
+  }
+
+  /* Bloque 3 — SERIE 15 AÑOS */
+  .p-serie-wrap {
+    margin: 28px 0 32px; padding: 26px 28px;
+    border: 1px solid #30363d; border-radius: 12px; background: #161b22;
+  }
+  .p-serie-wrap h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    color: #e6edf3; margin: 0 0 4px;
+  }
+  .p-serie-wrap .cap { color: #8b949e; font-size: 13px; margin-bottom: 18px; }
+  .p-serie-canvas-wrap { position: relative; height: 340px; }
+  .p-serie-legend {
+    display: flex; gap: 18px; margin-top: 8px; font-size: 12px; color: #c9d1d9;
+  }
+  .p-serie-legend .chip { display: inline-flex; align-items: center; gap: 7px; }
+  .p-serie-legend .chip .bar { width: 14px; height: 3px; border-radius: 2px; }
+
+  /* Bloque 4 — RANKING NACIONAL */
+  .p-rank-wrap {
+    margin: 28px 0 32px; padding: 26px 28px;
+    border: 1px solid #30363d; border-radius: 12px; background: #161b22;
+  }
+  .p-rank-wrap h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    color: #e6edf3; margin: 0 0 4px;
+  }
+  .p-rank-wrap .cap { color: #8b949e; font-size: 13px; margin-bottom: 18px; }
+  .p-rank-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .p-rank-row {
+    display: grid;
+    grid-template-columns: 34px 1fr 56px;
+    gap: 14px; align-items: center;
+    padding: 8px 12px; border-radius: 7px;
+    background: rgba(22,27,34,0.4);
+    border: 1px solid rgba(48,54,61,0.5);
+    transition: background 0.2s;
+  }
+  .p-rank-row.me {
+    background: linear-gradient(90deg, rgba(248,81,73,0.22) 0%, rgba(248,81,73,0.04) 100%);
+    border-color: rgba(248,81,73,0.6);
+    box-shadow: 0 0 14px rgba(248,81,73,0.18);
+  }
+  .p-rank-row .pos {
+    font-family: 'Fraunces', serif; font-size: 18px; font-weight: 800;
+    color: #6e7681; text-align: center; font-variant-numeric: tabular-nums;
+  }
+  .p-rank-row.me .pos { color: #fbbf24; font-size: 22px; }
+  .p-rank-bar {
+    position: relative; height: 24px;
+    background: rgba(48,54,61,0.4); border-radius: 4px; overflow: hidden;
+  }
+  .p-rank-bar .fill {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    background: linear-gradient(90deg, #6e7681 0%, #8b949e 100%);
+    border-radius: 4px 0 0 4px;
+    transition: width 0.6s cubic-bezier(0.22, 0.9, 0.25, 1);
+  }
+  .p-rank-row.me .fill {
+    background: linear-gradient(90deg, #f85149 0%, #fbbf24 100%);
+    box-shadow: 0 0 10px rgba(248,81,73,0.4);
+  }
+  .p-rank-bar .lbl {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    font-size: 12px; color: #e6edf3; font-weight: 700; letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  }
+  .p-rank-row.me .lbl { color: #fff; font-weight: 800; }
+  .p-rank-row .pct {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: #c9d1d9; font-weight: 700; text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .p-rank-row.me .pct { color: #fbbf24; font-size: 14px; }
+  .p-rank-nac {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 16px 0 10px; padding: 10px 14px;
+    border: 1px dashed rgba(139,148,158,0.4); border-radius: 6px;
+    font-size: 12px; color: #8b949e; letter-spacing: 0.5px;
+  }
+  .p-rank-nac strong { color: #fbbf24; font-weight: 700; }
+
+  /* Bloque 5 — CONTRASTE (percepción vs incidencia) */
+  .p-contrast {
+    margin: 28px 0 22px; padding: 30px 28px;
+    border: 1px solid rgba(251,191,36,0.35); border-radius: 12px;
+    background:
+      linear-gradient(180deg, rgba(251,191,36,0.05) 0%, rgba(13,17,23,0) 100%),
+      #0f1420;
+  }
+  .p-contrast h3 {
+    font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700;
+    color: #e6edf3; margin: 0 0 4px; text-align: center;
+  }
+  .p-contrast .cap { color: #8b949e; font-size: 13px; margin-bottom: 26px; text-align: center; }
+  .p-contrast-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch;
+  }
+  .p-con-col {
+    padding: 20px 22px; background: rgba(13,17,23,0.55);
+    border: 1px solid #30363d; border-radius: 10px;
+  }
+  .p-con-col .t {
+    font-size: 10.5px; letter-spacing: 1.8px; font-weight: 800;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .p-con-col.down .t { color: #3fb950; }
+  .p-con-col.up .t { color: #f85149; }
+  .p-con-yrs {
+    display: flex; justify-content: space-between; align-items: center;
+    margin: 6px 0; gap: 14px;
+  }
+  .p-con-yrs .yr {
+    font-family: 'Fraunces', serif; font-weight: 800;
+    font-variant-numeric: tabular-nums; line-height: 1;
+  }
+  .p-con-yrs .yr .y { font-size: 11px; color: #6e7681; letter-spacing: 1.2px; text-transform: uppercase; display: block; margin-bottom: 2px; }
+  .p-con-yrs .yr .n { font-size: 38px; color: #e6edf3; }
+  .p-con-col.down .yr.cur .n { color: #3fb950; }
+  .p-con-col.up .yr.cur .n { color: #f85149; }
+  .p-arrow-v {
+    flex: 0 0 48px; text-align: center;
+    font-size: 42px; line-height: 1;
+  }
+  .p-con-col.down .p-arrow-v { color: #3fb950; }
+  .p-con-col.up .p-arrow-v { color: #f85149; }
+  .p-con-delta {
+    margin-top: 10px; padding: 10px 12px;
+    border-radius: 6px; font-size: 13px; font-weight: 700;
+    text-align: center; font-family: 'JetBrains Mono', monospace;
+  }
+  .p-con-col.down .p-con-delta { background: rgba(63,185,113,0.1); color: #3fb950; border: 1px solid rgba(63,185,113,0.3); }
+  .p-con-col.up .p-con-delta { background: rgba(248,81,73,0.1); color: #f85149; border: 1px solid rgba(248,81,73,0.3); }
+  .p-con-col .note {
+    margin-top: 10px; font-size: 11.5px; color: #8b949e; line-height: 1.45;
+  }
+  .p-punch {
+    margin-top: 26px; text-align: center;
+    font-family: 'Fraunces', serif; font-size: clamp(17px, 2.2vw, 24px);
+    font-weight: 700; color: #e6edf3; letter-spacing: -0.3px;
+    line-height: 1.3;
+  }
+  .p-punch .hi { color: #fbbf24; }
+
+  /* Responsive sP */
+  @media (max-width: 900px) {
+    .p-hero { grid-template-columns: 1fr; gap: 20px; padding: 28px 22px; }
+    .p-hero-stats { grid-template-columns: 1fr 1fr 1fr; }
+    .p-isotype-grids, .p-contrast-grid { grid-template-columns: 1fr; gap: 24px; }
+    .p-iso-grid { max-width: 220px; }
+  }
+  @media (max-width: 560px) {
+    .p-big { font-size: 78px; letter-spacing: -2px; }
+    .p-iso-card .v { font-size: 46px; }
+    .p-hero-stats { grid-template-columns: 1fr; }
+    .p-con-yrs .yr .n { font-size: 30px; }
+    .p-arrow-v { font-size: 34px; flex-basis: 36px; }
+    .p-rank-row { grid-template-columns: 28px 1fr 48px; gap: 8px; padding: 6px 8px; }
+    .p-rank-row .pos { font-size: 15px; }
+    .p-rank-row.me .pos { font-size: 18px; }
+    .p-rank-bar .lbl { font-size: 11px; left: 8px; }
+    .p-rank-row .pct { font-size: 11px; }
+  }
+
   /* Matriz 4-cuadrantes inversiones */
   .quad-matrix {
     display: grid;
@@ -3621,6 +3911,7 @@
     <a href="#sH" data-target="sH"><span class="num num-icon" aria-label="Homicidio"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 5.5 L10 10 L13 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span>HOMICIDIO · RITMO</a>
     <a href="#sE" data-target="sE"><span class="num num-icon" aria-label="Extorsión"><svg viewBox="0 0 20 20"><path d="M4 6h12M4 10h12M4 14h8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><text x="14.5" y="15.5" font-size="6.5" font-weight="900" fill="currentColor" text-anchor="middle">$</text></svg></span>EXTORSIÓN · TRIBUTO</a>
     <a href="#sI" data-target="sI"><span class="num num-icon" aria-label="Cruce"><svg viewBox="0 0 20 20"><path d="M5 3v11.5M5 14.5L2.5 12M5 14.5L7.5 12M15 17V5.5M15 5.5L12.5 8M15 5.5L17.5 8" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>VIOLENCIA EN DOS FORMAS</a>
+    <a href="#sP" data-target="sP"><span class="num num-icon" aria-label="Percepción"><svg viewBox="0 0 20 20"><path d="M10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 3.2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 10.1c-1.7 0-3.1-.9-4-2.2.1-1.3 2.7-2 4-2s3.9.7 4 2c-.9 1.3-2.3 2.2-4 2.2z" fill="currentColor"/></svg></span>PERCEPCIÓN · #1 NACIONAL</a>
   </div>
 
   <div class="nav-group">
@@ -4241,6 +4532,134 @@
     </div>
     <p class="rk-caveat">Los promedios están calculados sobre los años completos de cada periodo (Peña Nieto = 4 años; AMLO = 6 años; Sheinbaum = 1 año). Municipios con base cero en homicidio y desaparición en el periodo A quedan <em>Sin datos</em>. Las variaciones altas en municipios pequeños pueden ser ruido. Para evaluación forense, cruzar con RNPDNO confidencial (40.7% de los registros).</p>
   </div>
+</section>
+
+<!-- =================================================================== -->
+<!-- SECCIÓN P — PERCEPCIÓN DE INSEGURIDAD (#1 NACIONAL 2025)            -->
+<!-- =================================================================== -->
+<section id="sP" class="map-hub" style="padding-top:60px;">
+  <div class="hub-header">
+    <h3>P — Percepción de inseguridad estatal</h3>
+    <h1>Morelos: el estado <span class="accent-ember">más inseguro percibido</span> del país</h1>
+    <p class="hub-sub">
+      En 2025, el <strong>90.09%</strong> de la población adulta de Morelos considera inseguro vivir en su entidad — la cifra más alta de los 32 estados. El país promedia 75.56%; Morelos lleva <strong>15 años consecutivos</strong> arriba del promedio nacional y en 2024-2025 alcanzó el pico histórico de la serie. La baja de homicidios oficiales <strong>no ha movido la aguja de la percepción</strong>. Fuente: Instituto Nacional de Estadística y Geografía (INEGI) · Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE).
+    </p>
+  </div>
+
+  <!-- BLOQUE 1 · HERO #1 NACIONAL -->
+  <div class="p-hero">
+    <div class="p-hero-left">
+      <div class="p-medal"><span class="star">●</span> #1 DE 32 ESTADOS</div>
+      <div class="p-big">90<span class="p-pct">.09%</span></div>
+      <div class="p-sub">ENVIPE 2025 · Morelos</div>
+    </div>
+    <div class="p-hero-right">
+      <h2>Nueve de cada diez morelenses adultos dicen que <strong>vivir en su estado es inseguro</strong>.</h2>
+      <div class="p-hero-stats">
+        <div class="p-stat">
+          <div class="k">Promedio nacional</div>
+          <div class="v">75.56%</div>
+          <div class="t">Estados Unidos Mexicanos, ENVIPE 2025</div>
+        </div>
+        <div class="p-stat">
+          <div class="k">Brecha vs nacional</div>
+          <div class="v red">+14.5 pp</div>
+          <div class="t">Una de las mayores del país</div>
+        </div>
+        <div class="p-stat">
+          <div class="k">Años consecutivos #1</div>
+          <div class="v">2</div>
+          <div class="t">2024 y 2025 · pico histórico</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2 · ISOTYPE 10×10 -->
+  <div class="p-isotype-wrap">
+    <h3>Uno frente al otro · Morelos vs el país</h3>
+    <p class="cap">Cada cuadrito representa una persona de cada 100. En rojo: los que consideran inseguro vivir en su entidad.</p>
+    <div class="p-isotype-grids">
+      <div class="p-iso-card mor">
+        <div class="t">Morelos</div>
+        <div class="v">90<span style="font-size:32px;color:#f85149;">/100</span></div>
+        <div class="p-iso-grid" id="pIsoMorelos"></div>
+        <div class="p-iso-legend">
+          <span class="chip"><span class="sq" style="background:#f85149;"></span> Inseguro</span>
+          <span class="chip"><span class="sq" style="background:rgba(63,185,113,0.55);"></span> Seguro</span>
+        </div>
+      </div>
+      <div class="p-iso-card nac">
+        <div class="t">Nacional</div>
+        <div class="v">76<span style="font-size:32px;color:#fbbf24;">/100</span></div>
+        <div class="p-iso-grid" id="pIsoNacional"></div>
+        <div class="p-iso-legend">
+          <span class="chip"><span class="sq" style="background:#fbbf24;"></span> Inseguro</span>
+          <span class="chip"><span class="sq" style="background:rgba(63,185,113,0.55);"></span> Seguro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 3 · SERIE 15 AÑOS -->
+  <div class="p-serie-wrap">
+    <h3>Quince años en el techo · serie 2011-2025</h3>
+    <p class="cap">Morelos ha estado por encima del promedio nacional cada uno de los 15 años de la ENVIPE. La banda ámbar marca la brecha anual.</p>
+    <div class="p-serie-canvas-wrap">
+      <canvas id="pSerieChart"></canvas>
+    </div>
+    <div class="p-serie-legend">
+      <span class="chip"><span class="bar" style="background:#f85149;"></span> Morelos</span>
+      <span class="chip"><span class="bar" style="background:#fbbf24;"></span> Nacional</span>
+      <span class="chip"><span class="bar" style="background:rgba(251,191,36,0.25);"></span> Brecha</span>
+    </div>
+  </div>
+
+  <!-- BLOQUE 4 · RANKING NACIONAL -->
+  <div class="p-rank-wrap">
+    <h3>Ranking nacional 2025 · los 10 estados con mayor percepción de inseguridad</h3>
+    <p class="cap">Morelos encabeza la lista. La barra muestra el porcentaje sobre 100.</p>
+    <div class="p-rank-grid" id="pRankGrid"></div>
+    <div class="p-rank-nac">
+      <span>Promedio nacional</span>
+      <strong>75.56%</strong>
+    </div>
+  </div>
+
+  <!-- BLOQUE 5 · CONTRASTE -->
+  <div class="p-contrast">
+    <h3>El dato oficial baja. La percepción no la sigue.</h3>
+    <p class="cap">Contraste 2024 → 2025 en Morelos: cifras oficiales de seguridad vs respuesta ciudadana de ENVIPE.</p>
+    <div class="p-contrast-grid">
+      <div class="p-con-col down">
+        <div class="t">Homicidio estatal (doloso + culposo)</div>
+        <div class="p-con-yrs">
+          <div class="yr"><span class="y">2024</span><span class="n">1,598</span></div>
+          <div class="p-arrow-v">↓</div>
+          <div class="yr cur"><span class="y">2025</span><span class="n">1,385</span></div>
+        </div>
+        <div class="p-con-delta">−13.3% · 213 víctimas menos</div>
+        <div class="note">Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP), corte diciembre 2025.</div>
+      </div>
+      <div class="p-con-col up">
+        <div class="t">Percepción de inseguridad estatal</div>
+        <div class="p-con-yrs">
+          <div class="yr"><span class="y">2024</span><span class="n">90.11%</span></div>
+          <div class="p-arrow-v">▬</div>
+          <div class="yr cur"><span class="y">2025</span><span class="n">90.09%</span></div>
+        </div>
+        <div class="p-con-delta">Sin movimiento · se mantiene en el techo</div>
+        <div class="note">Fuente: Instituto Nacional de Estadística y Geografía (INEGI) · ENVIPE, ediciones 2024 y 2025.</div>
+      </div>
+    </div>
+    <div class="p-punch">
+      La violencia letal <span class="hi">bajó 13%</span> — pero en el imaginario de los morelenses, Morelos <span class="hi">no se volvió más seguro</span>.
+    </div>
+  </div>
+
+  <p class="rk-caveat" style="margin-top:22px;">
+    La ENVIPE se levanta en marzo-abril de cada año y se publica en septiembre; el indicador base es <em>"¿considera inseguro vivir en su entidad federativa?"</em> sobre población de 18 años y más. La edición 2020 tuvo muestra reducida por COVID-19 pero los porcentajes son válidos bajo el diseño muestral ajustado. <strong>Fuente:</strong> Instituto Nacional de Estadística y Geografía (INEGI) · Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE), ediciones 2011 a 2025 · tabulados estatales V (cuadros 4.1/5.4/5.10/5.13 según edición).
+  </p>
 </section>
 
 <!-- SECCIÓN 1 — PORTADA CUAUTLA -->
@@ -8798,6 +9217,125 @@ function wireRankingTabs() {
   renderRanking("ttot");
   renderHomicidioEstatal();
   renderExtorsionEstatal();
+  renderPercepcionEstatal();
+}
+
+// ============ Panel P · Percepción de inseguridad (ENVIPE) ============
+function renderPercepcionEstatal() {
+  if (typeof PERCEPCION === "undefined") return;
+
+  // Bloque 2: isotype grids (10x10)
+  const buildGrid = (container, pct, cls) => {
+    if (!container) return;
+    container.innerHTML = "";
+    const filled = Math.round(pct);
+    for (let i = 0; i < 100; i++) {
+      const d = document.createElement("div");
+      d.className = "dot" + (i < filled ? " filled " + cls : "");
+      container.appendChild(d);
+    }
+  };
+  const morAct = PERCEPCION.morelos[PERCEPCION.morelos.length - 1];
+  const nacAct = PERCEPCION.nacional[PERCEPCION.nacional.length - 1];
+  buildGrid(document.getElementById("pIsoMorelos"), morAct, "mor");
+  buildGrid(document.getElementById("pIsoNacional"), nacAct, "nac");
+
+  // Bloque 3: serie 15 años
+  const cvs = document.getElementById("pSerieChart");
+  if (cvs && window.Chart) {
+    const ctx = cvs.getContext("2d");
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: PERCEPCION.anios,
+        datasets: [
+          {
+            label: "Morelos",
+            data: PERCEPCION.morelos,
+            borderColor: "#f85149",
+            backgroundColor: "rgba(248,81,73,0.18)",
+            fill: "+1",
+            tension: 0.3,
+            pointRadius: 4,
+            pointBackgroundColor: "#f85149",
+            pointBorderColor: "#0d1117",
+            pointBorderWidth: 2,
+            borderWidth: 2.8,
+          },
+          {
+            label: "Nacional",
+            data: PERCEPCION.nacional,
+            borderColor: "#fbbf24",
+            backgroundColor: "rgba(251,191,36,0.12)",
+            fill: false,
+            tension: 0.3,
+            pointRadius: 3,
+            pointBackgroundColor: "#fbbf24",
+            pointBorderColor: "#0d1117",
+            pointBorderWidth: 2,
+            borderWidth: 2,
+            borderDash: [5, 4],
+          },
+        ],
+      },
+      options: {
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        scales: {
+          y: {
+            min: 55, max: 95,
+            ticks: { color: "#8b949e", font: { family: "'JetBrains Mono', monospace", size: 11 }, callback: v => v + "%" },
+            grid: { color: "rgba(48,54,61,0.5)" },
+          },
+          x: {
+            ticks: { color: "#8b949e", font: { family: "'JetBrains Mono', monospace", size: 11 } },
+            grid: { color: "rgba(48,54,61,0.3)" },
+          },
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "#0d1117",
+            borderColor: "#30363d",
+            borderWidth: 1,
+            titleColor: "#e6edf3",
+            bodyColor: "#c9d1d9",
+            padding: 12,
+            callbacks: {
+              label: (c) => `${c.dataset.label}: ${c.parsed.y.toFixed(2)}%`,
+              afterBody: (items) => {
+                if (items.length !== 2) return "";
+                const diff = Math.abs(items[0].parsed.y - items[1].parsed.y);
+                return `Brecha: ${diff.toFixed(1)} pp`;
+              },
+            },
+          },
+        },
+      },
+    });
+  }
+
+  // Bloque 4: ranking top-10
+  const grid = document.getElementById("pRankGrid");
+  if (grid) {
+    grid.innerHTML = "";
+    const top = PERCEPCION.ranking2025.slice(0, 10);
+    const max = top[0].pct;
+    top.forEach(r => {
+      const row = document.createElement("div");
+      row.className = "p-rank-row" + (r.ent === "Morelos" ? " me" : "");
+      const widthPct = (r.pct / max) * 100;
+      row.innerHTML = `
+        <div class="pos">${r.pos}</div>
+        <div class="p-rank-bar">
+          <div class="fill" style="width:${widthPct.toFixed(1)}%;"></div>
+          <div class="lbl">${r.ent}</div>
+        </div>
+        <div class="pct">${r.pct.toFixed(1)}%</div>
+      `;
+      grid.appendChild(row);
+    });
+  }
 }
 
 // Bloqueo temporal de observers durante salto programático del nav
