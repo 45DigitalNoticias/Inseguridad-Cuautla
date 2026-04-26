@@ -5701,8 +5701,10 @@
       <p style="color:#c9d1d9;font-size:14.5px;margin-bottom:16px;line-height:1.5;">El corazón conurbado del estado. Concentra la mitad del homicidio doloso pero menos del 14% de la extorsión. Con 54% de la población, su firma criminal es <strong>patrimonial</strong>: sobreproporción en robo de vehículo y violencia familiar, infraproporción extrema en extorsión.</p>
 
       <!-- Chart · diverging horizontal bar (sobre/infraproporción 2025) -->
-      <div style="position:relative;height:300px;margin:8px 0 14px;padding:12px 14px 8px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
-        <canvas id="chartZmCuerSobreprop"></canvas>
+      <div class="chart-zoomable" style="margin:8px 0 14px;">
+        <div class="chart-canvas-frame" style="position:relative;height:300px;padding:12px 14px 8px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
+          <canvas id="chartZmCuerSobreprop"></canvas>
+        </div>
       </div>
       <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;margin-bottom:14px;text-align:center;">
         BARRA = ratio sobreproporción · LÍNEA EN 1.00 = peso poblacional ZM (54%)
@@ -5742,8 +5744,10 @@
       <p style="color:#c9d1d9;font-size:14.5px;margin-bottom:16px;line-height:1.5;">Polo del oriente del estado. Con 25% de la población, aporta cuotas grotescamente desproporcionadas en delitos específicos. Es la <strong>capital de la extorsión</strong> (80% estatal) y del rebrote del narcomenudeo. La forma del polígono lo dice: spike masivo, polígono asimétrico.</p>
 
       <!-- Chart · radar (% estatal aportado por la ZM Cuautla) -->
-      <div style="position:relative;height:320px;margin:8px 0 14px;padding:12px 14px 8px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
-        <canvas id="chartZmCuaPolygon"></canvas>
+      <div class="chart-zoomable" style="margin:8px 0 14px;">
+        <div class="chart-canvas-frame" style="position:relative;height:320px;padding:12px 14px 8px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
+          <canvas id="chartZmCuaPolygon"></canvas>
+        </div>
       </div>
       <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;margin-bottom:14px;text-align:center;">
         EJES = % estatal aportado por la ZM · CÍRCULO PUNTEADO = peso poblacional (25%)
@@ -18129,6 +18133,282 @@ new Chart(document.getElementById('chartTemxRnpdno'), {
     }
   }
 });
+</script>
+
+<!-- ============ Chart zoom · expandir gráficos a fullscreen ============ -->
+<style>
+.chart-zoomable {
+  position: relative;
+}
+.chart-expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22,27,34,0.85);
+  border: 1px solid rgba(139,148,158,0.4);
+  border-radius: 6px;
+  color: #c9d1d9;
+  cursor: pointer;
+  padding: 0;
+  transition: background 150ms, border-color 150ms, color 150ms, transform 150ms;
+}
+.chart-expand-btn:hover {
+  background: rgba(31,40,52,0.95);
+  border-color: rgba(201,209,217,0.85);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+.chart-expand-btn:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 2px;
+}
+.chart-close-btn,
+.chart-orientation-hint {
+  display: none;
+}
+.chart-zoomable.expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8,12,18,0.96);
+  padding: 56px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  min-height: 100vh !important;
+  max-height: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  animation: chart-zoom-in 200ms ease;
+  cursor: zoom-out;
+}
+/* Cualquier wrapper interno (frame, canvas directo, etc.) llena el espacio */
+.chart-zoomable.expanded > .chart-canvas-frame,
+.chart-zoomable.expanded > canvas,
+.chart-zoomable.expanded > div:not(.chart-orientation-hint) {
+  flex: 1 1 auto;
+  height: 100% !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  cursor: default;
+}
+/* Para .chart-container con canvas directo, asegura que el canvas se estire */
+.chart-zoomable.expanded > canvas {
+  display: block;
+}
+.chart-zoomable.expanded .chart-expand-btn {
+  display: none;
+}
+.chart-zoomable.expanded .chart-close-btn {
+  display: inline-flex;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22,27,34,0.92);
+  border: 1px solid rgba(139,148,158,0.55);
+  border-radius: 8px;
+  color: #c9d1d9;
+  cursor: pointer;
+  padding: 0;
+  transition: background 150ms, border-color 150ms, color 150ms;
+}
+.chart-zoomable.expanded .chart-close-btn:hover {
+  background: rgba(248,81,73,0.18);
+  border-color: rgba(248,81,73,0.7);
+  color: #ff7b72;
+}
+.chart-zoomable.expanded .chart-close-btn:focus-visible {
+  outline: 2px solid #ff7b72;
+  outline-offset: 2px;
+}
+@keyframes chart-zoom-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Hint "Gira tu teléfono" · solo mobile portrait */
+@media (max-width: 600px) and (orientation: portrait) {
+  .chart-zoomable.expanded .chart-orientation-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 8;
+    padding: 9px 16px;
+    background: rgba(22,27,34,0.94);
+    border: 1px solid rgba(88,166,255,0.55);
+    border-radius: 999px;
+    color: #c9d1d9;
+    font-size: 12px;
+    line-height: 1.2;
+    animation: hint-fade 4.5s ease forwards;
+    pointer-events: none;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+  }
+  .chart-zoomable.expanded .chart-orientation-hint .rot-icon {
+    font-size: 18px;
+    color: #58a6ff;
+    animation: rot-spin 1.8s linear infinite;
+    display: inline-block;
+    line-height: 1;
+  }
+  .chart-zoomable.expanded .chart-orientation-hint strong {
+    color: #58a6ff;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1px;
+  }
+  .chart-zoomable.expanded .chart-orientation-hint small {
+    color: #8b949e;
+    font-size: 10.5px;
+  }
+}
+@keyframes rot-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes hint-fade {
+  0%, 75% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+</style>
+
+<script>
+(function() {
+  // ============ Chart zoom · expand a fullscreen ============
+  // Cualquier wrapper con .chart-zoomable obtiene un botón ⛶ en sup-derecha.
+  // Click expande; click en backdrop / botón X / ESC cierra.
+  // Chart.js redimensiona automáticamente vía .resize() en cada toggle.
+
+  let activeWrapper = null;
+
+  function ensureControls(wrapper) {
+    if (wrapper.dataset.zoomReady === '1') return;
+
+    const expandBtn = document.createElement('button');
+    expandBtn.type = 'button';
+    expandBtn.className = 'chart-expand-btn';
+    expandBtn.setAttribute('aria-label', 'Expandir gráfico a pantalla completa');
+    expandBtn.title = 'Expandir';
+    expandBtn.innerHTML = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6V2h4M14 6V2h-4M2 10v4h4M14 10v4h-4"/></svg>';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'chart-close-btn';
+    closeBtn.setAttribute('aria-label', 'Cerrar gráfico expandido');
+    closeBtn.title = 'Cerrar (ESC)';
+    closeBtn.innerHTML = '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M3 13L13 3"/></svg>';
+
+    const hint = document.createElement('div');
+    hint.className = 'chart-orientation-hint';
+    hint.setAttribute('aria-hidden', 'true');
+    hint.innerHTML = '<span class="rot-icon">↻</span><div class="rot-text"><strong>Gira tu teléfono</strong><small>vista óptima horizontal</small></div>';
+
+    wrapper.insertBefore(hint, wrapper.firstChild);
+    wrapper.insertBefore(closeBtn, wrapper.firstChild);
+    wrapper.insertBefore(expandBtn, wrapper.firstChild);
+
+    wrapper.dataset.zoomReady = '1';
+  }
+
+  function resizeChart(wrapper) {
+    const canvas = wrapper.querySelector('canvas');
+    if (canvas && window.Chart && window.Chart.getChart) {
+      const chart = window.Chart.getChart(canvas);
+      if (chart) chart.resize();
+    }
+  }
+
+  function expand(wrapper) {
+    if (activeWrapper && activeWrapper !== wrapper) closeActive();
+    document.body.style.overflow = 'hidden';
+    wrapper.classList.add('expanded');
+    activeWrapper = wrapper;
+    requestAnimationFrame(() => requestAnimationFrame(() => resizeChart(wrapper)));
+    // Re-trigger hint animation on re-open
+    const hint = wrapper.querySelector('.chart-orientation-hint');
+    if (hint) {
+      hint.style.animation = 'none';
+      void hint.offsetWidth;
+      hint.style.animation = '';
+    }
+  }
+
+  function closeActive() {
+    if (!activeWrapper) return;
+    const w = activeWrapper;
+    w.classList.remove('expanded');
+    document.body.style.overflow = '';
+    activeWrapper = null;
+    requestAnimationFrame(() => resizeChart(w));
+  }
+
+  function init() {
+    // Auto-promote: el padre directo de cualquier <canvas> se vuelve zoomable,
+    // a menos que ya esté dentro de un .chart-zoomable (caso wrapper en 2 capas).
+    document.querySelectorAll('canvas').forEach(canvas => {
+      const wrapper = canvas.parentElement;
+      if (!wrapper) return;
+      if (wrapper.closest('.chart-zoomable')) return;
+      wrapper.classList.add('chart-zoomable');
+    });
+
+    document.querySelectorAll('.chart-zoomable').forEach(ensureControls);
+
+    document.addEventListener('click', (e) => {
+      const expBtn = e.target.closest('.chart-expand-btn');
+      if (expBtn) {
+        const wrapper = expBtn.closest('.chart-zoomable');
+        if (wrapper) expand(wrapper);
+        return;
+      }
+      const closeBtn = e.target.closest('.chart-close-btn');
+      if (closeBtn) {
+        closeActive();
+        return;
+      }
+      // Click on backdrop padding (wrapper itself, no descendant)
+      if (activeWrapper && e.target === activeWrapper) {
+        closeActive();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && activeWrapper) closeActive();
+    });
+
+    // Re-resize on viewport change while expanded (rotación, etc.)
+    window.addEventListener('resize', () => {
+      if (activeWrapper) resizeChart(activeWrapper);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
 </script>
 
 </body>
