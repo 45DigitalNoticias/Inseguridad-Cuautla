@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Archivo histórico · marcas de no-indexación -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://45digitalnoticias.github.io/Inseguridad-Morelos/">
+  <title>v2.3 · Archivo histórico · Inseguridad Morelos</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R64XZVCF6F"></script>
 <script>
@@ -13,8 +17,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="version" content="2.2-draft">
 <meta name="generated" content="2026-04-19">
-<meta name="changelog" content="v2.4: seccion Decada Nacional (sNAC1-5) - cohorte Morelos vs los 32 estados con metricas decenales 2015-2025. Espiral SVG, slope ladder, diverging bars Morelos vs nacional, cohorte 5 estados pares, heatmap nacional 32x11. v2.3: actualización SESNSP corte mar-2026 (Q1 2026 parcial). v2.2: charts ZM con sobreproporción + ZM Cuautla agregada (sZMC1-3). v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
-<title>Morelos: Seguridad municipal — Hub de investigación (v2.4)</title>
+<meta name="changelog" content="v2.3: actualización SESNSP corte mar-2026 (Q1 2026 parcial). v2.2: charts ZM con sobreproporción + ZM Cuautla agregada (sZMC1-3). v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
+
 <!-- Tipografía editorial -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4486,6 +4490,56 @@
 </style>
 </head>
 <body>
+<!-- BANNER ARCHIVO HISTÓRICO -->
+<style>
+  .archive-banner {
+    position: sticky; top: 0; z-index: 99999;
+    background: rgba(88,166,255,0.10);
+    border-left: 4px solid #58a6ff;
+    border-bottom: 1px solid rgba(88,166,255,0.45);
+    padding: 12px 22px 12px 18px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #c9d1d9;
+    font-size: 13.5px;
+    line-height: 1.55;
+    text-align: justify;
+    display: flex; align-items: center; gap: 14px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  }
+  .archive-banner .icon { font-size: 22px; flex-shrink: 0; }
+  .archive-banner .text { flex: 1; text-align: justify; }
+  .archive-banner .text strong { color: #58a6ff; font-weight: 700; letter-spacing: 0.4px; }
+  .archive-banner .text .sub { color: #8b949e; font-size: 12px; margin-top: 2px; display: block; text-align: justify; }
+  .archive-banner a.live-link {
+    color: #3fb950; text-decoration: underline; font-weight: 600; white-space: nowrap;
+    padding: 6px 12px; border: 1px solid rgba(63,185,80,0.45); border-radius: 6px;
+    transition: all 150ms; flex-shrink: 0;
+  }
+  .archive-banner a.live-link:hover { background: rgba(63,185,80,0.12); border-color: #3fb950; }
+  .archive-banner .close-btn {
+    background: transparent; border: 1px solid rgba(139,148,158,0.4); color: #8b949e;
+    width: 26px; height: 26px; border-radius: 4px; cursor: pointer; flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center; padding: 0;
+    transition: all 150ms;
+  }
+  .archive-banner .close-btn:hover { color: #c9d1d9; border-color: #c9d1d9; }
+  @media (max-width: 720px) {
+    .archive-banner { font-size: 12px; padding: 10px 14px; gap: 10px; }
+    .archive-banner .icon { font-size: 18px; }
+    .archive-banner a.live-link { padding: 5px 9px; font-size: 11.5px; }
+  }
+</style>
+<div class="archive-banner" id="archiveBanner" role="alert" aria-label="Archivo histórico">
+  <span class="icon" aria-hidden="true">📚</span>
+  <div class="text">
+    <strong>ARCHIVO HISTÓRICO · v2.3 · Publicada 2026-04-28</strong>
+    <span class="sub">Datos con corte SESNSP marzo 2026. Esta versión se mantiene como referencia histórica inalterable.</span>
+  </div>
+  <a class="live-link" href="https://45digitalnoticias.github.io/Inseguridad-Morelos/">→ Ver versión actual</a>
+  <button class="close-btn" onclick="document.getElementById('archiveBanner').remove();" aria-label="Cerrar banner" type="button">×</button>
+</div>
+
 
 <!-- Progress indicator · barra fija superior que rastrea scroll -->
 <div class="progress-indicator" aria-hidden="true"><div class="bar" id="progressBar"></div></div>
@@ -4535,7 +4589,6 @@
   <div class="nav-group nav-hub">
     <div class="nav-group-title">Panel estatal</div>
     <a href="#sHero" data-target="sHero"><span class="num num-icon" aria-label="Inicio"><svg viewBox="0 0 20 20"><path d="M10 2L2 9h2v8h5v-5h2v5h5V9h2L10 2z" fill="currentColor"/></svg></span>INICIO · RESUMEN</a>
-    <a href="#sNAC1" data-target="sNAC1" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.06);"><span class="num num-icon" aria-label="Década nacional"><svg viewBox="0 0 20 20"><path d="M2 17V7l4-3 4 3 4-3 4 3v10" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="14" cy="7" r="2.2" fill="currentColor"/></svg></span><span style="color:#f85149;font-weight:700;">DÉCADA NACIONAL</span></a>
     <a href="#s0" data-target="s0"><span class="num num-icon" aria-label="Mapa"><svg viewBox="0 0 20 20"><path d="M10 2C6.5 2 4 4.5 4 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.5-2.5-6-6-6zm0 8.3a2.3 2.3 0 110-4.6 2.3 2.3 0 010 4.6z" fill="currentColor"/></svg></span>MAPA</a>
     <a href="#sR" data-target="sR"><span class="num num-icon" aria-label="Ranking"><svg viewBox="0 0 20 20"><rect x="2.5" y="12" width="3.5" height="5.5" rx="0.6" fill="currentColor"/><rect x="8.25" y="7.5" width="3.5" height="10" rx="0.6" fill="currentColor"/><rect x="14" y="3" width="3.5" height="14.5" rx="0.6" fill="currentColor"/></svg></span>RANKING ESTATAL</a>
     <a href="#sH" data-target="sH"><span class="num num-icon" aria-label="Homicidio"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 5.5 L10 10 L13 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span>HOMICIDIO · RITMO</a>
@@ -4863,7 +4916,7 @@
   </div>
 
   <div class="nav-footer">
-    <span style="color:#f85149;">v2.4 · 28-abr-2026</span><br>
+    <span style="color:#3fb950;">v2.3 · 28-abr-2026</span><br>
     SESNSP · Mar 2026<br>
     RNPDNO · Dic 2025<br>
     <a href="versiones/" style="color:#8b949e;text-decoration:none;font-size:11px;border-bottom:1px dotted rgba(139,148,158,0.4);">Ver versiones anteriores ↗</a>
@@ -5102,806 +5155,38 @@
       .v23-banner h2 { font-size:22px; }
     }
   </style>
-  <div class="v23-banner" style="background:linear-gradient(135deg, rgba(248,81,73,0.10) 0%, rgba(251,191,36,0.06) 100%);border-color:rgba(248,81,73,0.55);border-left-color:#f85149;">
-    <div class="v23-eyebrow" style="color:#f85149;"><span class="pulse" style="background:#f85149;box-shadow:0 0 8px rgba(248,81,73,0.85);"></span>Actualización · v2.4 · 28 de abril de 2026 · Análisis decenal nacional</div>
-    <h2>Una década en sentido contrario: <strong style="color:#f85149;">Morelos lleva diez años empeorando más rápido que el país</strong></h2>
-    <p>Comparado con las 32 entidades federativas en el periodo 2015-2025, Morelos tiene la <strong>tendencia anual decenal más alta de México</strong> en homicidio doloso (+8.76% anual), la <strong>tasa de feminicidio más alta del país</strong> (1.67 por 100K habitantes), y subió el robo de vehículo 23% mientras el promedio nacional bajó 29%. La trayectoria está desacoplada del comportamiento nacional. Esta versión integra el análisis cohorte como sección dedicada.</p>
+  <div class="v23-banner">
+    <div class="v23-eyebrow"><span class="pulse"></span>Actualización · v2.3 · 28 de abril de 2026 · Corte SESNSP marzo 2026</div>
+    <h2>Morelos <strong>no siguió la baja nacional</strong> del homicidio doloso en el primer trimestre 2026</h2>
+    <p>El gobierno federal celebra una caída del 41% en el promedio diario de homicidios dolosos a nivel nacional entre septiembre 2024 y marzo 2026. <strong>En las 14 zonas metropolitanas analizadas de Morelos, el indicador se mantuvo plano (+1.6% interanual)</strong> — y la extorsión <strong>se multiplicó por 2.5</strong>. Esta versión integra los datos del corte SESNSP marzo 2026, sin modificar las cifras 2015-2025 ya publicadas.</p>
     <div class="v23-stats">
       <div class="v23-stat">
-        <div class="num" style="color:#f85149;">#3</div>
-        <div class="lbl">Tasa decenal · homicidio doloso · 45.20/100K hab</div>
-        <div class="delta up">▲ 2.14× la media nacional (21.13)</div>
+        <div class="num">+1.6%</div>
+        <div class="lbl">Homicidio doloso · 14 ZM Morelos · Q1 2025 → Q1 2026</div>
+        <div class="delta flat">▬ Plano vs −41% nacional</div>
       </div>
       <div class="v23-stat">
-        <div class="num" style="color:#f85149;">#1</div>
-        <div class="lbl">Tendencia anual decenal · homicidio doloso</div>
-        <div class="delta up">▲ +8.76% por año · el peor del país</div>
+        <div class="num">+150.9%</div>
+        <div class="lbl">Extorsión · 14 ZM · Q1 2025 → Q1 2026</div>
+        <div class="delta up">▲ De 55 a 138 carpetas</div>
       </div>
       <div class="v23-stat">
-        <div class="num" style="color:#f85149;">#1</div>
-        <div class="lbl">Tasa decenal · feminicidio · de 32 entidades</div>
-        <div class="delta up">▲ 1.67/100K · 2.6× la media nacional</div>
+        <div class="num">+17.3%</div>
+        <div class="lbl">Violencia familiar · 14 ZM · Q1 2025 → Q1 2026</div>
+        <div class="delta up">▲ Sube · no hay subregistro de denuncia</div>
       </div>
       <div class="v23-stat">
-        <div class="num" style="color:#f85149;">+107.7%</div>
-        <div class="lbl">Cambio acumulado homicidio doloso 2015 → 2025</div>
-        <div class="delta up">▲ Morelos más que duplicó · nacional +24%</div>
+        <div class="num">16</div>
+        <div class="lbl">Hallazgos rojos detectados (auditoría)</div>
+        <div class="delta up">⚠ Posibles reclasificaciones de tipificación</div>
       </div>
     </div>
     <div class="v23-actions">
-      <a href="#sNAC1" class="v23-cta" style="background:#f85149;color:#fff;">Ver sección decenal →</a>
-      <a href="#sQ1" class="v23-cta secondary">Q1 2026 · actualización</a>
+      <a href="#sQ1" class="v23-cta">Ver detalle Q1 2026 →</a>
       <a href="versiones/" class="v23-cta secondary">Ver versiones anteriores</a>
     </div>
   </div>
 </section>
-
-
-<!-- =============================================================== -->
-<!-- SECCIÓN sNAC · DÉCADA NACIONAL · 5 ACTOS (v2.4)                  -->
-<!-- Análisis de la trayectoria decenal de Morelos vs los 32 estados -->
-<!-- Fuente: SESNSP 2015-2025 · CONAPO 2025                          -->
-<!-- Clases prefijadas .nac-* para evitar colisión con dashboard      -->
-<!-- =============================================================== -->
-
-<style>
-  /* === sNAC · ESTILOS PREFIJADOS === */
-  .nac-spiral-stage {
-    position: relative; aspect-ratio: 16 / 11;
-    background: radial-gradient(ellipse at 50% 60%, rgba(248,81,73,0.10) 0%, rgba(88,166,255,0.05) 35%, rgba(13,17,23,1) 75%);
-    border: 1px solid rgba(48, 54, 61, 0.6); border-radius: 18px; overflow: hidden;
-  }
-  .nac-spiral-stage svg { width: 100%; height: 100%; display: block; }
-  .nac-hero-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; letter-spacing: 3px;
-    color: #f85149; font-weight: 800; text-transform: uppercase;
-    display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
-  }
-  .nac-hero-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
-  .nac-hero-headline {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(32px, 5vw, 60px); line-height: 1.05;
-    font-weight: 800; letter-spacing: -1.2px;
-    color: #e6edf3; margin-bottom: 22px; max-width: 1080px;
-  }
-  .nac-hero-headline em {
-    font-style: normal;
-    background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #58a6ff 100%);
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  .nac-hero-lead {
-    font-size: 18px; color: #c9d1d9; line-height: 1.55;
-    max-width: 880px; margin-bottom: 26px; text-align: justify;
-  }
-  .nac-hero-lead strong { color: #e6edf3; }
-  .nac-act-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11.5px; letter-spacing: 2.5px; color: #8b949e;
-    font-weight: 800; text-transform: uppercase; margin-bottom: 12px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .nac-act-eyebrow .num {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 18px; font-weight: 700; color: #58a6ff;
-    letter-spacing: -0.5px; font-style: italic;
-  }
-  .nac-act-eyebrow::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(88,166,255,0.4), transparent); }
-  .nac-act-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(26px, 3.2vw, 38px); line-height: 1.15;
-    font-weight: 700; color: #e6edf3; letter-spacing: -0.5px; margin-bottom: 18px;
-  }
-  .nac-act-title em { font-style: italic; color: #f85149; }
-  .nac-act-lead {
-    font-size: 16px; color: #8b949e; line-height: 1.6;
-    max-width: 920px; margin-bottom: 36px; text-align: justify;
-  }
-  .nac-act-lead strong { color: #c9d1d9; }
-  .nac-ranking-grid {
-    display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
-    gap: 14px; margin-bottom: 42px;
-  }
-  .nac-rank-card {
-    flex: 1 1 280px; min-width: 260px; max-width: 340px;
-    background: linear-gradient(160deg, rgba(22,27,34,0.95) 0%, rgba(22,27,34,0.7) 100%);
-    border: 1px solid #30363d; border-radius: 14px;
-    padding: 22px 22px 18px; position: relative; overflow: hidden;
-  }
-  .nac-rank-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, #f85149, #fbbf24);
-  }
-  .nac-rank-card .nac-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10.5px; letter-spacing: 1.6px; font-weight: 700;
-    color: #8b949e; text-transform: uppercase; margin-bottom: 14px;
-  }
-  .nac-rank-card .nac-position { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
-  .nac-rank-card .nac-pos-num {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 60px; font-weight: 900; line-height: 0.95;
-    background: linear-gradient(135deg, #f85149 0%, #fbbf24 100%);
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-    letter-spacing: -3px;
-  }
-  .nac-rank-card .nac-pos-of {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 16px; color: #8b949e; font-weight: 600;
-  }
-  .nac-rank-card .nac-metric {
-    font-size: 14px; color: #c9d1d9; line-height: 1.4;
-    margin-bottom: 12px; font-weight: 500; text-align: justify;
-  }
-  .nac-rank-card .nac-metric strong { color: #e6edf3; font-weight: 700; }
-  .nac-rank-scale { display: flex; gap: 2px; align-items: end; height: 22px; margin-bottom: 8px; }
-  .nac-rank-scale .seg { flex: 1; min-width: 4px; background: rgba(139,148,158,0.18); border-radius: 1px; height: 14px; }
-  .nac-rank-scale .seg.morelos {
-    background: linear-gradient(180deg, #f85149, #d29922);
-    height: 22px;
-    box-shadow: 0 0 8px rgba(248,81,73,0.55);
-  }
-  .nac-rank-foot {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10.5px; color: #6e7681; letter-spacing: 0.5px;
-  }
-  .nac-slope-wrap {
-    background: rgba(22,27,34,0.55);
-    border: 1px solid rgba(48,54,61,0.7); border-radius: 12px;
-    padding: 24px 28px; margin-bottom: 42px;
-  }
-  .nac-slope-wrap h3 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 22px; color: #e6edf3; font-weight: 700;
-    margin-bottom: 8px; letter-spacing: -0.3px;
-  }
-  .nac-slope-wrap p { color: #8b949e; font-size: 14px; margin-bottom: 18px; text-align: justify; }
-  .nac-slope-list { display: flex; flex-direction: column; gap: 4px; }
-  .nac-slope-row {
-    display: grid; grid-template-columns: 28px 1fr 60px 70px;
-    align-items: center; gap: 12px;
-    padding: 5px 12px; border-radius: 6px;
-    font-family: 'JetBrains Mono', monospace; font-size: 12px;
-    transition: background 150ms;
-  }
-  .nac-slope-row:hover { background: rgba(48,54,61,0.4); }
-  .nac-slope-row.morelos {
-    background: rgba(248,81,73,0.15);
-    border: 1px solid rgba(248,81,73,0.55);
-    box-shadow: 0 2px 12px rgba(248,81,73,0.18);
-    font-weight: 700;
-  }
-  .nac-slope-row .nac-pos { color: #6e7681; font-weight: 700; font-size: 11px; }
-  .nac-slope-row.morelos .nac-pos { color: #f85149; }
-  .nac-slope-row .nac-name { color: #c9d1d9; font-family: 'Inter', sans-serif; font-size: 13px; }
-  .nac-slope-row.morelos .nac-name { color: #f85149; font-weight: 800; }
-  .nac-slope-row .nac-bar-cell { position: relative; height: 18px; }
-  .nac-slope-row .nac-bar-zero { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: rgba(201,209,217,0.45); }
-  .nac-slope-row .nac-bar { position: absolute; top: 3px; bottom: 3px; border-radius: 2px; }
-  .nac-slope-row .nac-bar.up   { background: linear-gradient(90deg, rgba(248,81,73,0.4), #f85149); left: 50%; }
-  .nac-slope-row .nac-bar.down { background: linear-gradient(90deg, #58a6ff, rgba(88,166,255,0.4)); right: 50%; }
-  .nac-slope-row .nac-pct { text-align: right; color: #c9d1d9; font-weight: 700; }
-  .nac-slope-row.morelos .nac-pct { color: #f85149; }
-  .nac-slope-row .nac-rate { text-align: right; font-size: 10.5px; color: #6e7681; }
-  .nac-slope-row.morelos .nac-rate { color: #fbbf24; }
-  .nac-diverging-wrap {
-    background: rgba(22,27,34,0.55);
-    border: 1px solid rgba(48,54,61,0.7); border-radius: 12px;
-    padding: 24px 28px; margin-bottom: 42px;
-  }
-  .nac-div-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 8px; }
-  .nac-div-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; align-items: center; }
-  .nac-div-row .nac-label-cell {
-    font-family: 'Inter', sans-serif; font-size: 14px; color: #c9d1d9;
-    font-weight: 600; padding-right: 8px;
-  }
-  .nac-div-bars { display: flex; flex-direction: column; gap: 4px; position: relative; padding: 6px 0; }
-  .nac-div-bar { position: relative; height: 22px; background: rgba(139,148,158,0.10); border-radius: 3px; }
-  .nac-div-bar .nac-center-line { position: absolute; top: 0; bottom: 0; width: 1.5px; background: rgba(201,209,217,0.5); }
-  .nac-div-bar .nac-fill { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
-  .nac-div-bar .nac-fill.up   { background: linear-gradient(90deg, rgba(248,81,73,0.6), #f85149); }
-  .nac-div-bar .nac-fill.down { background: linear-gradient(90deg, #58a6ff, rgba(88,166,255,0.5)); }
-  .nac-div-bar .nac-v-label {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
-    color: #fff; padding: 0 8px;
-  }
-  .nac-div-bar .nac-v-label.outside-up   { color: #ff7b72; }
-  .nac-div-bar .nac-v-label.outside-down { color: #58a6ff; }
-  .nac-div-bar.label-row {
-    background: transparent; height: 16px; border-radius: 0;
-    color: #6e7681; font-family: 'JetBrains Mono', monospace; font-size: 9.5px;
-    letter-spacing: 0.5px;
-  }
-  .nac-div-bar.label-row .ll { position: absolute; left: 4px; }
-  .nac-div-bar.label-row .lr { position: absolute; right: 4px; }
-  .nac-div-foot {
-    font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #6e7681;
-    margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(48,54,61,0.5);
-    letter-spacing: 0.4px; text-align: center;
-  }
-  .nac-cohort-wrap {
-    background: rgba(22,27,34,0.55);
-    border: 1px solid rgba(48,54,61,0.7); border-radius: 12px;
-    padding: 24px 28px; margin-bottom: 42px;
-  }
-  .nac-heatmap-wrap {
-    background: rgba(22,27,34,0.55);
-    border: 1px solid rgba(48,54,61,0.7); border-radius: 12px;
-    padding: 24px 28px; margin-bottom: 42px; overflow-x: auto;
-  }
-  .nac-heatmap {
-    width: 100%; min-width: 900px; border-collapse: collapse;
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-  }
-  .nac-heatmap th {
-    color: #8b949e; font-weight: 700; padding: 6px 4px;
-    border-bottom: 1px solid #30363d; text-align: center; letter-spacing: 0.5px;
-  }
-  .nac-heatmap th.muni { text-align: left; padding-left: 10px; }
-  .nac-heatmap td {
-    text-align: center; padding: 4px 2px; border-bottom: 1px solid rgba(48,54,61,0.3);
-  }
-  .nac-heatmap td.muni-cell {
-    text-align: left; padding-left: 10px;
-    color: #c9d1d9; font-family: 'Inter', sans-serif; font-size: 11.5px; font-weight: 500;
-  }
-  .nac-heatmap tr.morelos-row td.muni-cell { color: #f85149; font-weight: 800; }
-  .nac-heatmap tr.morelos-row {
-    background: rgba(248,81,73,0.10);
-    box-shadow: inset 0 0 0 1px rgba(248,81,73,0.4);
-  }
-  .nac-heatmap td .cell {
-    display: block; padding: 5px 3px; border-radius: 3px;
-    font-size: 10px; font-weight: 700; color: #0d1117;
-  }
-  .nac-h-0  { background: rgba(63,185,80,0.10); color: #6e7681; }
-  .nac-h-1  { background: rgba(63,185,80,0.30); color: #c9d1d9; }
-  .nac-h-2  { background: rgba(251,191,36,0.30); color: #c9d1d9; }
-  .nac-h-3  { background: rgba(251,191,36,0.55); color: #0d1117; }
-  .nac-h-4  { background: rgba(248,81,73,0.45); color: #fff; }
-  .nac-h-5  { background: rgba(248,81,73,0.65); color: #fff; }
-  .nac-h-6  { background: rgba(248,81,73,0.85); color: #fff; }
-  .nac-h-7  { background: #f85149; color: #fff; }
-  .nac-closing {
-    background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%);
-    border: 1px solid rgba(248,81,73,0.40);
-    border-left: 4px solid #f85149;
-    border-radius: 14px;
-    padding: 32px 36px; margin-bottom: 28px;
-  }
-  .nac-closing h2 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(24px, 3vw, 32px); line-height: 1.2;
-    color: #e6edf3; font-weight: 800;
-    margin-bottom: 16px; letter-spacing: -0.4px;
-  }
-  .nac-closing h2 em { font-style: italic; color: #f85149; }
-  .nac-closing p {
-    font-size: 15.5px; color: #c9d1d9; line-height: 1.65;
-    margin-bottom: 12px; text-align: justify;
-  }
-  .nac-closing p strong { color: #e6edf3; }
-  @keyframes nacPulseGlow {
-    0%, 100% { filter: drop-shadow(0 0 6px rgba(248,81,73,0.4)); }
-    50%      { filter: drop-shadow(0 0 14px rgba(248,81,73,0.85)); }
-  }
-  @media (max-width: 720px) {
-    .nac-hero-headline { font-size: 28px; }
-    .nac-div-row { grid-template-columns: 1fr; gap: 6px; }
-    .nac-div-row .nac-label-cell { padding-bottom: 4px; }
-    .nac-slope-row { grid-template-columns: 24px 1fr 50px 56px; gap: 8px; font-size: 11px; }
-  }
-</style>
-
-<!-- sNAC1 — PORTADA · espiral decenal -->
-<section id="sNAC1">
-  <div class="nac-hero-eyebrow">SECCIÓN ESPECIAL · COHORTE NACIONAL</div>
-  <h1 class="nac-hero-headline">Diez años después: la trayectoria de Morelos en homicidio doloso <em>es la peor de México</em></h1>
-  <p class="nac-hero-lead">
-    En el periodo 2015 a 2025, Morelos subió el indicador de homicidio doloso prácticamente cada año, a un ritmo promedio de <strong>+8.76% anual</strong> — la pendiente decenal más alta de las 32 entidades del país. La tasa promedio del decenio (45.2 por 100K habitantes) es la tercera más alta a nivel nacional, más del doble del promedio del país. <strong>La trayectoria está desacoplada del comportamiento nacional</strong>: mientras varios estados mejoraron en el decenio o se mantuvieron estables, Morelos no detuvo el alza.
-  </p>
-
-  <div class="chart-zoomable nac-spiral-stage">
-    <svg id="nacSpiralSvg" viewBox="0 0 1200 825" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="nacBgRadial" cx="50%" cy="55%" r="60%">
-          <stop offset="0%" stop-color="rgba(248,81,73,0.16)"/>
-          <stop offset="40%" stop-color="rgba(251,191,36,0.07)"/>
-          <stop offset="100%" stop-color="rgba(13,17,23,0)"/>
-        </radialGradient>
-        <linearGradient id="nacMorelosGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#fbbf24"/>
-          <stop offset="50%" stop-color="#ff7b72"/>
-          <stop offset="100%" stop-color="#f85149"/>
-        </linearGradient>
-        <linearGradient id="nacNatGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#8b949e"/>
-          <stop offset="100%" stop-color="#6e7681"/>
-        </linearGradient>
-        <radialGradient id="nacDotRedGrad" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="rgba(248,81,73,0.95)"/>
-          <stop offset="60%" stop-color="rgba(248,81,73,0.45)"/>
-          <stop offset="100%" stop-color="rgba(248,81,73,0)"/>
-        </radialGradient>
-      </defs>
-      <rect width="1200" height="825" fill="url(#nacBgRadial)"/>
-      <g fill="#ffffff" opacity="0.18">
-        <circle cx="120" cy="80" r="1.0"/><circle cx="280" cy="50" r="1.3"/>
-        <circle cx="450" cy="100" r="1.0"/><circle cx="640" cy="60" r="1.2"/>
-        <circle cx="820" cy="90" r="1.1"/><circle cx="980" cy="50" r="1.3"/>
-        <circle cx="1140" cy="120" r="1.0"/><circle cx="180" cy="780" r="1.2"/>
-        <circle cx="380" cy="800" r="1.0"/><circle cx="600" cy="785" r="1.3"/>
-        <circle cx="900" cy="780" r="1.1"/><circle cx="1080" cy="800" r="1.2"/>
-      </g>
-      <g id="nacSpiralPaths"></g>
-      <g id="nacSpiralDots"></g>
-      <g id="nacSpiralLabels"></g>
-      <g transform="translate(600, 412)">
-        <circle r="60" fill="rgba(13,17,23,0.85)" stroke="rgba(248,81,73,0.4)" stroke-width="1"/>
-        <text y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8b949e" letter-spacing="2">DECENIO</text>
-        <text y="14" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="800" fill="#fbbf24">2015 → 2025</text>
-        <text y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#6e7681">+ Q1 2026</text>
-      </g>
-    </svg>
-  </div>
-
-  <div style="margin-top:36px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px;">
-    <div style="flex:1 1 220px;min-width:200px;max-width:280px;background:rgba(248,81,73,0.10);border:1px solid rgba(248,81,73,0.45);border-radius:10px;padding:14px 16px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#f85149;letter-spacing:1.6px;font-weight:800;margin-bottom:6px;">MORELOS · TASA DECENAL</div>
-      <div style="font-family:'Fraunces',Georgia,serif;font-size:32px;font-weight:800;color:#fff;line-height:1;">45.2 <span style="font-size:13px;color:#8b949e;font-family:'JetBrains Mono',monospace;font-weight:600;">/100K</span></div>
-      <div style="font-size:11.5px;color:#c9d1d9;margin-top:6px;line-height:1.4;">Más del doble del promedio nacional (21.13/100K).</div>
-    </div>
-    <div style="flex:1 1 220px;min-width:200px;max-width:280px;background:rgba(248,81,73,0.10);border:1px solid rgba(248,81,73,0.45);border-radius:10px;padding:14px 16px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#f85149;letter-spacing:1.6px;font-weight:800;margin-bottom:6px;">TENDENCIA ANUAL DECENAL</div>
-      <div style="font-family:'Fraunces',Georgia,serif;font-size:32px;font-weight:800;color:#fff;line-height:1;">+8.76% <span style="font-size:13px;color:#8b949e;font-family:'JetBrains Mono',monospace;font-weight:600;">/año</span></div>
-      <div style="font-size:11.5px;color:#c9d1d9;margin-top:6px;line-height:1.4;"><strong style="color:#f85149;">#1 de 32</strong> · el peor del país en empeoramiento sostenido.</div>
-    </div>
-    <div style="flex:1 1 220px;min-width:200px;max-width:280px;background:rgba(251,191,36,0.10);border:1px solid rgba(251,191,36,0.45);border-radius:10px;padding:14px 16px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#fbbf24;letter-spacing:1.6px;font-weight:800;margin-bottom:6px;">CAMBIO 2015 → 2025</div>
-      <div style="font-family:'Fraunces',Georgia,serif;font-size:32px;font-weight:800;color:#fff;line-height:1;">+107.7%</div>
-      <div style="font-size:11.5px;color:#c9d1d9;margin-top:6px;line-height:1.4;">Morelos más que duplicó · nacional +24%.</div>
-    </div>
-    <div style="flex:1 1 220px;min-width:200px;max-width:280px;background:rgba(248,81,73,0.10);border:1px solid rgba(248,81,73,0.45);border-radius:10px;padding:14px 16px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#f85149;letter-spacing:1.6px;font-weight:800;margin-bottom:6px;">MORELOS VS NACIONAL · TASA</div>
-      <div style="font-family:'Fraunces',Georgia,serif;font-size:32px;font-weight:800;color:#fff;line-height:1;">2.14× <span style="font-size:13px;color:#8b949e;font-family:'JetBrains Mono',monospace;font-weight:600;">la media</span></div>
-      <div style="font-size:11.5px;color:#c9d1d9;margin-top:6px;line-height:1.4;">45.20 vs 21.13 por 100K · 10 años promedio nacional.</div>
-    </div>
-  </div>
-</section>
-
-<!-- sNAC2 — Ranking + Slope ladder -->
-<section id="sNAC2">
-  <div class="nac-act-eyebrow"><span class="num">02</span>Morelos en el ranking nacional · métricas decenales</div>
-  <h2 class="nac-act-title">Cuatro métricas, una década, una posición que <em>no es accidente</em></h2>
-  <p class="nac-act-lead">
-    Las cifras absolutas pueden engañar — los estados grandes tienen más casos por aritmética simple. Pero las tasas por 100,000 habitantes y las tendencias relativas equiparan tamaños y exponen el comportamiento estructural. En cuatro métricas claves del decenio, Morelos está entre los <strong>peor posicionados</strong> del país. No es uno: son cuatro.
-  </p>
-
-  <div class="nac-ranking-grid">
-    <div class="nac-rank-card">
-      <div class="nac-label">Tasa por 100K · homicidio doloso · promedio decenal</div>
-      <div class="nac-position"><span class="nac-pos-num">3</span><span class="nac-pos-of">de 32</span></div>
-      <div class="nac-metric"><strong>45.2 / 100K</strong> · más del doble del promedio nacional (21.13).</div>
-      <div class="nac-rank-scale" id="nacScaleTasaHd"></div>
-      <div class="nac-rank-foot">Solo Colima (72.9) y Baja California (51.4) lo superan.</div>
-    </div>
-    <div class="nac-rank-card">
-      <div class="nac-label">Tendencia anual decenal · homicidio doloso</div>
-      <div class="nac-position"><span class="nac-pos-num">1</span><span class="nac-pos-of">de 32</span></div>
-      <div class="nac-metric"><strong>+8.76% por año</strong> · la pendiente decenal más alta del país.</div>
-      <div class="nac-rank-scale" id="nacScaleSlopeHd"></div>
-      <div class="nac-rank-foot">Le sigue Nuevo León (+8.33%) y Guanajuato (+6.95%).</div>
-    </div>
-    <div class="nac-rank-card">
-      <div class="nac-label">Tasa por 100K · feminicidio · promedio decenal</div>
-      <div class="nac-position"><span class="nac-pos-num">1</span><span class="nac-pos-of">de 32</span></div>
-      <div class="nac-metric"><strong>1.67 / 100K</strong> · 2.6× la media nacional (0.64).</div>
-      <div class="nac-rank-scale" id="nacScaleTasaFem"></div>
-      <div class="nac-rank-foot">El estado con más feminicidio per cápita del país durante 10 años.</div>
-    </div>
-    <div class="nac-rank-card">
-      <div class="nac-label">Tendencia anual decenal · robo de vehículo</div>
-      <div class="nac-position"><span class="nac-pos-num">2</span><span class="nac-pos-of">de 32</span></div>
-      <div class="nac-metric"><strong>+4.30% por año</strong> · mientras nacional bajó −28.8% en el decenio.</div>
-      <div class="nac-rank-scale" id="nacScaleSlopeRv"></div>
-      <div class="nac-rank-foot">Único top 3 nacional en tasa que ADEMÁS sigue subiendo.</div>
-    </div>
-  </div>
-
-  <div class="chart-zoomable nac-slope-wrap">
-    <h3>Tendencia anual decenal · homicidio doloso · 32 entidades</h3>
-    <p>Cada barra muestra la pendiente promedio del decenio 2015-2025 para cada estado. Una pendiente positiva significa que el estado fue empeorando en homicidio doloso a lo largo del decenio. Morelos lidera el ranking de los que más subieron — incluso por encima de estados con problemas de violencia conocidos como Guanajuato, Sonora o Colima. La pendiente positiva más alta del país es de Morelos.</p>
-    <div class="nac-slope-list" id="nacSlopeLadder"></div>
-  </div>
-</section>
-
-<!-- sNAC3 — Diverging -->
-<section id="sNAC3">
-  <div class="nac-act-eyebrow"><span class="num">03</span>El espejo · Morelos vs el promedio nacional</div>
-  <h2 class="nac-act-title">Para cada delito, una <em>pregunta</em></h2>
-  <p class="nac-act-lead">
-    Los seis indicadores graves del fuero común, comparados lado a lado: nacional vs Morelos, mismo periodo (2015 → 2025). En tres de los seis, Morelos creció más del doble que el promedio nacional. En uno (robo de vehículo) Morelos subió mientras el país bajaba. En dos (narcomenudeo y violencia familiar) Morelos creció <strong>menos</strong> que el promedio — y eso también es información: si la captura del Ministerio Público fuera lo que explica todas las "bajas sospechosas" de Morelos, estos delitos también deberían bajar. Suben.
-  </p>
-  <div class="nac-diverging-wrap">
-    <div class="nac-div-grid" id="nacDivergingGrid"></div>
-    <div class="nac-div-foot">CAMBIO % 2015 → 2025 · 🟦 NACIONAL · 🟥 MORELOS · LÍNEA EN 0% = SIN CAMBIO</div>
-  </div>
-</section>
-
-<!-- sNAC4 — Cohorte 5 estados -->
-<section id="sNAC4">
-  <div class="nac-act-eyebrow"><span class="num">04</span>El cohorte · cómo se ve Morelos vs sus pares</div>
-  <h2 class="nac-act-title">Cinco estados de tamaño similar · <em>una década paralela</em></h2>
-  <p class="nac-act-lead">
-    Para responder a la crítica natural de que "Morelos es chico, no se compara con estados grandes", aquí están los cinco estados con población más cercana a Morelos (entre 1.4 y 3.2 millones de habitantes, todos del centro-sur de México): <strong>Querétaro</strong>, <strong>San Luis Potosí</strong>, <strong>Hidalgo</strong>, <strong>Tlaxcala</strong> y <strong>Aguascalientes</strong>. Ninguno tuvo la trayectoria de Morelos. Cuatro mantuvieron tasas estables; uno (San Luis Potosí) subió y luego bajó. Solo Morelos sube prácticamente cada año.
-  </p>
-  <div class="nac-cohort-wrap">
-    <div style="position:relative;height:460px;margin:16px 0 8px;padding:12px 16px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.6);border-radius:10px;">
-      <canvas id="nacCohortChart"></canvas>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6e7681;margin-top:10px;letter-spacing:0.4px;text-align:center;">
-      TASA DE HOMICIDIO DOLOSO POR 100K HAB · 2015 A 2025 · POBLACIONES CONAPO 2025
-    </div>
-  </div>
-</section>
-
-<!-- sNAC5 — Heatmap nacional + cierre -->
-<section id="sNAC5">
-  <div class="nac-act-eyebrow"><span class="num">05</span>El mapa térmico nacional · una década completa</div>
-  <h2 class="nac-act-title">32 estados, 11 años, una tasa: <em>mira la fila de Morelos</em></h2>
-  <p class="nac-act-lead">
-    Cada celda es la tasa de homicidio doloso por 100,000 habitantes de un estado en un año. Cuanto más rojo, más alto el indicador. La fila de Morelos se mantiene roja durante toda la década, intensificándose hacia el centro de los años. Es el patrón visual más claro: la violencia letal en Morelos no es un fenómeno coyuntural — es estructural.
-  </p>
-
-  <div class="chart-zoomable nac-heatmap-wrap">
-    <table class="nac-heatmap" id="nacHeatmap"></table>
-    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#8b949e;align-items:center;">
-      <span style="margin-right:6px;font-weight:700;color:#c9d1d9;">Escala tasa /100K:</span>
-      <span class="cell nac-h-0" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#6e7681;">0–5</span>
-      <span class="cell nac-h-1" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#c9d1d9;">5–10</span>
-      <span class="cell nac-h-2" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#c9d1d9;">10–15</span>
-      <span class="cell nac-h-3" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#0d1117;">15–25</span>
-      <span class="cell nac-h-4" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#fff;">25–40</span>
-      <span class="cell nac-h-5" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#fff;">40–55</span>
-      <span class="cell nac-h-6" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#fff;">55–80</span>
-      <span class="cell nac-h-7" style="padding:3px 8px;border-radius:3px;display:inline-block;color:#fff;">80+</span>
-    </div>
-  </div>
-
-  <div class="nac-closing">
-    <h2>Una década en sentido contrario: <em>la trayectoria que el país no comparte</em></h2>
-    <p>
-      Lo que muestran estos diez años de datos es que <strong>la trayectoria de Morelos está desacoplada del promedio nacional</strong> en los indicadores más graves del fuero común. La tasa decenal de homicidio doloso es la tercera del país. La tendencia anual — el ritmo al que el indicador empeora cada año — es la primera de 32 entidades. La extorsión creció 144% (vs 75% nacional). El robo de vehículo subió 23% mientras el país bajó 29%. La tasa de feminicidio del decenio es la más alta de México.
-    </p>
-    <p>
-      No es un fenómeno coyuntural. No es un año específico. No es una administración aislada — la serie atraviesa tres administraciones estatales y dos federales. La trayectoria es <strong>estructural y consistente</strong>: Morelos sube prácticamente todos los años, mientras el promedio nacional oscila o, en algunos indicadores, mejora.
-    </p>
-    <p>
-      Esta sección documenta la trayectoria de larga duración. Para el comportamiento puntual del primer trimestre 2026 — donde, predeciblemente, Morelos tampoco siguió la baja nacional del homicidio doloso — el dashboard cuenta con una <a href="#sQ1" style="color:#f85149;text-decoration:underline;">sección dedicada</a> que aterriza la coyuntura. La línea decenal y el último trimestre cuentan la misma historia desde escalas distintas.
-    </p>
-  </div>
-
-  <div class="footer-note" style="text-align:justify;">
-    <strong>Fuentes y método.</strong> SESNSP · Tabla Dinámica RNID Municipal Delitos · cortes diciembre 2025 (publicación febrero 2026) y marzo 2026 (publicación abril 2026). CONAPO 2025 para denominadores poblacionales. Tasas calculadas como (carpetas / población × 100,000).
-    <br><br>
-    <strong>Métricas explicadas.</strong> <strong>Tasa promedio decenal:</strong> promedio anual de carpetas 2015-2025 dividido entre población × 100K. <strong>Tendencia anual (slope%):</strong> regresión lineal sobre la serie 2015-2025, expresada como porcentaje del promedio anual. <strong>Cambio 2015→2025:</strong> variación porcentual del valor inicial al final del decenio.
-    <br><br>
-    <strong>Lo que esta sección NO afirma.</strong> No atribuye responsabilidad a una administración específica — los datos cubren tres administraciones estatales y dos federales. No proyecta el comportamiento futuro. No afirma que Morelos sea "el peor estado del país" — es de los peores en algunos indicadores y se ve mejor en otros (notablemente narcomenudeo y violencia familiar, donde Morelos creció menos que el promedio nacional). La trayectoria estructural es lo que la data sostiene; las causas son materia de investigación posterior.
-  </div>
-</section>
-
-<script>
-(function(){
-  // === DATOS sNAC ===
-  const NAC_YEARS = [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
-  const NAC_MORELOS_HD_RATE = [24.49,29.90,29.34,35.36,46.48,40.92,52.81,53.11,66.43,67.50,50.87];
-  const NAC_NACIONAL_HD_RATE = [12.41,15.51,19.28,22.40,22.72,22.21,21.78,20.24,19.49,19.61,15.39];
-  const NAC_COHORT = [
-    { state: 'Querétaro',       rates: [5.02,4.52,6.70,6.90,6.74,6.97,7.09,6.36,6.86,6.67,5.36] },
-    { state: 'San Luis Potosí', rates: [8.28,10.52,15.50,15.70,15.57,21.34,21.10,18.80,14.88,12.96,6.36] },
-    { state: 'Hidalgo',         rates: [4.62,4.27,5.82,6.42,9.08,9.37,7.63,8.67,6.93,7.78,8.01] },
-    { state: 'Tlaxcala',        rates: [4.06,5.24,8.25,8.25,10.28,7.55,8.11,9.09,7.41,8.95,7.20] },
-    { state: 'Aguascalientes',  rates: [2.53,2.60,5.47,5.00,6.07,4.80,5.00,4.67,5.67,7.47,5.73] }
-  ];
-  const NAC_SLOPE = [
-    { ent:'Morelos',                         slope: 8.76, rate: 45.20 },
-    { ent:'Nuevo León',                      slope: 8.33, rate: 15.50 },
-    { ent:'Guanajuato',                      slope: 6.95, rate: 34.20 },
-    { ent:'Sonora',                          slope: 6.34, rate: 33.20 },
-    { ent:'Aguascalientes',                  slope: 6.24, rate:  5.00 },
-    { ent:'Campeche',                        slope: 5.11, rate:  8.00 },
-    { ent:'Colima',                          slope: 5.08, rate: 72.90 },
-    { ent:'Tabasco',                         slope: 4.87, rate: 16.80 },
-    { ent:'Hidalgo',                         slope: 4.75, rate:  7.20 },
-    { ent:'Quintana Roo',                    slope: 3.77, rate: 25.30 },
-    { ent:'Oaxaca',                          slope: 3.30, rate: 18.90 },
-    { ent:'Tlaxcala',                        slope: 3.26, rate:  7.70 },
-    { ent:'Baja California',                 slope: 2.88, rate: 51.40 },
-    { ent:'Chihuahua',                       slope: 2.58, rate: 44.60 },
-    { ent:'Michoacán de Ocampo',             slope: 2.37, rate: 30.00 },
-    { ent:'Puebla',                          slope: 1.95, rate: 12.20 },
-    { ent:'Zacatecas',                       slope: 1.61, rate: 35.30 },
-    { ent:'Querétaro',                       slope: 1.45, rate:  6.30 },
-    { ent:'San Luis Potosí',                 slope: 0.62, rate: 14.60 },
-    { ent:'Jalisco',                         slope: 0.44, rate: 17.40 },
-    { ent:'Nayarit',                         slope: 0.39, rate: 12.60 },
-    { ent:'Chiapas',                         slope:-0.96, rate:  8.30 },
-    { ent:'México',                          slope:-1.53, rate: 12.60 },
-    { ent:'Sinaloa',                         slope:-1.63, rate: 26.60 },
-    { ent:'Yucatán',                         slope:-2.73, rate:  1.80 },
-    { ent:'Ciudad de México',                slope:-2.97, rate: 10.50 },
-    { ent:'Veracruz de Ignacio de la Llave', slope:-3.79, rate: 13.10 },
-    { ent:'Guerrero',                        slope:-7.50, rate: 44.90 },
-    { ent:'Tamaulipas',                      slope:-8.73, rate: 14.70 },
-    { ent:'Coahuila de Zaragoza',            slope:-10.63,rate:  5.30 },
-    { ent:'Durango',                         slope:-13.49,rate:  7.70 },
-    { ent:'Baja California Sur',             slope:-18.35,rate: 16.50 }
-  ];
-  const NAC_DIVERGING = [
-    { label:'Robo de vehículo',   nac: -28.8, mor:  22.7 },
-    { label:'Homicidio doloso',   nac:  24.0, mor: 107.7 },
-    { label:'Feminicidio',        nac:  72.4, mor: 133.3 },
-    { label:'Extorsión',          nac:  74.9, mor: 143.6 },
-    { label:'Violencia familiar', nac: 109.3, mor:  44.0 },
-    { label:'Narcomenudeo',       nac: 221.6, mor:  44.1 }
-  ];
-  const NAC_HEATMAP = [
-    { ent:'Aguascalientes',                pop:1.50, vals:[38,39,82,75,91,72,75,70,85,112,86] },
-    { ent:'Baja California',               pop:4.05, vals:[787,1108,1834,2419,2829,2872,2547,2400,2207,1912,1607] },
-    { ent:'Baja California Sur',           pop:0.86, vals:[134,222,565,237,113,103,82,89,94,83,100] },
-    { ent:'Campeche',                      pop:1.00, vals:[39,67,75,69,93,107,94,75,93,94,80] },
-    { ent:'Chiapas',                       pop:5.78, vals:[325,328,365,431,572,547,401,372,388,438,210] },
-    { ent:'Chihuahua',                     pop:3.82, vals:[875,1209,1828,2009,2086,1769,1647,1488,1362,1404,1379] },
-    { ent:'Ciudad de México',              pop:9.21, vals:[952,924,1116,1244,1325,1003,946,799,795,690,905] },
-    { ent:'Coahuila de Zaragoza',          pop:3.27, vals:[216,182,220,205,208,165,141,153,124,90,59] },
-    { ent:'Colima',                        pop:0.81, vals:[251,653,776,830,665,565,488,533,634,701,861] },
-    { ent:'Durango',                       pop:1.90, vals:[240,184,207,181,178,141,134,108,115,80,56] },
-    { ent:'Guanajuato',                    pop:6.45, vals:[904,1077,1394,3290,3540,4490,3826,3263,2891,2519,2132] },
-    { ent:'Guerrero',                      pop:3.59, vals:[2009,2208,2353,2401,1888,1739,1576,1447,1209,1233,1066] },
-    { ent:'Hidalgo',                       pop:3.16, vals:[146,135,184,203,287,296,241,274,219,246,253] },
-    { ent:'Jalisco',                       pop:8.55, vals:[1485,1281,1447,1812,1689,1631,1474,1332,1421,1485,1478] },
-    { ent:'México',                        pop:17.05,vals:[2421,2517,2691,2880,2829,2738,2474,2274,2138,2017,1571] },
-    { ent:'Michoacán de Ocampo',           pop:4.92, vals:[1056,1249,1490,2114,1922,1876,1741,1581,1481,1462,1478] },
-    { ent:'Morelos',                       pop:1.96, vals:[480,586,575,693,911,802,1035,1041,1302,1323,997] },
-    { ent:'Nayarit',                       pop:1.30, vals:[86,108,153,178,166,168,206,189,183,166,163] },
-    { ent:'Nuevo León',                    pop:5.92, vals:[567,571,866,1064,1086,1063,1057,866,933,914,914] },
-    { ent:'Oaxaca',                        pop:4.16, vals:[202,335,594,825,1008,962,925,886,798,803,786] },
-    { ent:'Puebla',                        pop:6.94, vals:[535,673,807,944,953,914,860,814,740,860,845] },
-    { ent:'Querétaro',                     pop:2.61, vals:[131,118,175,180,176,182,185,166,179,174,140] },
-    { ent:'Quintana Roo',                  pop:1.93, vals:[124,225,361,536,529,508,544,496,480,394,350] },
-    { ent:'San Luis Potosí',               pop:2.91, vals:[241,306,451,457,453,621,614,547,433,377,185] },
-    { ent:'Sinaloa',                       pop:3.13, vals:[1093,1069,1221,1308,1267,910,807,719,752,790,1761] },
-    { ent:'Sonora',                        pop:3.12, vals:[583,830,977,1137,1305,1356,1342,1368,1244,1248,994] },
-    { ent:'Tabasco',                       pop:2.52, vals:[220,298,384,421,461,562,573,486,472,524,525] },
-    { ent:'Tamaulipas',                    pop:3.60, vals:[654,748,765,1009,937,742,716,548,425,344,249] },
-    { ent:'Tlaxcala',                      pop:1.43, vals:[58,75,118,118,147,108,116,130,106,128,103] },
-    { ent:'Veracruz de Ignacio de la Llave',pop:8.34,vals:[837,1265,1697,2143,2167,1913,1755,1521,1310,1300,1296] },
-    { ent:'Yucatán',                       pop:2.42, vals:[49,46,38,46,43,42,40,38,32,27,33] },
-    { ent:'Zacatecas',                     pop:1.65, vals:[332,335,362,449,569,758,927,808,633,460,163] }
-  ];
-
-  // === SPIRAL ===
-  const initSpiral = () => {
-    const svg = document.getElementById('nacSpiralSvg');
-    if (!svg) return;
-    const cx = 600, cy = 412, turns = 1.4;
-    const startAngle = Math.PI * 1.4;
-    const rInner = 95, rOuter = 360;
-    const buildPts = (rates, dotMaxScale) => {
-      const maxRate = Math.max(...rates) * 1.1;
-      return rates.map((rate, i) => {
-        const t = i / (rates.length - 1);
-        const r = rInner + (rOuter - rInner) * t;
-        const angle = startAngle + t * turns * 2 * Math.PI;
-        return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle), r, angle, rate, dotR: 4 + (rate / maxRate) * dotMaxScale, year: 2015 + i };
-      });
-    };
-    const morPts = buildPts(NAC_MORELOS_HD_RATE, 18);
-    const natPts = buildPts(NAC_NACIONAL_HD_RATE, 10);
-    const morPath = morPts.map((p, i) => (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' ');
-    const natPath = natPts.map((p, i) => (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' ');
-    const guidePts = Array.from({length:220}, (_, j) => {
-      const t = j / 219;
-      const r = rInner * 0.6 + (rOuter * 1.05 - rInner * 0.6) * t;
-      const angle = startAngle + t * (turns + 0.1) * 2 * Math.PI;
-      return 'L' + (cx + r * Math.cos(angle)).toFixed(1) + ',' + (cy + r * Math.sin(angle)).toFixed(1);
-    }).join(' ');
-    document.getElementById('nacSpiralPaths').innerHTML = `
-      <path d="M ${cx} ${cy} ${guidePts}" fill="none" stroke="rgba(139,148,158,0.10)" stroke-width="1"/>
-      <path d="${natPath}" fill="none" stroke="url(#nacNatGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.7" stroke-dasharray="6,4"/>
-      <path d="${morPath}" fill="none" stroke="url(#nacMorelosGrad)" stroke-width="3.6" stroke-linecap="round" style="filter:drop-shadow(0 0 8px rgba(248,81,73,0.5));"/>
-    `;
-    let dotsHtml = '';
-    natPts.forEach(p => dotsHtml += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${p.dotR.toFixed(1)}" fill="rgba(139,148,158,0.55)" stroke="#0d1117" stroke-width="1.2"/>`);
-    morPts.forEach((p, i) => {
-      const haloR = (p.dotR + 6).toFixed(1);
-      const isLast = (i === morPts.length - 1);
-      dotsHtml += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${haloR}" fill="url(#nacDotRedGrad)" opacity="0.45"/>`;
-      dotsHtml += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${p.dotR.toFixed(1)}" fill="#f85149" stroke="#fff" stroke-width="1.4"${isLast ? ' style="animation:nacPulseGlow 2.4s ease-in-out infinite;"' : ''}/>`;
-    });
-    document.getElementById('nacSpiralDots').innerHTML = dotsHtml;
-    let labelsHtml = '';
-    [0, 5, 10].forEach(idx => {
-      const p = morPts[idx];
-      const txtR = p.r + 28;
-      const tx = cx + txtR * Math.cos(p.angle);
-      const ty = cy + txtR * Math.sin(p.angle);
-      labelsHtml += `
-        <line x1="${p.x.toFixed(1)}" y1="${p.y.toFixed(1)}" x2="${tx.toFixed(1)}" y2="${ty.toFixed(1)}" stroke="rgba(248,81,73,0.5)" stroke-width="1" stroke-dasharray="2,3"/>
-        <text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" dy="4" font-family="JetBrains Mono, monospace" font-size="13" font-weight="800" fill="#f85149">${2015 + idx}</text>
-        <text x="${tx.toFixed(1)}" y="${(ty + 16).toFixed(1)}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#fbbf24">${NAC_MORELOS_HD_RATE[idx].toFixed(1)}/100K</text>
-      `;
-    });
-    labelsHtml += `
-      <g transform="translate(70, 70)">
-        <rect width="180" height="56" fill="rgba(13,17,23,0.85)" stroke="rgba(248,81,73,0.4)" stroke-width="1" rx="6"/>
-        <line x1="14" y1="20" x2="40" y2="20" stroke="url(#nacMorelosGrad)" stroke-width="3.6" stroke-linecap="round"/>
-        <text x="48" y="24" font-family="Inter, sans-serif" font-size="12" fill="#f85149" font-weight="700">MORELOS</text>
-        <line x1="14" y1="40" x2="40" y2="40" stroke="url(#nacNatGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,4"/>
-        <text x="48" y="44" font-family="Inter, sans-serif" font-size="12" fill="#8b949e" font-weight="700">NACIONAL</text>
-      </g>
-    `;
-    document.getElementById('nacSpiralLabels').innerHTML = labelsHtml;
-  };
-
-  const initRankScales = () => {
-    const buildScale = (id, position) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      let html = '';
-      for (let i = 0; i < 32; i++) html += `<div class="seg ${(i === position - 1) ? 'morelos' : ''}"></div>`;
-      el.innerHTML = html;
-    };
-    buildScale('nacScaleTasaHd', 3);
-    buildScale('nacScaleSlopeHd', 1);
-    buildScale('nacScaleTasaFem', 1);
-    buildScale('nacScaleSlopeRv', 2);
-  };
-
-  const initSlopeLadder = () => {
-    const el = document.getElementById('nacSlopeLadder');
-    if (!el) return;
-    const maxAbs = Math.max(...NAC_SLOPE.map(d => Math.abs(d.slope)));
-    let html = '';
-    NAC_SLOPE.forEach((d, i) => {
-      const isMor = d.ent === 'Morelos';
-      const widthPct = Math.abs(d.slope) / maxAbs * 48;
-      const barHtml = d.slope >= 0
-        ? `<div class="nac-bar up" style="width:${widthPct}%;"></div>`
-        : `<div class="nac-bar down" style="width:${widthPct}%;"></div>`;
-      html += `
-        <div class="nac-slope-row ${isMor ? 'morelos' : ''}">
-          <div class="nac-pos">#${i + 1}</div>
-          <div class="nac-name">${d.ent}${isMor ? ' ◀' : ''}</div>
-          <div class="nac-bar-cell">
-            <div class="nac-bar-zero"></div>
-            ${barHtml}
-          </div>
-          <div class="nac-pct">${d.slope >= 0 ? '+' : ''}${d.slope.toFixed(2)}%</div>
-          <div class="nac-rate">${d.rate.toFixed(1)}/100K</div>
-        </div>
-      `;
-    });
-    el.innerHTML = html;
-  };
-
-  const initDiverging = () => {
-    const el = document.getElementById('nacDivergingGrid');
-    if (!el) return;
-    const maxAbs = Math.max(...NAC_DIVERGING.flatMap(d => [Math.abs(d.nac), Math.abs(d.mor)]));
-    let html = '';
-    NAC_DIVERGING.forEach(d => {
-      const buildBar = (val, type) => {
-        const w = Math.abs(val) / maxAbs * 48;
-        const cls = val >= 0 ? 'up' : 'down';
-        const align = val >= 0 ? `left:50%;width:${w}%;` : `right:50%;width:${w}%;`;
-        const labelOutside = w < 12;
-        const labelText = (val >= 0 ? '+' : '') + val.toFixed(1) + '%';
-        const labelStyle = labelOutside
-          ? (val >= 0 ? `left:calc(50% + ${w}% + 4px);` : `right:calc(50% + ${w}% + 4px);`)
-          : (val >= 0 ? `left:calc(50% + 4px);` : `right:calc(50% + 4px);`);
-        const labelClass = labelOutside ? `outside-${cls}` : '';
-        return `
-          <div class="nac-div-bar">
-            <div class="nac-center-line" style="left:50%;"></div>
-            <div class="nac-fill ${cls}" style="${align}"></div>
-            <div class="nac-v-label ${labelClass}" style="${labelStyle}">${labelText} ${type}</div>
-          </div>
-        `;
-      };
-      html += `
-        <div class="nac-div-row">
-          <div class="nac-label-cell">${d.label}</div>
-          <div class="nac-div-bars">
-            ${buildBar(d.nac, 'NAC')}
-            ${buildBar(d.mor, 'MOR')}
-            <div class="nac-div-bar label-row">
-              <span class="ll">−${maxAbs.toFixed(0)}%</span>
-              <span style="position:absolute;left:50%;transform:translateX(-50%);">0%</span>
-              <span class="lr">+${maxAbs.toFixed(0)}%</span>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-    el.innerHTML = html;
-  };
-
-  const initCohort = () => {
-    const cvs = document.getElementById('nacCohortChart');
-    if (!cvs || !window.Chart) return;
-    const datasets = [
-      {
-        label: 'Morelos',
-        data: NAC_MORELOS_HD_RATE,
-        borderColor: '#f85149',
-        backgroundColor: 'rgba(248,81,73,0.12)',
-        borderWidth: 3.6, tension: 0.3,
-        pointRadius: 5, pointBackgroundColor: '#f85149',
-        pointBorderColor: '#fff', pointBorderWidth: 2, fill: false, order: 1
-      },
-      ...NAC_COHORT.map((c, i) => ({
-        label: c.state, data: c.rates,
-        borderColor: ['rgba(88,166,255,0.65)','rgba(139,148,158,0.65)','rgba(210,153,34,0.65)','rgba(63,185,80,0.65)','rgba(163,113,247,0.65)'][i],
-        backgroundColor: 'transparent',
-        borderWidth: 1.6, tension: 0.3, pointRadius: 2.5,
-        pointBackgroundColor: ['#58a6ff','#8b949e','#d29922','#3fb950','#a371f7'][i],
-        pointBorderColor: '#0d1117', pointBorderWidth: 1, borderDash: [4,3],
-        fill: false, order: 2 + i
-      }))
-    ];
-    new Chart(cvs.getContext('2d'), {
-      type: 'line', data: { labels: NAC_YEARS, datasets },
-      options: {
-        maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-        scales: {
-          y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } }, grid: { color: 'rgba(48,54,61,0.5)' }, title: { display: true, text: 'Tasa por 100K hab', color: '#8b949e', font: { size: 11, weight: '700' } } },
-          x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
-        },
-        plugins: {
-          legend: { position: 'top', labels: { color: '#c9d1d9', font: { size: 12, weight: '600' }, padding: 14, usePointStyle: true, pointStyle: 'circle' } },
-          tooltip: { backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1, titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 12,
-            callbacks: { title: (items) => items[0].label, label: (c) => c.dataset.label + ': ' + c.parsed.y.toFixed(2) + '/100K' } }
-        }
-      }
-    });
-  };
-
-  const initHeatmap = () => {
-    const el = document.getElementById('nacHeatmap');
-    if (!el) return;
-    const sorted = [...NAC_HEATMAP].sort((a, b) => a.ent.localeCompare(b.ent));
-    let html = '<thead><tr><th class="muni">Estado</th>';
-    NAC_YEARS.forEach(y => html += `<th>${y}</th>`);
-    html += '</tr></thead><tbody>';
-    for (const row of sorted) {
-      const isMor = row.ent === 'Morelos';
-      html += `<tr class="${isMor ? 'morelos-row' : ''}"><td class="muni-cell">${row.ent}</td>`;
-      row.vals.forEach((v, idx) => {
-        const rate = (v / (row.pop * 1000000)) * 100000;
-        let h = 0;
-        if (rate < 5) h = 0;
-        else if (rate < 10) h = 1;
-        else if (rate < 15) h = 2;
-        else if (rate < 25) h = 3;
-        else if (rate < 40) h = 4;
-        else if (rate < 55) h = 5;
-        else if (rate < 80) h = 6;
-        else h = 7;
-        html += `<td><span class="cell nac-h-${h}" title="${row.ent} ${NAC_YEARS[idx]}: ${v} carpetas · ${rate.toFixed(1)}/100K">${rate.toFixed(0)}</span></td>`;
-      });
-      html += '</tr>';
-    }
-    html += '</tbody>';
-    el.innerHTML = html;
-  };
-
-  const run = () => { initSpiral(); initRankScales(); initSlopeLadder(); initDiverging(); initCohort(); initHeatmap(); };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
-})();
-</script>
-
 
 <!-- SECCIÓN 0 — HUB DE MUNICIPIOS MORELOS (v2.1) -->
 <section id="s0" class="map-hub">
@@ -17126,8 +16411,6 @@
   <div class="glo-group" style="margin-top:32px;">
     <div class="glo-cat">Historial de versiones</div>
     <dl class="glo-list">
-      <div class="glo-item"><dt>v2.4 · 28 de abril de 2026</dt>
-        <dd style="text-align:justify;">Sección dedicada <strong>Década Nacional</strong> (sNAC1-sNAC5) con análisis cohorte de Morelos vs los 32 estados de México durante el decenio 2015-2025. Cinco actos: portada con espiral SVG decenal Morelos vs nacional · ranking de cuatro métricas con escalas visuales · slope ladder de las 32 entidades ordenadas por tendencia anual · diverging bars Morelos vs nacional en seis indicadores graves · cohorte de cinco estados de tamaño similar (Querétaro, San Luis Potosí, Hidalgo, Tlaxcala, Aguascalientes) · heatmap nacional 32 estados × 11 años. El argumento central: la trayectoria de Morelos en homicidio doloso es la peor del país en pendiente decenal (#1 de 32 con +8.76% anual sostenido), tercera tasa más alta nacional (45.2/100K). El Q1 2026 deja de ser headline y queda como coyuntura tangencial. Versión anterior: <a href="versiones/v2.3-2026-04-28/" style="color:#58a6ff;">v2.3 (28-abr-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.3 · 28 de abril de 2026</dt>
         <dd style="text-align:justify;">Integración del corte SESNSP marzo 2026 (datos parciales Q1 2026 — enero, febrero y marzo). Nueva sección "Q1 2026 · Actualización" con la comparativa Q1 2025 vs Q1 2026, tabla maestra por municipio, y cuatro hallazgos editoriales (Xochitepec polo extorsionario emergente; Emiliano Zapata ruptura de meseta; Tlayacapan feminicidio Q1 sin casos; Morelos no siguió la baja nacional del 41%). Auditoría sistemática reproducible (16 hallazgos rojos · 6 reclasificaciones potenciales · 23 bajas grandes · 53 alzas notables). <strong>Las cifras 2015-2025 publicadas en versiones anteriores se mantienen idénticas — esta versión agrega información, no modifica la histórica.</strong> Versión anterior: <a href="versiones/v2.2-2026-04-25/" style="color:#58a6ff;">v2.2 (25-abr-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.2 · 25 de abril de 2026</dt>
@@ -17144,7 +16427,7 @@
     </p>
   </div>
 
-  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.4 (corte SESNSP marzo 2026 · sección Década Nacional). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
+  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.3 (corte SESNSP marzo 2026). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
 </section>
 
 <script>
@@ -17497,7 +16780,7 @@ function wireCuautlaToggle() {
   const atlatlahucanIds = ["sAt1","sAt2","sAt3","sAt4","sAt5","sAt6","sAt7","sAt8","sAt9"];
   const zmIds = ["sZM1","sZM2","sZM3"];
   const zmcIds = ["sZMC1","sZMC2","sZMC3"];
-  const otherIds = ["s0", "sR", "sH", "sE", "sI", "sP", "sZE", "sQ1", "sQ1Cover", "sV23", "sNAC1", "sNAC2", "sNAC3", "sNAC4", "sNAC5", "sHero", "sM", "sG"];
+  const otherIds = ["s0", "sR", "sH", "sE", "sI", "sP", "sZE", "sQ1", "sV23", "sHero", "sM", "sG"];
   const all = [...otherIds, ...cuautlaIds, ...ayalaIds, ...cuernavacaIds, ...jiutepecIds, ...temixcoIds, ...huitzilacIds, ...emilianoZapataIds, ...tepoztlanIds, ...xochitepecIds, ...tlaltizapanIds, ...yautepecIds, ...yecapixtlaIds, ...tlayacapanIds, ...atlatlahucanIds, ...zmIds, ...zmcIds];
   wireCollapsibleGroup("toggleCuautla", "cuautlaSubnav", cuautlaIds, all);
   wireCollapsibleGroup("toggleAyala", "ayalaSubnav", ayalaIds, all);
