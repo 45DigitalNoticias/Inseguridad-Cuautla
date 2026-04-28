@@ -20543,26 +20543,28 @@ new Chart(document.getElementById('chartTemxRnpdno'), {
     wrapper._zoomLevel = level;
     wrapper.dataset.zoomLevel = level;
 
-    // Encuentra el contenedor interno principal para escalarlo
-    const inner = wrapper.querySelector(
-      '.chart-canvas-frame, .nac-spiral-stage, .nac-slope-wrap, .nac-heatmap-wrap'
+    // Escala TODOS los hijos directos del wrapper, excepto los controles
+    // (botón expand, close, controles de zoom, hint de rotación)
+    const skipClasses = ['chart-zoom-controls', 'chart-orientation-hint', 'chart-expand-btn', 'chart-close-btn'];
+    const scalable = Array.from(wrapper.children).filter(el =>
+      !skipClasses.some(cls => el.classList.contains(cls))
     );
 
-    if (inner) {
+    scalable.forEach(el => {
       if (level === 1) {
-        inner.style.removeProperty('width');
-        inner.style.removeProperty('height');
-        inner.style.removeProperty('min-height');
-        inner.style.removeProperty('font-size');
+        el.style.removeProperty('width');
+        el.style.removeProperty('max-width');
+        el.style.removeProperty('min-height');
+        el.style.removeProperty('font-size');
       } else {
-        inner.style.setProperty('width', (level * 100) + '%', 'important');
-        inner.style.setProperty('min-height', `calc(${level * 100}vh - ${level * 96}px)`, 'important');
-        // Para contenido text-heavy, escalar font-size también para que el texto crezca
-        if (inner.classList.contains('nac-slope-wrap') || inner.classList.contains('nac-heatmap-wrap')) {
-          inner.style.setProperty('font-size', (level * 100) + '%', 'important');
-        }
+        el.style.setProperty('width', (level * 100) + '%', 'important');
+        el.style.setProperty('max-width', 'none', 'important');
+        el.style.setProperty('min-height', `calc(${level * 100}vh - 96px)`, 'important');
+        // Bump font-size para todos: irrelevante en canvas (no tiene texto),
+        // útil en SVG/HTML/tablas para que el texto también crezca
+        el.style.setProperty('font-size', (level * 100) + '%', 'important');
       }
-    }
+    });
 
     // Update zoom display
     const lbl = wrapper.querySelector('.zoom-level-display');
@@ -20576,7 +20578,7 @@ new Chart(document.getElementById('chartTemxRnpdno'), {
     if (outBtn) outBtn.disabled = level <= 1;
     if (resetBtn) resetBtn.disabled = level === 1;
 
-    // Resize Chart.js after the layout settles
+    // Resize Chart.js after the layout settles (para charts canvas)
     requestAnimationFrame(() => requestAnimationFrame(() => resizeChart(wrapper)));
   }
 
