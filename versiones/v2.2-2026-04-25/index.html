@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Archivo histórico · marcas de no-indexación -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://45digitalnoticias.github.io/Inseguridad-Morelos/">
+  <title>v2.2 · Archivo histórico · Inseguridad Morelos</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R64XZVCF6F"></script>
 <script>
@@ -13,8 +17,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="version" content="2.2-draft">
 <meta name="generated" content="2026-04-19">
-<meta name="changelog" content="v2.3: actualización SESNSP corte mar-2026 (Q1 2026 parcial). v2.2: charts ZM con sobreproporción + ZM Cuautla agregada (sZMC1-3). v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
-<title>Morelos: Seguridad municipal — Hub de investigación (v2.3)</title>
+<meta name="changelog" content="v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
+
 <!-- Tipografía editorial -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -516,7 +520,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* ============ TIPOGRAFIA EDITORIAL (v2.3) ============ */
+  /* ============ TIPOGRAFIA EDITORIAL (v2.2) ============ */
   /* Titulares grandes con serif editorial — personalidad de pieza periodistica */
   .cover h1, section h1, .hub-header h1, .concl-header h1,
   .ay-statement .st-text, .h-state-frase, .e-state-frase,
@@ -4486,6 +4490,56 @@
 </style>
 </head>
 <body>
+<!-- BANNER ARCHIVO HISTÓRICO -->
+<style>
+  .archive-banner {
+    position: sticky; top: 0; z-index: 99999;
+    background: rgba(88,166,255,0.10);
+    border-left: 4px solid #58a6ff;
+    border-bottom: 1px solid rgba(88,166,255,0.45);
+    padding: 12px 22px 12px 18px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #c9d1d9;
+    font-size: 13.5px;
+    line-height: 1.55;
+    text-align: justify;
+    display: flex; align-items: center; gap: 14px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  }
+  .archive-banner .icon { font-size: 22px; flex-shrink: 0; }
+  .archive-banner .text { flex: 1; text-align: justify; }
+  .archive-banner .text strong { color: #58a6ff; font-weight: 700; letter-spacing: 0.4px; }
+  .archive-banner .text .sub { color: #8b949e; font-size: 12px; margin-top: 2px; display: block; text-align: justify; }
+  .archive-banner a.live-link {
+    color: #3fb950; text-decoration: underline; font-weight: 600; white-space: nowrap;
+    padding: 6px 12px; border: 1px solid rgba(63,185,80,0.45); border-radius: 6px;
+    transition: all 150ms; flex-shrink: 0;
+  }
+  .archive-banner a.live-link:hover { background: rgba(63,185,80,0.12); border-color: #3fb950; }
+  .archive-banner .close-btn {
+    background: transparent; border: 1px solid rgba(139,148,158,0.4); color: #8b949e;
+    width: 26px; height: 26px; border-radius: 4px; cursor: pointer; flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center; padding: 0;
+    transition: all 150ms;
+  }
+  .archive-banner .close-btn:hover { color: #c9d1d9; border-color: #c9d1d9; }
+  @media (max-width: 720px) {
+    .archive-banner { font-size: 12px; padding: 10px 14px; gap: 10px; }
+    .archive-banner .icon { font-size: 18px; }
+    .archive-banner a.live-link { padding: 5px 9px; font-size: 11.5px; }
+  }
+</style>
+<div class="archive-banner" id="archiveBanner" role="alert" aria-label="Archivo histórico">
+  <span class="icon" aria-hidden="true">📚</span>
+  <div class="text">
+    <strong>ARCHIVO HISTÓRICO · v2.2 · Publicada 2026-04-25</strong>
+    <span class="sub">Datos con corte SESNSP diciembre 2025. Esta versión se mantiene como referencia histórica inalterable.</span>
+  </div>
+  <a class="live-link" href="https://45digitalnoticias.github.io/Inseguridad-Morelos/">→ Ver versión actual</a>
+  <button class="close-btn" onclick="document.getElementById('archiveBanner').remove();" aria-label="Cerrar banner" type="button">×</button>
+</div>
+
 
 <!-- Progress indicator · barra fija superior que rastrea scroll -->
 <div class="progress-indicator" aria-hidden="true"><div class="bar" id="progressBar"></div></div>
@@ -4542,7 +4596,6 @@
     <a href="#sI" data-target="sI"><span class="num num-icon" aria-label="Cruce"><svg viewBox="0 0 20 20"><path d="M5 3v11.5M5 14.5L2.5 12M5 14.5L7.5 12M15 17V5.5M15 5.5L12.5 8M15 5.5L17.5 8" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>VIOLENCIA EN DOS FORMAS</a>
     <a href="#sP" data-target="sP"><span class="num num-icon" aria-label="Percepción"><svg viewBox="0 0 20 20"><path d="M10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 3.2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 10.1c-1.7 0-3.1-.9-4-2.2.1-1.3 2.7-2 4-2s3.9.7 4 2c-.9 1.3-2.3 2.2-4 2.2z" fill="currentColor"/></svg></span>PERCEPCIÓN · #1 NACIONAL</a>
     <a href="#sZE" data-target="sZE"><span class="num num-icon" aria-label="Resumen por zonas"><svg viewBox="0 0 20 20"><rect x="2" y="2" width="7" height="7" rx="1" fill="currentColor" opacity="0.85"/><rect x="11" y="2" width="7" height="7" rx="1" fill="currentColor" opacity="0.55"/><rect x="2" y="11" width="7" height="7" rx="1" fill="currentColor" opacity="0.35"/><rect x="11" y="11" width="7" height="7" rx="1" fill="currentColor" opacity="0.25"/></svg></span>RESUMEN · 4 ZONAS</a>
-    <a href="#sQ1" data-target="sQ1" style="border-left:3px solid #3fb950;padding-left:8px;background:rgba(63,185,80,0.06);"><span class="num num-icon" aria-label="Q1 2026"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M6.5 10.5L9 13L13.5 7.5" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span style="color:#3fb950;font-weight:700;">Q1 2026 · ACTUALIZACIÓN</span></a>
   </div>
 
   <!-- Zonas metropolitanas — agregados analíticos antes de los municipios individuales -->
@@ -4861,12 +4914,7 @@
     <div class="nav-pendientes-list" id="navPendientesList"></div>
   </div>
 
-  <div class="nav-footer">
-    <span style="color:#3fb950;">v2.3 · 28-abr-2026</span><br>
-    SESNSP · Mar 2026<br>
-    RNPDNO · Dic 2025<br>
-    <a href="versiones/" style="color:#8b949e;text-decoration:none;font-size:11px;border-bottom:1px dotted rgba(139,148,158,0.4);">Ver versiones anteriores ↗</a>
-  </div>
+  <div class="nav-footer">SESNSP · Dic 2025<br>RNPDNO · Abr 2026<br><span style="color:#d29922;">v2.2 (draft)</span></div>
 </nav>
 
 <!-- MODAL GLOBAL -->
@@ -4880,7 +4928,7 @@
 
 <!-- SECCIÓN HERO — RESUMEN EJECUTIVO (entry point) -->
 <section id="sHero">
-  <div class="hero-eyebrow">Morelos · Seguridad · Corte marzo 2026 · datos parciales Q1 2026</div>
+  <div class="hero-eyebrow">Morelos · Seguridad · Corte diciembre 2025</div>
   <h1>Los cinco <span class="accent">datos duros</span> de<br>la seguridad en Morelos</h1>
   <p class="hero-lead">
     Este análisis parte de fuentes oficiales — SESNSP, INEGI, RNPDNO, CONAPO — y triangula cifras con series decenales. Cinco hallazgos sostienen la argumentación completa.
@@ -5012,128 +5060,6 @@
   </div>
 </section>
 
-<!-- BANNER v2.3 — Anuncio de actualización Q1 2026 -->
-<section id="sV23" class="v23-callout" style="padding-top:32px;padding-bottom:32px;">
-  <style>
-    .v23-banner {
-      max-width:1100px; margin:0 auto;
-      background: linear-gradient(135deg, rgba(63,185,80,0.10) 0%, rgba(88,166,255,0.08) 100%);
-      border:1.5px solid rgba(63,185,80,0.45);
-      border-left:5px solid #3fb950;
-      border-radius:14px;
-      padding:26px 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-    }
-    .v23-eyebrow {
-      font-family:'JetBrains Mono', monospace;
-      color:#3fb950;
-      font-size:11px; font-weight:800;
-      letter-spacing:2.4px;
-      text-transform:uppercase;
-      margin-bottom:10px;
-      display:flex; align-items:center; gap:10px;
-    }
-    .v23-eyebrow .pulse {
-      width:8px; height:8px; border-radius:50%;
-      background:#3fb950; box-shadow:0 0 8px rgba(63,185,80,0.85);
-      animation: pulse 2s infinite;
-    }
-    .v23-banner h2 {
-      font-family:'Fraunces', Georgia, serif;
-      font-size:28px; font-weight:800;
-      line-height:1.2;
-      color:#e6edf3;
-      margin:0 0 12px;
-    }
-    .v23-banner h2 strong { color:#3fb950; font-weight:800; }
-    .v23-banner p {
-      color:#c9d1d9; font-size:15px; line-height:1.6;
-      margin-bottom:18px; max-width:880px;
-      text-align:justify;
-    }
-    .v23-stats {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));
-      gap:12px;
-      margin:18px 0 22px;
-    }
-    .v23-stat {
-      background:rgba(13,17,23,0.6);
-      border:1px solid #30363d;
-      border-radius:8px;
-      padding:14px 16px;
-    }
-    .v23-stat .num {
-      font-family:'JetBrains Mono', monospace;
-      font-size:22px; font-weight:800;
-      color:#e6edf3;
-      letter-spacing:0.3px;
-    }
-    .v23-stat .lbl {
-      font-size:11.5px; color:#8b949e;
-      letter-spacing:0.5px;
-      margin-top:4px; line-height:1.4;
-    }
-    .v23-stat .delta { font-size:12px; font-weight:700; margin-top:6px; }
-    .v23-stat .delta.up   { color:#f85149; }
-    .v23-stat .delta.flat { color:#fbbf24; }
-    .v23-stat .delta.down { color:#3fb950; }
-    .v23-actions {
-      display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;
-    }
-    .v23-cta {
-      padding:10px 18px;
-      background:#3fb950; color:#0d1117;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:700; font-size:13.5px;
-      letter-spacing:0.3px;
-      transition:all 200ms;
-    }
-    .v23-cta:hover { background:#56d364; transform:translateY(-1px); }
-    .v23-cta.secondary {
-      background:transparent; color:#58a6ff;
-      border:1px solid rgba(88,166,255,0.45);
-    }
-    .v23-cta.secondary:hover { background:rgba(88,166,255,0.12); border-color:#58a6ff; }
-    @media (max-width:720px) {
-      .v23-banner { padding:20px 22px; }
-      .v23-banner h2 { font-size:22px; }
-    }
-  </style>
-  <div class="v23-banner">
-    <div class="v23-eyebrow"><span class="pulse"></span>Actualización · v2.3 · 28 de abril de 2026 · Corte SESNSP marzo 2026</div>
-    <h2>Morelos <strong>no siguió la baja nacional</strong> del homicidio doloso en el primer trimestre 2026</h2>
-    <p>El gobierno federal celebra una caída del 41% en el promedio diario de homicidios dolosos a nivel nacional entre septiembre 2024 y marzo 2026. <strong>En las 14 zonas metropolitanas analizadas de Morelos, el indicador se mantuvo plano (+1.6% interanual)</strong> — y la extorsión <strong>se multiplicó por 2.5</strong>. Esta versión integra los datos del corte SESNSP marzo 2026, sin modificar las cifras 2015-2025 ya publicadas.</p>
-    <div class="v23-stats">
-      <div class="v23-stat">
-        <div class="num">+1.6%</div>
-        <div class="lbl">Homicidio doloso · 14 ZM Morelos · Q1 2025 → Q1 2026</div>
-        <div class="delta flat">▬ Plano vs −41% nacional</div>
-      </div>
-      <div class="v23-stat">
-        <div class="num">+150.9%</div>
-        <div class="lbl">Extorsión · 14 ZM · Q1 2025 → Q1 2026</div>
-        <div class="delta up">▲ De 55 a 138 carpetas</div>
-      </div>
-      <div class="v23-stat">
-        <div class="num">+17.3%</div>
-        <div class="lbl">Violencia familiar · 14 ZM · Q1 2025 → Q1 2026</div>
-        <div class="delta up">▲ Sube · no hay subregistro de denuncia</div>
-      </div>
-      <div class="v23-stat">
-        <div class="num">16</div>
-        <div class="lbl">Hallazgos rojos detectados (auditoría)</div>
-        <div class="delta up">⚠ Posibles reclasificaciones de tipificación</div>
-      </div>
-    </div>
-    <div class="v23-actions">
-      <a href="#sQ1" class="v23-cta">Ver detalle Q1 2026 →</a>
-      <a href="versiones/" class="v23-cta secondary">Ver versiones anteriores</a>
-    </div>
-  </div>
-</section>
-
 <!-- SECCIÓN 0 — HUB DE MUNICIPIOS MORELOS (v2.1) -->
 <section id="s0" class="map-hub">
   <div class="hub-header">
@@ -5245,7 +5171,7 @@
     <h1>Los 36 municipios de Morelos — ordenados</h1>
     <p class="hub-sub">
       ¿Qué municipio está peor en extorsión? ¿Cuál bajó más en 2025? ¿Cuál concentra más violencia per cápita?
-      Esta tabla interactiva responde eso con cifras SESNSP del corte marzo 2026.
+      Esta tabla interactiva responde eso con cifras SESNSP del corte diciembre 2025.
       Cambia de pestaña para ordenar por distintos criterios; los dos municipios con <strong style="color:#3fb950;">análisis completo</strong> son clickables — llevan directo a su dossier.
     </p>
   </div>
@@ -5280,7 +5206,7 @@
         <tbody id="rkTableBody"></tbody>
       </table>
     </div>
-    <p class="rk-caveat">Nota metodológica: las tasas por 100K habitantes normalizan por tamaño — útil para comparar municipios pequeños con grandes. Los municipios muy pequeños (&lt;15K hab) pueden tener tasas volátiles porque un solo evento cambia mucho el porcentaje. La variación Δ solo se calcula cuando 2024 tiene base &gt; 0. Fuente: SESNSP corte mar-2026 · CONAPO 2025.</p>
+    <p class="rk-caveat">Nota metodológica: las tasas por 100K habitantes normalizan por tamaño — útil para comparar municipios pequeños con grandes. Los municipios muy pequeños (&lt;15K hab) pueden tener tasas volátiles porque un solo evento cambia mucho el porcentaje. La variación Δ solo se calcula cuando 2024 tiene base &gt; 0. Fuente: SESNSP corte dic-2025 · CONAPO 2025.</p>
   </div>
 </section>
 
@@ -5385,7 +5311,7 @@
         <strong>Advertencia.</strong> La cifra incluye <strong>homicidio doloso + homicidio culposo</strong>. El feminicidio se contabiliza por separado, por convención del Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública. La cadencia municipal pierde resolución cuando el volumen anual es muy bajo (menos de 12 casos/año): allí el ritmo se expresa en semanas solo por completitud, sin pretensión de precisión.
       </div>
       <div class="method-source">
-        Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) — corte marzo 2026. Proyecciones poblacionales: Consejo Nacional de Población (CONAPO) 2025.
+        Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) — corte diciembre 2025. Proyecciones poblacionales: Consejo Nacional de Población (CONAPO) 2025.
       </div>
     </div>
   </div>
@@ -5403,7 +5329,7 @@
   <div class="h-rest" id="hRest"></div>
 
   <p class="rk-caveat" style="margin-top:22px;">
-    La variación anual de cada card compara <strong>enero-diciembre 2025</strong> contra el mismo corte de 2024. La tasa por 100K habitantes usa la proyección de población 2025 del <strong>Consejo Nacional de Población (CONAPO)</strong>. El procedimiento de cálculo del ritmo se detalla en el apartado metodológico arriba. <strong>Fuente:</strong> Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) — corte marzo 2026.
+    La variación anual de cada card compara <strong>enero-diciembre 2025</strong> contra el mismo corte de 2024. La tasa por 100K habitantes usa la proyección de población 2025 del <strong>Consejo Nacional de Población (CONAPO)</strong>. El procedimiento de cálculo del ritmo se detalla en el apartado metodológico arriba. <strong>Fuente:</strong> Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) — corte diciembre 2025.
   </p>
 </section>
 
@@ -5468,7 +5394,7 @@
   <div class="e-rest" id="eRest"></div>
 
   <p class="rk-caveat" style="margin-top:22px;">
-    El ritmo se calcula con la misma fórmula del panel de homicidio (<code style="color:#d29922;">365 / casos_año</code>) aplicada sobre denuncias formales. La extorsión en México tiene una <strong>cifra negra cercana al 93%</strong> de acuerdo con la Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE) 2024 del Instituto Nacional de Estadística y Geografía (INEGI) — solo uno de cada quince casos llega a carpeta de investigación. Las proyecciones con cifra negra se muestran por completitud estadística, pero el ordenamiento del ranking usa la cifra oficial reportada. Cuautla es primer lugar nacional absoluto en extorsión 2025 (259 casos · tasa 138.4/100K). <strong>Fuentes:</strong> Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) corte marzo 2026 · Instituto Nacional de Estadística y Geografía (INEGI) — ENVIPE 2024 · Consejo Nacional de Población (CONAPO) 2025.
+    El ritmo se calcula con la misma fórmula del panel de homicidio (<code style="color:#d29922;">365 / casos_año</code>) aplicada sobre denuncias formales. La extorsión en México tiene una <strong>cifra negra cercana al 93%</strong> de acuerdo con la Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (ENVIPE) 2024 del Instituto Nacional de Estadística y Geografía (INEGI) — solo uno de cada quince casos llega a carpeta de investigación. Las proyecciones con cifra negra se muestran por completitud estadística, pero el ordenamiento del ranking usa la cifra oficial reportada. Cuautla es primer lugar nacional absoluto en extorsión 2025 (259 casos · tasa 138.4/100K). <strong>Fuentes:</strong> Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) corte diciembre 2025 · Instituto Nacional de Estadística y Geografía (INEGI) — ENVIPE 2024 · Consejo Nacional de Población (CONAPO) 2025.
   </p>
 </section>
 
@@ -5538,7 +5464,7 @@
     <div class="chart-container" style="min-height:440px;">
       <canvas id="chartCross"></canvas>
     </div>
-    <p class="rk-caveat">Serie estatal = suma de los 36 municipios. Las desapariciones incluyen los registros con municipio <em>Confidencial</em> (40.7% del total Morelos). Fuente: SESNSP corte mar-2026 + RNPDNO corte nov-2025.</p>
+    <p class="rk-caveat">Serie estatal = suma de los 36 municipios. Las desapariciones incluyen los registros con municipio <em>Confidencial</em> (40.7% del total Morelos). Fuente: SESNSP corte dic-2025 + RNPDNO corte nov-2025.</p>
   </div>
 
   <!-- Totales estatales por periodo -->
@@ -5768,7 +5694,7 @@
           <div class="yr cur"><span class="y">2025</span><span class="n">1,385</span></div>
         </div>
         <div class="p-con-delta">−13.3% · 213 víctimas menos</div>
-        <div class="note">Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP), corte marzo 2026.</div>
+        <div class="note">Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP), corte diciembre 2025.</div>
       </div>
       <div class="p-con-col up">
         <div class="t">Percepción de inseguridad estatal</div>
@@ -5972,7 +5898,7 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes y método.</strong> Agregados calculados desde SESNSP corte mar-2026 — los 36 municipios del estado clasificados en 4 zonas. Definición ZM oficial SEDATU-CONAPO 2020 (con la salvedad de incluir Huitzilac en ZM Cuernavaca por contigüidad y patrón de violencia). Las regiones Sur-Poniente y Oriente son agregados geográficos no oficiales — facilitan lectura pero no equivalen a divisiones administrativas. Población CONAPO 2025. Datos derivados regenerables con `scripts/build_zm_aggregates.js` → `scripts/zm_aggregates.json`.
+    <strong>Fuentes y método.</strong> Agregados calculados desde SESNSP corte dic-2025 — los 36 municipios del estado clasificados en 4 zonas. Definición ZM oficial SEDATU-CONAPO 2020 (con la salvedad de incluir Huitzilac en ZM Cuernavaca por contigüidad y patrón de violencia). Las regiones Sur-Poniente y Oriente son agregados geográficos no oficiales — facilitan lectura pero no equivalen a divisiones administrativas. Población CONAPO 2025. Datos derivados regenerables con `scripts/build_zm_aggregates.js` → `scripts/zm_aggregates.json`.
   </div>
 </section>
 
@@ -6257,7 +6183,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>Fuente: SESNSP, corte marzo 2026 (publicación abril 2026)</div>
+      <div>Fuente: SESNSP, corte diciembre 2025 (publicación febrero 2026)</div>
     </div>
   </div>
 </section>
@@ -7073,7 +6999,7 @@
     <div class="card" onclick="showExplain('Narcomenudeo: +82% en un año','Narcomenudeo Ayala: <strong>11 casos en 2024 → 20 en 2025</strong>. Salto de +82% en un solo año. Es el segundo delito típico del crimen organizado que aparece cuando el homicidio oficial baja — reconfiguración del mercado criminal, no desaparición del mismo. Igual dirección que el patrón estatal de Morelos.')">
       <div class="num">+82%</div><div class="lbl">Narcomenudeo<br>2024 → 2025</div>
     </div>
-    <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.08);" onclick="showExplain('Homicidio: cuidado con la baja oficial','Homicidio Ayala: 69 en 2023 (pico decenal) → 56 en 2024 → 43 en 2025 (−23%). La estadística oficial muestra descenso. <strong>Pero esta baja refleja la estrategia federal de pacificación (patrón nacional bajo Sheinbaum), NO un mérito de la administración municipal.</strong> La realidad en territorio lo confirma: el 18 de abril de 2026 (04:50 hrs), 8 personas fueron asesinadas en el bar El Rincón de la Banda (Boulevard Anenecuilco, Ayala) — 7 hombres y 1 mujer. Cinco sujetos armados llegaron en motocicletas y dispararon de manera directa. Sin detenidos. El bar operaba sin licencia municipal. Un solo evento concentra el 18.6% del total anual oficial de homicidios de 2025 — hecho que aún no se reflejará en SESNSP (corte mar-2026) pero desmiente la narrativa de mejoría municipal.')">
+    <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.08);" onclick="showExplain('Homicidio: cuidado con la baja oficial','Homicidio Ayala: 69 en 2023 (pico decenal) → 56 en 2024 → 43 en 2025 (−23%). La estadística oficial muestra descenso. <strong>Pero esta baja refleja la estrategia federal de pacificación (patrón nacional bajo Sheinbaum), NO un mérito de la administración municipal.</strong> La realidad en territorio lo confirma: el 18 de abril de 2026 (04:50 hrs), 8 personas fueron asesinadas en el bar El Rincón de la Banda (Boulevard Anenecuilco, Ayala) — 7 hombres y 1 mujer. Cinco sujetos armados llegaron en motocicletas y dispararon de manera directa. Sin detenidos. El bar operaba sin licencia municipal. Un solo evento concentra el 18.6% del total anual oficial de homicidios de 2025 — hecho que aún no se reflejará en SESNSP (corte dic-2025) pero desmiente la narrativa de mejoría municipal.')">
       <div class="num">⚠ 8</div><div class="lbl">Asesinados 18-abr-2026<br>Bar El Rincón de la Banda</div>
     </div>
     <div class="card" onclick="showExplain('Escala vs Cuautla y Cuernavaca','Cuautla (187K hab) es el primer lugar nacional en extorsión: 259 casos, tasa 138.4/100K. Cuernavaca (397K hab, capital): 16 casos, tasa 4.0/100K. <strong>Ayala (90K hab): 21 casos, tasa 23.3/100K</strong> — 5.8× más extorsión per cápita que la capital del estado. En extorsión absoluta, Ayala supera a Cuernavaca con un cuarto de su población. La pregunta ya no es si el patrón llega a Ayala — es qué tan rápido.')">
@@ -7085,7 +7011,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO abr-2026 · evento 18-abr-2026 fuera de corte</div>
+      <div>SESNSP corte dic-2025 · RNPDNO abr-2026 · evento 18-abr-2026 fuera de corte</div>
     </div>
   </div>
 </section>
@@ -7172,7 +7098,7 @@
     <div class="simple-tag">Interpretación</div>
     <p>En los indicadores de volumen absoluto, Ayala aparece en posiciones medias-altas por ser un municipio de tamaño intermedio. En <strong>tasa de extorsión per cápita (23.3/100K)</strong>, Ayala ocupa el <strong>4° lugar estatal</strong> — muy por encima de Cuernavaca (4.0) y del promedio nacional. Esa es la señal estructural: Ayala no es violenta en volumen, pero sí en <em>densidad</em> de delitos típicos del crimen organizado, proporcional a su población.</p>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado. Para ver el ranking completo y ordenar por otros criterios, regresa al mapa del hub (sección 00).</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado. Para ver el ranking completo y ordenar por otros criterios, regresa al mapa del hub (sección 00).</div>
 </section>
 
 <!-- sA4 — SERIE HISTÓRICA DECENAL AYALA -->
@@ -7217,7 +7143,7 @@
     <canvas id="chart21"></canvas>
   </div>
   <div class="caveat-banner" style="margin-top:22px;">
-    <strong>El caso del bar "El Rincón de la Banda".</strong> La madrugada del sábado 18 de abril de 2026, ~04:50 hrs, <strong>8 personas (7 hombres y 1 mujer) fueron asesinadas</strong> en el bar <em>El Rincón de la Banda</em>, ubicado sobre el Boulevard Anenecuilco, en Ayala. Cinco sujetos armados llegaron en motocicleta, ingresaron y dispararon de manera directa antes de huir. El local operaba <strong>sin licencia municipal</strong>. Sin detenidos al cierre. Este hecho <em>no aparece</em> en las cifras SESNSP aquí mostradas (cierre dic-2025 + Q1 2026 parcial). Lo presentamos como caveat: <strong>la estadística oficial muestra descenso en homicidio</strong>, pero un solo evento desmiente cualquier narrativa de pacificación municipal. Cuando se publique el corte siguiente, el promedio 2026 reflejará este hecho y otros. La lectura correcta de la baja 2025 es <em>"provisional y condicionada"</em>.
+    <strong>El caso del bar "El Rincón de la Banda".</strong> La madrugada del sábado 18 de abril de 2026, ~04:50 hrs, <strong>8 personas (7 hombres y 1 mujer) fueron asesinadas</strong> en el bar <em>El Rincón de la Banda</em>, ubicado sobre el Boulevard Anenecuilco, en Ayala. Cinco sujetos armados llegaron en motocicleta, ingresaron y dispararon de manera directa antes de huir. El local operaba <strong>sin licencia municipal</strong>. Sin detenidos al cierre. Este hecho <em>no aparece</em> en las cifras SESNSP aquí mostradas (cierre dic-2025). Lo presentamos como caveat: <strong>la estadística oficial muestra descenso en homicidio</strong>, pero un solo evento desmiente cualquier narrativa de pacificación municipal. Cuando se publique el corte siguiente, el promedio 2026 reflejará este hecho y otros. La lectura correcta de la baja 2025 es <em>"provisional y condicionada"</em>.
   </div>
   <div class="footer-note">Fuente: SESNSP 2022-2025. Promedio anual 2022-2024 vs cifra 2025. Se omiten delitos con cifras de base muy bajas (&lt;5 casos) para evitar distorsión porcentual. Evento 18-abr-2026 reportado por El Sol de Cuautla y Sin Embargo; pendiente incorporación en SESNSP.</div>
 </section>
@@ -7373,7 +7299,7 @@
 
   <h3 style="margin-top:28px;">08.2 — Posición de Ayala entre 36 municipios</h3>
   <div class="info-box">
-    Rankings calculados sobre los 36 municipios de Morelos (fuente: SESNSP corte mar-2026). La posición se expresa como "X° de 36" — mientras menor el número, más alto Ayala en el ranking.
+    Rankings calculados sobre los 36 municipios de Morelos (fuente: SESNSP corte dic-2025). La posición se expresa como "X° de 36" — mientras menor el número, más alto Ayala en el ranking.
   </div>
   <div class="menores-table">
     <table>
@@ -7427,7 +7353,7 @@
     <p>Para la comparativa específica con Cuautla (el extremo del patrón), regresa al <strong>Ranking Estatal</strong> (sección R).</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
 </section>
 
 <!-- sA9 — CONCLUSIONES AYALA v2 -->
@@ -7447,7 +7373,7 @@
       El <span class="hl-green">homicidio oficial baja</span> por estrategia federal;<br>
       la <span class="hl-red">extorsión</span> y el <span class="hl-orange">narcomenudeo</span> suben por decisión local.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <!-- Grid 5 conclusion cards -->
@@ -7572,7 +7498,7 @@
 
 <!-- ============================================================ -->
 <!-- CUERNAVACA · 9 SECCIONES (sC1-sC9)                           -->
-<!-- Fuente: SESNSP corte mar-2026, RNPDNO abr-2026, CONAPO 2025  -->
+<!-- Fuente: SESNSP corte dic-2025, RNPDNO abr-2026, CONAPO 2025  -->
 <!-- ============================================================ -->
 
 <!-- sC1 — PORTADA CUERNAVACA -->
@@ -7697,7 +7623,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -7769,7 +7695,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sC3 — RANKING ESTATAL -->
@@ -7852,7 +7778,7 @@
     <div class="simple-tag">Interpretación</div>
     <p>Cuernavaca es <strong>capital por volumen absoluto</strong> en casi todo — excepto en extorsión. Ahí, Cuautla es el titular indiscutible (17.2× más absoluto, 34.6× más en tasa). La firma delictiva de la capital es <strong>homicidio y violencia familiar</strong>; la del oriente (Cuautla/Ayala) es <strong>extorsión y narcomenudeo</strong>. Dos ecosistemas criminales distintos dentro del mismo estado.</p>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado.</div>
 </section>
 
 <!-- sC4 — SERIE HISTÓRICA DECENAL -->
@@ -7932,7 +7858,7 @@
     <strong>(2) El par feminicidio/violencia familiar</strong>: feminicidio cae 62.5% (de 8 a 3) <em>sin</em> que baje la violencia familiar (plana en 2,067). Lo esperable si la violencia contra la mujer bajara sería que ambas categorías se movieran juntas. Que una caiga y la otra no, es la firma de <em>re-tipificación</em> — casos que en 2024 se clasificaron como feminicidio ahora se registran como violencia familiar.
   </div>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026, Cuernavaca. Z-scores calculados sobre promedio 2015-2023. Las cifras no prueban reclasificación por sí solas: son la firma estadística que la haría esperable.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025, Cuernavaca. Z-scores calculados sobre promedio 2015-2023. Las cifras no prueban reclasificación por sí solas: son la firma estadística que la haría esperable.</div>
 </section>
 
 <!-- sC7 — DESAPARICIONES -->
@@ -8036,7 +7962,7 @@
   <div class="info-box" style="margin-top:16px;">
     <strong>Limitación de la base.</strong> El 40.7% de los registros RNPDNO para Morelos completo tienen municipio "CONFIDENCIAL" (832 de 2,042). Los 286 de Cuernavaca corresponden solo a registros con municipio desagregado. La cifra real podría ser mayor.
   </div>
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (homicidio doloso, culposo, feminicidio, mensual por municipio), RNPDNO corte 29-nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. Ratio D/L = Desapariciones / Total Letal. Total letal = suma de doloso + culposo + feminicidio. Este cruce va como criterio base en cada municipio del dashboard.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (homicidio doloso, culposo, feminicidio, mensual por municipio), RNPDNO corte 29-nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. Ratio D/L = Desapariciones / Total Letal. Total letal = suma de doloso + culposo + feminicidio. Este cruce va como criterio base en cada municipio del dashboard.</div>
 </section>
 
 <!-- sC8 — CUERNAVACA VS ESTADO -->
@@ -8134,7 +8060,7 @@
     <p>Esa sobrerrepresentación, combinada con la caída simultánea del homicidio doloso (−92 víctimas) y la subida del homicidio culposo (+52 víctimas), es la combinación que invita a investigación pericial por reclasificación. <strong>Ninguna prueba por sí sola; la coincidencia sí merece una solicitud INAI a Fiscalía Morelos.</strong></p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
 </section>
 
 <!-- sC9 — CONCLUSIONES CUERNAVACA -->
@@ -8155,7 +8081,7 @@
       pero el <span class="hl-orange">culposo sube 68%</span> al máximo decenal —<br>
       52 víctimas <span class="hl-red">cambiaron de categoría</span>, no de existencia.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <!-- Grid 5 conclusion cards -->
@@ -8256,14 +8182,14 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes consolidadas sección Cuernavaca.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación abril 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones poblacionales 2025. Administración: José Luis Uriostegui (2022-2025, reelecto en 2024).
+    <strong>Fuentes consolidadas sección Cuernavaca.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación febrero 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones poblacionales 2025. Administración: José Luis Uriostegui (2022-2025, reelecto en 2024).
   </div>
 </section>
 
 
 <!-- ============================================================ -->
 <!-- JIUTEPEC · 9 SECCIONES (sJ1-sJ9)                             -->
-<!-- Fuente: SESNSP corte mar-2026, RNPDNO corte nov-2025         -->
+<!-- Fuente: SESNSP corte dic-2025, RNPDNO corte nov-2025         -->
 <!-- CVE 17011 · Pop 214,137 · Admin Flores Marín (2022-2025)     -->
 <!-- ============================================================ -->
 
@@ -8401,7 +8327,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -8473,7 +8399,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sJ3 — RANKING ESTATAL -->
@@ -8550,7 +8476,7 @@
     <div class="simple-tag">Interpretación</div>
     <p>Jiutepec es el <strong>polo industrial del estado</strong> — su perfil delictivo refleja eso: robo de vehículo (por CIVAC y tránsito), violencia familiar (ciudad densa), homicidio doloso alto (tercero absoluto, aunque tasa moderada). Pero la <strong>señal nueva</strong> son extorsión y narcomenudeo al alza — crimen organizado adaptándose al mercado de una ciudad industrial. Sin consolidarse aún al nivel de Cuautla, pero con dirección clara.</p>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado.</div>
 </section>
 
 <!-- sJ4 — SERIE HISTÓRICA -->
@@ -8635,7 +8561,7 @@
     <strong>(3) "Otros delitos contra la libertad personal" +133%</strong> — categoría residual dentro de la cual pueden ocultarse casos de privación de libertad no tipificados como secuestro o desaparición. Requiere análisis expediente por expediente.
   </div>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026, Jiutepec. Comparativo anual.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025, Jiutepec. Comparativo anual.</div>
 </section>
 
 <!-- sJ7 — CRUCE HOMICIDIO × DESAPARICIÓN -->
@@ -8735,7 +8661,7 @@
   <div class="chart-container" style="min-height:380px;">
     <canvas id="chartJiutRnpdno"></canvas>
   </div>
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (homicidio doloso, culposo, feminicidio mensual), RNPDNO corte 29-nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. Ratio D/L = Desapariciones / Total Letal.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (homicidio doloso, culposo, feminicidio mensual), RNPDNO corte 29-nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. Ratio D/L = Desapariciones / Total Letal.</div>
 </section>
 
 <!-- sJ8 — JIUTEPEC VS ESTADO -->
@@ -8826,7 +8752,7 @@
     <p>La dimensión a vigilar es la <strong>dirección del cambio</strong>: homicidio bajando, delitos económicos del crimen organizado subiendo. Si el patrón se sostiene en próximos cortes, Jiutepec estará replicando el trayectoria Cuautla con 3-4 años de retraso.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025.</div>
 </section>
 
 <!-- sJ9 — CONCLUSIONES -->
@@ -8846,7 +8772,7 @@
       la <span class="hl-orange">economía criminal sube</span>.<br>
       <span style="font-size:80%;opacity:0.85;">El doloso cae 39%, pero extorsión +56%, narcomenudeo +42%.</span>
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -8944,14 +8870,14 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Jiutepec.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Administraciones: Rafael Reyes Reyes (2016-2018, 2019-2021 reelecto) y Gabriela Flores Marín (2022-2025, reelecta).
+    <strong>Fuentes sección Jiutepec.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Administraciones: Rafael Reyes Reyes (2016-2018, 2019-2021 reelecto) y Gabriela Flores Marín (2022-2025, reelecta).
   </div>
 </section>
 
 
 <!-- ============================================================ -->
 <!-- TEMIXCO · 9 SECCIONES (sT1-sT9)                              -->
-<!-- Fuente: SESNSP corte mar-2026, RNPDNO corte nov-2025         -->
+<!-- Fuente: SESNSP corte dic-2025, RNPDNO corte nov-2025         -->
 <!-- CVE 17018 · Pop 130,084 · Admin Romero (2025, primer año)    -->
 <!-- ============================================================ -->
 
@@ -9092,7 +9018,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -9164,7 +9090,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sT3 — RANKING ESTATAL -->
@@ -9248,7 +9174,7 @@
     <p>Temixco es el municipio mediano del cuarteto — 5° en volumen de delitos pero 3° en homicidio doloso absoluto y 4° en tasa. La firma está en la <strong>densidad de violencia letal</strong>: con un tercio de la población de Cuernavaca, tiene 82% de los homicidios dolosos. Es <strong>estructuralmente</strong> más violento por habitante que la capital.</p>
     <p>Agregue a esto la subida de violación simple (+108%), abuso sexual (+68%) y "otros delitos contra la libertad personal" (+94%), y tiene un municipio donde <strong>no solo sube el homicidio — sube toda la familia de delitos violentos</strong> simultáneamente.</p>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025 + CONAPO 2025. Posiciones calculadas sobre los 36 municipios del estado.</div>
 </section>
 
 <!-- sT4 — SERIE HISTÓRICA -->
@@ -9339,7 +9265,7 @@
     Ninguna hipótesis se resuelve con estadística. Lo que SÍ documentan los números es que <strong>Temixco NO sigue la tendencia estatal</strong> — y su narrativa en el corte 2025 debe leerse sin el optimismo que aplica al resto.
   </div>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026, Temixco. Comparativo anual 2024-2025.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025, Temixco. Comparativo anual 2024-2025.</div>
 </section>
 
 <!-- sT7 — CRUCE HOMICIDIO × DESAPARICIÓN -->
@@ -9439,7 +9365,7 @@
   <div class="chart-container" style="min-height:380px;">
     <canvas id="chartTemxRnpdno"></canvas>
   </div>
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (homicidio doloso, culposo, feminicidio mensual), RNPDNO corte 29-nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. Ratio D/L = Desapariciones / Total Letal.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (homicidio doloso, culposo, feminicidio mensual), RNPDNO corte 29-nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. Ratio D/L = Desapariciones / Total Letal.</div>
 </section>
 
 <!-- sT8 — TEMIXCO VS ESTADO -->
@@ -9544,7 +9470,7 @@
     <p>La pregunta para la administración Romero (primer año): <strong>¿Por qué las cifras de violencia personal siguen subiendo cuando el resto del cuarteto ZM baja?</strong> Esa es la distinción que el discurso oficial tendrá que contestar.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025.</div>
 </section>
 
 <!-- sT9 — CONCLUSIONES -->
@@ -9564,7 +9490,7 @@
       Temixco sube y rompe el <span class="hl-red">pico decenal</span>.<br>
       <span style="font-size:78%;opacity:0.88;">103 víctimas · tasa 79/100K · la más violenta per cápita de la ZM.</span>
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -9672,14 +9598,14 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Temixco.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Administraciones: Juan Carlos Valencia (2016-2018), Ariadna Barrera (2019-2021), Rogelio López Angulo (2022-2024), Yael Fernando Romero González (2025-, Morena).
+    <strong>Fuentes sección Temixco.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Administraciones: Juan Carlos Valencia (2016-2018), Ariadna Barrera (2019-2021), Rogelio López Angulo (2022-2024), Yael Fernando Romero González (2025-, Morena).
   </div>
 </section>
 
 
 <!-- ============================================================ -->
 <!-- HUITZILAC · 9 SECCIONES (sHz1-sHz9)                          -->
-<!-- Fuente: SESNSP corte mar-2026, RNPDNO corte nov-2025         -->
+<!-- Fuente: SESNSP corte dic-2025, RNPDNO corte nov-2025         -->
 <!-- CVE 17009 · Pop ~20,000 · Peaje del Ajusco                   -->
 <!-- ============================================================ -->
 
@@ -9786,7 +9712,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -9865,7 +9791,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sHz3 — RANKING ESTATAL -->
@@ -9986,7 +9912,7 @@
 
   <p style="margin-top:18px;">Los <strong>249 robos de vehículo</strong> son equivalentes a <em>uno cada 35 horas</em> durante todo 2025 en un municipio de 20 mil habitantes. Las barras naranjas señalan los delitos donde Huitzilac <strong>rebasa su peso demográfico</strong> (más de 1% del total estatal).</p>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026. Total carpetas Huitzilac 2025: 840. Total Morelos: 45,451. Peso demográfico Huitzilac: 1.0%.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025. Total carpetas Huitzilac 2025: 840. Total Morelos: 45,451. Peso demográfico Huitzilac: 1.0%.</div>
 </section>
 
 <script>
@@ -10225,7 +10151,7 @@
     <p>La firma es clara: <strong>violencia letal de paso</strong> y <strong>delito patrimonial sobre la carretera</strong>. El municipio no es violento porque viva mucha gente — es violento porque por él pasa mucha gente, muchos vehículos y, potencialmente, mucho tránsito de mercancía criminal.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
 </section>
 
 <!-- sHz9 — CONCLUSIONES -->
@@ -10244,7 +10170,7 @@
       La violencia no se acumula porque <span class="hl-green">ahí viva mucha gente</span> —<br>
       se acumula porque <span class="hl-red">por ahí pasa la plaza</span>.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -10361,14 +10287,14 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Huitzilac.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Huitzilac, CVE municipal 17009, Zona Metropolitana de Cuernavaca.
+    <strong>Fuentes sección Huitzilac.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Huitzilac, CVE municipal 17009, Zona Metropolitana de Cuernavaca.
   </div>
 </section>
 
 
 <!-- ============================================================ -->
 <!-- EMILIANO ZAPATA · 9 SECCIONES (sEz1-sEz9)                    -->
-<!-- Fuente: SESNSP corte mar-2026, RNPDNO corte nov-2025         -->
+<!-- Fuente: SESNSP corte dic-2025, RNPDNO corte nov-2025         -->
 <!-- CVE 17008 · Pop ~110,000 · Satélite de Cuernavaca           -->
 <!-- ============================================================ -->
 
@@ -10488,7 +10414,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -10567,7 +10493,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sEz3 — RANKING ESTATAL -->
@@ -10688,7 +10614,7 @@
 
   <p style="margin-top:18px;">Las barras naranjas marcan los delitos donde E.Zapata <strong>rebasa su peso demográfico</strong> (más de 5.7% del estatal). Solo homicidio doloso y robo de vehículo entran en esa categoría. El resto se mantiene en o por debajo de la proporción esperada por población.</p>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026. Total carpetas E.Zapata 2025: 2,040. Total Morelos: 45,451. Peso demográfico E.Zapata: 5.7%.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025. Total carpetas E.Zapata 2025: 2,040. Total Morelos: 45,451. Peso demográfico E.Zapata: 5.7%.</div>
 </section>
 
 <script>
@@ -10929,7 +10855,7 @@
     <p>El perfil no es de un municipio con "crisis generalizada" sino de uno con <strong>pico específico en letalidad</strong>, consistente con ubicación geográfica (corredor Cuernavaca-Jiutepec-Cuautla) y con presencia criminal territorial. Los saltos 2025 en narcomenudeo y extorsión señalan que esa presencia se está formalizando en la estadística.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios.</div>
 </section>
 
 <!-- sEz9 — CONCLUSIONES -->
@@ -10948,7 +10874,7 @@
       La violencia no <span class="hl-green">baja</span>, no <span class="hl-red">sube</span> —<br>
       <span class="hl-orange">se normaliza</span> en niveles altos.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -11056,7 +10982,7 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Emiliano Zapata.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Emiliano Zapata, CVE municipal 17008, Zona Metropolitana de Cuernavaca.
+    <strong>Fuentes sección Emiliano Zapata.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Emiliano Zapata, CVE municipal 17008, Zona Metropolitana de Cuernavaca.
   </div>
 </section>
 
@@ -11184,7 +11110,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -11270,7 +11196,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sTep3 — RANKING ESTATAL -->
@@ -11403,7 +11329,7 @@
 
   <p style="margin-top:18px;">Las barras <strong>naranjas</strong> marcan delitos donde Tepoztlán rebasa su peso demográfico (más de 2.82% del estatal). Las barras <strong>amarillas</strong> marcan categorías con salto explosivo en 2025 (narcomenudeo). El resto se mantiene en o por debajo de la proporción esperada por población.</p>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026. Total carpetas Tepoztlán 2025: 1,101. Total Morelos: 45,451. Peso demográfico Tepoztlán: 2.82%.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025. Total carpetas Tepoztlán 2025: 1,101. Total Morelos: 45,451. Peso demográfico Tepoztlán: 2.82%.</div>
 </section>
 
 <script>
@@ -11650,7 +11576,7 @@
     <p>Lo que no muestra la tabla — y sí muestra la década — es que estos indicadores en sobreproporción son consistentes con el arco decenal: <strong>ningún delito crítico bajó</strong> desde 2016. El municipio se mantuvo en la Zona Metropolitana con perfil específico: violencia letal medio-alta, tensión patrimonial alta (despojo al 4.45% estatal), delito sexual sobrerepresentado y, a partir de 2025, narcomenudeo emergente.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios. Total Morelos de abuso sexual estimado en 359 a partir de serie del dashboard.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios. Total Morelos de abuso sexual estimado en 359 a partir de serie del dashboard.</div>
 </section>
 
 <!-- sTep9 — CONCLUSIONES -->
@@ -11669,7 +11595,7 @@
       El <span class="hl-green">Pueblo Mágico</span> terminó el año con <span class="hl-red">22 carpetas</span> de narcomenudeo<br>
       que el año anterior <span class="hl-orange">no existían</span>.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -11775,7 +11701,7 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Tepoztlán.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Tepoztlán, CVE municipal 17020, Zona Metropolitana de Cuernavaca. Pueblo Mágico desde 2010 (nombramiento SECTUR).
+    <strong>Fuentes sección Tepoztlán.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Tepoztlán, CVE municipal 17020, Zona Metropolitana de Cuernavaca. Pueblo Mágico desde 2010 (nombramiento SECTUR).
   </div>
 </section>
 
@@ -11921,7 +11847,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -12014,7 +11940,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios. Total estatal de abuso sexual estimado en ~359 a partir de la serie municipal del dashboard.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios. Total estatal de abuso sexual estimado en ~359 a partir de la serie municipal del dashboard.</div>
 </section>
 
 <!-- sXoc3 — RANKING ESTATAL -->
@@ -12147,7 +12073,7 @@
 
   <p style="margin-top:18px;">Las barras <strong>naranjas</strong> marcan delitos donde Xochitepec rebasa su peso demográfico (más de 4.05% del estatal). Las barras <strong>amarillas</strong> marcan el delito con máximo histórico en 2025 (abuso sexual). El perfil municipal es de <strong>violencia doméstica y sexual sostenida</strong> por encima del promedio estatal.</p>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026. Total carpetas Xochitepec 2025: 1,455. Total Morelos: 45,451. Peso demográfico Xochitepec: 4.05%.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025. Total carpetas Xochitepec 2025: 1,455. Total Morelos: 45,451. Peso demográfico Xochitepec: 4.05%.</div>
 </section>
 
 <script>
@@ -12401,7 +12327,7 @@
     <p>La caída 2025 en homicidio doloso coloca al municipio en terreno medio estatal (3.41% con 4.05% de población). Pero la <strong>serie decenal</strong> (con dos picos en 2021 y 2024, ambos con 71 casos) advierte que la volatilidad no es excepción — es la firma. Sin más años confirmatorios, la "baja 2025" se lee con cautela.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios. Total Morelos de abuso sexual estimado en ~359 a partir de serie del dashboard.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total estatal = suma de los 36 municipios. Total Morelos de abuso sexual estimado en ~359 a partir de serie del dashboard.</div>
 </section>
 
 <!-- sXoc9 — CONCLUSIONES -->
@@ -12420,7 +12346,7 @@
       El homicidio <span class="hl-green">cayó 52%</span>, pero el abuso sexual llegó a su<br>
       <span class="hl-red">máximo histórico</span> — y las amenazas <span class="hl-orange">también</span>.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -12524,11 +12450,11 @@
   </div>
 
   <div class="caveat-banner" style="margin-top:32px;">
-    <strong>Qué no dice este análisis.</strong> La caída 52% en homicidio doloso es un dato real del corte SESNSP mar-2026 — pero la serie muestra volatilidad cíclica que impide declararla "tendencia". Hay tres lecturas compatibles con los datos: (a) reducción real sostenida, (b) regresión a la media tras pico 2024 (el ciclo), (c) reclasificación o retraso de denuncia (parte se refleja en 2026). Distinguir requiere esperar al corte dic-2026. Lo que <em>sí</em> es robusto: abuso sexual en máximo histórico (+180% decenal, sobreproporción 1.92×) y amenazas en máximo histórico (+88% decenal). <strong>Solicitud INAI sugerida:</strong> las 28 carpetas de abuso sexual 2025 — desagregadas por víctima (edad, sexo), agresor (relación con víctima), ubicación y estatus procesal.
+    <strong>Qué no dice este análisis.</strong> La caída 52% en homicidio doloso es un dato real del corte SESNSP dic-2025 — pero la serie muestra volatilidad cíclica que impide declararla "tendencia". Hay tres lecturas compatibles con los datos: (a) reducción real sostenida, (b) regresión a la media tras pico 2024 (el ciclo), (c) reclasificación o retraso de denuncia (parte se refleja en 2026). Distinguir requiere esperar al corte dic-2026. Lo que <em>sí</em> es robusto: abuso sexual en máximo histórico (+180% decenal, sobreproporción 1.92×) y amenazas en máximo histórico (+88% decenal). <strong>Solicitud INAI sugerida:</strong> las 28 carpetas de abuso sexual 2025 — desagregadas por víctima (edad, sexo), agresor (relación con víctima), ubicación y estatus procesal.
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Xochitepec.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Xochitepec, CVE municipal 17028, Zona Metropolitana de Cuernavaca.
+    <strong>Fuentes sección Xochitepec.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Xochitepec, CVE municipal 17028, Zona Metropolitana de Cuernavaca.
   </div>
 </section>
 
@@ -12656,7 +12582,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -12749,7 +12675,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sTlz3 — RANKING ESTATAL -->
@@ -12882,7 +12808,7 @@
 
   <p style="margin-top:18px;">Las barras <strong>amarillas</strong> marcan los dos delitos con rebrote/sobreproporción crítica en 2025 (narcomenudeo, feminicidio). Las barras <strong>rojas</strong> marcan delitos donde Tlaltizapán rebasa su peso demográfico. El resto se mantiene en o por debajo del promedio estatal.</p>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026. Total carpetas Tlaltizapán 2025: 671. Total Morelos: 45,451. Peso demográfico Tlaltizapán: 2.77%.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025. Total carpetas Tlaltizapán 2025: 671. Total Morelos: 45,451. Peso demográfico Tlaltizapán: 2.77%.</div>
 </section>
 
 <script>
@@ -13130,7 +13056,7 @@
     <p>Lo que baja: violencia patrimonial y letal general. Lo que sube o sostiene sobreproporción: violencia dirigida a persona y mercado criminal. La lectura estructural es que el municipio no tiene "crisis general" sino <strong>crisis específica de género y mercado</strong> — dos patrones que requieren intervenciones distintas.</p>
   </div>
 
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026 (36 municipios Morelos), CONAPO 2025. Total Morelos de abuso sexual estimado en ~359 a partir de serie del dashboard.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025 (36 municipios Morelos), CONAPO 2025. Total Morelos de abuso sexual estimado en ~359 a partir de serie del dashboard.</div>
 </section>
 
 <!-- sTlz9 — CONCLUSIONES -->
@@ -13150,7 +13076,7 @@
       pero el <span class="hl-red">narcomenudeo</span> vuelve<br>
       y el <span class="hl-orange">feminicidio</span> regresa.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -13275,7 +13201,7 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección Tlaltizapán.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Tlaltizapán de Zapata, CVE municipal 17024, Zona Metropolitana de Cuernavaca.
+    <strong>Fuentes sección Tlaltizapán.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 (publicación feb 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones 2025. Tlaltizapán de Zapata, CVE municipal 17024, Zona Metropolitana de Cuernavaca.
   </div>
 </section>
 
@@ -13354,7 +13280,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -13426,7 +13352,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025; totales Morelos = suma de los 36 municipios.</div>
 </section>
 
 <!-- sYa3 — RANKING ESTATAL -->
@@ -13504,7 +13430,7 @@
     <canvas id="chartYaTop"></canvas>
   </div>
 
-  <div class="footer-note">Fuente: SESNSP corte mar-2026. Total Yautepec 2025: 2,440. Total Morelos: 45,451.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025. Total Yautepec 2025: 2,440. Total Morelos: 45,451.</div>
 </section>
 
 <script>
@@ -13639,7 +13565,7 @@
     <div class="simple-tag">La lectura honesta</div>
     <p>Yautepec rebasa peso demográfico en <strong>5 de 10 indicadores</strong>, todos críticos: <strong>feminicidio (1.52×)</strong>, <strong>robo vehículo (1.30×)</strong>, <strong>abuso sexual (1.28×)</strong>, <strong>homicidio doloso (1.10×)</strong> y extorsión (1.02×). Es el municipio con perfil de <strong>concentración silenciosa</strong> — múltiples sobreproporciones sin un titular único que las articule.</p>
   </div>
-  <div class="footer-note">Fuentes: SESNSP corte mar-2026; CONAPO 2025.</div>
+  <div class="footer-note">Fuentes: SESNSP corte dic-2025; CONAPO 2025.</div>
 </section>
 
 <!-- sYa9 — CONCLUSIONES -->
@@ -13656,7 +13582,7 @@
       el <span class="hl-red">narcomenudeo triplica</span> en uno —<br>
       el <span class="hl-orange">corredor</span> sigue funcionando.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
 
   <div class="conclusion-grid">
@@ -13775,7 +13701,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div>
+      <div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div>
     </div>
   </div>
 </section>
@@ -13808,7 +13734,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025.</div>
 </section>
 
 <section id="sYe3">
@@ -13867,7 +13793,7 @@
   <div style="position:relative;height:560px;margin:24px 0 18px;padding:18px 22px 14px;background:rgba(22,27,34,0.65);border:1px solid #30363d;border-radius:12px;">
     <canvas id="chartYeTop"></canvas>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025.</div>
 </section>
 
 <script>
@@ -13971,7 +13897,7 @@
       simultáneo —<br>
       el satélite que <span class="hl-orange">replica Cuautla</span>.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
   <div class="conclusion-grid">
     <div class="conclusion-card accent-red"><div class="hero">+233%</div><div class="hero-sub">Homicidio doloso decenal</div><p>De 9 casos en 2016 a 30 en 2025. Cuarto año consecutivo subiendo. Tasa 57/100K — por encima del promedio estatal.</p></div>
@@ -14049,7 +13975,7 @@
   <div class="click-hint"><span class="dot"></span>Haz clic en cualquier tarjeta para la explicación completa</div>
   <div class="brand-strip" style="max-width:560px;margin-top:0;">
     <svg class="mini45"><use href="#logo45"/></svg>
-    <div style="text-align:left;"><div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div><div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div></div>
+    <div style="text-align:left;"><div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div><div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div></div>
   </div>
 </section>
 
@@ -14079,7 +14005,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-note">Fuente: SESNSP corte mar-2026; CONAPO 2025.</div>
+  <div class="footer-note">Fuente: SESNSP corte dic-2025; CONAPO 2025.</div>
 </section>
 
 <section id="sTla3">
@@ -14234,7 +14160,7 @@
       Pueblo <span class="hl-green">Mágico</span> con la <span class="hl-red">sobreproporción</span><br>
       de feminicidio <span class="hl-orange">más alta de Morelos</span>.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
   <div class="conclusion-grid">
     <div class="conclusion-card accent-red"><div class="hero">6.55×</div><div class="hero-sub">Feminicidio · sobreproporción 1° estatal</div><p>2 casos sobre 0.87% de la población = 5.71% del feminicidio estatal. La sobreproporción más alta del estado en esta categoría. Después de 7 años sin feminicidios registrados, 2025 marca el regreso.</p></div>
@@ -14323,7 +14249,7 @@
   <div class="click-hint"><span class="dot"></span>Haz clic en cualquier tarjeta para la explicación completa</div>
   <div class="brand-strip" style="max-width:560px;margin-top:0;">
     <svg class="mini45"><use href="#logo45"/></svg>
-    <div style="text-align:left;"><div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div><div>SESNSP corte mar-2026 · RNPDNO corte nov-2025 · CONAPO 2025</div></div>
+    <div style="text-align:left;"><div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis hecho por 45 Digital Noticias</div><div>SESNSP corte dic-2025 · RNPDNO corte nov-2025 · CONAPO 2025</div></div>
   </div>
 </section>
 
@@ -14505,7 +14431,7 @@
       pero el robo a casa <span class="hl-orange">sube 48%</span> —<br>
       la violencia <span class="hl-red">cambia de forma</span>.
     </div>
-    <div class="st-meta">45 Digital Noticias · corte SESNSP mar-2026</div>
+    <div class="st-meta">45 Digital Noticias · corte SESNSP dic-2025</div>
   </div>
   <div class="conclusion-grid">
     <div class="conclusion-card accent-green"><div class="hero">−73%</div><div class="hero-sub">Mayor caída homicidio del estado</div><p>De 22 a 6 casos. La reducción más grande del año. Pero 2024 fue máximo decenal del municipio — la "caída" puede ser regresión a la media, no mejora estructural.</p></div>
@@ -14517,889 +14443,6 @@
   <div class="caveat-banner" style="margin-top:32px;"><strong>Qué no dice este análisis.</strong> En municipios con bases pequeñas (6-22 casos/año), la variabilidad estadística es alta. Una "caída del 73%" es real en términos relativos, pero estadísticamente no necesariamente es una <em>reducción significativa</em>. Distinguir requiere serie larga y comparar con tasas de error. La <strong>solicitud INAI sugerida</strong>: detalle mensual de los 22 casos 2024 para identificar si fueron eventos clusterizados o distribuidos.</div>
   <div class="footer-note" style="margin-top:24px;"><strong>Fuentes Atlatlahucan.</strong> SESNSP dic-2025, RNPDNO nov-2025, CONAPO 2025. CVE 17002. Zona Metropolitana de Cuautla.</div>
 </section>
-
-
-<!-- =============================================================== -->
-<!-- sQ1 · ACTUALIZACIÓN Q1 2026 (v2.3) · PORTADA + 3 CHARTS         -->
-<!-- Los datos 2015-2025 publicados en v2.2 quedan intactos en sus    -->
-<!-- secciones — esta sección agrega información, no la modifica.    -->
-<!-- =============================================================== -->
-
-<!-- sQ1Cover — PORTADA -->
-<section id="sQ1Cover" class="cover">
-  <div class="cover-visual">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="q1Bg" cx="50%" cy="55%" r="80%">
-          <stop offset="0%" stop-color="rgba(63,185,80,0.16)"/>
-          <stop offset="45%" stop-color="rgba(88,166,255,0.10)"/>
-          <stop offset="100%" stop-color="rgba(13,17,23,0)"/>
-        </radialGradient>
-        <radialGradient id="q1Core" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="rgba(63,185,80,1)"/>
-          <stop offset="40%" stop-color="rgba(88,166,255,0.5)"/>
-          <stop offset="100%" stop-color="rgba(63,185,80,0)"/>
-        </radialGradient>
-      </defs>
-      <rect width="1600" height="900" fill="url(#q1Bg)"/>
-      <!-- Estrellas atmósfera -->
-      <g fill="#3fb950" opacity="0.20">
-        <circle cx="140" cy="100" r="1.2"/><circle cx="340" cy="70" r="1.4"/>
-        <circle cx="520" cy="130" r="1"/><circle cx="720" cy="80" r="1.2"/>
-        <circle cx="900" cy="120" r="1.3"/><circle cx="1100" cy="60" r="1.1"/>
-        <circle cx="1280" cy="140" r="1.4"/><circle cx="1460" cy="90" r="1"/>
-      </g>
-      <!-- 3 nodos pulsantes representando enero, febrero, marzo 2026 -->
-      <g opacity="0.55">
-        <g stroke="rgba(63,185,80,0.32)" stroke-width="1.2" fill="none">
-          <line x1="450" y1="640" x2="800" y2="640">
-            <animate attributeName="stroke-opacity" values="0.15;0.55;0.15" dur="3.6s" repeatCount="indefinite"/>
-          </line>
-          <line x1="800" y1="640" x2="1150" y2="640"/>
-        </g>
-        <!-- Enero -->
-        <circle cx="450" cy="640" r="22" fill="url(#q1Core)" opacity="0.65">
-          <animate attributeName="r" values="22;30;22" dur="2.4s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="450" cy="640" r="11" fill="#3fb950"/>
-        <text x="450" y="700" fill="#3fb950" font-size="14" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">ENE</text>
-        <!-- Febrero -->
-        <circle cx="800" cy="640" r="22" fill="url(#q1Core)" opacity="0.65">
-          <animate attributeName="r" values="22;30;22" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="800" cy="640" r="11" fill="#58a6ff"/>
-        <text x="800" y="700" fill="#58a6ff" font-size="14" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">FEB</text>
-        <!-- Marzo -->
-        <circle cx="1150" cy="640" r="22" fill="url(#q1Core)" opacity="0.65">
-          <animate attributeName="r" values="22;30;22" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="1150" cy="640" r="11" fill="#fbbf24"/>
-        <text x="1150" y="700" fill="#fbbf24" font-size="14" font-weight="700" text-anchor="middle" font-family="JetBrains Mono, monospace">MAR</text>
-      </g>
-    </svg>
-  </div>
-
-  <!-- Badge -->
-  <div style="display:inline-flex;gap:10px;align-items:center;padding:8px 18px;background:rgba(13,17,23,0.85);border:1.5px solid rgba(63,185,80,0.55);border-radius:24px;margin-bottom:18px;backdrop-filter:blur(8px);">
-    <span style="width:9px;height:9px;background:#3fb950;border-radius:50%;box-shadow:0 0 10px rgba(63,185,80,0.85);animation:pulse 2s infinite;"></span>
-    <span style="color:#3fb950;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800;">Q1 2026 · 14 ZM · datos parciales</span>
-  </div>
-
-  <h1 style="background:linear-gradient(135deg,#3fb950 0%,#58a6ff 50%,#fbbf24 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 4px 30px rgba(0,0,0,0.5);">EL PRIMER TRIMESTRE 2026<br>QUE ROMPIÓ LA NARRATIVA</h1>
-  <p class="subtitle" style="max-width:880px;text-align:justify;">
-    El gobierno federal celebra una caída del 41% en el promedio diario nacional de homicidios dolosos. En las 14 zonas metropolitanas de Morelos, el indicador se mantuvo plano (+1.6%) mientras la extorsión se multiplicó por 2.5 en un solo trimestre. Esta sección integra el corte SESNSP marzo 2026 como capa adicional — sin modificar las cifras 2015-2025 publicadas previamente.
-  </p>
-</section>
-
-<!-- sQ1 — DETALLE -->
-<section id="sQ1">
-  <h3>Q1 2026 · Detalle</h3>
-  <h1>Lo que el corte SESNSP marzo 2026 agrega al análisis</h1>
-  <p style="font-size:18px;color:#c9d1d9;line-height:1.5;max-width:920px;margin-bottom:32px;text-align:justify;">
-    El SESNSP publicó el 14 de abril de 2026 el corte de incidencia delictiva con datos hasta el 31 de marzo de 2026. Las cifras 2015-2025 que ya documentamos en versiones anteriores <strong>se mantienen idénticas</strong>. Esta sección integra el primer trimestre 2026 como capa adicional, identificando explícitamente cuándo los datos 2026 son parciales (solo 3 meses del año).
-  </p>
-
-  <!-- Cards de comparativa Q1 2025 vs Q1 2026 (14 munis ZM agregadas) -->
-  <h3 style="margin-top:24px;">Q1 2026 · agregado de las 14 ZM</h3>
-  <style>
-    .q1-hero-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin: 22px 0 16px;
-    }
-    .q1-hero-card {
-      background: rgba(22, 27, 34, 0.85);
-      border: 1.5px solid #30363d;
-      border-radius: 12px;
-      padding: 18px 20px 16px;
-      cursor: pointer;
-      transition: transform 200ms, border-color 200ms, box-shadow 200ms;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      text-align: left;
-    }
-    .q1-hero-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    }
-    .q1-hero-card.alza { border-color: rgba(248, 81, 73, 0.55); border-left: 4px solid #f85149; }
-    .q1-hero-card.alza:hover { border-color: #f85149; }
-    .q1-hero-card.flat { border-color: rgba(251, 191, 36, 0.55); border-left: 4px solid #fbbf24; }
-    .q1-hero-card.flat:hover { border-color: #fbbf24; }
-    .q1-hero-card.alert { border-color: rgba(210, 153, 34, 0.55); border-left: 4px solid #d29922; }
-    .q1-hero-card.alert:hover { border-color: #d29922; }
-    .q1-hero-card.up { border-color: rgba(88, 166, 255, 0.55); border-left: 4px solid #58a6ff; }
-    .q1-hero-card.up:hover { border-color: #58a6ff; }
-    .q1-hero-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .q1-hero-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 1.6px;
-      font-weight: 800;
-      color: #c9d1d9;
-      text-transform: uppercase;
-    }
-    .q1-hero-icon {
-      font-size: 18px; line-height: 1;
-    }
-    .q1-hero-icon.alza { color: #f85149; }
-    .q1-hero-icon.flat { color: #fbbf24; }
-    .q1-hero-icon.alert { color: #d29922; }
-    .q1-hero-icon.up { color: #58a6ff; }
-    .q1-hero-mini {
-      width: 100%;
-      height: 70px;
-    }
-    .q1-hero-bigrow {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
-      padding-top: 4px;
-    }
-    .q1-hero-num {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1;
-    }
-    .q1-hero-num.alza { color: #f85149; }
-    .q1-hero-num.flat { color: #fbbf24; }
-    .q1-hero-num.alert { color: #d29922; }
-    .q1-hero-num.up { color: #58a6ff; }
-    .q1-hero-num small {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      font-weight: 600;
-      color: #8b949e;
-      letter-spacing: 0.4px;
-      margin-left: 4px;
-    }
-    .q1-hero-context {
-      font-size: 11.5px;
-      color: #8b949e;
-      line-height: 1.4;
-      font-family: 'JetBrains Mono', monospace;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-      max-width: 50%;
-      text-align: right;
-    }
-    .q1-hero-foot {
-      font-size: 12.5px;
-      color: #c9d1d9;
-      line-height: 1.55;
-      padding-top: 8px;
-      border-top: 1px solid rgba(48, 54, 61, 0.6);
-      text-align: justify;
-    }
-    .q1-hero-foot strong { color: #e6edf3; }
-  </style>
-
-  <div class="q1-hero-grid">
-
-    <!-- Card 1 · Homicidio doloso (PLANO) -->
-    <div class="q1-hero-card flat" onclick="showExplain('Homicidio doloso plano: la anomalía Morelos','Mientras el SESNSP nacional reportó marzo 2026 como el mes con menos homicidios dolosos desde 2016 (caída de 41% en el promedio diario respecto a septiembre 2024), las 14 ZM de Morelos registraron solo +1.6% interanual (de 190 a 193 carpetas Q1 2025→Q1 2026). Las 7 entidades destacadas en mañanera (Guanajuato −63%, Baja California −42%, Sinaloa −63%, Estado de México, Nuevo León −74%, Quintana Roo −74%, Zacatecas −89%) sí registraron caídas dramáticas; Morelos no apareció en ese conteo.')">
-      <div class="q1-hero-head">
-        <span class="q1-hero-title">Homicidio doloso · 14 ZM</span>
-        <span class="q1-hero-icon flat">▬</span>
-      </div>
-      <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="none">
-        <!-- Q1 2025 row -->
-        <text x="0" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#8b949e" font-weight="700">Q1 2025</text>
-        <rect x="58" y="6" width="200" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-        <rect x="58" y="6" width="197.9" height="14" rx="2" fill="rgba(251,191,36,0.45)"/>
-        <text x="265" y="17" font-family="JetBrains Mono, monospace" font-size="11" fill="#c9d1d9" font-weight="700">190</text>
-        <!-- Q1 2026 row -->
-        <text x="0" y="44" font-family="JetBrains Mono, monospace" font-size="9" fill="#fbbf24" font-weight="800">Q1 2026</text>
-        <rect x="58" y="36" width="200" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-        <rect x="58" y="36" width="201" height="14" rx="2" fill="#fbbf24"/>
-        <text x="265" y="47" font-family="JetBrains Mono, monospace" font-size="11" fill="#fbbf24" font-weight="800">193</text>
-        <!-- Diff annotation -->
-        <text x="135" y="65" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#8b949e" text-anchor="middle" letter-spacing="1">+3 carpetas · sin cambio significativo</text>
-      </svg>
-      <div class="q1-hero-bigrow">
-        <span class="q1-hero-num flat">+1.6%<small>Δ Q1 26</small></span>
-        <span class="q1-hero-context">vs −41%<br>nacional</span>
-      </div>
-      <div class="q1-hero-foot"><strong>Morelos no apareció</strong> en el top 7 de estados que celebra mañanera. La caída del 41% nacional no se replicó aquí.</div>
-    </div>
-
-    <!-- Card 2 · Extorsión (ALZA EXTREMA) -->
-    <div class="q1-hero-card alza" onclick="showExplain('Extorsión multiplicada por 2.5','Las 14 ZM Morelos pasaron de 55 a 138 carpetas de extorsión entre Q1 2025 y Q1 2026 (+150.9%). Cuautla cabecera concentra 60 de esas 138 carpetas (43.5% de la nueva extorsión) — manteniendo su firma como capital nacional del cobro de piso. Pero el hallazgo más relevante es que Xochitepec, que cerró 2025 con solo 4 extorsiones anuales, registró 24 en el solo Q1 2026 — un nuevo polo emergente. La tendencia contradice la narrativa nacional de baja generalizada.')">
-      <div class="q1-hero-head">
-        <span class="q1-hero-title">Extorsión · 14 ZM</span>
-        <span class="q1-hero-icon alza">▲</span>
-      </div>
-      <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="none">
-        <!-- Bar Q1 25 (55) -->
-        <text x="0" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#8b949e" font-weight="700">Q1 2025</text>
-        <rect x="58" y="6" width="200" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-        <rect x="58" y="6" width="79.7" height="14" rx="2" fill="rgba(248,81,73,0.40)"/>
-        <text x="265" y="17" font-family="JetBrains Mono, monospace" font-size="11" fill="#c9d1d9" font-weight="700">55</text>
-        <!-- Bar Q1 26 (138) -->
-        <text x="0" y="44" font-family="JetBrains Mono, monospace" font-size="9" fill="#f85149" font-weight="800">Q1 2026</text>
-        <rect x="58" y="36" width="200" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-        <rect x="58" y="36" width="200" height="14" rx="2" fill="#f85149"/>
-        <text x="265" y="47" font-family="JetBrains Mono, monospace" font-size="11" fill="#f85149" font-weight="800">138</text>
-        <text x="135" y="65" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#f85149" text-anchor="middle" letter-spacing="1" font-weight="700">+83 carpetas · multiplicado por 2.5</text>
-      </svg>
-      <div class="q1-hero-bigrow">
-        <span class="q1-hero-num alza">+151%<small>Δ Q1 26</small></span>
-        <span class="q1-hero-context">Xochitepec<br>×24 alza</span>
-      </div>
-      <div class="q1-hero-foot"><strong>Cuautla concentra 60 carpetas</strong> de las 138 (43%). Xochitepec emerge como tercer polo: pasó de 4 a 24 en un trimestre.</div>
-    </div>
-
-    <!-- Card 3 · Violencia familiar (ALZA · denuncia operativa) -->
-    <div class="q1-hero-card up" onclick="showExplain('Violencia familiar al alza: el delito de denuncia funciona','Las 14 ZM Morelos registraron 1,373 carpetas de violencia familiar en Q1 2026 vs 1,171 en Q1 2025 (+17.3%). Es un dato editorialmente importante: si el sistema de captura del Ministerio Público estuviera fallando (subregistro), todos los delitos bajarían — incluyendo violencia familiar y feminicidio (estos suben +66.7%). El que estos delitos SUBAN dice que el sistema de denuncia opera. Por lo tanto, las bajas que sí ocurrieron en otras categorías (lesiones dolosas −31%, amenazas −18%) ameritan auditoría: pueden ser reales o reclasificación de tipificación.')">
-      <div class="q1-hero-head">
-        <span class="q1-hero-title">Violencia familiar · 14 ZM</span>
-        <span class="q1-hero-icon up">▲</span>
-      </div>
-      <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="none">
-        <!-- Bar Q1 25 (1171) -->
-        <text x="0" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#8b949e" font-weight="700">Q1 2025</text>
-        <rect x="58" y="6" width="200" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-        <rect x="58" y="6" width="170.5" height="14" rx="2" fill="rgba(88,166,255,0.42)"/>
-        <text x="265" y="17" font-family="JetBrains Mono, monospace" font-size="10" fill="#c9d1d9" font-weight="700">1,171</text>
-        <!-- Bar Q1 26 (1373) -->
-        <text x="0" y="44" font-family="JetBrains Mono, monospace" font-size="9" fill="#58a6ff" font-weight="800">Q1 2026</text>
-        <rect x="58" y="36" width="200" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-        <rect x="58" y="36" width="200" height="14" rx="2" fill="#58a6ff"/>
-        <text x="265" y="47" font-family="JetBrains Mono, monospace" font-size="10" fill="#58a6ff" font-weight="800">1,373</text>
-        <text x="135" y="65" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#8b949e" text-anchor="middle" letter-spacing="1">+202 carpetas · denuncia activa</text>
-      </svg>
-      <div class="q1-hero-bigrow">
-        <span class="q1-hero-num up">+17.3%<small>Δ Q1 26</small></span>
-        <span class="q1-hero-context">Feminicidio<br>+67%</span>
-      </div>
-      <div class="q1-hero-foot"><strong>Si el subregistro fuera la explicación</strong>, viofam y feminicidio bajarían también. Que SUBAN dice que el sistema de denuncia opera.</div>
-    </div>
-
-    <!-- Card 4 · 16 hallazgos rojos (AUDITORÍA) -->
-    <div class="q1-hero-card alert" onclick="showExplain('16 hallazgos rojos detectados por la auditoría','La auditoría automatizada Q1 2026 vs Q1 2025 detectó 16 cifras donde delitos históricamente estables cayeron más de 30% en un trimestre. Casos destacados: Tlaltizapán lesiones dolosas −85% (13→2), Yecapixtla lesiones dolosas −64% (11→4), Cuautla lesiones dolosas −44% (61→34) con lesiones culposas subiendo +48% (169→250) en paralelo — patrón que sugiere reclasificación. Las 6 reclasificaciones detectadas no son acusación de manipulación, son hipótesis pendientes de confirmar vía solicitudes INAI a Fiscalía Morelos.')">
-      <div class="q1-hero-head">
-        <span class="q1-hero-title">Auditoría · hallazgos rojos</span>
-        <span class="q1-hero-icon alert">⚠</span>
-      </div>
-      <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="xMidYMid meet">
-        <!-- Grid 4×4 = 16 dots representando los hallazgos -->
-        <g transform="translate(35, 8)">
-          <!-- Row 1 -->
-          <circle cx="0"  cy="0" r="6" fill="#d29922"/>
-          <circle cx="20" cy="0" r="6" fill="#d29922"/>
-          <circle cx="40" cy="0" r="6" fill="#d29922"/>
-          <circle cx="60" cy="0" r="6" fill="#d29922"/>
-          <!-- Row 2 -->
-          <circle cx="0"  cy="20" r="6" fill="#d29922"/>
-          <circle cx="20" cy="20" r="6" fill="#d29922"/>
-          <circle cx="40" cy="20" r="6" fill="#d29922"/>
-          <circle cx="60" cy="20" r="6" fill="#d29922"/>
-          <!-- Row 3 -->
-          <circle cx="0"  cy="40" r="6" fill="#f85149"/>
-          <circle cx="20" cy="40" r="6" fill="#f85149"/>
-          <circle cx="40" cy="40" r="6" fill="#f85149"/>
-          <circle cx="60" cy="40" r="6" fill="#f85149"/>
-          <!-- Row 4 — 6 dots -->
-          <circle cx="0"  cy="55" r="5" fill="#f85149" opacity="0.85"/>
-          <circle cx="20" cy="55" r="5" fill="#f85149" opacity="0.85"/>
-          <circle cx="40" cy="55" r="5" fill="#f85149" opacity="0.85"/>
-          <circle cx="60" cy="55" r="5" fill="#f85149" opacity="0.85"/>
-        </g>
-        <text x="120" y="20" font-family="JetBrains Mono, monospace" font-size="10" fill="#c9d1d9" font-weight="700">10 bajas</text>
-        <text x="120" y="32" font-family="JetBrains Mono, monospace" font-size="9" fill="#d29922">en delitos estables</text>
-        <text x="120" y="50" font-family="JetBrains Mono, monospace" font-size="10" fill="#c9d1d9" font-weight="700">6 pares</text>
-        <text x="120" y="62" font-family="JetBrains Mono, monospace" font-size="9" fill="#f85149">posible reclasificación</text>
-      </svg>
-      <div class="q1-hero-bigrow">
-        <span class="q1-hero-num alert">16<small>cifras flagged</small></span>
-        <span class="q1-hero-context">Cuautla<br>61→34 lesiones</span>
-      </div>
-      <div class="q1-hero-foot"><strong>Tlaltizapán lesiones dolosas −85%</strong> (13→2). Cuautla doloso −44% con culposo +48%. Hipótesis pendiente de INAI a Fiscalía.</div>
-    </div>
-
-  </div>
-  <div class="click-hint"><span class="dot"></span>Haz clic en cualquier tarjeta para la explicación completa</div>
-
-  <!-- ========================== -->
-  <!-- CHART A · Diverging bar Δ% -->
-  <!-- ========================== -->
-  <h3 style="margin-top:44px;">Qué subió y qué bajó · Q1 2025 → Q1 2026 · agregado 14 ZM</h3>
-  <p style="text-align:justify;">Para cada delito, el porcentaje de cambio entre el primer trimestre 2025 y el primer trimestre 2026 al agregar las 14 zonas metropolitanas. Las barras a la derecha (rojo) representan alzas — el delito creció en el trimestre. Las barras a la izquierda (azul) representan bajas. Las cifras anualizadas equivalentes están entre paréntesis: nada se proyectó al año completo, solo se cita el cambio interanual del mismo trimestre.</p>
-
-  <div class="chart-zoomable" style="margin:22px 0 18px;">
-    <div class="chart-canvas-frame" style="position:relative;height:480px;padding:14px 16px 12px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
-      <canvas id="chartQ1Delta"></canvas>
-    </div>
-  </div>
-  <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;margin-bottom:14px;text-align:center;">
-    DERECHA = ALZA Q1-25→Q1-26 · IZQUIERDA = BAJA · LÍNEA EN 0% = SIN CAMBIO
-  </div>
-
-  <!-- Tabla maestra Q1 2026 por muni -->
-  <h3 style="margin-top:44px;">Q1 2026 por municipio · totales del trimestre enero-marzo 2026</h3>
-  <p style="text-align:justify;">Los datos del primer trimestre por cada uno de los 14 municipios analizados. Población CONAPO 2025. Las cifras de cada delito son la suma Enero+Febrero+Marzo 2026 reportada por SESNSP en el corte mar-2026. Las celdas resaltadas en rojo destacan los volúmenes más altos del trimestre; en verde, las cifras bajas que también merecen atención por contraste.</p>
-
-  <div class="menores-table" style="margin-top:18px;">
-    <table>
-      <thead>
-        <tr>
-          <th>Municipio</th>
-          <th style="text-align:right;">Pob (mil)</th>
-          <th style="text-align:right;">Total Q1</th>
-          <th style="text-align:right;">Hom doloso</th>
-          <th style="text-align:right;">Hom culposo</th>
-          <th style="text-align:right;">Feminicidio</th>
-          <th style="text-align:right;">Extorsión</th>
-          <th style="text-align:right;">Narco</th>
-          <th style="text-align:right;">Robo veh</th>
-          <th style="text-align:right;">V. familiar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Cuernavaca</strong></td><td style="text-align:right;">397</td><td style="text-align:right;font-weight:700;">3,233</td><td style="text-align:right;">33</td><td style="text-align:right;">13</td><td style="text-align:right;">6</td><td style="text-align:right;">11</td><td style="text-align:right;">63</td><td style="text-align:right;font-weight:700;">298</td><td style="text-align:right;font-weight:700;">484</td></tr>
-        <tr><td><strong>Cuautla</strong></td><td style="text-align:right;">187</td><td style="text-align:right;font-weight:700;">1,833</td><td style="text-align:right;">22</td><td style="text-align:right;">17</td><td style="text-align:right;">2</td><td style="text-align:right;font-weight:700;color:#f85149;">60</td><td style="text-align:right;">51</td><td style="text-align:right;">97</td><td style="text-align:right;">189</td></tr>
-        <tr><td><strong>Jiutepec</strong></td><td style="text-align:right;">214</td><td style="text-align:right;">1,084</td><td style="text-align:right;">18</td><td style="text-align:right;">8</td><td style="text-align:right;">0</td><td style="text-align:right;">7</td><td style="text-align:right;">23</td><td style="text-align:right;">144</td><td style="text-align:right;">162</td></tr>
-        <tr><td><strong>Temixco</strong></td><td style="text-align:right;">130</td><td style="text-align:right;">758</td><td style="text-align:right;">17</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">6</td><td style="text-align:right;">10</td><td style="text-align:right;">51</td><td style="text-align:right;">120</td></tr>
-        <tr><td><strong>Yautepec</strong></td><td style="text-align:right;">110</td><td style="text-align:right;">647</td><td style="text-align:right;">19</td><td style="text-align:right;">5</td><td style="text-align:right;">0</td><td style="text-align:right;">12</td><td style="text-align:right;">10</td><td style="text-align:right;">65</td><td style="text-align:right;">75</td></tr>
-        <tr><td><strong>E. Zapata</strong></td><td style="text-align:right;">110</td><td style="text-align:right;">620</td><td style="text-align:right;font-weight:700;color:#f85149;">27</td><td style="text-align:right;">1</td><td style="text-align:right;">1</td><td style="text-align:right;">4</td><td style="text-align:right;">28</td><td style="text-align:right;">56</td><td style="text-align:right;">96</td></tr>
-        <tr><td><strong>Xochitepec</strong></td><td style="text-align:right;">79</td><td style="text-align:right;">434</td><td style="text-align:right;">10</td><td style="text-align:right;">3</td><td style="text-align:right;">0</td><td style="text-align:right;font-weight:700;color:#f85149;">24</td><td style="text-align:right;">2</td><td style="text-align:right;">47</td><td style="text-align:right;">75</td></tr>
-        <tr><td><strong>Ayala</strong></td><td style="text-align:right;">90</td><td style="text-align:right;">273</td><td style="text-align:right;">14</td><td style="text-align:right;">1</td><td style="text-align:right;">0</td><td style="text-align:right;">5</td><td style="text-align:right;">4</td><td style="text-align:right;">24</td><td style="text-align:right;">34</td></tr>
-        <tr><td><strong>Yecapixtla</strong></td><td style="text-align:right;">53</td><td style="text-align:right;">223</td><td style="text-align:right;">14</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">8</td><td style="text-align:right;">6</td><td style="text-align:right;">11</td><td style="text-align:right;">24</td></tr>
-        <tr><td><strong>Tepoztlán</strong></td><td style="text-align:right;">55</td><td style="text-align:right;">221</td><td style="text-align:right;color:#3fb950;">1</td><td style="text-align:right;">2</td><td style="text-align:right;">1</td><td style="text-align:right;">0</td><td style="text-align:right;">2</td><td style="text-align:right;">6</td><td style="text-align:right;">44</td></tr>
-        <tr><td><strong>Huitzilac</strong></td><td style="text-align:right;">20</td><td style="text-align:right;">216</td><td style="text-align:right;">7</td><td style="text-align:right;">5</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">4</td><td style="text-align:right;">52</td><td style="text-align:right;">21</td></tr>
-        <tr><td><strong>Tlaltizapán</strong></td><td style="text-align:right;">54</td><td style="text-align:right;">127</td><td style="text-align:right;">4</td><td style="text-align:right;">3</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">6</td><td style="text-align:right;">6</td><td style="text-align:right;">24</td></tr>
-        <tr><td><strong>Tlayacapan</strong></td><td style="text-align:right;">17</td><td style="text-align:right;">83</td><td style="text-align:right;">2</td><td style="text-align:right;">1</td><td style="text-align:right;">0</td><td style="text-align:right;">1</td><td style="text-align:right;">0</td><td style="text-align:right;">9</td><td style="text-align:right;">16</td></tr>
-        <tr><td><strong>Atlatlahucan</strong></td><td style="text-align:right;">30</td><td style="text-align:right;">77</td><td style="text-align:right;">5</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">1</td><td style="text-align:right;">6</td><td style="text-align:right;">9</td></tr>
-        <tr style="background:rgba(88,166,255,0.06);border-top:2px solid rgba(88,166,255,0.3);">
-          <td><strong style="color:#58a6ff;">ZM Cuernavaca</strong></td>
-          <td style="text-align:right;">1,059</td><td style="text-align:right;font-weight:700;color:#58a6ff;">6,693</td><td style="text-align:right;font-weight:700;">117</td><td style="text-align:right;">37</td><td style="text-align:right;">8</td><td style="text-align:right;">52</td><td style="text-align:right;">138</td><td style="text-align:right;font-weight:700;color:#58a6ff;">660</td><td style="text-align:right;font-weight:700;color:#58a6ff;">1,026</td>
-        </tr>
-        <tr style="background:rgba(251,191,36,0.06);border-top:2px solid rgba(251,191,36,0.3);">
-          <td><strong style="color:#fbbf24;">ZM Cuautla</strong></td>
-          <td style="text-align:right;">487</td><td style="text-align:right;font-weight:700;color:#fbbf24;">3,136</td><td style="text-align:right;">76</td><td style="text-align:right;">28</td><td style="text-align:right;">2</td><td style="text-align:right;font-weight:700;color:#fbbf24;">86</td><td style="text-align:right;">72</td><td style="text-align:right;">212</td><td style="text-align:right;">347</td>
-        </tr>
-        <tr style="background:rgba(63,185,80,0.06);border-top:2px solid rgba(63,185,80,0.4);">
-          <td><strong style="color:#3fb950;">TOTAL 14 munis</strong></td>
-          <td style="text-align:right;font-weight:800;color:#3fb950;">1,546</td><td style="text-align:right;font-weight:800;color:#3fb950;">9,829</td><td style="text-align:right;font-weight:800;color:#3fb950;">193</td><td style="text-align:right;">65</td><td style="text-align:right;">10</td><td style="text-align:right;font-weight:800;color:#3fb950;">138</td><td style="text-align:right;">210</td><td style="text-align:right;font-weight:800;color:#3fb950;">872</td><td style="text-align:right;font-weight:800;color:#3fb950;">1,373</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- ============================ -->
-  <!-- CHART B · Q1 histórico decenal -->
-  <!-- ============================ -->
-  <h3 style="margin-top:44px;">Q1 en perspectiva decenal · 2016 a 2026 · 14 ZM agregadas</h3>
-  <p style="text-align:justify;">El primer trimestre de cada año desde 2016, sumando los 14 municipios analizados. Permite ubicar el Q1 2026 dentro del rango histórico observado del decenio. La línea sólida marca el indicador completo de cada serie; el punto 2026 corresponde al primer trimestre del año que recién publicó el SESNSP. Es la única manera honesta de verificar si una "baja" o "alza" del trimestre actual sale del comportamiento esperable de la última década.</p>
-
-  <div class="chart-zoomable" style="margin:22px 0 18px;">
-    <div class="chart-canvas-frame" style="position:relative;height:440px;padding:14px 16px 12px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
-      <canvas id="chartQ1Historic"></canvas>
-    </div>
-  </div>
-  <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;margin-bottom:14px;text-align:center;">
-    SERIES Q1 ENERO-FEBRERO-MARZO · 2016 A 2026 · SUMA DE LOS 14 MUNICIPIOS ZM
-  </div>
-
-  <!-- ========================== -->
-  <!-- CHART C · Heatmap muni × delito -->
-  <!-- ========================== -->
-  <h3 style="margin-top:44px;">Mapa de calor · cambio Q1 2025 → Q1 2026 por municipio y delito</h3>
-  <p style="text-align:justify;">Cada celda muestra la variación porcentual del delito (columna) en el municipio (fila) entre el primer trimestre 2025 y el primer trimestre 2026. El color es directamente proporcional al cambio: rojo intenso para alzas grandes, azul intenso para bajas grandes, gris neutro para cambios menores al 10%. Las celdas marcadas con asterisco corresponden a delitos que pasaron de cero casos a una cifra positiva — el porcentaje no aplica en ese caso, pero el cambio absoluto sí es relevante.</p>
-
-  <div style="margin:22px 0 18px;padding:18px 14px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;overflow-x:auto;">
-    <style>
-      .q1-heatmap { width:100%; min-width:780px; border-collapse:collapse; font-family:'JetBrains Mono', monospace; font-size:11.5px; }
-      .q1-heatmap th { padding:8px 6px; color:#8b949e; font-weight:700; letter-spacing:0.4px; border-bottom:1px solid #30363d; text-align:center; }
-      .q1-heatmap th.muni-col { text-align:left; padding-left:12px; }
-      .q1-heatmap td { padding:8px 4px; text-align:center; border-bottom:1px solid rgba(48,54,61,0.4); position:relative; }
-      .q1-heatmap td.muni-cell { text-align:left; padding-left:12px; color:#c9d1d9; font-weight:600; font-family:'Inter',sans-serif; font-size:12.5px; }
-      .q1-heatmap .pop { color:#6e7681; font-size:10.5px; margin-left:6px; font-family:'JetBrains Mono',monospace; }
-      .q1-heatmap .delta { color:#0d1117; font-weight:800; font-size:11.5px; padding:5px 0; border-radius:4px; display:block; }
-      /* Escala de colores Δ% — rojo alza, azul baja, gris neutro */
-      .delta-rr { background:#f85149; color:#fff; }                   /* ≥+50% */
-      .delta-r  { background:rgba(248,81,73,0.65); color:#fff; }       /* +20% a +50% */
-      .delta-rL { background:rgba(248,81,73,0.30); color:#f0c4c0; }    /* +10% a +20% */
-      .delta-n  { background:rgba(139,148,158,0.18); color:#8b949e; }  /* ±10% */
-      .delta-bL { background:rgba(88,166,255,0.30); color:#b0d1f0; }   /* −10% a −20% */
-      .delta-b  { background:rgba(88,166,255,0.62); color:#fff; }      /* −20% a −50% */
-      .delta-bb { background:#58a6ff; color:#0d1117; }                 /* ≤−50% */
-      .delta-na { background:rgba(48,54,61,0.4); color:#6e7681; }      /* sin datos */
-      .delta-newcat { background:rgba(63,185,80,0.45); color:#fff; }   /* nuevo desde 0 */
-    </style>
-    <table class="q1-heatmap">
-      <thead>
-        <tr>
-          <th class="muni-col">Municipio</th>
-          <th>Hom<br>doloso</th>
-          <th>Extorsión</th>
-          <th>Narco</th>
-          <th>Femini<br>cidio</th>
-          <th>Hom<br>culposo</th>
-          <th>Viol.<br>familiar</th>
-          <th>Robo<br>vehículo</th>
-          <th>Lesiones<br>dolosas</th>
-          <th>Amenazas</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="muni-cell">Cuernavaca <span class="pop">397K</span></td><td><span class="delta delta-n" title="36→33">-8%</span></td><td><span class="delta delta-newcat" title="0→11 (nuevo)">+11*</span></td><td><span class="delta delta-rL" title="56→63">+13%</span></td><td><span class="delta delta-newcat" title="0→6 (nuevo)">+6*</span></td><td><span class="delta delta-bb" title="41→13">-68%</span></td><td><span class="delta delta-b" title="604→484">-20%</span></td><td><span class="delta delta-b" title="418→298">-29%</span></td><td><span class="delta delta-b" title="33→23">-30%</span></td><td><span class="delta delta-b" title="467→305">-35%</span></td></tr>
-        <tr><td class="muni-cell">Jiutepec <span class="pop">214K</span></td><td><span class="delta delta-n" title="18→18">0%</span></td><td><span class="delta delta-newcat" title="0→7 (nuevo)">+7*</span></td><td><span class="delta delta-rr" title="9→23">+156%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-rr" title="4→8">+100%</span></td><td><span class="delta delta-rr" title="96→162">+69%</span></td><td><span class="delta delta-b" title="184→144">-22%</span></td><td><span class="delta delta-b" title="10→7">-30%</span></td><td><span class="delta delta-n" title="113→110">-3%</span></td></tr>
-        <tr><td class="muni-cell">Temixco <span class="pop">130K</span></td><td><span class="delta delta-bL" title="20→17">-15%</span></td><td><span class="delta delta-newcat" title="0→6 (nuevo)">+6*</span></td><td><span class="delta delta-rr" title="4→10">+150%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-bb" title="5→2">-60%</span></td><td><span class="delta delta-rr" title="43→120">+179%</span></td><td><span class="delta delta-bL" title="58→51">-12%</span></td><td><span class="delta delta-rr" title="8→14">+75%</span></td><td><span class="delta delta-rL" title="74→84">+14%</span></td></tr>
-        <tr><td class="muni-cell">E. Zapata <span class="pop">110K</span></td><td><span class="delta delta-r" title="22→27">+23%</span></td><td><span class="delta delta-newcat" title="0→4 (nuevo)">+4*</span></td><td><span class="delta delta-rr" title="5→28">+460%</span></td><td><span class="delta delta-newcat" title="0→1 (nuevo)">+1*</span></td><td><span class="delta delta-bb" title="4→1">-75%</span></td><td><span class="delta delta-rr" title="37→96">+159%</span></td><td><span class="delta delta-n" title="59→56">-5%</span></td><td><span class="delta delta-bL" title="9→8">-11%</span></td><td><span class="delta delta-rL" title="63→71">+13%</span></td></tr>
-        <tr><td class="muni-cell">Xochitepec <span class="pop">79K</span></td><td><span class="delta delta-bL" title="12→10">-17%</span></td><td><span class="delta delta-newcat" title="0→24 (nuevo)">+24*</span></td><td><span class="delta delta-rr" title="1→2">+100%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-n" title="3→3">0%</span></td><td><span class="delta delta-rr" title="34→75">+121%</span></td><td><span class="delta delta-bL" title="53→47">-11%</span></td><td><span class="delta delta-rL" title="5→6">+20%</span></td><td><span class="delta delta-n" title="50→45">-10%</span></td></tr>
-        <tr><td class="muni-cell">Tepoztlán <span class="pop">55K</span></td><td><span class="delta delta-bb" title="10→1">-90%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-newcat" title="0→2 (nuevo)">+2*</span></td><td><span class="delta delta-newcat" title="0→1 (nuevo)">+1*</span></td><td><span class="delta delta-bb" title="5→2">-60%</span></td><td><span class="delta delta-rr" title="26→44">+69%</span></td><td><span class="delta delta-bb" title="19→6">-68%</span></td><td><span class="delta delta-bb" title="2→0">-100%</span></td><td><span class="delta delta-b" title="42→26">-38%</span></td></tr>
-        <tr><td class="muni-cell">Tlaltizapán <span class="pop">54K</span></td><td><span class="delta delta-rr" title="2→4">+100%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-rr" title="4→6">+50%</span></td><td><span class="delta delta-bb" title="1→0">-100%</span></td><td><span class="delta delta-rr" title="1→3">+200%</span></td><td><span class="delta delta-n" title="24→24">0%</span></td><td><span class="delta delta-rL" title="5→6">+20%</span></td><td><span class="delta delta-bb" title="13→2">-85%</span></td><td><span class="delta delta-b" title="31→20">-35%</span></td></tr>
-        <tr><td class="muni-cell">Huitzilac <span class="pop">20K</span></td><td><span class="delta delta-r" title="5→7">+40%</span></td><td><span class="delta delta-bb" title="1→0">-100%</span></td><td><span class="delta delta-newcat" title="0→4 (nuevo)">+4*</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-rr" title="3→5">+67%</span></td><td><span class="delta delta-rr" title="12→21">+75%</span></td><td><span class="delta delta-b" title="74→52">-30%</span></td><td><span class="delta delta-rr" title="3→5">+67%</span></td><td><span class="delta delta-bb" title="28→13">-54%</span></td></tr>
-        <tr><td class="muni-cell">Cuautla <span class="pop">187K</span></td><td><span class="delta delta-b" title="31→22">-29%</span></td><td><span class="delta delta-rr" title="33→60">+82%</span></td><td><span class="delta delta-bL" title="57→51">-11%</span></td><td><span class="delta delta-newcat" title="0→2 (nuevo)">+2*</span></td><td><span class="delta delta-rr" title="10→17">+70%</span></td><td><span class="delta delta-n" title="188→189">+1%</span></td><td><span class="delta delta-n" title="106→97">-8%</span></td><td><span class="delta delta-b" title="61→34">-44%</span></td><td><span class="delta delta-n" title="216→203">-6%</span></td></tr>
-        <tr><td class="muni-cell">Yautepec <span class="pop">110K</span></td><td><span class="delta delta-r" title="15→19">+27%</span></td><td><span class="delta delta-r" title="9→12">+33%</span></td><td><span class="delta delta-b" title="17→10">-41%</span></td><td><span class="delta delta-bb" title="3→0">-100%</span></td><td><span class="delta delta-bL" title="6→5">-17%</span></td><td><span class="delta delta-rr" title="50→75">+50%</span></td><td><span class="delta delta-b" title="112→65">-42%</span></td><td><span class="delta delta-n" title="4→4">0%</span></td><td><span class="delta delta-n" title="64→70">+9%</span></td></tr>
-        <tr><td class="muni-cell">Ayala <span class="pop">90K</span></td><td><span class="delta delta-r" title="11→14">+27%</span></td><td><span class="delta delta-b" title="7→5">-29%</span></td><td><span class="delta delta-r" title="3→4">+33%</span></td><td><span class="delta delta-bb" title="2→0">-100%</span></td><td><span class="delta delta-bb" title="7→1">-86%</span></td><td><span class="delta delta-rr" title="19→34">+79%</span></td><td><span class="delta delta-rL" title="21→24">+14%</span></td><td><span class="delta delta-r" title="3→4">+33%</span></td><td><span class="delta delta-n" title="43→39">-9%</span></td></tr>
-        <tr><td class="muni-cell">Yecapixtla <span class="pop">53K</span></td><td><span class="delta delta-rr" title="3→14">+367%</span></td><td><span class="delta delta-rr" title="4→8">+100%</span></td><td><span class="delta delta-rL" title="5→6">+20%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-bb" title="5→2">-60%</span></td><td><span class="delta delta-rL" title="21→24">+14%</span></td><td><span class="delta delta-bb" title="24→11">-54%</span></td><td><span class="delta delta-bb" title="11→4">-64%</span></td><td><span class="delta delta-b" title="44→31">-30%</span></td></tr>
-        <tr><td class="muni-cell">Atlatlahucan <span class="pop">30K</span></td><td><span class="delta delta-newcat" title="0→5 (nuevo)">+5*</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-n" title="1→1">0%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-bb" title="5→2">-60%</span></td><td><span class="delta delta-rr" title="6→9">+50%</span></td><td><span class="delta delta-b" title="9→6">-33%</span></td><td><span class="delta delta-newcat" title="0→1 (nuevo)">+1*</span></td><td><span class="delta delta-bL" title="12→10">-17%</span></td></tr>
-        <tr><td class="muni-cell">Tlayacapan <span class="pop">17K</span></td><td><span class="delta delta-bb" title="5→2">-60%</span></td><td><span class="delta delta-n" title="1→1">0%</span></td><td><span class="delta delta-bb" title="1→0">-100%</span></td><td><span class="delta delta-na" title="0→0">—</span></td><td><span class="delta delta-bb" title="2→1">-50%</span></td><td><span class="delta delta-rr" title="11→16">+45%</span></td><td><span class="delta delta-rr" title="4→9">+125%</span></td><td><span class="delta delta-bb" title="1→0">-100%</span></td><td><span class="delta delta-b" title="19→10">-47%</span></td></tr>
-      </tbody>
-    </table>
-    <!-- Leyenda -->
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#8b949e;align-items:center;">
-      <span style="margin-right:6px;font-weight:700;color:#c9d1d9;">Escala Δ%:</span>
-      <span class="delta delta-bb" style="padding:3px 8px;border-radius:4px;display:inline-block;">≤ −50% baja extrema</span>
-      <span class="delta delta-b" style="padding:3px 8px;border-radius:4px;display:inline-block;">−20% a −50%</span>
-      <span class="delta delta-bL" style="padding:3px 8px;border-radius:4px;display:inline-block;">−10% a −20%</span>
-      <span class="delta delta-n" style="padding:3px 8px;border-radius:4px;display:inline-block;">±10% sin cambio</span>
-      <span class="delta delta-rL" style="padding:3px 8px;border-radius:4px;display:inline-block;">+10% a +20%</span>
-      <span class="delta delta-r" style="padding:3px 8px;border-radius:4px;display:inline-block;">+20% a +50%</span>
-      <span class="delta delta-rr" style="padding:3px 8px;border-radius:4px;display:inline-block;">≥ +50% alza extrema</span>
-      <span class="delta delta-newcat" style="padding:3px 8px;border-radius:4px;display:inline-block;">* nuevo desde 0</span>
-    </div>
-  </div>
-  <div style="font-size:11px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.4px;margin-bottom:14px;text-align:center;">
-    PASE EL CURSOR SOBRE CADA CELDA PARA VER LAS CIFRAS BRUTAS Q1-25 → Q1-26
-  </div>
-
-  <!-- Hallazgos nuevos editoriales -->
-  <h3 style="margin-top:44px;">Cuatro hallazgos nuevos del Q1 2026</h3>
-  <p style="text-align:justify;">El Q1 2026 confirma la línea estructural del análisis (las dos zonas metropolitanas como polos diferenciados — patrimonial Cuernavaca, organizada Cuautla) pero introduce cuatro datos nuevos que merecen atención editorial. Tres son hallazgos emergentes en municipios específicos; el cuarto es una observación sobre el contraste entre la narrativa federal de baja generalizada y los datos del estado.</p>
-
-  <style>
-    .q1-finding-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
-    .q1-finding {
-      background: rgba(22, 27, 34, 0.85);
-      border: 1.5px solid #30363d;
-      border-radius: 14px;
-      padding: 22px 24px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      position: relative;
-      overflow: hidden;
-    }
-    .q1-finding::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    }
-    .q1-finding.red::before    { background: linear-gradient(90deg, #f85149, #ff7b72); }
-    .q1-finding.amber::before  { background: linear-gradient(90deg, #fbbf24, #d29922); }
-    .q1-finding.green::before  { background: linear-gradient(90deg, #3fb950, #56d364); }
-    .q1-finding.purple::before { background: linear-gradient(90deg, #a371f7, #d2a8ff); }
-
-    .q1-finding-head {
-      display: flex; align-items: center; gap: 10px;
-    }
-    .q1-finding-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px; letter-spacing: 1.6px; font-weight: 800;
-      padding: 4px 10px; border-radius: 999px;
-      text-transform: uppercase;
-    }
-    .q1-finding.red    .q1-finding-tag { color: #f85149; background: rgba(248,81,73,0.12); border: 1px solid rgba(248,81,73,0.45); }
-    .q1-finding.amber  .q1-finding-tag { color: #fbbf24; background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.45); }
-    .q1-finding.green  .q1-finding-tag { color: #3fb950; background: rgba(63,185,80,0.12); border: 1px solid rgba(63,185,80,0.45); }
-    .q1-finding.purple .q1-finding-tag { color: #d2a8ff; background: rgba(163,113,247,0.12); border: 1px solid rgba(163,113,247,0.45); }
-
-    .q1-finding h3 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: 22px; font-weight: 800; line-height: 1.2;
-      color: #e6edf3; margin: 0; letter-spacing: -0.3px;
-    }
-    .q1-finding-viz {
-      width: 100%; height: 110px;
-      background: rgba(13, 17, 23, 0.55);
-      border: 1px solid rgba(48, 54, 61, 0.6);
-      border-radius: 8px;
-      padding: 10px;
-    }
-    .q1-finding-viz svg { width: 100%; height: 100%; display: block; }
-    .q1-finding p {
-      color: #c9d1d9; font-size: 13.5px; line-height: 1.6;
-      margin: 0; text-align: justify;
-    }
-    .q1-finding p strong { color: #e6edf3; }
-  </style>
-  <div class="q1-finding-grid">
-
-    <!-- Hallazgo 1 · Xochitepec polo extorsionario -->
-    <div class="q1-finding red">
-      <div class="q1-finding-head">
-        <span class="q1-finding-tag">Polo emergente</span>
-      </div>
-      <h3>Xochitepec · la extorsión que apareció en un trimestre</h3>
-      <div class="q1-finding-viz">
-        <svg viewBox="0 0 320 90" preserveAspectRatio="xMidYMid meet">
-          <!-- Bar 2025 anual -->
-          <text x="0" y="22" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b949e" font-weight="700">2025 anual</text>
-          <rect x="80" y="13" width="220" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-          <rect x="80" y="13" width="9.2" height="14" rx="2" fill="rgba(248,81,73,0.40)"/>
-          <text x="305" y="24" font-family="JetBrains Mono, monospace" font-size="11" fill="#c9d1d9" font-weight="800">4</text>
-          <!-- Bar Q1 2026 (24 vs escala 220 · proporcional al 2025) -->
-          <text x="0" y="52" font-family="JetBrains Mono, monospace" font-size="10" fill="#f85149" font-weight="800">Q1 2026</text>
-          <rect x="80" y="43" width="220" height="14" rx="2" fill="rgba(139,148,158,0.18)"/>
-          <rect x="80" y="43" width="220" height="14" rx="2" fill="#f85149"/>
-          <text x="305" y="54" font-family="JetBrains Mono, monospace" font-size="11" fill="#f85149" font-weight="800">24</text>
-          <!-- Anotación arrow -->
-          <text x="160" y="80" font-family="JetBrains Mono, monospace" font-size="10" fill="#f85149" text-anchor="middle" font-weight="800" letter-spacing="1">×6 SOBRE TODO 2025 · EN UN SOLO TRIMESTRE</text>
-        </svg>
-      </div>
-      <p>Xochitepec (79K hab) cerró 2025 con <strong>4 extorsiones anuales</strong>. El primer trimestre 2026 registró <strong>24</strong>. Si la tendencia se sostiene, sería un tercer polo extorsionario apareciendo en plena ZM Cuernavaca — no en ZM Cuautla, donde está el monopolio histórico. Hallazgo nuevo no contemplado en versiones anteriores.</p>
-    </div>
-
-    <!-- Hallazgo 2 · E. Zapata meseta rota -->
-    <div class="q1-finding amber">
-      <div class="q1-finding-head">
-        <span class="q1-finding-tag">Meseta rota</span>
-      </div>
-      <h3>Emiliano Zapata · la línea estable que se quebró al alza</h3>
-      <div class="q1-finding-viz">
-        <svg viewBox="0 0 320 90" preserveAspectRatio="xMidYMid meet">
-          <!-- Línea de meseta 2022-2025: 80, 86, 88 + projección Q1 anualizada 108 -->
-          <g stroke="rgba(48,54,61,0.6)" fill="none">
-            <line x1="20" y1="20" x2="305" y2="20" stroke-dasharray="2,3"/>
-            <line x1="20" y1="50" x2="305" y2="50" stroke-dasharray="2,3"/>
-          </g>
-          <text x="2" y="22" font-family="JetBrains Mono, monospace" font-size="8" fill="#6e7681">110</text>
-          <text x="2" y="52" font-family="JetBrains Mono, monospace" font-size="8" fill="#6e7681">80</text>
-          <!-- Línea histórica meseta -->
-          <polyline fill="none" stroke="#fbbf24" stroke-width="2.4" points="60,55 130,52 200,50 270,52"/>
-          <!-- Punto 2026 anualizado proyectado -->
-          <line x1="270" y1="52" x2="305" y2="22" stroke="#f85149" stroke-width="2.4" stroke-dasharray="3,3"/>
-          <circle cx="60" cy="55" r="3.5" fill="#fbbf24" stroke="#0d1117" stroke-width="1.5"/>
-          <circle cx="130" cy="52" r="3.5" fill="#fbbf24" stroke="#0d1117" stroke-width="1.5"/>
-          <circle cx="200" cy="50" r="3.5" fill="#fbbf24" stroke="#0d1117" stroke-width="1.5"/>
-          <circle cx="270" cy="52" r="3.5" fill="#fbbf24" stroke="#0d1117" stroke-width="1.5"/>
-          <circle cx="305" cy="22" r="5" fill="#f85149" stroke="#0d1117" stroke-width="2"/>
-          <!-- Labels años -->
-          <text x="60" y="73" font-family="JetBrains Mono, monospace" font-size="8" fill="#8b949e" text-anchor="middle">2022</text>
-          <text x="130" y="73" font-family="JetBrains Mono, monospace" font-size="8" fill="#8b949e" text-anchor="middle">2023</text>
-          <text x="200" y="73" font-family="JetBrains Mono, monospace" font-size="8" fill="#8b949e" text-anchor="middle">2024</text>
-          <text x="270" y="73" font-family="JetBrains Mono, monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="800">2025</text>
-          <text x="305" y="73" font-family="JetBrains Mono, monospace" font-size="8" fill="#f85149" text-anchor="middle" font-weight="800">26·Q1*</text>
-          <!-- Labels valores -->
-          <text x="270" y="48" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-weight="800">88</text>
-          <text x="305" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#f85149" text-anchor="middle" font-weight="800">~108</text>
-          <text x="160" y="86" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#6e7681" text-anchor="middle">*Q1 ÷ 0.25 = anualizado proyectado</text>
-        </svg>
-      </div>
-      <p>El dashboard documentaba a Emiliano Zapata como <strong>meseta estable 80-86 dolosos anuales</strong> 2022-2024. Q1 2026 registra <strong>27 homicidios dolosos</strong> — anualizado proyectado ≈108, un quiebre de +25% sobre el cierre 2025 (88). Es el segundo municipio con más homicidio doloso de la ZM Cuernavaca después de la capital.</p>
-    </div>
-
-    <!-- Hallazgo 3 · Tlayacapan feminicidio cero -->
-    <div class="q1-finding green">
-      <div class="q1-finding-head">
-        <span class="q1-finding-tag">Pico o tendencia</span>
-      </div>
-      <h3>Tlayacapan · la sobreproporción extrema 2025 que no se replica</h3>
-      <div class="q1-finding-viz">
-        <svg viewBox="0 0 320 90" preserveAspectRatio="xMidYMid meet">
-          <!-- 2024: 0 -->
-          <text x="40" y="22" font-family="JetBrains Mono, monospace" font-size="9" fill="#8b949e" font-weight="700">2024</text>
-          <rect x="80" y="14" width="200" height="12" rx="2" fill="rgba(139,148,158,0.18)"/>
-          <text x="285" y="23" font-family="JetBrains Mono, monospace" font-size="10" fill="#8b949e" font-weight="700">0</text>
-          <!-- 2025: 2 (sobreproporción 6.59x) -->
-          <text x="40" y="44" font-family="JetBrains Mono, monospace" font-size="9" fill="#f85149" font-weight="800">2025</text>
-          <rect x="80" y="36" width="200" height="12" rx="2" fill="rgba(139,148,158,0.18)"/>
-          <rect x="80" y="36" width="200" height="12" rx="2" fill="#f85149"/>
-          <text x="285" y="45" font-family="JetBrains Mono, monospace" font-size="10" fill="#f85149" font-weight="800">2 (6.59×)</text>
-          <!-- Q1 2026: 0 -->
-          <text x="40" y="66" font-family="JetBrains Mono, monospace" font-size="9" fill="#3fb950" font-weight="800">Q1·26</text>
-          <rect x="80" y="58" width="200" height="12" rx="2" fill="rgba(139,148,158,0.18)"/>
-          <text x="285" y="67" font-family="JetBrains Mono, monospace" font-size="10" fill="#3fb950" font-weight="800">0</text>
-          <text x="160" y="84" font-family="JetBrains Mono, monospace" font-size="8" fill="#3fb950" text-anchor="middle" font-weight="700" letter-spacing="0.5">EL RÉCORD 2025 NO SE SOSTIENE EN Q1 2026</text>
-        </svg>
-      </div>
-      <p>Tlayacapan (17K hab, Pueblo Mágico) cerró 2025 con <strong>sobreproporción de feminicidio 6.59×</strong> — la más alta del estado en cualquier indicador. Q1 2026: <strong>cero feminicidios registrados</strong>. El dato no permite afirmar que el patrón "se acabó", pero sí que el récord 2025 puede haber sido un pico, no una tendencia. Pendiente confirmar Q2.</p>
-    </div>
-
-    <!-- Hallazgo 4 · Morelos vs nacional -->
-    <div class="q1-finding purple">
-      <div class="q1-finding-head">
-        <span class="q1-finding-tag">Anomalía estatal</span>
-      </div>
-      <h3>Morelos vs nacional · la baja del 41% que no llegó</h3>
-      <div class="q1-finding-viz">
-        <svg viewBox="0 0 320 90" preserveAspectRatio="xMidYMid meet">
-          <!-- Línea cero -->
-          <line x1="20" y1="40" x2="305" y2="40" stroke="rgba(201,209,217,0.5)" stroke-width="1.2"/>
-          <text x="2" y="44" font-family="JetBrains Mono, monospace" font-size="8" fill="#8b949e">0%</text>
-          <!-- Bar nacional -41% (mucho hacia abajo) -->
-          <rect x="50" y="40" width="60" height="36" fill="#3fb950"/>
-          <text x="80" y="84" font-family="JetBrains Mono, monospace" font-size="9" fill="#3fb950" text-anchor="middle" font-weight="800">NACIONAL</text>
-          <text x="80" y="55" font-family="JetBrains Mono, monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">−41%</text>
-          <!-- Bar Morelos +1.6% (apenas arriba) -->
-          <rect x="180" y="38.5" width="60" height="2" fill="#fbbf24"/>
-          <text x="210" y="84" font-family="JetBrains Mono, monospace" font-size="9" fill="#fbbf24" text-anchor="middle" font-weight="800">14 ZM MORELOS</text>
-          <text x="210" y="32" font-family="JetBrains Mono, monospace" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="800">+1.6%</text>
-          <!-- Annotation gap -->
-          <text x="160" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#d2a8ff" text-anchor="middle" font-weight="700" letter-spacing="0.6">BRECHA: 42.6 PUNTOS PORCENTUALES</text>
-        </svg>
-      </div>
-      <p>El gobierno federal celebra <strong>−41% en el promedio diario nacional</strong> de homicidios dolosos sept-2024 → mar-2026, con 7 entidades destacadas (Guanajuato, Baja California, Sinaloa, Edo. México, Nuevo León, Quintana Roo, Zacatecas). <strong>Morelos no aparece en ese conteo.</strong> Las 14 ZM mantuvieron el indicador plano (+1.6%). La narrativa de éxito federal no aplica al estado.</p>
-    </div>
-
-  </div>
-
-  <!-- Auditoría -->
-  <h3 style="margin-top:44px;">Metodología · auditoría sistemática Q1 2025 vs Q1 2026</h3>
-  <div class="simple-box">
-    <div class="simple-tag">Cómo se construyó esta sección</div>
-    <p style="text-align:justify;">Para cada municipio × delito × indicador, se comparó la suma del primer trimestre 2026 (Enero+Febrero+Marzo) contra la suma del mismo trimestre 2025. La comparación es directa, sin ajuste estacional, porque el primer trimestre históricamente tiene el comportamiento más estable del año en delitos como homicidio doloso, extorsión y violencia familiar. Las cifras absolutas se preservan tal como vienen publicadas por SESNSP — no se aplica suavizado ni interpolación.</p>
-    <p style="text-align:justify;">Una baja en cualquier delito puede tener tres explicaciones distintas: <strong>(1) reducción real del fenómeno</strong>, <strong>(2) falla de captura por el Ministerio Público</strong>, o <strong>(3) reclasificación de tipificación</strong>. Para discriminar entre las tres hipótesis, la auditoría aplica varias capas estadísticas, cuyos resultados deben ser tomados como pistas — no como prueba — para investigación periodística posterior.</p>
-    <ul style="margin:10px 0 0 20px;padding:0;">
-      <li style="text-align:justify;"><strong>Z-score histórico:</strong> el Q1 2026 se compara contra la distribución de los Q1 de los años 2015 a 2025 del mismo delito. Si la cifra cae más de 2 desviaciones estándar por debajo del promedio decenal, es estadísticamente improbable bajo el supuesto de una distribución normal y amerita explicación.</li>
-      <li style="text-align:justify;"><strong>Detección de pares:</strong> si un delito baja ≥30% mientras otro relacionado sube ≥30% en el mismo municipio, es señal de posible reclasificación de tipificación. No es acusación de manipulación: es una hipótesis verificable con las carpetas individuales del Ministerio Público vía solicitud INAI.</li>
-      <li style="text-align:justify;"><strong>Delitos históricamente estables:</strong> violencia familiar, lesiones dolosas, robo a casa habitación, amenazas. Su descenso súbito es señal roja de subregistro o reclasificación, no caída real, porque estos delitos casi nunca bajan en condiciones normales de operación del Ministerio Público.</li>
-    </ul>
-    <p style="margin-top:12px;text-align:justify;">La auditoría completa (16 hallazgos rojos · 6 pares de reclasificación · 23 bajas grandes · 53 alzas notables) se reproduce ejecutando el script <code>scripts/auditoria_q1_2026.js</code> sobre el dataset combinado.</p>
-  </div>
-
-  <div class="footer-note" style="margin-top:24px;text-align:justify;">
-    <strong>Fuentes y método.</strong> SESNSP · Tabla Dinámica RNID Municipal Delitos · corte 31-marzo-2026 · publicación abril 2026. CONAPO 2025. Auditoría reproducible vía <code>scripts/auditoria_q1_2026.js</code> sobre el dataset combinado <code>scripts/data_combined/&lt;muni&gt;_records.json</code>, que preserva los registros originales 2015-2025 y agrega Q1 2026 sin sobrescribir.
-    <br><br>
-    <strong>Nota sobre RNPDNO.</strong> El registro nacional de personas desaparecidas (RNPDNO) público no se ha actualizado desde diciembre 2025. El cruce homicidio × desaparición para Q1 2026 queda como solicitud INAI pendiente ante la Comisión Nacional de Búsqueda. Las cifras del cruce 2015-2025 documentadas en versiones anteriores se mantienen idénticas.
-  </div>
-</section>
-
-<script>
-(function(){
-  // === Chart A · Diverging horizontal bar — Δ% por delito (agregado 14 ZM) ===
-  const initQ1Delta = () => {
-    const cvs = document.getElementById('chartQ1Delta');
-    if (!cvs || !window.Chart) return;
-    const cats = [
-      { label: 'Extorsión',          delta: 150.9, q25: 55,   q26: 138 },
-      { label: 'Feminicidio',        delta: 66.7,  q25: 6,    q26: 10 },
-      { label: 'Narcomenudeo',       delta: 28.8,  q25: 163,  q26: 210 },
-      { label: 'Daño a la propiedad',delta: 20.5,  q25: 552,  q26: 665 },
-      { label: 'Violencia familiar', delta: 17.3,  q25: 1171, q26: 1373 },
-      { label: 'Fraude',             delta: 11.7,  q25: 445,  q26: 497 },
-      { label: 'Homicidio doloso',   delta: 1.6,   q25: 190,  q26: 193 },
-      { label: 'Robo casa habitación', delta: -4.7,q25: 255,  q26: 243 },
-      { label: 'Abuso sexual',       delta: -10.6, q25: 132,  q26: 118 },
-      { label: 'Amenazas',           delta: -18.1, q25: 1266, q26: 1037 },
-      { label: 'Robo vehículo',      delta: -23.9, q25: 1146, q26: 872 },
-      { label: 'Lesiones dolosas',   delta: -31.3, q25: 163,  q26: 112 },
-      { label: 'Homicidio culposo',  delta: -35.6, q25: 101,  q26: 65 }
-    ];
-    new Chart(cvs.getContext('2d'), {
-      type: 'bar',
-      data: {
-        labels: cats.map(c => c.label),
-        datasets: [{
-          label: 'Δ% Q1 2025 → Q1 2026',
-          data: cats.map(c => c.delta),
-          backgroundColor: cats.map(c => c.delta >= 0 ? 'rgba(248,81,73,0.78)' : 'rgba(88,166,255,0.65)'),
-          borderColor: cats.map(c => c.delta >= 0 ? '#f85149' : '#58a6ff'),
-          borderWidth: 1.5,
-          borderRadius: 4
-        }]
-      },
-      options: {
-        indexAxis: 'y',
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            min: -60, max: 165,
-            ticks: {
-              color: '#8b949e',
-              font: { family: "'JetBrains Mono', monospace", size: 10.5 },
-              callback: (v) => (v > 0 ? '+' : '') + v + '%'
-            },
-            grid: {
-              color: (ctx) => ctx.tick.value === 0 ? 'rgba(201,209,217,0.65)' : 'rgba(48,54,61,0.4)',
-              lineWidth: (ctx) => ctx.tick.value === 0 ? 1.5 : 1
-            }
-          },
-          y: {
-            ticks: { color: '#c9d1d9', font: { size: 11.5, weight: '600' } },
-            grid: { display: false }
-          }
-        },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1,
-            titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 12,
-            callbacks: {
-              title: (items) => items[0].label,
-              label: (c) => {
-                const d = cats[c.dataIndex];
-                return [
-                  `Q1 2025: ${d.q25} carpetas`,
-                  `Q1 2026: ${d.q26} carpetas`,
-                  `Δ: ${d.delta >= 0 ? '+' : ''}${d.delta.toFixed(1)}%  (${d.q26 - d.q25 >= 0 ? '+' : ''}${d.q26 - d.q25} casos)`
-                ];
-              }
-            }
-          }
-        }
-      },
-      plugins: [{
-        id: 'datalabel-q1delta',
-        afterDatasetsDraw(chart) {
-          const { ctx } = chart;
-          const meta = chart.getDatasetMeta(0);
-          ctx.save();
-          ctx.font = "700 10.5px 'JetBrains Mono', monospace";
-          ctx.textBaseline = 'middle';
-          meta.data.forEach((bar, i) => {
-            const d = cats[i].delta;
-            const isPos = d >= 0;
-            ctx.fillStyle = isPos ? '#ff7b72' : '#58a6ff';
-            ctx.textAlign = isPos ? 'left' : 'right';
-            const offset = isPos ? 6 : -6;
-            ctx.fillText((isPos ? '+' : '') + d.toFixed(1) + '%', bar.x + offset, bar.y);
-          });
-          ctx.restore();
-        }
-      }]
-    });
-  };
-
-  // === Chart B · Q1 histórico decenal 2016-2026 (líneas: hom doloso, extorsión, narco, viofam) ===
-  const initQ1Historic = () => {
-    const cvs = document.getElementById('chartQ1Historic');
-    if (!cvs || !window.Chart) return;
-    const labels = [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
-    new Chart(cvs.getContext('2d'), {
-      type: 'line',
-      data: {
-        labels,
-        datasets: [
-          {
-            label: 'Homicidio doloso',
-            data: [94, 122, 125, 173, 150, 170, 164, 230, 294, 190, 193],
-            borderColor: '#f85149',
-            backgroundColor: 'rgba(248,81,73,0.10)',
-            borderWidth: 2.6, tension: 0.3,
-            pointRadius: (ctx) => ctx.dataIndex === 10 ? 7 : 4,
-            pointBackgroundColor: (ctx) => ctx.dataIndex === 10 ? '#fbbf24' : '#f85149',
-            pointBorderColor: '#0d1117', pointBorderWidth: 2,
-            fill: false
-          },
-          {
-            label: 'Extorsión',
-            data: [15, 8, 4, 26, 17, 28, 20, 32, 84, 55, 138],
-            borderColor: '#fbbf24',
-            backgroundColor: 'rgba(251,191,36,0.10)',
-            borderWidth: 2.6, tension: 0.3,
-            pointRadius: (ctx) => ctx.dataIndex === 10 ? 7 : 4,
-            pointBackgroundColor: (ctx) => ctx.dataIndex === 10 ? '#3fb950' : '#fbbf24',
-            pointBorderColor: '#0d1117', pointBorderWidth: 2,
-            fill: false
-          },
-          {
-            label: 'Narcomenudeo',
-            data: [210, 151, 195, 124, 122, 151, 132, 104, 73, 163, 210],
-            borderColor: '#58a6ff',
-            backgroundColor: 'rgba(88,166,255,0.08)',
-            borderWidth: 2.2, tension: 0.3,
-            pointRadius: (ctx) => ctx.dataIndex === 10 ? 6 : 3,
-            pointBackgroundColor: (ctx) => ctx.dataIndex === 10 ? '#3fb950' : '#58a6ff',
-            pointBorderColor: '#0d1117', pointBorderWidth: 1.5,
-            borderDash: [4, 3],
-            fill: false
-          },
-          {
-            label: 'Violencia familiar',
-            data: [1044, 1000, 1073, 1079, 1244, 1040, 1053, 1335, 1219, 1171, 1373],
-            borderColor: '#8b949e',
-            backgroundColor: 'rgba(139,148,158,0.05)',
-            borderWidth: 2, tension: 0.3,
-            pointRadius: (ctx) => ctx.dataIndex === 10 ? 6 : 3,
-            pointBackgroundColor: (ctx) => ctx.dataIndex === 10 ? '#3fb950' : '#8b949e',
-            pointBorderColor: '#0d1117', pointBorderWidth: 1.5,
-            borderDash: [2, 4],
-            fill: false,
-            yAxisID: 'y1'
-          }
-        ]
-      },
-      options: {
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        scales: {
-          y: {
-            beginAtZero: true,
-            position: 'left',
-            ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 10.5 } },
-            grid: { color: 'rgba(48,54,61,0.5)' },
-            title: { display: true, text: 'Carpetas Q1 (homicidio · extorsión · narco)', color: '#8b949e', font: { size: 10.5, weight: '700' } }
-          },
-          y1: {
-            beginAtZero: true,
-            position: 'right',
-            ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 10.5 } },
-            grid: { drawOnChartArea: false },
-            title: { display: true, text: 'Carpetas Q1 (violencia familiar)', color: '#8b949e', font: { size: 10.5, weight: '700' } }
-          },
-          x: {
-            ticks: {
-              color: (ctx) => ctx.tick.label === '2026' ? '#3fb950' : '#8b949e',
-              font: (ctx) => ({ family: "'JetBrains Mono', monospace", size: ctx.tick.label === '2026' ? 12 : 11, weight: ctx.tick.label === '2026' ? '700' : '500' })
-            },
-            grid: { color: 'rgba(48,54,61,0.3)' }
-          }
-        },
-        plugins: {
-          legend: { position: 'top', labels: { color: '#c9d1d9', font: { size: 11.5, weight: '600' }, padding: 14, usePointStyle: true, pointStyle: 'circle' } },
-          tooltip: {
-            backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1,
-            titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 12,
-            callbacks: {
-              title: (items) => 'Q1 ' + items[0].label + (items[0].label === '2026' ? ' (parcial — corte mar-2026)' : ''),
-              label: (c) => c.dataset.label + ': ' + c.parsed.y + ' carpetas'
-            }
-          },
-          annotation: {
-            annotations: {
-              q1Marker: {
-                type: 'line',
-                xMin: 10, xMax: 10,
-                borderColor: 'rgba(63,185,80,0.4)',
-                borderWidth: 2,
-                borderDash: [6, 4],
-                label: { display: false }
-              }
-            }
-          }
-        }
-      }
-    });
-  };
-
-  const run = () => { initQ1Delta(); initQ1Historic(); };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
-})();
-</script>
 
 
 <!-- =============================================================== -->
@@ -15501,7 +14544,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis ZM hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · CONAPO 2025 · 8 municipios agregados</div>
+      <div>SESNSP corte dic-2025 · CONAPO 2025 · 8 municipios agregados</div>
     </div>
   </div>
 </section>
@@ -15642,7 +14685,7 @@
     </ul>
   </div>
 
-  <div class="footer-note" style="margin-top:20px;">Fuente: SESNSP corte mar-2026 (agregado de los 8 municipios de la ZM Cuernavaca). CONAPO 2025.</div>
+  <div class="footer-note" style="margin-top:20px;">Fuente: SESNSP corte dic-2025 (agregado de los 8 municipios de la ZM Cuernavaca). CONAPO 2025.</div>
 </section>
 
 <!-- sZM3 — SERIE DECENAL + CONCLUSIÓN ZM -->
@@ -15688,7 +14731,7 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección ZM.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 — agregado de los 8 municipios de la ZM Cuernavaca. CONAPO 2025. Total Morelos 2025: 45,451 carpetas.
+    <strong>Fuentes sección ZM.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 — agregado de los 8 municipios de la ZM Cuernavaca. CONAPO 2025. Total Morelos 2025: 45,451 carpetas.
   </div>
 </section>
 
@@ -15792,7 +14835,7 @@
     <svg class="mini45"><use href="#logo45"/></svg>
     <div style="text-align:left;">
       <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis ZM hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · CONAPO 2025 · 6 municipios agregados</div>
+      <div>SESNSP corte dic-2025 · CONAPO 2025 · 6 municipios agregados</div>
     </div>
   </div>
 </section>
@@ -15914,7 +14957,7 @@
     </ul>
   </div>
 
-  <div class="footer-note" style="margin-top:20px;">Fuente: SESNSP corte mar-2026 (agregado de los 6 municipios de la ZM Cuautla). CONAPO 2025. Definición SEDATU-CONAPO 2020.</div>
+  <div class="footer-note" style="margin-top:20px;">Fuente: SESNSP corte dic-2025 (agregado de los 6 municipios de la ZM Cuautla). CONAPO 2025. Definición SEDATU-CONAPO 2020.</div>
 </section>
 
 <!-- sZMC3 — SERIE DECENAL + CONCLUSIÓN ZM CUAUTLA -->
@@ -15960,7 +15003,7 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección ZM Cuautla.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 — agregado de los 6 municipios de la ZM Cuautla (definición SEDATU-CONAPO 2020). CONAPO 2025. Total Morelos 2025: 45,451 carpetas. Datos derivados regenerables vía <code>scripts/build_zm_aggregates.js</code> → <code>scripts/zm_aggregates.json</code>.
+    <strong>Fuentes sección ZM Cuautla.</strong> SESNSP Tabla Dinámica Municipal corte dic-2025 — agregado de los 6 municipios de la ZM Cuautla (definición SEDATU-CONAPO 2020). CONAPO 2025. Total Morelos 2025: 45,451 carpetas. Datos derivados regenerables vía <code>scripts/build_zm_aggregates.js</code> → <code>scripts/zm_aggregates.json</code>.
   </div>
 </section>
 
@@ -16067,7 +15110,7 @@
           <td><strong>Tabla Dinámica Municipal — Delitos del Fuero Común</strong></td>
           <td>SESNSP (Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública)</td>
           <td>XLSX (pivot cache)</td>
-          <td>Diciembre 2025<br>Pub. abr 2026</td>
+          <td>Diciembre 2025<br>Pub. feb 2026</td>
           <td>Febrero 2026</td>
           <td>2,562,994 registros nacionales · 1,078 filas Cuautla</td>
         </tr>
@@ -16115,7 +15158,7 @@
     <h3>M.2 — Cortes temporales y actualización</h3>
     <p>Cada dataset tiene una fecha en la que se congeló el registro que aquí usamos. Las cifras pueden actualizarse en futuros cortes oficiales, lo que modificaría el análisis en sentido estricto. Cuando eso ocurra, se publica una versión numerada del dashboard.</p>
     <ul>
-      <li><strong>SESNSP — corte marzo 2026.</strong> Publicación oficial en febrero 2026. Serie de 10 años (2016-2025) completa. Próxima actualización mensual.</li>
+      <li><strong>SESNSP — corte diciembre 2025.</strong> Publicación oficial en febrero 2026. Serie de 10 años (2016-2025) completa. Próxima actualización mensual.</li>
       <li><strong>RNPDNO — corte 29-noviembre-2025.</strong> Incluye registros hasta esa fecha. Actualización semanal-mensual. Dataset descargado el 19-abr-2026 desde el repo público; hash conservado para integridad.</li>
       <li><strong>ENVIPE — ediciones 2011 a 2025 (15 años continuos).</strong> Encuesta anual levantada en marzo-abril y publicada en septiembre del mismo año; la 2025 es la más reciente disponible. Usada para la cifra negra (93% nacional) y como fuente primaria del panel de percepción estatal. Edición 2020 con muestra reducida por COVID-19 — porcentajes válidos, población base no comparable con otras ediciones. Actualización automatizada con <code>bash scripts/update_envipe.sh</code>.</li>
       <li><strong>CONAPO — proyecciones 2025.</strong> Basadas en el Censo 2020 del INEGI; las proyecciones se actualizan periódicamente.</li>
@@ -16353,27 +15396,7 @@
     </dl>
   </div>
 
-  <!-- Changelog de versiones -->
-  <div class="glo-group" style="margin-top:32px;">
-    <div class="glo-cat">Historial de versiones</div>
-    <dl class="glo-list">
-      <div class="glo-item"><dt>v2.3 · 28 de abril de 2026</dt>
-        <dd style="text-align:justify;">Integración del corte SESNSP marzo 2026 (datos parciales Q1 2026 — enero, febrero y marzo). Nueva sección "Q1 2026 · Actualización" con la comparativa Q1 2025 vs Q1 2026, tabla maestra por municipio, y cuatro hallazgos editoriales (Xochitepec polo extorsionario emergente; Emiliano Zapata ruptura de meseta; Tlayacapan feminicidio Q1 sin casos; Morelos no siguió la baja nacional del 41%). Auditoría sistemática reproducible (16 hallazgos rojos · 6 reclasificaciones potenciales · 23 bajas grandes · 53 alzas notables). <strong>Las cifras 2015-2025 publicadas en versiones anteriores se mantienen idénticas — esta versión agrega información, no modifica la histórica.</strong> Versión anterior: <a href="versiones/v2.2-2026-04-25/" style="color:#58a6ff;">v2.2 (25-abr-2026)</a>.</dd></div>
-      <div class="glo-item"><dt>v2.2 · 25 de abril de 2026</dt>
-        <dd style="text-align:justify;">Sección agregada ZM Cuautla (sZMC1-sZMC3) con los 6 municipios como unidad analítica · charts visuales en tarjetas ZM (divergent bar Cuernavaca + radar Cuautla) · botón ⛶ para expandir charts · adaptación móvil con leyenda de rotación · nav reordenado (ambos grupos ZM antes de los municipios individuales) · glosario con entrada AxA y entradas ampliadas para ambas zonas metropolitanas.</dd></div>
-      <div class="glo-item"><dt>v2.1 · 19 de abril de 2026</dt>
-        <dd style="text-align:justify;">Hub interactivo de los 36 municipios de Morelos al inicio · sección "El detalle mensual" con matriz homicidio × desaparición · glosario inicial · explicaciones simples ("En palabras simples") en cada sección.</dd></div>
-      <div class="glo-item"><dt>v2.0 · 15 de abril de 2026</dt>
-        <dd style="text-align:justify;">Publicación inicial. Sección Desapariciones (RNPDNO) · correcciones numéricas · conclusión matizada. Análisis decenal 2015-2025 con datos SESNSP corte dic-2025.</dd></div>
-    </dl>
-    <p style="font-size:13px;color:#8b949e;margin-top:12px;line-height:1.55;text-align:justify;">
-      <strong>Política de versionado.</strong> Cada vez que el SESNSP publica un nuevo corte de incidencia delictiva, generamos una versión nueva del dashboard.
-      Las versiones anteriores se preservan tal como fueron publicadas — sin modificación retroactiva — para que cualquier lector pueda verificar qué decían y cuándo.
-      <a href="versiones/" style="color:#58a6ff;font-weight:600;">Ver historial completo de versiones ↗</a>
-    </p>
-  </div>
-
-  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.3 (corte SESNSP marzo 2026). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
+  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.1. Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
 </section>
 
 <script>
@@ -16726,7 +15749,7 @@ function wireCuautlaToggle() {
   const atlatlahucanIds = ["sAt1","sAt2","sAt3","sAt4","sAt5","sAt6","sAt7","sAt8","sAt9"];
   const zmIds = ["sZM1","sZM2","sZM3"];
   const zmcIds = ["sZMC1","sZMC2","sZMC3"];
-  const otherIds = ["s0", "sR", "sH", "sE", "sI", "sP", "sZE", "sQ1", "sV23", "sHero", "sM", "sG"];
+  const otherIds = ["s0", "sR", "sH", "sE", "sI", "sP", "sZE", "sHero", "sM", "sG"];
   const all = [...otherIds, ...cuautlaIds, ...ayalaIds, ...cuernavacaIds, ...jiutepecIds, ...temixcoIds, ...huitzilacIds, ...emilianoZapataIds, ...tepoztlanIds, ...xochitepecIds, ...tlaltizapanIds, ...yautepecIds, ...yecapixtlaIds, ...tlayacapanIds, ...atlatlahucanIds, ...zmIds, ...zmcIds];
   wireCollapsibleGroup("toggleCuautla", "cuautlaSubnav", cuautlaIds, all);
   wireCollapsibleGroup("toggleAyala", "ayalaSubnav", ayalaIds, all);
