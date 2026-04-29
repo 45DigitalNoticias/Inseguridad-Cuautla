@@ -12564,8 +12564,21 @@
     <p style="text-align:justify;">El 28 de abril de 2026 el alcalde de Tepoztlán declaró públicamente que su municipio fue "el que tuvo la mayor disminución en cualquier índice que tú veas" durante el primer trimestre 2026. Esta sección verifica cifra por cifra esa afirmación contra los 36 tipos de delito que reporta el SESNSP. <strong>El homicidio doloso, en efecto, bajó dramáticamente</strong> — cayó 90 por ciento. <strong>Pero la afirmación de que "todo bajó" no se sostiene</strong>: hay indicadores que aparecieron donde no había, otros se duplicaron y triplicaron, y un patrón sospechoso entre lesiones dolosas y culposas que vale revisar.</p>
   </div>
 
+  <!-- ===== Chart visual de las 4 cifras clave · Q1 25 vs Q1 26 ===== -->
+  <h3 style="margin-top:28px;">Las cuatro cifras clave del trimestre · una mirada</h3>
+  <p style="text-align:justify;">Cada barra muestra la cifra absoluta del trimestre. La barra gris es el primer trimestre 2025; la barra coloreada es el primer trimestre 2026. Si la barra coloreada es <strong style="color:#3fb950;">verde</strong>, el delito bajó. Si es <strong style="color:#f85149;">roja</strong>, el delito subió. Para narcomenudeo se incluyen las cifras de cierre anual (2024 vs 2025) porque el salto editorialmente relevante es a nivel anual: 22 carpetas vs cero. Las explicaciones detalladas y el contexto editorial vienen en las cuatro tarjetas que siguen.</p>
+
+  <div class="chart-zoomable" style="margin:18px 0 14px;">
+    <div class="chart-canvas-frame" style="position:relative;height:340px;padding:14px 16px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
+      <canvas id="chartTepCifrasClave"></canvas>
+    </div>
+  </div>
+  <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.4px;margin-bottom:18px;text-align:center;">
+    GRIS = TRIMESTRE ANTERIOR · COLOR = TRIMESTRE ACTUAL · VERDE BAJÓ · ROJO SUBIÓ
+  </div>
+
   <!-- Stats hero · 4 cards comparativas -->
-  <div class="cards" style="margin-top:24px;">
+  <div class="cards" style="margin-top:14px;">
     <div class="card" style="border-color:#3fb950;background:rgba(63,185,80,0.10);" onclick="showExplain('Homicidio doloso · la baja real','Tepoztlán pasó de 10 carpetas de homicidio doloso en el primer trimestre 2025 a una sola en el primer trimestre 2026 — una caída del 90 por ciento. Es la baja más fuerte de las 14 zonas metropolitanas analizadas. Sin embargo, conviene contextualizar: el cierre 2025 fue 50 dolosos anuales (récord decenal). Una sola carpeta en Q1 podría ser tendencia o piso anómalo. Pendiente Q2 para confirmar.')">
       <div class="num" style="color:#3fb950;">−90%</div><div class="lbl">Homicidio doloso<br>(de 10 a 1 · Q1 25→26)</div>
     </div>
@@ -12929,7 +12942,111 @@
     });
   };
 
-  const run = () => { initFull(); initLesiones(); initLesionesMensual(); initSexual(); initNarcoDecenal(); };
+  // ===== Chart hero · Las 4 cifras clave Q1 25 vs Q1 26 =====
+  const initCifrasClave = () => {
+    const cvs = document.getElementById('chartTepCifrasClave');
+    if (!cvs || !window.Chart) return;
+    // Datos (mezcla Q1 trimestrales y narcomenudeo anual cierre)
+    const labels = [
+      'Homicidio doloso (Q1)',
+      'Violencia familiar (Q1)',
+      'Violencia sexual (Q1 · suma)',
+      'Narcomenudeo (cierre anual)'
+    ];
+    const periodoAnterior = [10, 26, 4, 0];   // Q1 25 / 2024 anual
+    const periodoActual   = [1, 44, 9, 22];   // Q1 26 / 2025 anual
+    // Color del Q1 26 según dirección
+    const coloresActual = [
+      'rgba(63,185,80,0.78)',   // homicidio bajó · verde
+      'rgba(248,81,73,0.78)',   // viofam subió · rojo
+      'rgba(248,81,73,0.78)',   // sexual subió · rojo
+      'rgba(210,153,34,0.85)'   // narco apareció · ámbar
+    ];
+    const bordesActual = ['#3fb950', '#f85149', '#f85149', '#d29922'];
+    new Chart(cvs.getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Periodo anterior',
+            data: periodoAnterior,
+            backgroundColor: 'rgba(139,148,158,0.55)',
+            borderColor: '#8b949e',
+            borderWidth: 1.5,
+            borderRadius: 4
+          },
+          {
+            label: 'Periodo actual',
+            data: periodoActual,
+            backgroundColor: coloresActual,
+            borderColor: bordesActual,
+            borderWidth: 1.5,
+            borderRadius: 4
+          }
+        ]
+      },
+      options: {
+        indexAxis: 'y',
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            beginAtZero: true,
+            ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } },
+            grid: { color: 'rgba(48,54,61,0.5)' },
+            title: { display: true, text: 'Carpetas SESNSP', color: '#8b949e', font: { size: 11, weight: '700' } }
+          },
+          y: { ticks: { color: '#c9d1d9', font: { size: 12, weight: '600' } }, grid: { display: false } }
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { color: '#c9d1d9', font: { size: 12, weight: '600' }, padding: 14, usePointStyle: true, pointStyle: 'circle' }
+          },
+          tooltip: {
+            backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1,
+            titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 12,
+            callbacks: {
+              label: (c) => c.dataset.label + ': ' + c.parsed.x + ' carpetas'
+            }
+          }
+        }
+      },
+      plugins: [{
+        id: 'datalabel-cifras',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          ctx.save();
+          ctx.font = "700 12px 'JetBrains Mono', monospace";
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'middle';
+          // Etiqueta numérica al final de cada barra
+          chart.data.datasets.forEach((ds, di) => {
+            const meta = chart.getDatasetMeta(di);
+            meta.data.forEach((bar, i) => {
+              const v = ds.data[i];
+              ctx.fillStyle = di === 0 ? '#c9d1d9' : (bordesActual[i] || '#fff');
+              ctx.fillText(String(v), bar.x + 6, bar.y);
+            });
+          });
+          // Etiquetas de % cambio al lado derecho del eje
+          ctx.font = "800 11px 'JetBrains Mono', monospace";
+          ctx.textAlign = 'right';
+          const deltas = ['▼ −90%', '▲ +69%', '▲ +125%', '⊕ apareció'];
+          const deltaColors = ['#3fb950', '#f85149', '#f85149', '#d29922'];
+          const meta1 = chart.getDatasetMeta(1);
+          meta1.data.forEach((bar, i) => {
+            ctx.fillStyle = deltaColors[i];
+            const xRight = chart.chartArea.right - 8;
+            ctx.fillText(deltas[i], xRight, bar.y - 14);
+          });
+          ctx.restore();
+        }
+      }]
+    });
+  };
+
+  const run = () => { initCifrasClave(); initFull(); initLesiones(); initLesionesMensual(); initSexual(); initNarcoDecenal(); };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
 </script>
