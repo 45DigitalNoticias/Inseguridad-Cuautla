@@ -16878,12 +16878,12 @@
     padding: 0 !important;
     margin: 0;
     background: #0d1117;
-    overflow: hidden;
   }
   #sME .me-iframe-wrap {
+    position: relative;
     width: 100%;
-    margin: 0 auto;
     background: #0d1117;
+    min-height: 80vh;
   }
   #sME-iframe {
     display: block;
@@ -16893,15 +16893,22 @@
     min-height: 80vh;
     transition: height 200ms ease;
   }
-  /* loading state · placeholder mientras carga */
+  /* loading state · OVERLAY absoluto encima del iframe (no oculta iframe) */
   #sME-loading {
+    position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center;
-    min-height: 60vh;
     color: #fbbf24;
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px; letter-spacing: 1.2px;
-    text-align: center;
-    background: linear-gradient(180deg, rgba(251,191,36,0.05) 0%, rgba(13,17,23,0) 100%);
+    text-align: center; padding: 0 24px;
+    background: linear-gradient(180deg, rgba(13,17,23,1) 0%, rgba(13,17,23,0.95) 100%);
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 350ms ease;
+  }
+  #sME-loading.gone {
+    opacity: 0;
+    visibility: hidden;
   }
   #sME-loading::before {
     content: '⚐';
@@ -16917,13 +16924,11 @@
 
 <section id="sME" aria-label="Banderas rojas Morelos · primer trimestre 2026">
   <div class="me-iframe-wrap">
-    <div id="sME-loading">cargando reporte ejecutivo · banderas rojas Morelos · T1 2026</div>
     <iframe id="sME-iframe"
             title="Reporte ejecutivo · banderas rojas Morelos T1 2026"
             src="secciones_lab/reporte_ejecutivo_v2.html?embed=1"
-            loading="lazy"
-            scrolling="no"
-            style="display:none;"></iframe>
+            scrolling="no"></iframe>
+    <div id="sME-loading">cargando reporte ejecutivo · banderas rojas Morelos · T1 2026</div>
   </div>
 </section>
 
@@ -16942,7 +16947,7 @@
 
   // Recibir altura desde el iframe vía postMessage
   window.addEventListener('message', (e) => {
-    if (e.source !== iframe.contentWindow) return;
+    if (!iframe.contentWindow || e.source !== iframe.contentWindow) return;
     if (e.data && e.data.type === 'sME-height' && typeof e.data.h === 'number') {
       applyHeight(e.data.h);
     }
@@ -16963,14 +16968,19 @@
   }
 
   iframe.addEventListener('load', () => {
-    loading.style.display = 'none';
-    iframe.style.display = 'block';
+    if (loading) loading.classList.add('gone');
     measureFallback();
-    setTimeout(measureFallback, 600);
-    setTimeout(measureFallback, 1500);
-    setTimeout(measureFallback, 3500);
+    setTimeout(measureFallback, 400);
+    setTimeout(measureFallback, 1200);
+    setTimeout(measureFallback, 3000);
   });
   window.addEventListener('resize', measureFallback);
+
+  // Safety: si tras 6s sigue el loading, ocultarlo igual (el iframe puede haber cargado sin disparar load por algún motivo)
+  setTimeout(() => {
+    if (loading) loading.classList.add('gone');
+    measureFallback();
+  }, 6000);
 })();
 </script>
 
