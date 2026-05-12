@@ -4878,7 +4878,7 @@
   <!-- Fuente: Plan Estatal de Desarrollo (admin Margarita González) -->
   <!-- ============================================================ -->
 
-  <!-- REGIÓN 1 · NOROESTE · azul · contiene ZM Cuernavaca SEDATU -->
+  <!-- REGIÓN 1 · NOROESTE · azul -->
   <div class="nav-region">
     <div class="nav-region-title" id="toggleRegionNoroeste" role="button" tabindex="0" aria-expanded="true" aria-controls="regionNoroesteContent" style="color:#58a6ff;">
       <span class="triangle">▸</span>
@@ -4886,19 +4886,6 @@
       <span class="count">6 munis</span>
     </div>
     <div class="nav-region-content open" id="regionNoroesteContent">
-
-  <div class="nav-group" style="opacity:0.85;">
-    <div class="nav-group-title nav-collapsible" id="toggleZM" role="button" tabindex="0" aria-expanded="false" style="font-size:9px;letter-spacing:1.5px;color:#8b949e;border-left:2px dashed rgba(88,166,255,0.5);padding-left:8px;">
-      <span class="triangle" style="color:#8b949e;">▸</span>
-      <span>+ Agregado SEDATU</span>
-      <span class="caret" style="color:#8b949e;">▾</span>
-    </div>
-    <div class="nav-subnav" id="zmSubnav">
-      <a href="#sZM1" data-target="sZM1"><span class="num">01</span>PORTADA</a>
-      <a href="#sZM2" data-target="sZM2"><span class="num">02</span>COMPARATIVA</a>
-      <a href="#sZM3" data-target="sZM3"><span class="num">03</span>SERIE + CIERRE</a>
-    </div>
-  </div>
 
   <div class="nav-group">
     <div class="nav-group-title g-completo nav-collapsible" id="toggleCuernavaca" role="button" tabindex="0" aria-expanded="false">
@@ -5144,7 +5131,7 @@
     </div><!-- /regionNoresteContent -->
   </div><!-- /nav-region Noreste -->
 
-  <!-- REGIÓN 4 · CENTRO · ámbar · 3 munis · ZM Cuautla SEDATU -->
+  <!-- REGIÓN 4 · CENTRO · ámbar · 3 munis -->
   <div class="nav-region">
     <div class="nav-region-title" id="toggleRegionCentro" role="button" tabindex="0" aria-expanded="false" aria-controls="regionCentroContent" style="color:#fbbf24;">
       <span class="triangle">▸</span>
@@ -5152,19 +5139,6 @@
       <span class="count">3 munis</span>
     </div>
     <div class="nav-region-content" id="regionCentroContent">
-
-  <div class="nav-group" style="opacity:0.85;">
-    <div class="nav-group-title nav-collapsible" id="toggleZMC" role="button" tabindex="0" aria-expanded="false" style="font-size:9px;letter-spacing:1.5px;color:#8b949e;border-left:2px dashed rgba(251,191,36,0.5);padding-left:8px;">
-      <span class="triangle" style="color:#8b949e;">▸</span>
-      <span>+ Agregado SEDATU</span>
-      <span class="caret" style="color:#8b949e;">▾</span>
-    </div>
-    <div class="nav-subnav" id="zmcSubnav">
-      <a href="#sZMC1" data-target="sZMC1"><span class="num">01</span>PORTADA</a>
-      <a href="#sZMC2" data-target="sZMC2"><span class="num">02</span>COMPARATIVA</a>
-      <a href="#sZMC3" data-target="sZMC3"><span class="num">03</span>SERIE + CIERRE</a>
-    </div>
-  </div>
 
   <div class="nav-group">
     <div class="nav-group-title g-completo nav-collapsible" id="toggleCuautla" role="button" tabindex="0" aria-expanded="false">
@@ -6479,12 +6453,8 @@
     </p>
   </div>
 
-  <!-- Toggle ZM delimitación -->
+  <!-- Acceso al resumen ejecutivo de regiones -->
   <div style="display:flex;justify-content:center;gap:12px;margin:8px 0 14px;flex-wrap:wrap;">
-    <button type="button" class="zm-toggle-btn" id="btnToggleZM" aria-pressed="false">
-      <span class="dot"></span>
-      <span>Resaltar ZMs SEDATU</span>
-    </button>
     <a href="#sZE" class="zm-toggle-btn" style="text-decoration:none;" onclick="document.getElementById('sZE').scrollIntoView({block:'start'});">
       <span>→ Análisis 7 regiones PED</span>
     </a>
@@ -6509,7 +6479,7 @@
       <g id="zm-titles">
         <!-- Noroeste · arriba izquierda · azul -->
         <g>
-          <text class="zm-title-sub" x="20" y="58" font-size="9">6 MUNICIPIOS · ZM CUERNAVACA</text>
+          <text class="zm-title-sub" x="20" y="58" font-size="9">6 MUNICIPIOS</text>
           <text class="zm-title-label" x="20" y="86" font-size="22" fill="#58a6ff">NOROESTE</text>
           <line x1="20" y1="98" x2="150" y2="98" stroke="#58a6ff" stroke-width="1.2" opacity="0.65"/>
         </g>
@@ -6527,7 +6497,7 @@
         </g>
         <!-- Centro · centro-izquierda · ámbar -->
         <g>
-          <text class="zm-title-sub" x="20" y="350" font-size="9">3 MUNICIPIOS · ZM CUAUTLA</text>
+          <text class="zm-title-sub" x="20" y="350" font-size="9">3 MUNICIPIOS</text>
           <text class="zm-title-label" x="20" y="378" font-size="22" fill="#fbbf24">CENTRO</text>
           <line x1="20" y1="390" x2="120" y2="390" stroke="#fbbf24" stroke-width="1.2" opacity="0.65"/>
         </g>
@@ -6551,7 +6521,7 @@
         </g>
       </g>
       <!-- Fuente -->
-      <text x="970" y="665" fill="#484f58" font-size="9" text-anchor="end" font-style="italic">Geometría: CONABIO 2023 simplificada · definición ZM: SEDATU-CONAPO</text>
+      <text x="970" y="665" fill="#484f58" font-size="9" text-anchor="end" font-style="italic">Geometría: CONABIO 2023 simplificada · Regiones: PED Morelos 2025-2030</text>
     </svg>
   </div>
 
@@ -6576,8 +6546,8 @@
 
   <div class="hub-legend">
     <div class="item"><span class="dot green"></span> Análisis completo <span class="count">(haz clic para abrir)</span></div>
-    <div class="item"><span class="dot" style="background:#58a6ff;"></span> Noroeste <span class="count">(6 munis · incluye ZM Cuernavaca)</span></div>
-    <div class="item"><span class="dot" style="background:#fbbf24;"></span> Centro <span class="count">(3 munis · ZM Cuautla)</span></div>
+    <div class="item"><span class="dot" style="background:#58a6ff;"></span> Noroeste <span class="count">(6 munis)</span></div>
+    <div class="item"><span class="dot" style="background:#fbbf24;"></span> Centro <span class="count">(3 munis)</span></div>
     <div class="item"><span class="dot" style="background:#84cc16;"></span> Norte <span class="count">(5 munis)</span></div>
     <div class="item"><span class="dot" style="background:#14b8a6;"></span> Noreste <span class="count">(6 munis)</span></div>
     <div class="item"><span class="dot" style="background:#a371f7;"></span> Oriente <span class="count">(4 munis)</span></div>
@@ -7156,7 +7126,7 @@
     Los 36 municipios del estado se agrupan en <strong>7 regiones</strong> según el <strong>Plan Estatal de Desarrollo Morelos 2025-2030</strong> (admin Margarita González Saravia). Cada región tiene una firma criminal distinta y una pregunta editorial propia.
   </p>
   <p style="font-size:13px;color:#8b949e;line-height:1.55;max-width:920px;margin-bottom:32px;font-style:italic;">
-    Nota metodológica: la <strong>SEDATU-CONAPO</strong> define dos Zonas Metropolitanas federales (ZM Cuernavaca, ZM Cuautla) que se preservan como agregados analíticos complementarios en las secciones <code>sZM1-3</code> y <code>sZMC1-3</code>. Las ZMs SEDATU se solapan parcialmente con las regiones PED Noroeste y Centro, pero no son intercambiables.
+    Nota metodológica: el agregado regional sigue exclusivamente la división del PED 2025-2030. Las regiones se calculan sumando los municipios oficialmente asignados por el Plan en cada zona.
   </p>
 
   <!-- Mini comparativa visual · 7 regiones PED -->
@@ -7218,9 +7188,9 @@
     <!-- NOROESTE -->
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
         <h2 style="font-size:22px;font-weight:800;color:#58a6ff;margin:0;letter-spacing:-0.3px;">Noroeste</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS · ZM CNV SEDATU</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS</span>
       </div>
-      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">El corazón conurbado del estado. Coincide con la ZM Cuernavaca SEDATU. Con 46.6% de la población aporta 54.7% de las carpetas — sobreproporción patrimonial. Pero en homicidio doloso (46.1%) y extorsión (12.6%) está en línea o por debajo del peso poblacional.</p>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">El corazón conurbado del estado. Con 46.6% de la población aporta 54.7% de las carpetas — sobreproporción patrimonial. Pero en homicidio doloso (46.1%) y extorsión (12.6%) está en línea o por debajo del peso poblacional.</p>
       <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
         <li><strong>24,866 carpetas 2025</strong> (–8.4% AxA) · 639 HD · tasa 67/100K.</li>
         <li><strong>Extorsión infraproporción severa</strong> (0.27× peso pop.) · sólo 53 carpetas. No es zona de extorsión.</li>
@@ -7236,9 +7206,9 @@
     <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(251,191,36,0.55);border-left:5px solid #fbbf24;border-radius:12px;padding:22px 24px;">
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
         <h2 style="font-size:22px;font-weight:800;color:#fbbf24;margin:0;letter-spacing:-0.3px;">Centro</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">3 MUNICIPIOS · ZM CUA SEDATU</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">3 MUNICIPIOS</span>
       </div>
-      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Coincide con la ZM Cuautla SEDATU (Cuautla, Yautepec, Ayala). Con 19% de la población aporta el <strong>72.6% de la extorsión estatal</strong> — sobre 3.82×. Es la <strong>capital de la extorsión</strong> de Morelos. Total subió +11.5% AxA mientras el resto del estado bajó.</p>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Cuautla, Yautepec, Ayala. Con 19% de la población aporta el <strong>72.6% de la extorsión estatal</strong> — sobre 3.82×. Es la <strong>capital de la extorsión</strong> de Morelos. Total subió +11.5% AxA mientras el resto del estado bajó.</p>
       <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
         <li><strong>10,770 carpetas 2025</strong> (+11.5% AxA, contracorriente).</li>
         <li><strong>Extorsión 304</strong> carpetas — Cuautla concentra 259 (85% regional).</li>
@@ -7350,184 +7320,10 @@
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes y método.</strong> Agregados calculados desde SESNSP corte mar-2026 sobre los 36 municipios de Morelos. <strong>División regional:</strong> Plan Estatal de Desarrollo Morelos 2025-2030, admin Margarita González Saravia (Foros Regionales de Consulta Ciudadana, nov 2024 · <a href="https://www.morelos.gob.mx/links-de-interes/ped2025-2030" target="_blank" style="color:#58a6ff;text-decoration:none;">morelos.gob.mx/ped2025-2030</a>). <strong>ZM SEDATU-CONAPO 2020</strong> se preservan como agregados analíticos complementarios — ver secciones sZM1-3 (Cuernavaca) y sZMC1-3 (Cuautla). Población CONAPO 2025.
+    <strong>Fuentes y método.</strong> Agregados calculados desde SESNSP corte mar-2026 sobre los 36 municipios de Morelos. <strong>División regional:</strong> Plan Estatal de Desarrollo Morelos 2025-2030, admin Margarita González Saravia (Foros Regionales de Consulta Ciudadana, nov 2024 · <a href="https://www.morelos.gob.mx/links-de-interes/ped2025-2030" target="_blank" style="color:#58a6ff;text-decoration:none;">morelos.gob.mx/ped2025-2030</a>). Población CONAPO 2025.
   </div>
 </section>
 
-<script>
-(function(){
-  // === ZM Cuernavaca · diverging horizontal bar ===
-  // Cada categoría: ratio sobreproporción 2025 = (% estatal del delito) / (% población esperada 53.98%)
-  // Bar > 1.00 → sobreproporción (rojo) · Bar < 1.00 → infraproporción (azul)
-  const initCuer = () => {
-    const cvs = document.getElementById('chartZmCuerSobreprop');
-    if (!cvs || !window.Chart) return;
-    const cats = [
-      { label: 'Robo vehículo',      ratio: 1.28 },
-      { label: 'Violencia familiar', ratio: 1.18 },
-      { label: 'Homicidio doloso',   ratio: 0.94 },
-      { label: 'Feminicidio',        ratio: 0.74 },
-      { label: 'Narcomenudeo',       ratio: 0.64 },
-      { label: 'Extorsión',          ratio: 0.25 }
-    ];
-    new Chart(cvs.getContext('2d'), {
-      type: 'bar',
-      data: {
-        labels: cats.map(c => c.label),
-        datasets: [{
-          label: 'Ratio vs peso poblacional',
-          data: cats.map(c => c.ratio - 1),
-          backgroundColor: cats.map(c => c.ratio >= 1 ? 'rgba(255,123,114,0.78)' : 'rgba(88,166,255,0.55)'),
-          borderColor: cats.map(c => c.ratio >= 1 ? '#ff7b72' : '#58a6ff'),
-          borderWidth: 1.5,
-          borderRadius: 4
-        }]
-      },
-      options: {
-        indexAxis: 'y',
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            min: -0.85, max: 0.45,
-            ticks: {
-              color: '#8b949e',
-              font: { family: "'JetBrains Mono', monospace", size: 10 },
-              callback: (v) => (1 + v).toFixed(2) + '×'
-            },
-            grid: {
-              color: (ctx) => ctx.tick.value === 0 ? 'rgba(201,209,217,0.65)' : 'rgba(48,54,61,0.4)',
-              lineWidth: (ctx) => ctx.tick.value === 0 ? 1.5 : 1
-            }
-          },
-          y: {
-            ticks: { color: '#c9d1d9', font: { size: 11.5, weight: '600' } },
-            grid: { display: false }
-          }
-        },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1,
-            titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 10,
-            callbacks: {
-              title: (items) => items[0].label,
-              label: (c) => {
-                const ratio = (1 + c.parsed.x);
-                const label = ratio >= 1 ? 'Sobreproporción' : 'Infraproporción';
-                return `${label}: ${ratio.toFixed(2)}×`;
-              }
-            }
-          }
-        }
-      },
-      plugins: [{
-        id: 'datalabel-ratio',
-        afterDatasetsDraw(chart) {
-          const { ctx } = chart;
-          const meta = chart.getDatasetMeta(0);
-          ctx.save();
-          ctx.font = "700 11px 'JetBrains Mono', monospace";
-          ctx.textBaseline = 'middle';
-          meta.data.forEach((bar, i) => {
-            const ratio = cats[i].ratio;
-            const isPos = ratio >= 1;
-            ctx.fillStyle = isPos ? '#ff7b72' : '#58a6ff';
-            ctx.textAlign = isPos ? 'left' : 'right';
-            const offset = isPos ? 6 : -6;
-            ctx.fillText(ratio.toFixed(2) + '×', bar.x + offset, bar.y);
-          });
-          ctx.restore();
-        }
-      }]
-    });
-  };
-
-  // === ZM Cuautla · radar polygon ===
-  // Cada eje: % estatal aportado por la ZM Cuautla en ese delito
-  // Círculo punteado a 25% = peso poblacional (lo que aportaría una zona "neutra")
-  const initCua = () => {
-    const cvs = document.getElementById('chartZmCuaPolygon');
-    if (!cvs || !window.Chart) return;
-    const labels = ['Extorsión','Narcomenudeo','Feminicidio','Homicidio doloso','Violencia familiar','Robo vehículo'];
-    const zmShare = [79.95, 35.44, 34.29, 25.08, 22.03, 21.66];
-    const popGuide = labels.map(() => 24.82);
-    new Chart(cvs.getContext('2d'), {
-      type: 'radar',
-      data: {
-        labels,
-        datasets: [
-          {
-            label: 'Peso poblacional (25%)',
-            data: popGuide,
-            borderColor: 'rgba(139,148,158,0.85)',
-            backgroundColor: 'rgba(139,148,158,0.05)',
-            borderWidth: 1.5,
-            borderDash: [4,4],
-            pointRadius: 0,
-            fill: false
-          },
-          {
-            label: '% estatal aportado',
-            data: zmShare,
-            borderColor: '#fbbf24',
-            backgroundColor: 'rgba(251,191,36,0.22)',
-            borderWidth: 2.5,
-            pointBackgroundColor: '#fbbf24',
-            pointBorderColor: '#0d1117',
-            pointBorderWidth: 1.5,
-            pointRadius: 4,
-            fill: true
-          }
-        ]
-      },
-      options: {
-        maintainAspectRatio: false,
-        scales: {
-          r: {
-            min: 0, max: 85,
-            ticks: {
-              stepSize: 20,
-              color: '#6e7681',
-              font: { family: "'JetBrains Mono', monospace", size: 9 },
-              backdropColor: 'transparent',
-              callback: (v) => v + '%'
-            },
-            grid: { color: 'rgba(48,54,61,0.55)' },
-            angleLines: { color: 'rgba(48,54,61,0.55)' },
-            pointLabels: {
-              color: '#c9d1d9',
-              font: { size: 11, weight: '600' }
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: '#c9d1d9',
-              font: { size: 10.5 },
-              padding: 10,
-              usePointStyle: true,
-              pointStyle: 'circle',
-              boxWidth: 8
-            }
-          },
-          tooltip: {
-            backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1,
-            titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 10,
-            callbacks: {
-              label: (c) => c.dataset.label + ': ' + c.parsed.r.toFixed(2) + '%'
-            }
-          }
-        }
-      }
-    });
-  };
-
-  const run = () => { initCuer(); initCua(); };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
-})();
-</script>
 
 
 <!-- SECCIÓN 1 — PORTADA CUAUTLA -->
@@ -21361,639 +21157,6 @@
 })();
 </script>
 
-<!-- =============================================================== -->
-<!-- ZM CUERNAVACA · SECCIÓN AGREGADA (sZM1-sZM3)                     -->
-<!-- Los 8 municipios como unidad analítica                           -->
-<!-- =============================================================== -->
-
-<!-- sZM1 — PORTADA ZM CUERNAVACA -->
-<section id="sZM1" class="cover">
-  <div class="cover-visual">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="zmBg" cx="50%" cy="55%" r="80%">
-          <stop offset="0%" stop-color="rgba(88,166,255,0.15)"/>
-          <stop offset="45%" stop-color="rgba(248,81,73,0.10)"/>
-          <stop offset="100%" stop-color="rgba(13,17,23,0)"/>
-        </radialGradient>
-        <radialGradient id="zmCore" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="rgba(248,81,73,1)"/>
-          <stop offset="40%" stop-color="rgba(251,191,36,0.5)"/>
-          <stop offset="100%" stop-color="rgba(248,81,73,0)"/>
-        </radialGradient>
-      </defs>
-      <rect width="1600" height="900" fill="url(#zmBg)"/>
-      <!-- Estrellas -->
-      <g fill="#fbbf24" opacity="0.18">
-        <circle cx="140" cy="100" r="1.2"/><circle cx="340" cy="70" r="1.4"/>
-        <circle cx="520" cy="130" r="1"/><circle cx="720" cy="80" r="1.2"/>
-        <circle cx="900" cy="120" r="1.3"/><circle cx="1100" cy="60" r="1.1"/>
-        <circle cx="1280" cy="140" r="1.4"/><circle cx="1460" cy="90" r="1"/>
-      </g>
-      <!-- Constelación ZM: 8 nodos como atmosfera visual (sin etiquetas, sin texto — los datos van en las cards) -->
-      <g opacity="0.38">
-        <!-- Líneas de conurbación (más sutiles) -->
-        <g stroke="rgba(88,166,255,0.22)" stroke-width="1" fill="none">
-          <line x1="230" y1="720" x2="130" y2="620">
-            <animate attributeName="stroke-opacity" values="0.1;0.45;0.1" dur="4s" repeatCount="indefinite"/>
-          </line>
-          <line x1="230" y1="720" x2="350" y2="700"/>
-          <line x1="230" y1="720" x2="160" y2="820"/>
-          <line x1="230" y1="720" x2="70" y2="760"/>
-          <line x1="230" y1="720" x2="330" y2="820"/>
-          <line x1="230" y1="720" x2="430" y2="810"/>
-          <line x1="130" y1="620" x2="70" y2="760"/>
-          <line x1="350" y1="700" x2="430" y2="810"/>
-          <line x1="160" y1="820" x2="330" y2="820"/>
-          <line x1="1360" y1="250" x2="1460" y2="180"/>
-          <line x1="1460" y1="180" x2="1520" y2="120"/>
-        </g>
-        <!-- 8 Nodos relocalizados a las esquinas · lejos del título central -->
-        <!-- Cluster inferior izquierdo (ZM principal) -->
-        <circle cx="230" cy="720" r="26" fill="url(#zmCore)" opacity="0.55">
-          <animate attributeName="r" values="26;34;26" dur="2.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="230" cy="720" r="13" fill="#f85149"/>
-        <circle cx="230" cy="720" r="4" fill="#fff"/>
-        <circle cx="350" cy="700" r="16" fill="rgba(248,81,73,0.75)" stroke="#f85149" stroke-width="1.2">
-          <animate attributeName="r" values="16;19;16" dur="2.8s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="160" cy="820" r="12" fill="rgba(251,191,36,0.7)" stroke="#fbbf24" stroke-width="1.2"/>
-        <circle cx="330" cy="820" r="11" fill="rgba(251,191,36,0.65)" stroke="#fbbf24" stroke-width="1.2"/>
-        <circle cx="130" cy="620" r="10" fill="rgba(210,153,34,0.6)" stroke="#d29922" stroke-width="1"/>
-        <circle cx="430" cy="810" r="9" fill="rgba(210,153,34,0.6)" stroke="#d29922" stroke-width="1"/>
-        <!-- Cluster superior derecho · satélites del norte -->
-        <circle cx="1360" cy="250" r="8" fill="rgba(210,153,34,0.55)" stroke="#d29922" stroke-width="1"/>
-        <circle cx="1460" cy="180" r="6" fill="rgba(139,148,158,0.65)" stroke="#8b949e" stroke-width="1"/>
-      </g>
-    </svg>
-  </div>
-
-  <!-- Badge -->
-  <div style="display:inline-flex;gap:10px;align-items:center;padding:8px 18px;background:rgba(13,17,23,0.85);border:1.5px solid rgba(88,166,255,0.55);border-radius:24px;margin-bottom:18px;backdrop-filter:blur(8px);">
-    <span style="width:9px;height:9px;background:#58a6ff;border-radius:50%;box-shadow:0 0 10px rgba(88,166,255,0.85);animation:pulse 2s infinite;"></span>
-    <span style="color:#58a6ff;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800;">8 municipios · 1.06 millón hab · 54% estado</span>
-  </div>
-
-  <h1 style="background:linear-gradient(135deg,#58a6ff 0%,#fbbf24 50%,#f85149 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 4px 30px rgba(0,0,0,0.5);">ZM CUERNAVACA:<br>EL CORAZÓN Y SUS ÓRBITAS</h1>
-  <p class="subtitle" style="max-width:820px;">
-    Con 54% de la población de Morelos, concentra 69% del robo de vehículo y 63% de la violencia familiar.<br>
-    Pero la extorsión — el delito emblema del estado — no vive aquí.
-  </p>
-
-  <div class="cards">
-    <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.10);" onclick="showExplain('Concentración de homicidio letal','ZM Cuernavaca concentra <strong>506 de los 997 homicidios dolosos</strong> del estado en 2025 (50.8%). Con 54% de la población, el indicador queda casi en línea con peso demográfico. Los picos son Cuernavaca (126), Cuautla-externa, Temixco (103), E.Zapata (80) y Jiutepec (73) — cinco municipios concentran 508 homicidios dolosos, la mitad del total estatal. El cuadro aclara que en Morelos el homicidio se concentra en el valle conurbado.')">
-      <div class="num">50.8%</div><div class="lbl">Homicidio doloso<br>506 de 997 estatales</div>
-    </div>
-    <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.12);" onclick="showExplain('Firma del corredor: robo de vehículo','La ZM concentra <strong>69% del robo de vehículo</strong> del estado (2,964 de 4,298). Muy por encima del peso demográfico 54% — sobreproporción 1.28×. El corredor Cuernavaca-Jiutepec-E.Zapata-Temixco facilita el tránsito vehicular robado. Huitzilac (249 casos, tasa 1,245/100K) es caso extremo por el peaje del Ajusco. El patrón es geográfico, no demográfico.')">
-      <div class="num">69.0%</div><div class="lbl">Robo vehículo<br>sobreproporción 1.28×</div>
-    </div>
-    <div class="card" style="border-color:#58a6ff;background:rgba(88,166,255,0.08);" onclick="showExplain('Violencia doméstica: donde vive la ZM','La ZM concentra <strong>63% de la violencia familiar</strong> del estado (3,686 de 5,807). Cuernavaca solo aporta 2,067 — el 35.6% estatal. La sobreproporción 1.17× refleja que el delito de denuncia se ejerce más donde hay más densidad poblacional, infraestructura institucional y acceso a Ministerios Públicos.')">
-      <div class="num">63.5%</div><div class="lbl">Violencia familiar<br>3,686 de 5,807 estatales</div>
-    </div>
-    <div class="card" style="border-color:#3fb950;background:rgba(63,185,110,0.08);" onclick="showExplain('La extorsión NO vive en la ZM','Con 54% de la población, la ZM aporta solo <strong>13.6% de la extorsión estatal</strong> (57 de 419). La extorsión es el único indicador mayor donde la ZM queda dramáticamente por debajo — la infraproporción es 0.25×. Cuautla sola aporta 259 casos (62% estatal). El delito emblema de Morelos vive en el oriente agrícola-comercial, no en el valle conurbado.')">
-      <div class="num">13.6%</div><div class="lbl">Extorsión<br>infraproporción 0.25×</div>
-    </div>
-  </div>
-  <div class="click-hint"><span class="dot"></span>Haz clic en cualquier tarjeta para la explicación completa</div>
-  <div class="brand-strip" style="max-width:560px;margin-top:0;">
-    <svg class="mini45"><use href="#logo45"/></svg>
-    <div style="text-align:left;">
-      <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis ZM hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · CONAPO 2025 · 8 municipios agregados</div>
-    </div>
-  </div>
-</section>
-
-<!-- sZM2 — COMPARATIVA MUNICIPAL -->
-<section id="sZM2">
-  <h3>ZM · 2</h3>
-  <h1>Los 8 municipios lado a lado</h1>
-  <p>La Zona Metropolitana de Cuernavaca agrupa 8 municipios con población acumulada de 1.06 millones (54% de Morelos). Abajo la tabla comparativa 2025 — cada fila su firma específica, cada columna la posición relativa.</p>
-
-  <div class="menores-table" style="margin-top:20px;">
-    <table>
-      <thead>
-        <tr>
-          <th>Municipio</th>
-          <th style="text-align:right;">Pob (miles)</th>
-          <th style="text-align:right;">Homicidio doloso</th>
-          <th style="text-align:right;">Tasa/100K</th>
-          <th style="text-align:right;">Narcomenudeo</th>
-          <th style="text-align:right;">Robo vehículo</th>
-          <th style="text-align:right;">Violencia familiar</th>
-          <th>Firma específica</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:rgba(248,81,73,0.06);">
-          <td><strong>Cuernavaca</strong></td>
-          <td style="text-align:right;">397</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">126</td>
-          <td style="text-align:right;">32</td>
-          <td style="text-align:right;">187</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">1,393</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">2,067</td>
-          <td style="color:#c9d1d9;font-size:13px;">Capital que reclasifica — violencia familiar nuclear estatal</td>
-        </tr>
-        <tr>
-          <td><strong>Jiutepec</strong></td>
-          <td style="text-align:right;">214</td>
-          <td style="text-align:right;font-weight:700;">73</td>
-          <td style="text-align:right;">34</td>
-          <td style="text-align:right;">37</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">571</td>
-          <td style="text-align:right;">520</td>
-          <td style="color:#c9d1d9;font-size:13px;">CIVAC industrial — segundo nodo por robo de vehículo</td>
-        </tr>
-        <tr>
-          <td><strong>Temixco</strong></td>
-          <td style="text-align:right;">130</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">103</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">94</td>
-          <td style="text-align:right;">24</td>
-          <td style="text-align:right;">227</td>
-          <td style="text-align:right;">339</td>
-          <td style="color:#c9d1d9;font-size:13px;">Tasa alta sostenida — 3° estatal en tasa homicidio</td>
-        </tr>
-        <tr>
-          <td><strong>E.Zapata</strong></td>
-          <td style="text-align:right;">110</td>
-          <td style="text-align:right;font-weight:700;">80</td>
-          <td style="text-align:right;">73</td>
-          <td style="text-align:right;">34</td>
-          <td style="text-align:right;">291</td>
-          <td style="text-align:right;">224</td>
-          <td style="color:#c9d1d9;font-size:13px;">Meseta estable 80-86 · narcomenudeo +183%</td>
-        </tr>
-        <tr>
-          <td><strong>Xochitepec</strong></td>
-          <td style="text-align:right;">79</td>
-          <td style="text-align:right;font-weight:700;color:#3fb950;">34</td>
-          <td style="text-align:right;">43</td>
-          <td style="text-align:right;">12</td>
-          <td style="text-align:right;">154</td>
-          <td style="text-align:right;">186</td>
-          <td style="color:#c9d1d9;font-size:13px;">Mayor caída ZM −52% · abuso sexual 1.92×</td>
-        </tr>
-        <tr>
-          <td><strong>Tepoztlán</strong></td>
-          <td style="text-align:right;">55</td>
-          <td style="text-align:right;font-weight:700;">36</td>
-          <td style="text-align:right;">65</td>
-          <td style="text-align:right;font-weight:700;color:#fbbf24;">22</td>
-          <td style="text-align:right;">52</td>
-          <td style="text-align:right;">156</td>
-          <td style="color:#c9d1d9;font-size:13px;">Pueblo Mágico · narcomenudeo 0 → 22</td>
-        </tr>
-        <tr>
-          <td><strong>Tlaltizapán</strong></td>
-          <td style="text-align:right;">54</td>
-          <td style="text-align:right;font-weight:700;">21</td>
-          <td style="text-align:right;">39</td>
-          <td style="text-align:right;font-weight:700;color:#fbbf24;">36</td>
-          <td style="text-align:right;">27</td>
-          <td style="text-align:right;">124</td>
-          <td style="color:#c9d1d9;font-size:13px;">El narco regresa +350% · feminicidio 2.06×</td>
-        </tr>
-        <tr>
-          <td><strong>Huitzilac</strong></td>
-          <td style="text-align:right;">20</td>
-          <td style="text-align:right;font-weight:700;">33</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">165</td>
-          <td style="text-align:right;">11</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">249</td>
-          <td style="text-align:right;">70</td>
-          <td style="color:#c9d1d9;font-size:13px;">Peaje del Ajusco · tasa robo vehículo 1,245/100K</td>
-        </tr>
-        <tr style="background:rgba(88,166,255,0.08);border-top:2px solid rgba(88,166,255,0.4);">
-          <td><strong style="color:#58a6ff;">TOTAL ZM</strong></td>
-          <td style="text-align:right;font-weight:800;color:#58a6ff;">1,059</td>
-          <td style="text-align:right;font-weight:800;color:#58a6ff;">506</td>
-          <td style="text-align:right;font-weight:700;">48</td>
-          <td style="text-align:right;font-weight:800;color:#58a6ff;">363</td>
-          <td style="text-align:right;font-weight:800;color:#58a6ff;">2,964</td>
-          <td style="text-align:right;font-weight:800;color:#58a6ff;">3,686</td>
-          <td style="color:#58a6ff;font-size:13px;font-weight:700;">54% población · 50.8% dolosos · 69% robo · 63% violencia</td>
-        </tr>
-        <tr style="opacity:0.8;font-size:13px;">
-          <td>Total Morelos</td>
-          <td style="text-align:right;">1,950</td>
-          <td style="text-align:right;">997</td>
-          <td style="text-align:right;">51</td>
-          <td style="text-align:right;">1,058</td>
-          <td style="text-align:right;">4,298</td>
-          <td style="text-align:right;">5,807</td>
-          <td style="color:#8b949e;">— línea de comparación</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="simple-box" style="margin-top:24px;">
-    <div class="simple-tag">Los patrones internos de la ZM</div>
-    <p>La ZM no es homogénea — tiene <strong>al menos cuatro perfiles</strong> claros:</p>
-    <ul style="margin:10px 0 0 20px;padding:0;">
-      <li><strong>Núcleo letal (Cuernavaca, Temixco, Jiutepec):</strong> concentran volumen absoluto de homicidio y violencia patrimonial. Corredor conectado, dinámica compartida.</li>
-      <li><strong>Satélites con firma propia (E.Zapata, Tepoztlán, Tlaltizapán):</strong> cada uno tiene una trayectoria distinta — meseta estable, Pueblo Mágico con narcomenudeo emergente, regreso del narco post-2020.</li>
-      <li><strong>El caso atípico (Huitzilac):</strong> 20 mil habitantes con tasa de robo de vehículo 1,245/100K — un outlier geográfico por el peaje del Ajusco.</li>
-      <li><strong>El ciclo (Xochitepec):</strong> dos picos gemelos en homicidio (2021, 2024), mayor caída 2025 de la ZM (−52%). Patrón cíclico que no coincide con la meseta ni la trayectoria.</li>
-    </ul>
-  </div>
-
-  <div class="footer-note" style="margin-top:20px;">Fuente: SESNSP corte mar-2026 (agregado de los 8 municipios de la ZM Cuernavaca). CONAPO 2025.</div>
-</section>
-
-<!-- sZM3 — SERIE DECENAL + CONCLUSIÓN ZM -->
-<section id="sZM3">
-  <h3>ZM · 3</h3>
-  <h1>La ZM que se movió — y la que no</h1>
-  <p>En diez años (2016-2025) la ZM Cuernavaca pasó de <strong>262 a 506 homicidios dolosos anuales</strong> (+93%). El pico fue 2024 (682 casos) y 2025 marca una caída de 26%. El patrón global ZM sigue la curva nacional de Morelos — pero los siete valles y picos interiores de sus ocho municipios cuentan historias distintas.</p>
-
-  <div style="position:relative;height:400px;margin:24px 0 18px;padding:18px 22px 14px;background:rgba(22,27,34,0.65);border:1px solid #30363d;border-radius:12px;">
-    <canvas id="chartZmSerie"></canvas>
-  </div>
-
-  <div class="conclusion-grid" style="margin-top:28px;">
-    <div class="conclusion-card accent-red">
-      <div class="hero">506</div>
-      <div class="hero-sub">Dolosos 2025 · 50.8% estatal</div>
-      <p>La ZM concentra exactamente la mitad del homicidio doloso del estado. Con 54% de la población, el indicador se alinea con peso demográfico. El mensaje: la violencia letal en Morelos es mayoritariamente metropolitana.</p>
-    </div>
-    <div class="conclusion-card accent-yellow">
-      <div class="hero">+78%</div>
-      <div class="hero-sub">Narcomenudeo 2024 → 2025</div>
-      <p>De 203 a 363 carpetas en un año. El rebrote está distribuido: Tepoztlán (0→22), E.Zapata (12→34), Tlaltizapán (8→36). Cuernavaca también sube (137→187). El mercado se está redistribuyendo dentro de la ZM.</p>
-    </div>
-    <div class="conclusion-card accent-orange">
-      <div class="hero">2,964</div>
-      <div class="hero-sub">Robo vehículo · 69% estatal</div>
-      <p>La firma más desproporcionada de la ZM. Sobreproporción 1.28× (69% del delito con 54% de la población). El corredor Cuernavaca-Jiutepec-E.Zapata-Huitzilac es la geografía del robo vehicular en Morelos.</p>
-    </div>
-    <div class="conclusion-card accent-green">
-      <div class="hero">13.6%</div>
-      <div class="hero-sub">Extorsión · infraproporción 0.25×</div>
-      <p>Con 54% de la población, la ZM solo aporta 13.6% de la extorsión estatal. La extorsión vive en el oriente (Cuautla concentra 62% estatal). Para la ZM, la extorsión es un fenómeno externo — por ahora.</p>
-    </div>
-    <div class="conclusion-card accent-gradient">
-      <div class="hero">→</div>
-      <div class="hero-sub">Lo que sigue en 2026</div>
-      <p>Si la extorsión <strong>llega a la ZM en 2026</strong>, la redistribución criminal de Morelos entrará en fase nueva. El narcomenudeo ya empezó a moverse; la extorsión es el siguiente indicador a vigilar — especialmente en los municipios pequeños con narco emergente (Tepoztlán, Tlaltizapán).</p>
-    </div>
-  </div>
-
-  <div class="caveat-banner" style="margin-top:32px;">
-    <strong>Qué es la ZM Cuernavaca y qué no es.</strong> En este dashboard usamos como Zona Metropolitana los <strong>8 municipios</strong> de mayor integración funcional con la capital (conmutación laboral, continuidad urbana, dependencia económica): Cuernavaca, Jiutepec, Temixco, Emiliano Zapata, Xochitepec, Tepoztlán, Tlaltizapán y Huitzilac. La definición oficial SEDATU-CONAPO reconoce como ZM Cuernavaca a 7 municipios (sin Huitzilac) — lo incluimos por contigüidad geográfica y patrón de violencia (peaje del Ajusco, tasa robo vehículo 1,245/100K). La ZM formal representa ~52% del estado; con Huitzilac, ~54%.
-  </div>
-
-  <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección ZM.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 — agregado de los 8 municipios de la ZM Cuernavaca. CONAPO 2025. Total Morelos 2025: 45,451 carpetas.
-  </div>
-</section>
-
-
-<!-- =============================================================== -->
-<!-- ZM CUAUTLA · SECCIÓN AGREGADA (sZMC1-sZMC3)                      -->
-<!-- Los 6 municipios como unidad analítica                           -->
-<!-- =============================================================== -->
-
-<!-- sZMC1 — PORTADA ZM CUAUTLA -->
-<section id="sZMC1" class="cover">
-  <div class="cover-visual">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="zmcBg" cx="55%" cy="55%" r="80%">
-          <stop offset="0%" stop-color="rgba(251,191,36,0.18)"/>
-          <stop offset="45%" stop-color="rgba(248,81,73,0.10)"/>
-          <stop offset="100%" stop-color="rgba(13,17,23,0)"/>
-        </radialGradient>
-        <radialGradient id="zmcCore" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="rgba(248,81,73,1)"/>
-          <stop offset="38%" stop-color="rgba(251,191,36,0.55)"/>
-          <stop offset="100%" stop-color="rgba(248,81,73,0)"/>
-        </radialGradient>
-      </defs>
-      <rect width="1600" height="900" fill="url(#zmcBg)"/>
-      <!-- Estrellas -->
-      <g fill="#fbbf24" opacity="0.18">
-        <circle cx="120" cy="80" r="1.1"/><circle cx="320" cy="60" r="1.3"/>
-        <circle cx="500" cy="120" r="1"/><circle cx="700" cy="70" r="1.2"/>
-        <circle cx="880" cy="110" r="1.3"/><circle cx="1080" cy="50" r="1.1"/>
-        <circle cx="1260" cy="130" r="1.4"/><circle cx="1440" cy="80" r="1"/>
-      </g>
-      <!-- Constelación ZM Cuautla: 6 nodos · cluster oriente-derecha del estado -->
-      <g opacity="0.42">
-        <!-- Líneas de conurbación -->
-        <g stroke="rgba(251,191,36,0.28)" stroke-width="1" fill="none">
-          <line x1="1260" y1="700" x2="1140" y2="640">
-            <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3.8s" repeatCount="indefinite"/>
-          </line>
-          <line x1="1260" y1="700" x2="1380" y2="660"/>
-          <line x1="1260" y1="700" x2="1180" y2="800"/>
-          <line x1="1260" y1="700" x2="1340" y2="810"/>
-          <line x1="1260" y1="700" x2="1100" y2="780"/>
-          <line x1="1140" y1="640" x2="1100" y2="780"/>
-          <line x1="1380" y1="660" x2="1340" y2="810"/>
-        </g>
-        <!-- Nodo principal · CUAUTLA con halo extorsión (rojo dominante) -->
-        <circle cx="1260" cy="700" r="32" fill="url(#zmcCore)" opacity="0.62">
-          <animate attributeName="r" values="32;44;32" dur="2.6s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="1260" cy="700" r="15" fill="#f85149"/>
-        <circle cx="1260" cy="700" r="5" fill="#fff"/>
-        <!-- Yautepec · narco emergente (amarillo intenso, segundo más grande) -->
-        <circle cx="1140" cy="640" r="20" fill="rgba(251,191,36,0.78)" stroke="#fbbf24" stroke-width="1.4">
-          <animate attributeName="r" values="20;25;20" dur="3.2s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="1140" cy="640" r="6" fill="#fbbf24"/>
-        <!-- Ayala -->
-        <circle cx="1380" cy="660" r="14" fill="rgba(251,191,36,0.58)" stroke="#fbbf24" stroke-width="1.2"/>
-        <!-- Yecapixtla -->
-        <circle cx="1180" cy="800" r="12" fill="rgba(248,81,73,0.55)" stroke="#f85149" stroke-width="1.2"/>
-        <!-- Atlatlahucan -->
-        <circle cx="1100" cy="780" r="9" fill="rgba(63,185,80,0.55)" stroke="#3fb950" stroke-width="1"/>
-        <!-- Tlayacapan · feminicidio extremo (rojo brillante a pesar de tamaño chico) -->
-        <circle cx="1340" cy="810" r="10" fill="rgba(248,81,73,0.68)" stroke="#f85149" stroke-width="1.3">
-          <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
-        </circle>
-      </g>
-    </svg>
-  </div>
-
-  <!-- Badge -->
-  <div style="display:inline-flex;gap:10px;align-items:center;padding:8px 18px;background:rgba(13,17,23,0.85);border:1.5px solid rgba(251,191,36,0.55);border-radius:24px;margin-bottom:18px;backdrop-filter:blur(8px);">
-    <span style="width:9px;height:9px;background:#fbbf24;border-radius:50%;box-shadow:0 0 10px rgba(251,191,36,0.85);animation:pulse 2s infinite;"></span>
-    <span style="color:#fbbf24;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800;">6 municipios · 487K hab · 25% estado</span>
-  </div>
-
-  <h1 style="background:linear-gradient(135deg,#fbbf24 0%,#f85149 55%,#d29922 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 4px 30px rgba(0,0,0,0.5);">ZM CUAUTLA:<br>EL POLO QUE DESORDENA</h1>
-  <p class="subtitle" style="max-width:820px;">
-    Con el 25% de la población de Morelos, concentra <strong>80% de la extorsión</strong> y <strong>35% del narcomenudeo</strong>.<br>
-    La firma del crimen organizado en el estado vive aquí — no en la capital.
-  </p>
-
-  <div class="cards">
-    <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.14);" onclick="showExplain('La capital de la extorsión','La ZM Cuautla concentra <strong>335 de los 419 casos de extorsión</strong> registrados en Morelos durante 2025 (79.95%). Con apenas 25% de la población, el ratio de sobreproporción es 3.22× — el más extremo del estado en cualquier indicador. Cuautla cabecera sola aporta 259 casos: el 62% del total estatal en absoluto. Yecapixtla suma 22 casos con población de 53K (ratio 1.94×). Es la geografía del cobro de piso y de las llamadas extorsivas.')">
-      <div class="num">79.95%</div><div class="lbl">Extorsión<br>sobreproporción 3.22×</div>
-    </div>
-    <div class="card" style="border-color:#fbbf24;background:rgba(251,191,36,0.12);" onclick="showExplain('Narcomenudeo: el rebrote 2025','La ZM Cuautla concentra <strong>375 de las 1,058 carpetas de narcomenudeo</strong> estatales (35.4%). Sobreproporción 1.43×. Yautepec pasa de 17 carpetas en 2024 a 55 en 2025 (+224% AxA) — el salto más grande del estado. Cuautla cabecera concentra 263 carpetas (+177% AxA). Es el segundo polo activo del crimen organizado, tras la extorsión.')">
-      <div class="num">35.4%</div><div class="lbl">Narcomenudeo<br>sobreproporción 1.43×</div>
-    </div>
-    <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.10);" onclick="showExplain('Feminicidio: la firma de Tlayacapan','La ZM Cuautla aporta <strong>12 de los 35 feminicidios estatales</strong> de 2025 (34.3%). Con 25% de población, sobreproporción 1.38×. La firma específica está en Tlayacapan — Pueblo Mágico de 17 mil habitantes — con sobreproporción 6.59× (la más alta del estado en cualquier indicador). Ayala y Yautepec aportan 3 cada uno (sobreproporciones de 1.87× y 1.53×). Es la firma de género más concentrada de Morelos.')">
-      <div class="num">34.3%</div><div class="lbl">Feminicidio<br>sobreproporción 1.38×</div>
-    </div>
-    <div class="card" style="border-color:#8b949e;background:rgba(139,148,158,0.08);" onclick="showExplain('Homicidio doloso: en línea con el peso','La ZM Cuautla concentra <strong>250 de los 997 homicidios dolosos</strong> estatales en 2025 (25.08%). Con 25% de la población, el indicador queda exactamente en línea con peso demográfico (ratio 1.01×). El pico fue 2023 con 414 casos; 2025 marca −31% sobre ese pico. La narrativa principal NO es la violencia letal — es la consolidación de extorsión y narcomenudeo. La ZM Cuautla resignificó el crimen letal hacia mercados criminales más sofisticados.')">
-      <div class="num">25.08%</div><div class="lbl">Homicidio doloso<br>en línea con peso 1.01×</div>
-    </div>
-  </div>
-  <div class="click-hint"><span class="dot"></span>Haz clic en cualquier tarjeta para la explicación completa</div>
-  <div class="brand-strip" style="max-width:560px;margin-top:0;">
-    <svg class="mini45"><use href="#logo45"/></svg>
-    <div style="text-align:left;">
-      <div style="color:#e6edf3;font-weight:600;font-size:14px;">Análisis ZM hecho por 45 Digital Noticias</div>
-      <div>SESNSP corte mar-2026 · CONAPO 2025 · 6 municipios agregados</div>
-    </div>
-  </div>
-</section>
-
-<!-- sZMC2 — COMPARATIVA MUNICIPAL -->
-<section id="sZMC2">
-  <h3>ZM-C · 2</h3>
-  <h1>Los 6 municipios lado a lado</h1>
-  <p>La Zona Metropolitana de Cuautla agrupa 6 municipios con población acumulada de 487 mil (25% de Morelos). Aporta el 27% de las carpetas SESNSP del estado — pero su firma específica no es el volumen, sino la <strong>concentración extrema</strong> en delitos del crimen organizado. Tabla comparativa 2025 — cada fila su rol en la firma.</p>
-
-  <div class="menores-table" style="margin-top:20px;">
-    <table>
-      <thead>
-        <tr>
-          <th>Municipio</th>
-          <th style="text-align:right;">Pob (miles)</th>
-          <th style="text-align:right;">Homicidio doloso</th>
-          <th style="text-align:right;">Tasa/100K</th>
-          <th style="text-align:right;">Extorsión</th>
-          <th style="text-align:right;">Narcomenudeo</th>
-          <th style="text-align:right;">Feminicidio</th>
-          <th>Firma específica</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:rgba(248,81,73,0.06);">
-          <td><strong>Cuautla</strong></td>
-          <td style="text-align:right;">187</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">110</td>
-          <td style="text-align:right;font-weight:700;">59</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">259</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">263</td>
-          <td style="text-align:right;">4</td>
-          <td style="color:#c9d1d9;font-size:13px;">La cabecera extorsionaria · 62% nacional en absoluto</td>
-        </tr>
-        <tr>
-          <td><strong>Yautepec</strong></td>
-          <td style="text-align:right;">110</td>
-          <td style="text-align:right;font-weight:700;">62</td>
-          <td style="text-align:right;">56</td>
-          <td style="text-align:right;font-weight:700;">24</td>
-          <td style="text-align:right;font-weight:700;color:#fbbf24;">55</td>
-          <td style="text-align:right;font-weight:700;">3</td>
-          <td style="color:#c9d1d9;font-size:13px;">El narco que se mudó · +224% AxA (17→55)</td>
-        </tr>
-        <tr>
-          <td><strong>Ayala</strong></td>
-          <td style="text-align:right;">90</td>
-          <td style="text-align:right;font-weight:700;">28</td>
-          <td style="text-align:right;">31</td>
-          <td style="text-align:right;font-weight:700;">21</td>
-          <td style="text-align:right;">20</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">3</td>
-          <td style="color:#c9d1d9;font-size:13px;">Feminicidio sobreproporción 1.87× · extorsión sostenida</td>
-        </tr>
-        <tr>
-          <td><strong>Yecapixtla</strong></td>
-          <td style="text-align:right;">53</td>
-          <td style="text-align:right;font-weight:700;">30</td>
-          <td style="text-align:right;font-weight:700;">57</td>
-          <td style="text-align:right;font-weight:700;color:#fbbf24;">22</td>
-          <td style="text-align:right;">24</td>
-          <td style="text-align:right;color:#3fb950;">0</td>
-          <td style="color:#c9d1d9;font-size:13px;">Segundo nodo extorsionario · sobreproporción 1.94×</td>
-        </tr>
-        <tr>
-          <td><strong>Atlatlahucan</strong></td>
-          <td style="text-align:right;">30</td>
-          <td style="text-align:right;font-weight:700;color:#3fb950;">6</td>
-          <td style="text-align:right;">20</td>
-          <td style="text-align:right;">6</td>
-          <td style="text-align:right;">5</td>
-          <td style="text-align:right;color:#3fb950;">0</td>
-          <td style="color:#c9d1d9;font-size:13px;">Caída más grande del año · homicidio −73% AxA (22→6)</td>
-        </tr>
-        <tr>
-          <td><strong>Tlayacapan</strong></td>
-          <td style="text-align:right;">17</td>
-          <td style="text-align:right;font-weight:700;">14</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">82</td>
-          <td style="text-align:right;">3</td>
-          <td style="text-align:right;">8</td>
-          <td style="text-align:right;font-weight:700;color:#f85149;">2</td>
-          <td style="color:#c9d1d9;font-size:13px;">Pueblo Mágico · feminicidio 6.59× la más alta del estado</td>
-        </tr>
-        <tr style="background:rgba(251,191,36,0.10);border-top:2px solid rgba(251,191,36,0.5);">
-          <td><strong style="color:#fbbf24;">TOTAL ZM</strong></td>
-          <td style="text-align:right;font-weight:800;color:#fbbf24;">487</td>
-          <td style="text-align:right;font-weight:800;color:#fbbf24;">250</td>
-          <td style="text-align:right;font-weight:700;">51</td>
-          <td style="text-align:right;font-weight:800;color:#fbbf24;">335</td>
-          <td style="text-align:right;font-weight:800;color:#fbbf24;">375</td>
-          <td style="text-align:right;font-weight:800;color:#fbbf24;">12</td>
-          <td style="color:#fbbf24;font-size:13px;font-weight:700;">25% pob · 25% dolosos · 80% extorsión · 35% narco · 34% feminicidio</td>
-        </tr>
-        <tr style="opacity:0.8;font-size:13px;">
-          <td>Total Morelos</td>
-          <td style="text-align:right;">1,962</td>
-          <td style="text-align:right;">997</td>
-          <td style="text-align:right;">51</td>
-          <td style="text-align:right;">419</td>
-          <td style="text-align:right;">1,058</td>
-          <td style="text-align:right;">35</td>
-          <td style="color:#8b949e;">— línea de comparación</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="simple-box" style="margin-top:24px;">
-    <div class="simple-tag">Los patrones internos de la ZM Cuautla</div>
-    <p>Los 6 municipios <strong>no son intercambiables</strong>. Cada uno aporta una pieza distinta de la firma:</p>
-    <ul style="margin:10px 0 0 20px;padding:0;">
-      <li><strong>Núcleo extorsionario (Cuautla, Yecapixtla):</strong> 281 de los 335 casos de extorsión de la ZM (84%). Cuautla concentra el 62% nacional en absoluto. Es la geografía donde el cobro de piso vive.</li>
-      <li><strong>Polo del narco emergente (Yautepec, Cuautla):</strong> +224% y +177% AxA respectivamente en narcomenudeo. La ZM pasa de 145 carpetas en 2024 a 375 en 2025 — más que duplica.</li>
-      <li><strong>Outlier femenino (Tlayacapan):</strong> 17 mil habitantes con sobreproporción de feminicidio 6.59× — la más extrema del estado. Pueblo Mágico — el contraste con el branding turístico es brutal.</li>
-      <li><strong>Caída atípica (Atlatlahucan):</strong> homicidio doloso de 22 a 6 (−73%) — la baja más grande del año en cualquier municipio del estado. Política de seguridad o ciclo natural — pendiente determinar.</li>
-      <li><strong>Continuidad estructural (Ayala):</strong> sobreproporciones moderadas pero sostenidas en feminicidio y extorsión. Sin picos espectaculares pero sin caídas — el patrón consolidado.</li>
-    </ul>
-  </div>
-
-  <div class="footer-note" style="margin-top:20px;">Fuente: SESNSP corte mar-2026 (agregado de los 6 municipios de la ZM Cuautla). CONAPO 2025. Definición SEDATU-CONAPO 2020.</div>
-</section>
-
-<!-- sZMC3 — SERIE DECENAL + CONCLUSIÓN ZM CUAUTLA -->
-<section id="sZMC3">
-  <h3>ZM-C · 3</h3>
-  <h1>La ZM que se volvió capital de la extorsión</h1>
-  <p>En diez años (2016-2025) la ZM Cuautla pasó de <strong>32 a 335 carpetas anuales de extorsión</strong> (×10.5). El homicidio doloso siguió la curva estatal — picó en 2023 con 414 casos y bajó a 250 en 2025 (−40%). El narcomenudeo cicló a la baja entre 2017-2024 y rebotó dramáticamente en 2025: <strong>+159% en un solo año</strong>. La firma criminal de la ZM no es la violencia letal — es la consolidación de mercados ilícitos.</p>
-
-  <div style="position:relative;height:400px;margin:24px 0 18px;padding:18px 22px 14px;background:rgba(22,27,34,0.65);border:1px solid #30363d;border-radius:12px;">
-    <canvas id="chartZmcSerie"></canvas>
-  </div>
-
-  <div class="conclusion-grid" style="margin-top:28px;">
-    <div class="conclusion-card accent-red">
-      <div class="hero">335</div>
-      <div class="hero-sub">Extorsiones 2025 · 80% estatal</div>
-      <p>La ZM concentra cuatro de cada cinco extorsiones registradas en Morelos. Con 25% de la población, la sobreproporción es 3.22× — el indicador más desproporcionado de cualquier zona del estado. Cuautla sola aporta 259 (62% nacional en absoluto). El cobro de piso es geográficamente específico: vive aquí.</p>
-    </div>
-    <div class="conclusion-card accent-yellow">
-      <div class="hero">+159%</div>
-      <div class="hero-sub">Narcomenudeo 2024 → 2025</div>
-      <p>De 145 a 375 carpetas en un año. El crecimiento concentrado en Yautepec (17→55, +224% AxA) y Cuautla (95→263, +177% AxA). Es el segundo rebrote del decenio — el primero fue 2019-2020 — pero a niveles superiores y con redistribución dentro de la ZM.</p>
-    </div>
-    <div class="conclusion-card accent-orange">
-      <div class="hero">12</div>
-      <div class="hero-sub">Feminicidios · 34% estatal</div>
-      <p>Tlayacapan (17K hab) concentra 2 casos: ratio 6.59× de sobreproporción — la más alta del estado en cualquier indicador. Ayala (3 casos) y Yautepec (3 casos) suman sobreproporciones de 1.87× y 1.53×. Es la firma de género más concentrada del estado.</p>
-    </div>
-    <div class="conclusion-card accent-green">
-      <div class="hero">250</div>
-      <div class="hero-sub">Homicidio doloso · 25% estatal · ratio 1.01×</div>
-      <p>Con 25% de la población, la ZM aporta exactamente 25% del homicidio doloso. La violencia letal NO es la firma de Cuautla — está en línea con peso demográfico. El pico fue 2023 (414); 2025 marca −40% sobre ese máximo. La caída del homicidio coincide con el alza de extorsión y narcomenudeo: posible reclasificación del mercado criminal.</p>
-    </div>
-    <div class="conclusion-card accent-gradient">
-      <div class="hero">→</div>
-      <div class="hero-sub">Lo que sigue en 2026</div>
-      <p>Si la extorsión <strong>se exporta a la ZM Cuernavaca</strong> en 2026, la geografía criminal de Morelos se reordena. El narcomenudeo ya empezó a moverse hacia el centro (Tlaltizapán +350%, Tepoztlán 0→22). La pregunta editorial: ¿la ZM Cuautla mantiene el monopolio del cobro de piso, o se replica al corredor metropolitano?</p>
-    </div>
-  </div>
-
-  <div class="caveat-banner" style="margin-top:32px;">
-    <strong>Qué es la ZM Cuautla y qué no es.</strong> En este dashboard usamos la definición oficial SEDATU-CONAPO 2020: <strong>6 municipios</strong> con integración funcional (conmutación, continuidad urbana, dependencia económica): Cuautla, Yautepec, Ayala, Yecapixtla, Atlatlahucan y Tlayacapan. La ZM concentra 25% de la población del estado pero 27% de las carpetas SESNSP. Su rasgo distintivo no es el volumen — es la <strong>concentración extrema</strong> en extorsión (80%), narcomenudeo (35%) y feminicidio (34%). La narrativa pública sobre Morelos suele centrarse en Cuernavaca; los datos sostienen que la firma criminal del estado vive en el oriente.
-  </div>
-
-  <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes sección ZM Cuautla.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 — agregado de los 6 municipios de la ZM Cuautla (definición SEDATU-CONAPO 2020). CONAPO 2025. Total Morelos 2025: 45,451 carpetas. Datos derivados regenerables vía <code>scripts/build_zm_aggregates.js</code> → <code>scripts/zm_aggregates.json</code>.
-  </div>
-</section>
-
-<script>
-(function(){
-  const init = () => {
-    const cvs = document.getElementById('chartZmcSerie');
-    if (!cvs || !window.Chart) return;
-    new Chart(cvs.getContext('2d'), {
-      type: 'line',
-      data: {
-        labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
-        datasets: [
-          { label: 'Extorsión ZM Cuautla', data: [32,12,8,44,33,62,44,137,229,335], borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.22)', borderWidth: 3, tension: 0.3, pointRadius: 4.5, pointBackgroundColor: '#f85149', pointBorderColor: '#0d1117', pointBorderWidth: 2, fill: true },
-          { label: 'Narcomenudeo ZM Cuautla', data: [195,200,174,286,297,208,191,156,145,375], borderColor: '#fbbf24', backgroundColor: 'rgba(251,191,36,0.14)', borderWidth: 2.6, tension: 0.3, pointRadius: 4, pointBackgroundColor: '#fbbf24', pointBorderColor: '#0d1117', pointBorderWidth: 2, borderDash: [5,4], fill: false },
-          { label: 'Homicidio doloso ZM Cuautla', data: [138,126,149,168,136,252,285,414,361,250], borderColor: '#d29922', backgroundColor: 'rgba(210,153,34,0.10)', borderWidth: 2.2, tension: 0.3, pointRadius: 3.5, pointBackgroundColor: '#d29922', pointBorderColor: '#0d1117', pointBorderWidth: 1.5, borderDash: [3,3], fill: false }
-        ]
-      },
-      options: {
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        scales: {
-          y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } }, grid: { color: 'rgba(48,54,61,0.5)' }, title: { display: true, text: 'Carpetas SESNSP', color: '#8b949e', font: { size: 11, weight: '700' } } },
-          x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
-        },
-        plugins: {
-          legend: { position: 'top', labels: { color: '#c9d1d9', font: { size: 12, weight: '600' }, padding: 14, usePointStyle: true, pointStyle: 'circle' } },
-          tooltip: { backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1, titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 12,
-            callbacks: { title: (items) => 'Año ' + items[0].label, label: (c) => c.dataset.label + ': ' + c.parsed.y + ' carpetas' }
-          }
-        }
-      }
-    });
-  };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
-})();
-</script>
-
-
-<script>
-(function(){
-  const init = () => {
-    const cvs = document.getElementById('chartZmSerie');
-    if (!cvs || !window.Chart) return;
-    new Chart(cvs.getContext('2d'), {
-      type: 'line',
-      data: {
-        labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
-        datasets: [
-          { label: 'Homicidio doloso ZM', data: [262,280,330,476,475,562,519,606,682,506], borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.18)', borderWidth: 3, tension: 0.3, pointRadius: 4.5, pointBackgroundColor: '#f85149', pointBorderColor: '#0d1117', pointBorderWidth: 2, fill: true },
-          { label: 'Resto del estado (Morelos − ZM)', data: [219,219,251,294,305,346,337,351,353,491], borderColor: '#8b949e', backgroundColor: 'rgba(139,148,158,0.10)', borderWidth: 2.2, tension: 0.3, pointRadius: 3.5, pointBackgroundColor: '#8b949e', pointBorderColor: '#0d1117', pointBorderWidth: 1.5, borderDash: [6,4], fill: false },
-          { label: 'Narcomenudeo ZM', data: [530,455,418,319,243,321,277,186,203,363], borderColor: '#fbbf24', backgroundColor: 'rgba(251,191,36,0.10)', borderWidth: 2.2, tension: 0.3, pointRadius: 3, pointBackgroundColor: '#fbbf24', pointBorderColor: '#0d1117', pointBorderWidth: 1.5, borderDash: [3,3], fill: false }
-        ]
-      },
-      options: {
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        scales: {
-          y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } }, grid: { color: 'rgba(48,54,61,0.5)' }, title: { display: true, text: 'Casos / carpetas', color: '#8b949e', font: { size: 11, weight: '700' } } },
-          x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono', monospace", size: 11 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
-        },
-        plugins: {
-          legend: { position: 'top', labels: { color: '#c9d1d9', font: { size: 12, weight: '600' }, padding: 14, usePointStyle: true, pointStyle: 'circle' } },
-          tooltip: { backgroundColor: '#0d1117', borderColor: '#30363d', borderWidth: 1, titleColor: '#e6edf3', bodyColor: '#c9d1d9', padding: 12,
-            callbacks: { title: (items) => 'Año ' + items[0].label, label: (c) => c.dataset.label + ': ' + c.parsed.y }
-          }
-        }
-      }
-    });
-  };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
-})();
-</script>
-
 
 <!-- SECCIÓN M — MÉTODO: FUENTES Y PROCEDIMIENTO -->
 <section id="sM" class="meta-section">
@@ -22699,10 +21862,8 @@ function wireCuautlaToggle() {
   const jantetelcoIds = ["sJt1","sJt2","sJt3","sJt4","sJt5","sJt6","sJt7","sJt8","sJt9","sJt10"];
   const puenteDeIxtlaIds = ["sPi1","sPi2","sPi3","sPi4","sPi5","sPi6","sPi7","sPi8","sPi9","sPi10"];
   const tetecalaIds = ["sTtc1","sTtc2","sTtc3","sTtc4","sTtc5","sTtc6","sTtc7","sTtc8","sTtc9","sTtc10"];
-  const zmIds = ["sZM1","sZM2","sZM3"];
-  const zmcIds = ["sZMC1","sZMC2","sZMC3"];
   const otherIds = ["s0", "sR", "sH", "sE", "sI", "sP", "sZE", "sQ1", "sQ1Cover", "sME", "sV23", "sNAC1", "sNAC2", "sNAC3", "sNAC4", "sNAC5", "sHero", "sM", "sG"];
-  const all = [...otherIds, ...cuautlaIds, ...ayalaIds, ...cuernavacaIds, ...jiutepecIds, ...temixcoIds, ...huitzilacIds, ...emilianoZapataIds, ...tepoztlanIds, ...xochitepecIds, ...tlaltizapanIds, ...yautepecIds, ...yecapixtlaIds, ...tlayacapanIds, ...atlatlahucanIds, ...tepalcingoIds, ...jojutlaIds, ...tlalnepantlaIds, ...mazatepecIds, ...jantetelcoIds, ...puenteDeIxtlaIds, ...tetecalaIds, ...zmIds, ...zmcIds];
+  const all = [...otherIds, ...cuautlaIds, ...ayalaIds, ...cuernavacaIds, ...jiutepecIds, ...temixcoIds, ...huitzilacIds, ...emilianoZapataIds, ...tepoztlanIds, ...xochitepecIds, ...tlaltizapanIds, ...yautepecIds, ...yecapixtlaIds, ...tlayacapanIds, ...atlatlahucanIds, ...tepalcingoIds, ...jojutlaIds, ...tlalnepantlaIds, ...mazatepecIds, ...jantetelcoIds, ...puenteDeIxtlaIds, ...tetecalaIds];
   wireCollapsibleGroup("toggleCuautla", "cuautlaSubnav", cuautlaIds, all);
   wireCollapsibleGroup("toggleAyala", "ayalaSubnav", ayalaIds, all);
   wireCollapsibleGroup("toggleCuernavaca", "cuernavacaSubnav", cuernavacaIds, all);
@@ -22724,8 +21885,6 @@ function wireCuautlaToggle() {
   wireCollapsibleGroup("toggleJantetelco", "jantetelcoSubnav", jantetelcoIds, all);
   wireCollapsibleGroup("togglePuenteDeIxtla", "puenteDeIxtlaSubnav", puenteDeIxtlaIds, all);
   wireCollapsibleGroup("toggleTetecala", "tetecalaSubnav", tetecalaIds, all);
-  wireCollapsibleGroup("toggleZM", "zmSubnav", zmIds, all);
-  wireCollapsibleGroup("toggleZMC", "zmcSubnav", zmcIds, all);
   wireRegionGroups();
 }
 
@@ -22765,10 +21924,10 @@ function wireRegionGroups() {
 // Abre el super-grupo regional PED que contiene el sectionId activo
 // Las 7 regiones siguen el Plan Estatal de Desarrollo Morelos 2025-2030.
 function openRegionContaining(targetId) {
-  // NOROESTE · Cuernavaca, Jiutepec, Temixco, Xochitepec, Emiliano Zapata, Huitzilac (+ sZM meta)
-  const noroesteIds = ["sZM1","sZM2","sZM3","sC1","sC2","sC3","sC4","sC5","sC6","sC7","sC8","sC9","sJ1","sJ2","sJ3","sJ4","sJ5","sJ6","sJ7","sJ8","sJ9","sJ10","sT1","sT2","sT3","sT4","sT5","sT6","sT7","sT8","sT9","sT10","sEz1","sEz2","sEz3","sEz4","sEz5","sEz6","sEz7","sEz8","sEz9","sEz10","sXoc1","sXoc2","sXoc3","sXoc4","sXoc5","sXoc6","sXoc7","sXoc8","sXoc9","sXoc10","sHz1","sHz2","sHz3","sHz4","sHz5","sHz6","sHz7","sHz8","sHz9","sHz10"];
-  // CENTRO · Cuautla, Yautepec, Ayala (+ sZMC meta)
-  const centroIds = ["sZMC1","sZMC2","sZMC3","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","sA1","sA2","sA3","sA4","sA5","sA6","sA7","sA8","sA9","sYa1","sYa2","sYa3","sYa4","sYa5","sYa6","sYa7","sYa8","sYa9"];
+  // NOROESTE · Cuernavaca, Jiutepec, Temixco, Xochitepec, Emiliano Zapata, Huitzilac
+  const noroesteIds = ["sC1","sC2","sC3","sC4","sC5","sC6","sC7","sC8","sC9","sJ1","sJ2","sJ3","sJ4","sJ5","sJ6","sJ7","sJ8","sJ9","sJ10","sT1","sT2","sT3","sT4","sT5","sT6","sT7","sT8","sT9","sT10","sEz1","sEz2","sEz3","sEz4","sEz5","sEz6","sEz7","sEz8","sEz9","sEz10","sXoc1","sXoc2","sXoc3","sXoc4","sXoc5","sXoc6","sXoc7","sXoc8","sXoc9","sXoc10","sHz1","sHz2","sHz3","sHz4","sHz5","sHz6","sHz7","sHz8","sHz9","sHz10"];
+  // CENTRO · Cuautla, Yautepec, Ayala
+  const centroIds = ["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","sA1","sA2","sA3","sA4","sA5","sA6","sA7","sA8","sA9","sYa1","sYa2","sYa3","sYa4","sYa5","sYa6","sYa7","sYa8","sYa9"];
   // NORTE · Atlatlahucan, Tlayacapan, Tepoztlán, Tlalnepantla, Totolapan
   const norteIds = ["sAt1","sAt2","sAt3","sAt4","sAt5","sAt6","sAt7","sAt8","sAt9","sTla1","sTla2","sTla3","sTla4","sTla5","sTla6","sTla7","sTla8","sTla9","sTep1","sTep2","sTep3","sTep4","sTep5","sTep6","sTep7","sTep8","sTep9","sTep10","sTln1","sTln2","sTln3","sTln4","sTln5","sTln6","sTln7","sTln8","sTln9","sTln10"];
   // NORESTE · Yecapixtla, Ocuituco, Tetela del Volcán, Hueyapan, Zacualpan, Temoac
@@ -23574,8 +22733,6 @@ function wireNavProgrammaticLock() {
   const jantetelcoIds = ["sJt1","sJt2","sJt3","sJt4","sJt5","sJt6","sJt7","sJt8","sJt9","sJt10"];
   const puenteDeIxtlaIds = ["sPi1","sPi2","sPi3","sPi4","sPi5","sPi6","sPi7","sPi8","sPi9","sPi10"];
   const tetecalaIds = ["sTtc1","sTtc2","sTtc3","sTtc4","sTtc5","sTtc6","sTtc7","sTtc8","sTtc9","sTtc10"];
-  const zmIds = ["sZM1","sZM2","sZM3"];
-  const zmcIds = ["sZMC1","sZMC2","sZMC3"];
 
   const applyGroupsForTarget = (targetId) => {
     const cuautlaSub = document.getElementById("cuautlaSubnav");
@@ -23598,10 +22755,6 @@ function wireNavProgrammaticLock() {
     const xocTog = document.getElementById("toggleXochitepec");
     const tlzSub = document.getElementById("tlaltizapanSubnav");
     const tlzTog = document.getElementById("toggleTlaltizapan");
-    const zmSub = document.getElementById("zmSubnav");
-    const zmTog = document.getElementById("toggleZM");
-    const zmcSub = document.getElementById("zmcSubnav");
-    const zmcTog = document.getElementById("toggleZMC");
     const yaSub = document.getElementById("yautepecSubnav");
     const yaTog = document.getElementById("toggleYautepec");
     const yeSub = document.getElementById("yecapixtlaSubnav");
@@ -23650,8 +22803,6 @@ function wireNavProgrammaticLock() {
     set(jtSub, jtTog, jantetelcoIds.includes(targetId));
     set(piSub, piTog, puenteDeIxtlaIds.includes(targetId));
     set(ttcSub, ttcTog, tetecalaIds.includes(targetId));
-    set(zmSub, zmTog, zmIds.includes(targetId));
-    set(zmcSub, zmcTog, zmcIds.includes(targetId));
     // Abrir el super-grupo regional que contiene el target
     if (typeof openRegionContaining === "function") openRegionContaining(targetId);
   };
@@ -23682,20 +22833,6 @@ function wireNavProgrammaticLock() {
   });
 }
 
-// Toggle ZM delimitación en mapa interactivo
-function wireZMToggle() {
-  const btn = document.getElementById("btnToggleZM");
-  const svg = document.querySelector("svg.morelos-map");
-  if (!btn || !svg) return;
-  btn.addEventListener("click", () => {
-    const active = svg.classList.toggle("show-zm");
-    btn.classList.toggle("active", active);
-    btn.setAttribute("aria-pressed", String(active));
-    const span = btn.querySelector("span:last-child");
-    if (span) span.textContent = active ? "Quitar resaltado ZMs" : "Resaltar ZMs SEDATU";
-  });
-}
-
 // Arranque
 function initHub() {
   renderMorelosMap();
@@ -23703,7 +22840,6 @@ function initHub() {
   wireNavToggle();
   wireNavMunicipioClicks();
   wireCuautlaToggle();
-  wireZMToggle();
   wireRankingTabs();
   renderAyalaRanking();
   renderCrossStatewide();
