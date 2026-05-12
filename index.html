@@ -2454,21 +2454,58 @@
   .mun-label.zm-label { fill: #ff7b72; font-weight: 700; }
   .mun-label.zm-label-cua { fill: #fbbf24; font-weight: 700; }
   /* ============================================================ */
-  /* TINTES REGIONALES POR ZONA ANALÍTICA                          */
-  /* Se aplican sólo en pendientes (para no competir con el verde  */
-  /* fuerte de "completo" ni el ámbar de "en-progreso").           */
-  /* Borde de la región siempre visible en todas las munis.        */
+  /* TINTES REGIONALES · 7 REGIONES PED MORELOS 2025-2030          */
+  /* Tinte de fondo en munis pendientes; borde de región en todos. */
+  /* Fuente: Plan Estatal de Desarrollo Morelos 2025-2030          */
   /* ============================================================ */
-  /* Sur-poniente · rojo */
-  .mun-region.region-sur {
-    stroke: rgba(248,81,73,0.7) !important;
+  /* Noroeste · azul */
+  .mun-region.region-noroeste {
+    stroke: rgba(88,166,255,0.7) !important;
     stroke-width: 1.4 !important;
     stroke-dasharray: 4 2;
   }
-  .mun-region.region-sur.status-pendiente {
-    fill: rgba(248,81,73, 0.20) !important;
-    stroke: rgba(248,81,73, 0.85) !important;
+  .mun-region.region-noroeste.status-pendiente {
+    fill: rgba(88,166,255, 0.20) !important;
+    stroke: rgba(88,166,255, 0.85) !important;
   }
+  .mun-region.status-completo.region-noroeste { stroke: #58a6ff !important; stroke-dasharray: none; }
+
+  /* Centro · ámbar */
+  .mun-region.region-centro {
+    stroke: rgba(251,191,36,0.7) !important;
+    stroke-width: 1.4 !important;
+    stroke-dasharray: 4 2;
+  }
+  .mun-region.region-centro.status-pendiente {
+    fill: rgba(251,191,36, 0.22) !important;
+    stroke: rgba(251,191,36, 0.85) !important;
+  }
+  .mun-region.status-completo.region-centro { stroke: #fbbf24 !important; stroke-dasharray: none; }
+
+  /* Norte · lima */
+  .mun-region.region-norte {
+    stroke: rgba(132,204,22,0.7) !important;
+    stroke-width: 1.4 !important;
+    stroke-dasharray: 4 2;
+  }
+  .mun-region.region-norte.status-pendiente {
+    fill: rgba(132,204,22, 0.22) !important;
+    stroke: rgba(132,204,22, 0.85) !important;
+  }
+  .mun-region.status-completo.region-norte { stroke: #84cc16 !important; stroke-dasharray: none; }
+
+  /* Noreste · teal */
+  .mun-region.region-noreste {
+    stroke: rgba(20,184,166,0.7) !important;
+    stroke-width: 1.4 !important;
+    stroke-dasharray: 4 2;
+  }
+  .mun-region.region-noreste.status-pendiente {
+    fill: rgba(20,184,166, 0.22) !important;
+    stroke: rgba(20,184,166, 0.85) !important;
+  }
+  .mun-region.status-completo.region-noreste { stroke: #14b8a6 !important; stroke-dasharray: none; }
+
   /* Oriente · morado */
   .mun-region.region-oriente {
     stroke: rgba(163,113,247,0.7) !important;
@@ -2479,30 +2516,45 @@
     fill: rgba(163,113,247, 0.22) !important;
     stroke: rgba(163,113,247, 0.85) !important;
   }
-  /* Altos de Morelos · verde teal */
-  .mun-region.region-altos {
-    stroke: rgba(63,185,80,0.7) !important;
+  .mun-region.status-completo.region-oriente { stroke: #a371f7 !important; stroke-dasharray: none; }
+
+  /* Sur · rojo */
+  .mun-region.region-sur {
+    stroke: rgba(248,81,73,0.7) !important;
     stroke-width: 1.4 !important;
     stroke-dasharray: 4 2;
   }
-  .mun-region.region-altos.status-pendiente {
-    fill: rgba(63,185,80, 0.20) !important;
-    stroke: rgba(63,185,80, 0.85) !important;
+  .mun-region.region-sur.status-pendiente {
+    fill: rgba(248,81,73, 0.20) !important;
+    stroke: rgba(248,81,73, 0.85) !important;
   }
-  /* Los munis con análisis completo conservan su fill verde fuerte
-     pero usan el borde de la región para señalar pertenencia. */
   .mun-region.status-completo.region-sur { stroke: #f85149 !important; stroke-dasharray: none; }
-  .mun-region.status-completo.region-oriente { stroke: #a371f7 !important; stroke-dasharray: none; }
-  .mun-region.status-completo.region-altos { stroke: #3fb950 !important; stroke-dasharray: none; }
-  /* Las ZMs (cuernavaca/cuautla) tienen su propio styling con stroke amber/rojo,
-     mantenido en sus rules específicas más arriba. No se sobrescriben aquí. */
 
-  /* En modo toggle ZM — las regiones no-ZM se atenúan aún más */
-  .morelos-map.show-zm .mun-region.region-sur,
+  /* Poniente · rosa magenta */
+  .mun-region.region-poniente {
+    stroke: rgba(236,72,153,0.7) !important;
+    stroke-width: 1.4 !important;
+    stroke-dasharray: 4 2;
+  }
+  .mun-region.region-poniente.status-pendiente {
+    fill: rgba(236,72,153, 0.22) !important;
+    stroke: rgba(236,72,153, 0.85) !important;
+  }
+  .mun-region.status-completo.region-poniente { stroke: #ec4899 !important; stroke-dasharray: none; }
+
+  /* En modo "Resaltar ZMs SEDATU" — las regiones no-ZM se atenúan */
+  .morelos-map.show-zm .mun-region.region-noroeste,
+  .morelos-map.show-zm .mun-region.region-centro,
+  .morelos-map.show-zm .mun-region.region-norte,
+  .morelos-map.show-zm .mun-region.region-noreste,
   .morelos-map.show-zm .mun-region.region-oriente,
-  .morelos-map.show-zm .mun-region.region-altos {
-    opacity: 0.18;
-    filter: saturate(0.25) brightness(0.7);
+  .morelos-map.show-zm .mun-region.region-sur,
+  .morelos-map.show-zm .mun-region.region-poniente {
+    /* override only for munis NOT in a ZM */
+  }
+  .morelos-map.show-zm .mun-region:not(.zm-cuernavaca):not(.zm-cuautla) {
+    opacity: 0.20;
+    filter: saturate(0.3) brightness(0.7);
   }
   /* Títulos grandes de ZM sobre el mapa */
   .zm-title-label {
@@ -4822,23 +4874,23 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- MUNICIPIOS · AGRUPADOS POR REGIÓN                            -->
-  <!-- Click en región expande/colapsa todos los munis dentro       -->
+  <!-- MUNICIPIOS · 7 REGIONES PED MORELOS 2025-2030                -->
+  <!-- Fuente: Plan Estatal de Desarrollo (admin Margarita González) -->
   <!-- ============================================================ -->
 
-  <!-- REGIÓN 1 · ZM CUERNAVACA -->
+  <!-- REGIÓN 1 · NOROESTE · azul · contiene ZM Cuernavaca SEDATU -->
   <div class="nav-region">
-    <div class="nav-region-title" id="toggleRegionCnv" role="button" tabindex="0" aria-expanded="true" aria-controls="regionCnvContent" style="color:#58a6ff;">
+    <div class="nav-region-title" id="toggleRegionNoroeste" role="button" tabindex="0" aria-expanded="true" aria-controls="regionNoroesteContent" style="color:#58a6ff;">
       <span class="triangle">▸</span>
-      <span>ZM Cuernavaca</span>
-      <span class="count">8 munis</span>
+      <span>Noroeste</span>
+      <span class="count">6 munis</span>
     </div>
-    <div class="nav-region-content open" id="regionCnvContent">
+    <div class="nav-region-content open" id="regionNoroesteContent">
 
   <div class="nav-group">
     <div class="nav-group-title g-completo nav-collapsible" id="toggleZM" role="button" tabindex="0" aria-expanded="false" style="border-left:3px solid #58a6ff;padding-left:8px;">
       <span class="triangle">▸</span>
-      <span style="color:#58a6ff;">ZM CUERNAVACA · meta</span>
+      <span style="color:#58a6ff;">ZM CUERNAVACA · meta SEDATU</span>
       <span class="caret">▾</span>
     </div>
     <div class="nav-subnav" id="zmSubnav">
@@ -4948,45 +5000,6 @@
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleTepoztlan" role="button" tabindex="0" aria-expanded="false">
-      <span class="triangle">▸</span>
-      <span>Tepoztlán</span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="nav-subnav" id="tepoztlanSubnav">
-      <a href="#sTep1" data-target="sTep1"><span class="num">01</span>PORTADA</a>
-      <a href="#sTep2" data-target="sTep2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sTep3" data-target="sTep3"><span class="num">03</span>RANKING</a>
-      <a href="#sTep4" data-target="sTep4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sTep5" data-target="sTep5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sTep6" data-target="sTep6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sTep7" data-target="sTep7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sTep8" data-target="sTep8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sTep9" data-target="sTep9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sTep10" data-target="sTep10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">Q1 2026 · LA RESPUESTA</span></a>
-    </div>
-  </div>
-
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleTlaltizapan" role="button" tabindex="0" aria-expanded="false">
-      <span class="triangle">▸</span>
-      <span>Tlaltizapán</span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="nav-subnav" id="tlaltizapanSubnav">
-      <a href="#sTlz1" data-target="sTlz1"><span class="num">01</span>PORTADA</a>
-      <a href="#sTlz2" data-target="sTlz2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sTlz3" data-target="sTlz3"><span class="num">03</span>RANKING</a>
-      <a href="#sTlz4" data-target="sTlz4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sTlz5" data-target="sTlz5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sTlz6" data-target="sTlz6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sTlz7" data-target="sTlz7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sTlz8" data-target="sTlz8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sTlz9" data-target="sTlz9"><span class="num">09</span>CONCLUSIONES</a>
-    </div>
-  </div>
-
-  <div class="nav-group">
     <div class="nav-group-title g-completo nav-collapsible" id="toggleHuitzilac" role="button" tabindex="0" aria-expanded="false">
       <span class="triangle">▸</span>
       <span>Huitzilac</span>
@@ -5009,19 +5022,141 @@
     </div><!-- /regionCnvContent -->
   </div><!-- /nav-region ZM Cnv -->
 
-  <!-- REGIÓN 2 · ZM CUAUTLA -->
+  <!-- REGIÓN 2 · NORTE · lima · 5 munis (4 con análisis) -->
   <div class="nav-region">
-    <div class="nav-region-title" id="toggleRegionCua" role="button" tabindex="0" aria-expanded="false" aria-controls="regionCuaContent" style="color:#fbbf24;">
+    <div class="nav-region-title" id="toggleRegionNorte" role="button" tabindex="0" aria-expanded="false" aria-controls="regionNorteContent" style="color:#84cc16;">
       <span class="triangle">▸</span>
-      <span>ZM Cuautla</span>
+      <span>Norte</span>
+      <span class="count">5 munis</span>
+    </div>
+    <div class="nav-region-content" id="regionNorteContent">
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleAtlatlahucan" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Atlatlahucan</span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="nav-subnav" id="atlatlahucanSubnav">
+      <a href="#sAt1" data-target="sAt1"><span class="num">01</span>PORTADA</a>
+      <a href="#sAt2" data-target="sAt2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sAt3" data-target="sAt3"><span class="num">03</span>RANKING</a>
+      <a href="#sAt4" data-target="sAt4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sAt5" data-target="sAt5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sAt6" data-target="sAt6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sAt7" data-target="sAt7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sAt8" data-target="sAt8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sAt9" data-target="sAt9"><span class="num">09</span>CONCLUSIONES</a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleTlayacapan" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Tlayacapan</span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="nav-subnav" id="tlayacapanSubnav">
+      <a href="#sTla1" data-target="sTla1"><span class="num">01</span>PORTADA</a>
+      <a href="#sTla2" data-target="sTla2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sTla3" data-target="sTla3"><span class="num">03</span>RANKING</a>
+      <a href="#sTla4" data-target="sTla4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sTla5" data-target="sTla5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sTla6" data-target="sTla6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sTla7" data-target="sTla7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sTla8" data-target="sTla8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sTla9" data-target="sTla9"><span class="num">09</span>CONCLUSIONES</a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleTepoztlan" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Tepoztlán</span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="nav-subnav" id="tepoztlanSubnav">
+      <a href="#sTep1" data-target="sTep1"><span class="num">01</span>PORTADA</a>
+      <a href="#sTep2" data-target="sTep2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sTep3" data-target="sTep3"><span class="num">03</span>RANKING</a>
+      <a href="#sTep4" data-target="sTep4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sTep5" data-target="sTep5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sTep6" data-target="sTep6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sTep7" data-target="sTep7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sTep8" data-target="sTep8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sTep9" data-target="sTep9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sTep10" data-target="sTep10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">Q1 2026 · LA RESPUESTA</span></a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleTlalnepantla" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Tlalnepantla</span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="nav-subnav" id="tlalnepantlaSubnav">
+      <a href="#sTln1" data-target="sTln1"><span class="num">01</span>PORTADA</a>
+      <a href="#sTln2" data-target="sTln2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sTln3" data-target="sTln3"><span class="num">03</span>RANKING</a>
+      <a href="#sTln4" data-target="sTln4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sTln5" data-target="sTln5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sTln6" data-target="sTln6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sTln7" data-target="sTln7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sTln8" data-target="sTln8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sTln9" data-target="sTln9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sTln10" data-target="sTln10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">T1 2026 · CRISIS INSTITUCIONAL</span></a>
+    </div>
+  </div>
+
+    </div><!-- /regionNorteContent -->
+  </div><!-- /nav-region Norte -->
+
+  <!-- REGIÓN 3 · NORESTE · teal · 6 munis (1 con análisis) -->
+  <div class="nav-region">
+    <div class="nav-region-title" id="toggleRegionNoreste" role="button" tabindex="0" aria-expanded="false" aria-controls="regionNoresteContent" style="color:#14b8a6;">
+      <span class="triangle">▸</span>
+      <span>Noreste</span>
       <span class="count">6 munis</span>
     </div>
-    <div class="nav-region-content" id="regionCuaContent">
+    <div class="nav-region-content" id="regionNoresteContent">
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleYecapixtla" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Yecapixtla</span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="nav-subnav" id="yecapixtlaSubnav">
+      <a href="#sYe1" data-target="sYe1"><span class="num">01</span>PORTADA</a>
+      <a href="#sYe2" data-target="sYe2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sYe3" data-target="sYe3"><span class="num">03</span>RANKING</a>
+      <a href="#sYe4" data-target="sYe4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sYe5" data-target="sYe5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sYe6" data-target="sYe6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sYe7" data-target="sYe7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sYe8" data-target="sYe8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sYe9" data-target="sYe9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sYe10" data-target="sYe10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">T1 2026 · LA ESCALADA</span></a>
+    </div>
+  </div>
+
+    </div><!-- /regionNoresteContent -->
+  </div><!-- /nav-region Noreste -->
+
+  <!-- REGIÓN 4 · CENTRO · ámbar · 3 munis · ZM Cuautla SEDATU -->
+  <div class="nav-region">
+    <div class="nav-region-title" id="toggleRegionCentro" role="button" tabindex="0" aria-expanded="false" aria-controls="regionCentroContent" style="color:#fbbf24;">
+      <span class="triangle">▸</span>
+      <span>Centro</span>
+      <span class="count">3 munis</span>
+    </div>
+    <div class="nav-region-content" id="regionCentroContent">
 
   <div class="nav-group">
     <div class="nav-group-title g-completo nav-collapsible" id="toggleZMC" role="button" tabindex="0" aria-expanded="false" style="border-left:3px solid #fbbf24;padding-left:8px;">
       <span class="triangle">▸</span>
-      <span style="color:#fbbf24;">ZM CUAUTLA · meta</span>
+      <span style="color:#fbbf24;">ZM CUAUTLA · meta SEDATU</span>
       <span class="caret">▾</span>
     </div>
     <div class="nav-subnav" id="zmcSubnav">
@@ -5097,73 +5232,119 @@
     </div>
   </div>
 
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleYecapixtla" role="button" tabindex="0" aria-expanded="false">
+    </div><!-- /regionCentroContent -->
+  </div><!-- /nav-region Centro -->
+
+  <!-- REGIÓN 5 · ORIENTE · morado · 4 munis (2 con análisis) -->
+  <div class="nav-region">
+    <div class="nav-region-title" id="toggleRegionOriente" role="button" tabindex="0" aria-expanded="false" aria-controls="regionOrienteContent" style="color:#a371f7;">
       <span class="triangle">▸</span>
-      <span>Yecapixtla</span>
+      <span>Oriente</span>
+      <span class="count">4 munis</span>
+    </div>
+    <div class="nav-region-content" id="regionOrienteContent">
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleTepalcingo" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Tepalcingo</span>
       <span class="caret">▾</span>
     </div>
-    <div class="nav-subnav" id="yecapixtlaSubnav">
-      <a href="#sYe1" data-target="sYe1"><span class="num">01</span>PORTADA</a>
-      <a href="#sYe2" data-target="sYe2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sYe3" data-target="sYe3"><span class="num">03</span>RANKING</a>
-      <a href="#sYe4" data-target="sYe4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sYe5" data-target="sYe5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sYe6" data-target="sYe6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sYe7" data-target="sYe7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sYe8" data-target="sYe8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sYe9" data-target="sYe9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sYe10" data-target="sYe10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">T1 2026 · LA ESCALADA</span></a>
+    <div class="nav-subnav" id="tepalcingoSubnav">
+      <a href="#sTpa1" data-target="sTpa1"><span class="num">01</span>PORTADA</a>
+      <a href="#sTpa2" data-target="sTpa2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sTpa3" data-target="sTpa3"><span class="num">03</span>RANKING</a>
+      <a href="#sTpa4" data-target="sTpa4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sTpa5" data-target="sTpa5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sTpa6" data-target="sTpa6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sTpa7" data-target="sTpa7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sTpa8" data-target="sTpa8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sTpa9" data-target="sTpa9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sTpa10" data-target="sTpa10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">T1 2026 · TODO PRENDIDO</span></a>
     </div>
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleTlayacapan" role="button" tabindex="0" aria-expanded="false">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleJantetelco" role="button" tabindex="0" aria-expanded="false">
       <span class="triangle">▸</span>
-      <span>Tlayacapan</span>
+      <span>Jantetelco</span>
       <span class="caret">▾</span>
     </div>
-    <div class="nav-subnav" id="tlayacapanSubnav">
-      <a href="#sTla1" data-target="sTla1"><span class="num">01</span>PORTADA</a>
-      <a href="#sTla2" data-target="sTla2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sTla3" data-target="sTla3"><span class="num">03</span>RANKING</a>
-      <a href="#sTla4" data-target="sTla4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sTla5" data-target="sTla5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sTla6" data-target="sTla6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sTla7" data-target="sTla7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sTla8" data-target="sTla8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sTla9" data-target="sTla9"><span class="num">09</span>CONCLUSIONES</a>
+    <div class="nav-subnav" id="jantetelcoSubnav">
+      <a href="#sJt1" data-target="sJt1"><span class="num">01</span>PORTADA</a>
+      <a href="#sJt2" data-target="sJt2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sJt3" data-target="sJt3"><span class="num">03</span>RANKING</a>
+      <a href="#sJt4" data-target="sJt4"><span class="num">04</span>DECADAL</a>
+      <a href="#sJt5" data-target="sJt5"><span class="num">05</span>ESPEJO</a>
+      <a href="#sJt6" data-target="sJt6"><span class="num">06</span>CLAVE</a>
+      <a href="#sJt7" data-target="sJt7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sJt8" data-target="sJt8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sJt9" data-target="sJt9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sJt10" data-target="sJt10" style="border-left:3px solid #f85149; padding-left:9px;"><span class="num">10</span><span style="color:#f85149;">T1 2026 · HD MÁX</span></a>
+    </div>
+  </div>
+
+    </div><!-- /regionOrienteContent -->
+  </div><!-- /nav-region Oriente -->
+
+  <!-- REGIÓN 6 · PONIENTE · rosa magenta · 6 munis (2 con análisis) -->
+  <div class="nav-region">
+    <div class="nav-region-title" id="toggleRegionPoniente" role="button" tabindex="0" aria-expanded="false" aria-controls="regionPonienteContent" style="color:#ec4899;">
+      <span class="triangle">▸</span>
+      <span>Poniente</span>
+      <span class="count">6 munis</span>
+    </div>
+    <div class="nav-region-content" id="regionPonienteContent">
+
+  <div class="nav-group">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleMazatepec" role="button" tabindex="0" aria-expanded="false">
+      <span class="triangle">▸</span>
+      <span>Mazatepec</span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="nav-subnav" id="mazatepecSubnav">
+      <a href="#sMz1" data-target="sMz1"><span class="num">01</span>PORTADA</a>
+      <a href="#sMz2" data-target="sMz2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sMz3" data-target="sMz3"><span class="num">03</span>RANKING</a>
+      <a href="#sMz4" data-target="sMz4"><span class="num">04</span>DECADAL</a>
+      <a href="#sMz5" data-target="sMz5"><span class="num">05</span>ESPEJO</a>
+      <a href="#sMz6" data-target="sMz6"><span class="num">06</span>CLAVE</a>
+      <a href="#sMz7" data-target="sMz7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sMz8" data-target="sMz8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sMz9" data-target="sMz9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sMz10" data-target="sMz10" style="border-left:3px solid #f85149; padding-left:9px;"><span class="num">10</span><span style="color:#f85149;">T1 2026 · AM + DP</span></a>
     </div>
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleAtlatlahucan" role="button" tabindex="0" aria-expanded="false">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleTetecala" role="button" tabindex="0" aria-expanded="false">
       <span class="triangle">▸</span>
-      <span>Atlatlahucan</span>
+      <span>Tetecala</span>
       <span class="caret">▾</span>
     </div>
-    <div class="nav-subnav" id="atlatlahucanSubnav">
-      <a href="#sAt1" data-target="sAt1"><span class="num">01</span>PORTADA</a>
-      <a href="#sAt2" data-target="sAt2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sAt3" data-target="sAt3"><span class="num">03</span>RANKING</a>
-      <a href="#sAt4" data-target="sAt4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sAt5" data-target="sAt5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sAt6" data-target="sAt6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sAt7" data-target="sAt7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sAt8" data-target="sAt8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sAt9" data-target="sAt9"><span class="num">09</span>CONCLUSIONES</a>
+    <div class="nav-subnav" id="tetecalaSubnav">
+      <a href="#sTtc1" data-target="sTtc1"><span class="num">01</span>PORTADA</a>
+      <a href="#sTtc2" data-target="sTtc2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sTtc3" data-target="sTtc3"><span class="num">03</span>RANKING</a>
+      <a href="#sTtc4" data-target="sTtc4"><span class="num">04</span>DECADAL</a>
+      <a href="#sTtc5" data-target="sTtc5"><span class="num">05</span>ESPEJO</a>
+      <a href="#sTtc6" data-target="sTtc6"><span class="num">06</span>CLAVE</a>
+      <a href="#sTtc7" data-target="sTtc7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sTtc8" data-target="sTtc8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sTtc9" data-target="sTtc9"><span class="num">09</span>CONCLUSIONES</a>
+      <a href="#sTtc10" data-target="sTtc10" style="border-left:3px solid #f85149; padding-left:9px;"><span class="num">10</span><span style="color:#f85149;">T1 2026 · LC + NM</span></a>
     </div>
   </div>
 
-    </div><!-- /regionCuaContent -->
-  </div><!-- /nav-region ZM Cua -->
+    </div><!-- /regionPonienteContent -->
+  </div><!-- /nav-region Poniente -->
 
-  <!-- REGIÓN 3 · SUR-PONIENTE -->
+  <!-- REGIÓN 7 · SUR · rojo · 6 munis (3 con análisis) -->
   <div class="nav-region">
     <div class="nav-region-title" id="toggleRegionSur" role="button" tabindex="0" aria-expanded="false" aria-controls="regionSurContent" style="color:#f85149;">
       <span class="triangle">▸</span>
-      <span>Sur-poniente</span>
-      <span class="count">4 munis</span>
+      <span>Sur</span>
+      <span class="count">6 munis</span>
     </div>
     <div class="nav-region-content" id="regionSurContent">
 
@@ -5188,26 +5369,6 @@
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleMazatepec" role="button" tabindex="0" aria-expanded="false">
-      <span class="triangle">▸</span>
-      <span>Mazatepec</span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="nav-subnav" id="mazatepecSubnav">
-      <a href="#sMz1" data-target="sMz1"><span class="num">01</span>PORTADA</a>
-      <a href="#sMz2" data-target="sMz2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sMz3" data-target="sMz3"><span class="num">03</span>RANKING</a>
-      <a href="#sMz4" data-target="sMz4"><span class="num">04</span>DECADAL</a>
-      <a href="#sMz5" data-target="sMz5"><span class="num">05</span>ESPEJO</a>
-      <a href="#sMz6" data-target="sMz6"><span class="num">06</span>CLAVE</a>
-      <a href="#sMz7" data-target="sMz7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sMz8" data-target="sMz8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sMz9" data-target="sMz9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sMz10" data-target="sMz10" style="border-left:3px solid #f85149; padding-left:9px;"><span class="num">10</span><span style="color:#f85149;">T1 2026 · AM + DP</span></a>
-    </div>
-  </div>
-
-  <div class="nav-group">
     <div class="nav-group-title g-completo nav-collapsible" id="togglePuenteDeIxtla" role="button" tabindex="0" aria-expanded="false">
       <span class="triangle">▸</span>
       <span>Puente de Ixtla</span>
@@ -5228,99 +5389,26 @@
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleTetecala" role="button" tabindex="0" aria-expanded="false">
+    <div class="nav-group-title g-completo nav-collapsible" id="toggleTlaltizapan" role="button" tabindex="0" aria-expanded="false">
       <span class="triangle">▸</span>
-      <span>Tetecala</span>
+      <span>Tlaltizapán</span>
       <span class="caret">▾</span>
     </div>
-    <div class="nav-subnav" id="tetecalaSubnav">
-      <a href="#sTtc1" data-target="sTtc1"><span class="num">01</span>PORTADA</a>
-      <a href="#sTtc2" data-target="sTtc2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sTtc3" data-target="sTtc3"><span class="num">03</span>RANKING</a>
-      <a href="#sTtc4" data-target="sTtc4"><span class="num">04</span>DECADAL</a>
-      <a href="#sTtc5" data-target="sTtc5"><span class="num">05</span>ESPEJO</a>
-      <a href="#sTtc6" data-target="sTtc6"><span class="num">06</span>CLAVE</a>
-      <a href="#sTtc7" data-target="sTtc7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sTtc8" data-target="sTtc8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sTtc9" data-target="sTtc9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sTtc10" data-target="sTtc10" style="border-left:3px solid #f85149; padding-left:9px;"><span class="num">10</span><span style="color:#f85149;">T1 2026 · LC + NM</span></a>
+    <div class="nav-subnav" id="tlaltizapanSubnav">
+      <a href="#sTlz1" data-target="sTlz1"><span class="num">01</span>PORTADA</a>
+      <a href="#sTlz2" data-target="sTlz2"><span class="num">02</span>ESTATAL</a>
+      <a href="#sTlz3" data-target="sTlz3"><span class="num">03</span>RANKING</a>
+      <a href="#sTlz4" data-target="sTlz4"><span class="num">04</span>SERIE DECENAL</a>
+      <a href="#sTlz5" data-target="sTlz5"><span class="num">05</span>TOP DELITOS</a>
+      <a href="#sTlz6" data-target="sTlz6"><span class="num">06</span>CONTRATENDENCIAS</a>
+      <a href="#sTlz7" data-target="sTlz7"><span class="num">07</span>HOM × DESAP</a>
+      <a href="#sTlz8" data-target="sTlz8"><span class="num">08</span>VS ESTADO</a>
+      <a href="#sTlz9" data-target="sTlz9"><span class="num">09</span>CONCLUSIONES</a>
     </div>
   </div>
 
     </div><!-- /regionSurContent -->
-  </div><!-- /nav-region Sur-poniente -->
-
-  <!-- REGIÓN 4 · ORIENTE -->
-  <div class="nav-region">
-    <div class="nav-region-title" id="toggleRegionOri" role="button" tabindex="0" aria-expanded="false" aria-controls="regionOriContent" style="color:#a371f7;">
-      <span class="triangle">▸</span>
-      <span>Oriente</span>
-      <span class="count">3 munis</span>
-    </div>
-    <div class="nav-region-content" id="regionOriContent">
-
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleTepalcingo" role="button" tabindex="0" aria-expanded="false">
-      <span class="triangle">▸</span>
-      <span>Tepalcingo</span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="nav-subnav" id="tepalcingoSubnav">
-      <a href="#sTpa1" data-target="sTpa1"><span class="num">01</span>PORTADA</a>
-      <a href="#sTpa2" data-target="sTpa2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sTpa3" data-target="sTpa3"><span class="num">03</span>RANKING</a>
-      <a href="#sTpa4" data-target="sTpa4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sTpa5" data-target="sTpa5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sTpa6" data-target="sTpa6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sTpa7" data-target="sTpa7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sTpa8" data-target="sTpa8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sTpa9" data-target="sTpa9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sTpa10" data-target="sTpa10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">T1 2026 · TODO PRENDIDO</span></a>
-    </div>
-  </div>
-
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleTlalnepantla" role="button" tabindex="0" aria-expanded="false">
-      <span class="triangle">▸</span>
-      <span>Tlalnepantla</span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="nav-subnav" id="tlalnepantlaSubnav">
-      <a href="#sTln1" data-target="sTln1"><span class="num">01</span>PORTADA</a>
-      <a href="#sTln2" data-target="sTln2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sTln3" data-target="sTln3"><span class="num">03</span>RANKING</a>
-      <a href="#sTln4" data-target="sTln4"><span class="num">04</span>SERIE DECENAL</a>
-      <a href="#sTln5" data-target="sTln5"><span class="num">05</span>TOP DELITOS</a>
-      <a href="#sTln6" data-target="sTln6"><span class="num">06</span>CONTRATENDENCIAS</a>
-      <a href="#sTln7" data-target="sTln7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sTln8" data-target="sTln8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sTln9" data-target="sTln9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sTln10" data-target="sTln10" style="border-left:3px solid #f85149;padding-left:8px;background:rgba(248,81,73,0.08);"><span class="num">10</span><span style="color:#f85149;font-weight:700;">T1 2026 · CRISIS INSTITUCIONAL</span></a>
-    </div>
-  </div>
-
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleJantetelco" role="button" tabindex="0" aria-expanded="false">
-      <span class="triangle">▸</span>
-      <span>Jantetelco</span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="nav-subnav" id="jantetelcoSubnav">
-      <a href="#sJt1" data-target="sJt1"><span class="num">01</span>PORTADA</a>
-      <a href="#sJt2" data-target="sJt2"><span class="num">02</span>ESTATAL</a>
-      <a href="#sJt3" data-target="sJt3"><span class="num">03</span>RANKING</a>
-      <a href="#sJt4" data-target="sJt4"><span class="num">04</span>DECADAL</a>
-      <a href="#sJt5" data-target="sJt5"><span class="num">05</span>ESPEJO</a>
-      <a href="#sJt6" data-target="sJt6"><span class="num">06</span>CLAVE</a>
-      <a href="#sJt7" data-target="sJt7"><span class="num">07</span>HOM × DESAP</a>
-      <a href="#sJt8" data-target="sJt8"><span class="num">08</span>VS ESTADO</a>
-      <a href="#sJt9" data-target="sJt9"><span class="num">09</span>CONCLUSIONES</a>
-      <a href="#sJt10" data-target="sJt10" style="border-left:3px solid #f85149; padding-left:9px;"><span class="num">10</span><span style="color:#f85149;">T1 2026 · HD MÁX</span></a>
-    </div>
-  </div>
-
-    </div><!-- /regionOriContent -->
-  </div><!-- /nav-region Oriente -->
+  </div><!-- /nav-region Sur -->
 
   <div class="nav-group">
     <div class="nav-group-title">Referencia</div>
@@ -6417,42 +6505,49 @@
       <!-- Capa de los 36 municipios (paths reales desde CONABIO 2023) -->
       <g id="municipios-layer"></g>
       <g id="municipios-labels"></g>
-      <!-- Títulos de Zonas Metropolitanas y Regiones · repartidos en pantalla -->
+      <!-- Etiquetas de las 7 regiones PED Morelos 2025-2030 · perimetrales al mapa -->
       <g id="zm-titles">
-        <!-- ZM Cuernavaca · arriba izquierda -->
+        <!-- Noroeste · arriba izquierda · azul -->
         <g>
-          <text class="zm-title-label cuernavaca" x="20" y="80" font-size="22">ZM</text>
-          <text class="zm-title-label cuernavaca" x="20" y="108" font-size="22">CUERNAVACA</text>
-          <text class="zm-title-sub" x="20" y="128" font-size="9">8 MUNICIPIOS · 54% ESTADO</text>
-          <line x1="20" y1="135" x2="130" y2="135" stroke="#ff7b72" stroke-width="1.2" opacity="0.6"/>
+          <text class="zm-title-sub" x="20" y="58" font-size="9">6 MUNICIPIOS · ZM CUERNAVACA</text>
+          <text class="zm-title-label" x="20" y="86" font-size="22" fill="#58a6ff">NOROESTE</text>
+          <line x1="20" y1="98" x2="150" y2="98" stroke="#58a6ff" stroke-width="1.2" opacity="0.65"/>
         </g>
-        <!-- ZM Cuautla · arriba derecha -->
+        <!-- Norte · arriba centro · lima -->
         <g>
-          <text class="zm-title-label cuautla" x="998" y="80" font-size="22" text-anchor="end">ZM</text>
-          <text class="zm-title-label cuautla" x="998" y="108" font-size="22" text-anchor="end">CUAUTLA</text>
-          <text class="zm-title-sub" x="998" y="128" font-size="9" text-anchor="end">6 MUNICIPIOS · 27% ESTADO</text>
-          <line x1="888" y1="135" x2="998" y2="135" stroke="#fbbf24" stroke-width="1.2" opacity="0.6"/>
+          <text class="zm-title-sub" x="500" y="58" font-size="9" text-anchor="middle">5 MUNICIPIOS</text>
+          <text class="zm-title-label" x="500" y="86" font-size="22" text-anchor="middle" fill="#84cc16">NORTE</text>
+          <line x1="430" y1="98" x2="570" y2="98" stroke="#84cc16" stroke-width="1.2" opacity="0.65"/>
         </g>
-        <!-- Región Sur-Poniente · abajo izquierda · rojo -->
+        <!-- Noreste · arriba derecha · teal -->
         <g>
-          <line x1="20" y1="555" x2="140" y2="555" stroke="#f85149" stroke-width="1.4" opacity="0.55" stroke-dasharray="4 2"/>
-          <text class="zm-title-sub" x="20" y="575" font-size="9">11 MUNICIPIOS</text>
-          <text class="zm-title-label" x="20" y="600" font-size="18" fill="#f85149">REGIÓN</text>
-          <text class="zm-title-label" x="20" y="624" font-size="18" fill="#f85149">SUR-PONIENTE</text>
+          <text class="zm-title-sub" x="998" y="58" font-size="9" text-anchor="end">6 MUNICIPIOS</text>
+          <text class="zm-title-label" x="998" y="86" font-size="22" text-anchor="end" fill="#14b8a6">NORESTE</text>
+          <line x1="860" y1="98" x2="998" y2="98" stroke="#14b8a6" stroke-width="1.2" opacity="0.65"/>
         </g>
-        <!-- Región Oriente · abajo derecha · morado -->
+        <!-- Centro · centro-izquierda · ámbar -->
         <g>
-          <line x1="870" y1="555" x2="998" y2="555" stroke="#a371f7" stroke-width="1.4" opacity="0.55" stroke-dasharray="4 2"/>
-          <text class="zm-title-sub" x="998" y="575" font-size="9" text-anchor="end">5 MUNICIPIOS</text>
-          <text class="zm-title-label" x="998" y="600" font-size="18" text-anchor="end" fill="#a371f7">REGIÓN</text>
-          <text class="zm-title-label" x="998" y="624" font-size="18" text-anchor="end" fill="#a371f7">ORIENTE</text>
+          <text class="zm-title-sub" x="20" y="350" font-size="9">3 MUNICIPIOS · ZM CUAUTLA</text>
+          <text class="zm-title-label" x="20" y="378" font-size="22" fill="#fbbf24">CENTRO</text>
+          <line x1="20" y1="390" x2="120" y2="390" stroke="#fbbf24" stroke-width="1.2" opacity="0.65"/>
         </g>
-        <!-- Altos de Morelos · centro inferior · verde -->
+        <!-- Oriente · centro-derecha · morado -->
         <g>
-          <line x1="430" y1="555" x2="570" y2="555" stroke="#3fb950" stroke-width="1.4" opacity="0.55" stroke-dasharray="4 2"/>
-          <text class="zm-title-sub" x="500" y="575" font-size="9" text-anchor="middle">6 MUNICIPIOS</text>
-          <text class="zm-title-label" x="500" y="600" font-size="18" text-anchor="middle" fill="#3fb950">ALTOS DE</text>
-          <text class="zm-title-label" x="500" y="624" font-size="18" text-anchor="middle" fill="#3fb950">MORELOS</text>
+          <text class="zm-title-sub" x="998" y="350" font-size="9" text-anchor="end">4 MUNICIPIOS</text>
+          <text class="zm-title-label" x="998" y="378" font-size="22" text-anchor="end" fill="#a371f7">ORIENTE</text>
+          <line x1="900" y1="390" x2="998" y2="390" stroke="#a371f7" stroke-width="1.2" opacity="0.65"/>
+        </g>
+        <!-- Poniente · abajo izquierda · rosa -->
+        <g>
+          <text class="zm-title-sub" x="20" y="575" font-size="9">6 MUNICIPIOS</text>
+          <text class="zm-title-label" x="20" y="603" font-size="22" fill="#ec4899">PONIENTE</text>
+          <line x1="20" y1="615" x2="140" y2="615" stroke="#ec4899" stroke-width="1.2" opacity="0.65"/>
+        </g>
+        <!-- Sur · abajo derecha · rojo -->
+        <g>
+          <text class="zm-title-sub" x="998" y="575" font-size="9" text-anchor="end">6 MUNICIPIOS</text>
+          <text class="zm-title-label" x="998" y="603" font-size="22" text-anchor="end" fill="#f85149">SUR</text>
+          <line x1="940" y1="615" x2="998" y2="615" stroke="#f85149" stroke-width="1.2" opacity="0.65"/>
         </g>
       </g>
       <!-- Fuente -->
@@ -6481,11 +6576,16 @@
 
   <div class="hub-legend">
     <div class="item"><span class="dot green"></span> Análisis completo <span class="count">(haz clic para abrir)</span></div>
-    <div class="item"><span class="dot" style="background:#ff7b72;"></span> ZM Cuernavaca <span class="count">(8 munis · contorno rojo)</span></div>
-    <div class="item"><span class="dot" style="background:#fbbf24;"></span> ZM Cuautla <span class="count">(6 munis · contorno ámbar)</span></div>
-    <div class="item"><span class="dot" style="background:#f85149;"></span> Sur-Poniente <span class="count">(11 munis · tinte rojo)</span></div>
-    <div class="item"><span class="dot" style="background:#a371f7;"></span> Oriente <span class="count">(5 munis · tinte morado)</span></div>
-    <div class="item"><span class="dot" style="background:#3fb950;"></span> Altos de Morelos <span class="count">(6 munis · tinte verde)</span></div>
+    <div class="item"><span class="dot" style="background:#58a6ff;"></span> Noroeste <span class="count">(6 munis · incluye ZM Cuernavaca)</span></div>
+    <div class="item"><span class="dot" style="background:#fbbf24;"></span> Centro <span class="count">(3 munis · ZM Cuautla)</span></div>
+    <div class="item"><span class="dot" style="background:#84cc16;"></span> Norte <span class="count">(5 munis)</span></div>
+    <div class="item"><span class="dot" style="background:#14b8a6;"></span> Noreste <span class="count">(6 munis)</span></div>
+    <div class="item"><span class="dot" style="background:#a371f7;"></span> Oriente <span class="count">(4 munis)</span></div>
+    <div class="item"><span class="dot" style="background:#f85149;"></span> Sur <span class="count">(6 munis)</span></div>
+    <div class="item"><span class="dot" style="background:#ec4899;"></span> Poniente <span class="count">(6 munis)</span></div>
+  </div>
+  <div class="hub-instructions" style="font-size:11px;color:#6e7681;margin-top:6px;">
+    División regional: <strong>Plan Estatal de Desarrollo Morelos 2025-2030</strong> · Las dos Zonas Metropolitanas SEDATU (definición federal) se delinean al activar el botón superior.
   </div>
   <div class="hub-instructions">El tamaño del círculo es proporcional a la población del municipio. Pasa el cursor para ver el nombre; haz clic para abrir la ficha.</div>
 </section>
@@ -22217,43 +22317,47 @@
 // ============ HUB MORELOS — mapa interactivo real (v2.1) ============
 // Usa GeoJSON de CONABIO 2023 simplificado cargado desde morelos.geojson.js.
 // Metadatos por CVE_MUN: población (miles CONAPO 2025 aprox) + status del análisis.
+// Regiones según Plan Estatal de Desarrollo Morelos 2025-2030 (admin Margarita González Saravia)
+// Fuente: https://www.morelos.gob.mx/ultimas-noticias/convoca-gobierno-del-estado-de-morelos-a-participar-en-los-foros-regionales-de-consulta-ciudadana
+// El campo `zm` se mantiene como referencia a la definición SEDATU-CONAPO (Zonas Metropolitanas federales)
+// que coexiste con la división PED pero no es la primaria del dashboard.
 const MUN_META = {
-  "001": { pop:  18, status: "pendiente", region: "sur" },  // Amacuzac
-  "002": { pop:  30, status: "completo", zm: "cuautla", target: "sAt1" },  // Atlatlahucan
+  "001": { pop:  18, status: "pendiente", region: "poniente" },  // Amacuzac
+  "002": { pop:  30, status: "completo", region: "norte", zm: "cuautla", target: "sAt1" },  // Atlatlahucan
   "003": { pop:  37, status: "pendiente", region: "oriente" },  // Axochiapan
-  "004": { pop:  90, status: "completo", zm: "cuautla", target: "sA1" }, // Ayala
-  "005": { pop:  11, status: "pendiente", region: "sur" },  // Coatlán del Río
-  "006": { pop: 187, status: "completo", zm: "cuautla", target: "s1" }, // Cuautla
-  "007": { pop: 397, status: "completo", zm: "cuernavaca", target: "sC1" },  // Cuernavaca
-  "008": { pop: 110, status: "completo", zm: "cuernavaca", target: "sEz1" },  // Emiliano Zapata
-  "009": { pop:  20, status: "completo", zm: "cuernavaca", target: "sHz1" },  // Huitzilac
+  "004": { pop:  90, status: "completo", region: "centro", zm: "cuautla", target: "sA1" }, // Ayala
+  "005": { pop:  11, status: "pendiente", region: "poniente" },  // Coatlán del Río
+  "006": { pop: 187, status: "completo", region: "centro", zm: "cuautla", target: "s1" }, // Cuautla
+  "007": { pop: 397, status: "completo", region: "noroeste", zm: "cuernavaca", target: "sC1" },  // Cuernavaca
+  "008": { pop: 110, status: "completo", region: "noroeste", zm: "cuernavaca", target: "sEz1" },  // Emiliano Zapata
+  "009": { pop:  20, status: "completo", region: "noroeste", zm: "cuernavaca", target: "sHz1" },  // Huitzilac
   "010": { pop:  16, status: "completo", region: "oriente", target: "sJt1" },  // Jantetelco
-  "011": { pop: 214, status: "completo", zm: "cuernavaca", target: "sJ1" },  // Jiutepec
+  "011": { pop: 214, status: "completo", region: "noroeste", zm: "cuernavaca", target: "sJ1" },  // Jiutepec
   "012": { pop:  59, status: "completo", region: "sur", target: "sJo1" },  // Jojutla
   "013": { pop:  16, status: "pendiente", region: "oriente" },  // Jonacatepec
-  "014": { pop:  11, status: "completo", region: "sur", target: "sMz1" },  // Mazatepec
-  "015": { pop:  27, status: "pendiente", region: "sur" },  // Miacatlán
-  "016": { pop:  18, status: "pendiente", region: "altos" },  // Ocuituco
+  "014": { pop:  11, status: "completo", region: "poniente", target: "sMz1" },  // Mazatepec
+  "015": { pop:  27, status: "pendiente", region: "poniente" },  // Miacatlán
+  "016": { pop:  18, status: "pendiente", region: "noreste" },  // Ocuituco
   "017": { pop:  67, status: "completo", region: "sur", target: "sPi1" },  // Puente de Ixtla
-  "018": { pop: 130, status: "completo", zm: "cuernavaca", target: "sT1" },  // Temixco
+  "018": { pop: 130, status: "completo", region: "noroeste", zm: "cuernavaca", target: "sT1" },  // Temixco
   "019": { pop:  27, status: "completo", region: "oriente", target: "sTpa1" },  // Tepalcingo
-  "020": { pop:  55, status: "completo", zm: "cuernavaca", target: "sTep1" },  // Tepoztlán
-  "021": { pop:   8, status: "completo", region: "sur", target: "sTtc1" },  // Tetecala
-  "022": { pop:  20, status: "pendiente", region: "altos" },  // Tetela del Volcán
-  "023": { pop:   7, status: "completo", region: "oriente", target: "sTln1" },  // Tlalnepantla
-  "024": { pop:  54, status: "completo", zm: "cuernavaca", target: "sTlz1" },  // Tlaltizapán
+  "020": { pop:  55, status: "completo", region: "norte", zm: "cuernavaca", target: "sTep1" },  // Tepoztlán
+  "021": { pop:   8, status: "completo", region: "poniente", target: "sTtc1" },  // Tetecala
+  "022": { pop:  20, status: "pendiente", region: "noreste" },  // Tetela del Volcán
+  "023": { pop:   7, status: "completo", region: "norte", target: "sTln1" },  // Tlalnepantla
+  "024": { pop:  54, status: "completo", region: "sur", zm: "cuernavaca", target: "sTlz1" },  // Tlaltizapán
   "025": { pop:  34, status: "pendiente", region: "sur" },  // Tlaquiltenango
-  "026": { pop:  17, status: "completo", zm: "cuautla", target: "sTla1" },  // Tlayacapan
-  "027": { pop:  11, status: "pendiente", region: "altos" },  // Totolapan
-  "028": { pop:  79, status: "completo", zm: "cuernavaca", target: "sXoc1" },  // Xochitepec
-  "029": { pop: 110, status: "completo", zm: "cuautla", target: "sYa1" },  // Yautepec
-  "030": { pop:  53, status: "completo", zm: "cuautla", target: "sYe1" },  // Yecapixtla
+  "026": { pop:  17, status: "completo", region: "norte", zm: "cuautla", target: "sTla1" },  // Tlayacapan
+  "027": { pop:  11, status: "pendiente", region: "norte" },  // Totolapan
+  "028": { pop:  79, status: "completo", region: "noroeste", zm: "cuernavaca", target: "sXoc1" },  // Xochitepec
+  "029": { pop: 110, status: "completo", region: "centro", zm: "cuautla", target: "sYa1" },  // Yautepec
+  "030": { pop:  53, status: "completo", region: "noreste", zm: "cuautla", target: "sYe1" },  // Yecapixtla
   "031": { pop:  36, status: "pendiente", region: "sur" },  // Zacatepec
-  "032": { pop:  10, status: "pendiente", region: "altos" },  // Zacualpan de Amilpas
-  "033": { pop:  15, status: "pendiente", region: "altos" },  // Temoac
-  "034": { pop:  11, status: "pendiente", region: "sur" },  // Coatetelco
+  "032": { pop:  10, status: "pendiente", region: "noreste" },  // Zacualpan de Amilpas
+  "033": { pop:  15, status: "pendiente", region: "noreste" },  // Temoac
+  "034": { pop:  11, status: "pendiente", region: "poniente" },  // Coatetelco
   "035": { pop:  30, status: "pendiente", region: "sur" },  // Xoxocotla
-  "036": { pop:   7, status: "pendiente", region: "altos" }   // Hueyapan
+  "036": { pop:   7, status: "pendiente", region: "noreste" }   // Hueyapan
 };
 
 function computeBbox(features) {
@@ -22599,13 +22703,16 @@ function wireCuautlaToggle() {
   wireRegionGroups();
 }
 
-// Toggles para los 4 super-grupos regionales (ZM Cnv / ZM Cua / Sur / Oriente)
+// Toggles para los 7 super-grupos regionales PED Morelos 2025-2030
 function wireRegionGroups() {
   const regions = [
-    { tog: "toggleRegionCnv", content: "regionCnvContent" },
-    { tog: "toggleRegionCua", content: "regionCuaContent" },
-    { tog: "toggleRegionSur", content: "regionSurContent" },
-    { tog: "toggleRegionOri", content: "regionOriContent" }
+    { tog: "toggleRegionNoroeste", content: "regionNoroesteContent" },
+    { tog: "toggleRegionCentro",   content: "regionCentroContent" },
+    { tog: "toggleRegionNorte",    content: "regionNorteContent" },
+    { tog: "toggleRegionNoreste",  content: "regionNoresteContent" },
+    { tog: "toggleRegionOriente",  content: "regionOrienteContent" },
+    { tog: "toggleRegionSur",      content: "regionSurContent" },
+    { tog: "toggleRegionPoniente", content: "regionPonienteContent" }
   ];
   regions.forEach(r => {
     const tog = document.getElementById(r.tog);
@@ -22629,17 +22736,32 @@ function wireRegionGroups() {
   });
 }
 
-// Abre el super-grupo regional que contiene el sectionId activo
+// Abre el super-grupo regional PED que contiene el sectionId activo
+// Las 7 regiones siguen el Plan Estatal de Desarrollo Morelos 2025-2030.
 function openRegionContaining(targetId) {
-  const cnvIds = ["sZM1","sZM2","sZM3","sC1","sC2","sC3","sC4","sC5","sC6","sC7","sC8","sC9","sJ1","sJ2","sJ3","sJ4","sJ5","sJ6","sJ7","sJ8","sJ9","sJ10","sT1","sT2","sT3","sT4","sT5","sT6","sT7","sT8","sT9","sT10","sEz1","sEz2","sEz3","sEz4","sEz5","sEz6","sEz7","sEz8","sEz9","sEz10","sXoc1","sXoc2","sXoc3","sXoc4","sXoc5","sXoc6","sXoc7","sXoc8","sXoc9","sXoc10","sTep1","sTep2","sTep3","sTep4","sTep5","sTep6","sTep7","sTep8","sTep9","sTep10","sTlz1","sTlz2","sTlz3","sTlz4","sTlz5","sTlz6","sTlz7","sTlz8","sTlz9","sHz1","sHz2","sHz3","sHz4","sHz5","sHz6","sHz7","sHz8","sHz9","sHz10"];
-  const cuaIds = ["sZMC1","sZMC2","sZMC3","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","sA1","sA2","sA3","sA4","sA5","sA6","sA7","sA8","sA9","sYa1","sYa2","sYa3","sYa4","sYa5","sYa6","sYa7","sYa8","sYa9","sYe1","sYe2","sYe3","sYe4","sYe5","sYe6","sYe7","sYe8","sYe9","sYe10","sTla1","sTla2","sTla3","sTla4","sTla5","sTla6","sTla7","sTla8","sTla9","sAt1","sAt2","sAt3","sAt4","sAt5","sAt6","sAt7","sAt8","sAt9"];
-  const surIds = ["sJo1","sJo2","sJo3","sJo4","sJo5","sJo6","sJo7","sJo8","sJo9","sJo10","sMz1","sMz2","sMz3","sMz4","sMz5","sMz6","sMz7","sMz8","sMz9","sMz10","sPi1","sPi2","sPi3","sPi4","sPi5","sPi6","sPi7","sPi8","sPi9","sPi10","sTtc1","sTtc2","sTtc3","sTtc4","sTtc5","sTtc6","sTtc7","sTtc8","sTtc9","sTtc10"];
-  const oriIds = ["sTpa1","sTpa2","sTpa3","sTpa4","sTpa5","sTpa6","sTpa7","sTpa8","sTpa9","sTpa10","sTln1","sTln2","sTln3","sTln4","sTln5","sTln6","sTln7","sTln8","sTln9","sTln10","sJt1","sJt2","sJt3","sJt4","sJt5","sJt6","sJt7","sJt8","sJt9","sJt10"];
+  // NOROESTE · Cuernavaca, Jiutepec, Temixco, Xochitepec, Emiliano Zapata, Huitzilac (+ sZM meta)
+  const noroesteIds = ["sZM1","sZM2","sZM3","sC1","sC2","sC3","sC4","sC5","sC6","sC7","sC8","sC9","sJ1","sJ2","sJ3","sJ4","sJ5","sJ6","sJ7","sJ8","sJ9","sJ10","sT1","sT2","sT3","sT4","sT5","sT6","sT7","sT8","sT9","sT10","sEz1","sEz2","sEz3","sEz4","sEz5","sEz6","sEz7","sEz8","sEz9","sEz10","sXoc1","sXoc2","sXoc3","sXoc4","sXoc5","sXoc6","sXoc7","sXoc8","sXoc9","sXoc10","sHz1","sHz2","sHz3","sHz4","sHz5","sHz6","sHz7","sHz8","sHz9","sHz10"];
+  // CENTRO · Cuautla, Yautepec, Ayala (+ sZMC meta)
+  const centroIds = ["sZMC1","sZMC2","sZMC3","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","sA1","sA2","sA3","sA4","sA5","sA6","sA7","sA8","sA9","sYa1","sYa2","sYa3","sYa4","sYa5","sYa6","sYa7","sYa8","sYa9"];
+  // NORTE · Atlatlahucan, Tlayacapan, Tepoztlán, Tlalnepantla, Totolapan
+  const norteIds = ["sAt1","sAt2","sAt3","sAt4","sAt5","sAt6","sAt7","sAt8","sAt9","sTla1","sTla2","sTla3","sTla4","sTla5","sTla6","sTla7","sTla8","sTla9","sTep1","sTep2","sTep3","sTep4","sTep5","sTep6","sTep7","sTep8","sTep9","sTep10","sTln1","sTln2","sTln3","sTln4","sTln5","sTln6","sTln7","sTln8","sTln9","sTln10"];
+  // NORESTE · Yecapixtla, Ocuituco, Tetela del Volcán, Hueyapan, Zacualpan, Temoac
+  const noresteIds = ["sYe1","sYe2","sYe3","sYe4","sYe5","sYe6","sYe7","sYe8","sYe9","sYe10"];
+  // ORIENTE · Jonacatepec, Jantetelco, Axochiapan, Tepalcingo
+  const orienteIds = ["sTpa1","sTpa2","sTpa3","sTpa4","sTpa5","sTpa6","sTpa7","sTpa8","sTpa9","sTpa10","sJt1","sJt2","sJt3","sJt4","sJt5","sJt6","sJt7","sJt8","sJt9","sJt10"];
+  // SUR · Jojutla, Puente de Ixtla, Tlaltizapán, Xoxocotla, Zacatepec, Tlaquiltenango
+  const surIds = ["sJo1","sJo2","sJo3","sJo4","sJo5","sJo6","sJo7","sJo8","sJo9","sJo10","sPi1","sPi2","sPi3","sPi4","sPi5","sPi6","sPi7","sPi8","sPi9","sPi10","sTlz1","sTlz2","sTlz3","sTlz4","sTlz5","sTlz6","sTlz7","sTlz8","sTlz9"];
+  // PONIENTE · Mazatepec, Coatetelco, Miacatlán, Tetecala, Coatlán del Río, Amacuzac
+  const ponienteIds = ["sMz1","sMz2","sMz3","sMz4","sMz5","sMz6","sMz7","sMz8","sMz9","sMz10","sTtc1","sTtc2","sTtc3","sTtc4","sTtc5","sTtc6","sTtc7","sTtc8","sTtc9","sTtc10"];
+
   const map = [
-    { ids: cnvIds, tog: "toggleRegionCnv", content: "regionCnvContent" },
-    { ids: cuaIds, tog: "toggleRegionCua", content: "regionCuaContent" },
-    { ids: surIds, tog: "toggleRegionSur", content: "regionSurContent" },
-    { ids: oriIds, tog: "toggleRegionOri", content: "regionOriContent" }
+    { ids: noroesteIds, tog: "toggleRegionNoroeste", content: "regionNoroesteContent" },
+    { ids: centroIds,   tog: "toggleRegionCentro",   content: "regionCentroContent" },
+    { ids: norteIds,    tog: "toggleRegionNorte",    content: "regionNorteContent" },
+    { ids: noresteIds,  tog: "toggleRegionNoreste",  content: "regionNoresteContent" },
+    { ids: orienteIds,  tog: "toggleRegionOriente",  content: "regionOrienteContent" },
+    { ids: surIds,      tog: "toggleRegionSur",      content: "regionSurContent" },
+    { ids: ponienteIds, tog: "toggleRegionPoniente", content: "regionPonienteContent" }
   ];
   map.forEach(r => {
     const tog = document.getElementById(r.tog);
