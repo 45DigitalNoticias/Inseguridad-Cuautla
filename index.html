@@ -4887,11 +4887,11 @@
     </div>
     <div class="nav-region-content open" id="regionNoroesteContent">
 
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleZM" role="button" tabindex="0" aria-expanded="false" style="border-left:3px solid #58a6ff;padding-left:8px;">
-      <span class="triangle">▸</span>
-      <span style="color:#58a6ff;">ZM CUERNAVACA · meta SEDATU</span>
-      <span class="caret">▾</span>
+  <div class="nav-group" style="opacity:0.85;">
+    <div class="nav-group-title nav-collapsible" id="toggleZM" role="button" tabindex="0" aria-expanded="false" style="font-size:9px;letter-spacing:1.5px;color:#8b949e;border-left:2px dashed rgba(88,166,255,0.5);padding-left:8px;">
+      <span class="triangle" style="color:#8b949e;">▸</span>
+      <span>+ Agregado SEDATU</span>
+      <span class="caret" style="color:#8b949e;">▾</span>
     </div>
     <div class="nav-subnav" id="zmSubnav">
       <a href="#sZM1" data-target="sZM1"><span class="num">01</span>PORTADA</a>
@@ -5153,11 +5153,11 @@
     </div>
     <div class="nav-region-content" id="regionCentroContent">
 
-  <div class="nav-group">
-    <div class="nav-group-title g-completo nav-collapsible" id="toggleZMC" role="button" tabindex="0" aria-expanded="false" style="border-left:3px solid #fbbf24;padding-left:8px;">
-      <span class="triangle">▸</span>
-      <span style="color:#fbbf24;">ZM CUAUTLA · meta SEDATU</span>
-      <span class="caret">▾</span>
+  <div class="nav-group" style="opacity:0.85;">
+    <div class="nav-group-title nav-collapsible" id="toggleZMC" role="button" tabindex="0" aria-expanded="false" style="font-size:9px;letter-spacing:1.5px;color:#8b949e;border-left:2px dashed rgba(251,191,36,0.5);padding-left:8px;">
+      <span class="triangle" style="color:#8b949e;">▸</span>
+      <span>+ Agregado SEDATU</span>
+      <span class="caret" style="color:#8b949e;">▾</span>
     </div>
     <div class="nav-subnav" id="zmcSubnav">
       <a href="#sZMC1" data-target="sZMC1"><span class="num">01</span>PORTADA</a>
@@ -5419,7 +5419,7 @@
   <div class="nav-group">
     <div class="nav-group-title">Otros municipios</div>
     <button class="nav-toggle" id="toggleOtros" aria-expanded="false" type="button">
-      <span class="toggle-label">Ver 34 pendientes</span>
+      <span class="toggle-label">Ver 15 pendientes</span>
       <span class="caret">▾</span>
     </button>
     <div class="nav-pendientes-list" id="navPendientesList"></div>
@@ -6483,10 +6483,10 @@
   <div style="display:flex;justify-content:center;gap:12px;margin:8px 0 14px;flex-wrap:wrap;">
     <button type="button" class="zm-toggle-btn" id="btnToggleZM" aria-pressed="false">
       <span class="dot"></span>
-      <span>Resaltar ambas ZM</span>
+      <span>Resaltar ZMs SEDATU</span>
     </button>
-    <a href="#sZM1" class="zm-toggle-btn" style="text-decoration:none;" onclick="document.getElementById('sZM1').scrollIntoView({block:'start'});">
-      <span>→ Análisis ZM Cuernavaca</span>
+    <a href="#sZE" class="zm-toggle-btn" style="text-decoration:none;" onclick="document.getElementById('sZE').scrollIntoView({block:'start'});">
+      <span>→ Análisis 7 regiones PED</span>
     </a>
   </div>
 
@@ -6561,15 +6561,15 @@
       <div class="l">Municipios totales</div>
     </div>
     <div class="hub-stat">
-      <div class="n" style="color:#3fb950;">14</div>
+      <div class="n" style="color:#3fb950;">21</div>
       <div class="l">Análisis completos</div>
     </div>
     <div class="hub-stat">
-      <div class="n" style="color:#ff7b72;">8</div>
-      <div class="l">ZM Cuernavaca</div>
+      <div class="n" style="color:#58a6ff;">7</div>
+      <div class="l">Regiones PED 2025-2030</div>
     </div>
     <div class="hub-stat">
-      <div class="n" style="color:#8b949e;">22</div>
+      <div class="n" style="color:#8b949e;">15</div>
       <div class="l">Por iniciar</div>
     </div>
   </div>
@@ -6619,6 +6619,7 @@
           <tr>
             <th>#</th>
             <th>Municipio</th>
+            <th>Región PED</th>
             <th class="num">Pob (K)</th>
             <th class="num">Total 2025</th>
             <th class="num">Δ total</th>
@@ -7149,182 +7150,200 @@
 <!-- Cierre del panel estatal · agregados regionales 36 municipios     -->
 <!-- =============================================================== -->
 <section id="sZE">
-  <h3>Resumen ejecutivo · zonas</h3>
-  <h1>Morelos en cuatro zonas</h1>
-  <p style="font-size:18px;color:#c9d1d9;line-height:1.5;max-width:920px;margin-bottom:32px;">
-    Los 36 municipios del estado se agrupan en <strong>4 zonas</strong> con firmas criminales distintas. Dos son metropolitanas oficiales (SEDATU-CONAPO); dos son agregados geográficos del resto. Cada una tiene una historia y una pregunta editorial que sigue.
+  <h3>Resumen ejecutivo · 7 regiones PED</h3>
+  <h1>Morelos en siete regiones</h1>
+  <p style="font-size:18px;color:#c9d1d9;line-height:1.5;max-width:920px;margin-bottom:14px;">
+    Los 36 municipios del estado se agrupan en <strong>7 regiones</strong> según el <strong>Plan Estatal de Desarrollo Morelos 2025-2030</strong> (admin Margarita González Saravia). Cada región tiene una firma criminal distinta y una pregunta editorial propia.
+  </p>
+  <p style="font-size:13px;color:#8b949e;line-height:1.55;max-width:920px;margin-bottom:32px;font-style:italic;">
+    Nota metodológica: la <strong>SEDATU-CONAPO</strong> define dos Zonas Metropolitanas federales (ZM Cuernavaca, ZM Cuautla) que se preservan como agregados analíticos complementarios en las secciones <code>sZM1-3</code> y <code>sZMC1-3</code>. Las ZMs SEDATU se solapan parcialmente con las regiones PED Noroeste y Centro, pero no son intercambiables.
   </p>
 
-  <!-- Mini comparativa visual -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:36px;font-family:'JetBrains Mono',monospace;">
-    <div style="background:rgba(255,123,114,0.10);border:1.5px solid rgba(255,123,114,0.55);border-radius:10px;padding:14px;">
-      <div style="color:#ff7b72;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">ZM CUERNAVACA</div>
-      <div style="color:#fff;font-size:24px;font-weight:900;">26,638</div>
-      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 58.6% estado</div>
-      <div style="color:#8b949e;font-size:11px;">8 munis · 1.06M hab</div>
+  <!-- Mini comparativa visual · 7 regiones PED -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:36px;font-family:'JetBrains Mono',monospace;">
+    <div style="background:rgba(88,166,255,0.10);border:1.5px solid rgba(88,166,255,0.55);border-radius:10px;padding:14px;">
+      <div style="color:#58a6ff;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">NOROESTE</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">24,866</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 54.7% estado</div>
+      <div style="color:#8b949e;font-size:11px;">6 munis · 950K hab</div>
     </div>
     <div style="background:rgba(251,191,36,0.10);border:1.5px solid rgba(251,191,36,0.55);border-radius:10px;padding:14px;">
-      <div style="color:#fbbf24;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">ZM CUAUTLA</div>
-      <div style="color:#fff;font-size:24px;font-weight:900;">12,296</div>
-      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 27.0% estado</div>
-      <div style="color:#8b949e;font-size:11px;">6 munis · 487K hab</div>
+      <div style="color:#fbbf24;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">CENTRO</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">10,770</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 23.7% estado</div>
+      <div style="color:#8b949e;font-size:11px;">3 munis · 387K hab</div>
     </div>
-    <div style="background:rgba(139,148,158,0.10);border:1.5px solid rgba(139,148,158,0.55);border-radius:10px;padding:14px;">
-      <div style="color:#8b949e;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">SUR-PONIENTE</div>
-      <div style="color:#fff;font-size:24px;font-weight:900;">4,814</div>
-      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 10.6% estado</div>
-      <div style="color:#8b949e;font-size:11px;">11 munis · 308K hab</div>
+    <div style="background:rgba(248,81,73,0.10);border:1.5px solid rgba(248,81,73,0.55);border-radius:10px;padding:14px;">
+      <div style="color:#f85149;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">SUR</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">4,549</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 10.0% estado</div>
+      <div style="color:#8b949e;font-size:11px;">6 munis · 278K hab</div>
     </div>
-    <div style="background:rgba(110,118,129,0.10);border:1.5px solid rgba(110,118,129,0.55);border-radius:10px;padding:14px;">
-      <div style="color:#8b949e;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">ORIENTE</div>
-      <div style="color:#fff;font-size:24px;font-weight:900;">1,703</div>
-      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 3.7% estado</div>
-      <div style="color:#8b949e;font-size:11px;">11 munis · 185K hab</div>
+    <div style="background:rgba(132,204,22,0.10);border:1.5px solid rgba(132,204,22,0.55);border-radius:10px;padding:14px;">
+      <div style="color:#84cc16;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">NORTE</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">1,998</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 4.4% estado</div>
+      <div style="color:#8b949e;font-size:11px;">5 munis · 120K hab</div>
+    </div>
+    <div style="background:rgba(20,184,166,0.10);border:1.5px solid rgba(20,184,166,0.55);border-radius:10px;padding:14px;">
+      <div style="color:#14b8a6;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">NORESTE</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">1,422</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 3.1% estado</div>
+      <div style="color:#8b949e;font-size:11px;">6 munis · 123K hab</div>
+    </div>
+    <div style="background:rgba(236,72,153,0.10);border:1.5px solid rgba(236,72,153,0.55);border-radius:10px;padding:14px;">
+      <div style="color:#ec4899;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">PONIENTE</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">936</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 2.1% estado</div>
+      <div style="color:#8b949e;font-size:11px;">6 munis · 84K hab</div>
+    </div>
+    <div style="background:rgba(163,113,247,0.10);border:1.5px solid rgba(163,113,247,0.55);border-radius:10px;padding:14px;">
+      <div style="color:#a371f7;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:6px;">ORIENTE</div>
+      <div style="color:#fff;font-size:24px;font-weight:900;">910</div>
+      <div style="color:#8b949e;font-size:11px;margin-top:2px;">carpetas · 2.0% estado</div>
+      <div style="color:#8b949e;font-size:11px;">4 munis · 97K hab</div>
     </div>
   </div>
 
-  <!-- Tarjetas de resumen por zona · cada una con bullet points -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:24px;">
+  <!-- Tarjetas detalladas · 7 regiones PED -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(370px,1fr));gap:18px;">
 
-    <!-- ZM CUERNAVACA -->
-    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(255,123,114,0.55);border-left:5px solid #ff7b72;border-radius:12px;padding:24px 26px;">
+    <!-- NOROESTE -->
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
-        <h2 style="font-size:24px;font-weight:800;color:#ff7b72;margin:0;letter-spacing:-0.3px;">ZM Cuernavaca</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">8 MUNICIPIOS</span>
+        <h2 style="font-size:22px;font-weight:800;color:#58a6ff;margin:0;letter-spacing:-0.3px;">Noroeste</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS · ZM CNV SEDATU</span>
       </div>
-      <p style="color:#c9d1d9;font-size:14.5px;margin-bottom:16px;line-height:1.5;">El corazón conurbado del estado. Concentra la mitad del homicidio doloso pero menos del 14% de la extorsión. Con 54% de la población, su firma criminal es <strong>patrimonial</strong>: sobreproporción en robo de vehículo y violencia familiar, infraproporción extrema en extorsión.</p>
-
-      <!-- Chart · diverging horizontal bar (sobre/infraproporción 2025) -->
-      <div class="chart-zoomable" style="margin:8px 0 14px;">
-        <div class="chart-canvas-frame" style="position:relative;height:300px;padding:12px 14px 8px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
-          <canvas id="chartZmCuerSobreprop"></canvas>
-        </div>
-      </div>
-      <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;margin-bottom:14px;text-align:center;">
-        BARRA = ratio sobreproporción · LÍNEA EN 1.00 = peso poblacional ZM (54%)
-      </div>
-
-      <!-- Outliers municipales · badges -->
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(255,123,114,0.10);border:1px solid rgba(255,123,114,0.45);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#ff7b72;">Huitzilac</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">robo veh. 5.68×</span>
-        </span>
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(63,185,80,0.10);border:1px solid rgba(63,185,80,0.40);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#3fb950;">Cuernavaca</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">feminicidio −62.5% AxA</span>
-        </span>
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(255,123,114,0.10);border:1px solid rgba(255,123,114,0.45);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#ff7b72;">Tlaltizapán</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">narco +350% AxA</span>
-        </span>
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(255,123,114,0.10);border:1px solid rgba(255,123,114,0.45);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#ff7b72;">E. Zapata</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">extorsión +200% AxA</span>
-        </span>
-      </div>
-
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
-        <strong style="color:#ff7b72;">Pregunta editorial 2026:</strong> ¿el narcomenudeo distribuido en la ZM consolida un nuevo polo o vuelve a centralizarse en Cuernavaca?
-      </div>
-    </div>
-
-    <!-- ZM CUAUTLA -->
-    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(251,191,36,0.55);border-left:5px solid #fbbf24;border-radius:12px;padding:24px 26px;">
-      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
-        <h2 style="font-size:24px;font-weight:800;color:#fbbf24;margin:0;letter-spacing:-0.3px;">ZM Cuautla</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS</span>
-      </div>
-      <p style="color:#c9d1d9;font-size:14.5px;margin-bottom:16px;line-height:1.5;">Polo del oriente del estado. Con 25% de la población, aporta cuotas grotescamente desproporcionadas en delitos específicos. Es la <strong>capital de la extorsión</strong> (80% estatal) y del rebrote del narcomenudeo. La forma del polígono lo dice: spike masivo, polígono asimétrico.</p>
-
-      <!-- Chart · radar (% estatal aportado por la ZM Cuautla) -->
-      <div class="chart-zoomable" style="margin:8px 0 14px;">
-        <div class="chart-canvas-frame" style="position:relative;height:320px;padding:12px 14px 8px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
-          <canvas id="chartZmCuaPolygon"></canvas>
-        </div>
-      </div>
-      <div style="font-size:10.5px;color:#8b949e;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;margin-bottom:14px;text-align:center;">
-        EJES = % estatal aportado por la ZM · CÍRCULO PUNTEADO = peso poblacional (25%)
-      </div>
-
-      <!-- Outliers municipales · badges -->
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(251,191,36,0.10);border:1px solid rgba(251,191,36,0.45);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#fbbf24;">Tlayacapan</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">feminicidio 6.59×</span>
-        </span>
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(251,191,36,0.10);border:1px solid rgba(251,191,36,0.45);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#fbbf24;">Cuautla</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">extorsión 6.49×</span>
-        </span>
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(251,191,36,0.10);border:1px solid rgba(251,191,36,0.45);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#fbbf24;">Yautepec</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">narco +224% AxA</span>
-        </span>
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(63,185,80,0.10);border:1px solid rgba(63,185,80,0.40);border-radius:999px;font-size:11.5px;color:#c9d1d9;">
-          <strong style="color:#3fb950;">Atlatlahucan</strong>
-          <span style="font-family:'JetBrains Mono',monospace;color:#8b949e;">homicidio −73% AxA</span>
-        </span>
-      </div>
-
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
-        <strong style="color:#fbbf24;">Pregunta editorial 2026:</strong> ¿la extorsión sigue concentrada en Cuautla o se replica al corredor metropolitano del centro?
-      </div>
-    </div>
-
-    <!-- SUR-PONIENTE -->
-    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(139,148,158,0.55);border-left:5px solid #8b949e;border-radius:12px;padding:24px 26px;">
-      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
-        <h2 style="font-size:22px;font-weight:800;color:#c9d1d9;margin:0;letter-spacing:-0.3px;">Región Sur-Poniente</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">11 MUNICIPIOS</span>
-      </div>
-      <p style="color:#c9d1d9;font-size:14.5px;margin-bottom:16px;line-height:1.5;">Cabecera económica: Jojutla y Zacatepec. Pero también municipios chicos con tasas extremas — la zona donde un caso pesa más por habitante.</p>
-      <ul style="color:#c9d1d9;font-size:13.5px;line-height:1.65;padding-left:18px;margin:0;">
-        <li><strong style="color:#c9d1d9;">15.8% de la población</strong> del estado, <strong>10.6%</strong> de las carpetas SESNSP.</li>
-        <li><strong>Jojutla concentra 42% del total</strong> de la región (2,053 carpetas) — polo histórico.</li>
-        <li><strong>24.6% del homicidio doloso estatal</strong> con 15.8% de población — sobreproporción 1.56×.</li>
-        <li><strong>Mazatepec: tasa homicidio 200/100K</strong> — segunda del estado tras Huitzilac.</li>
-        <li><strong>Tetecala: homicidio +143% (7→17 casos)</strong>, tasa 212/100K — alza atípica 2025.</li>
-        <li><strong>Narcomenudeo 24.6% estatal</strong> · 260 carpetas — Jojutla sola aporta 120 (11.3% nacional).</li>
-        <li><strong>Extorsión solo 4.3% estatal</strong> · 18 casos — la zona sur queda fuera del corredor extorsionario.</li>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">El corazón conurbado del estado. Coincide con la ZM Cuernavaca SEDATU. Con 46.6% de la población aporta 54.7% de las carpetas — sobreproporción patrimonial. Pero en homicidio doloso (46.1%) y extorsión (12.6%) está en línea o por debajo del peso poblacional.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>24,866 carpetas 2025</strong> (–8.4% AxA) · 639 HD · tasa 67/100K.</li>
+        <li><strong>Extorsión infraproporción severa</strong> (0.27× peso pop.) · sólo 53 carpetas. No es zona de extorsión.</li>
+        <li><strong>Huitzilac:</strong> tasa HD 240/100K — la más alta del estado, problema del transporte.</li>
+        <li><strong>Temixco:</strong> sube +6% HD mientras la región baja — contratendencia.</li>
       </ul>
       <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
-        <strong style="color:#c9d1d9;">Pregunta editorial 2026:</strong> ¿Mazatepec y Tetecala consolidan tasas extremas o vuelven a la media de municipios chicos del sur?
+        <strong style="color:#58a6ff;">Pregunta editorial 2026:</strong> ¿la baja del HD en la región es real o se desplazó a Huitzilac y Temixco?
+      </div>
+    </div>
+
+    <!-- CENTRO -->
+    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(251,191,36,0.55);border-left:5px solid #fbbf24;border-radius:12px;padding:22px 24px;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+        <h2 style="font-size:22px;font-weight:800;color:#fbbf24;margin:0;letter-spacing:-0.3px;">Centro</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">3 MUNICIPIOS · ZM CUA SEDATU</span>
+      </div>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Coincide con la ZM Cuautla SEDATU (Cuautla, Yautepec, Ayala). Con 19% de la población aporta el <strong>72.6% de la extorsión estatal</strong> — sobre 3.82×. Es la <strong>capital de la extorsión</strong> de Morelos. Total subió +11.5% AxA mientras el resto del estado bajó.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>10,770 carpetas 2025</strong> (+11.5% AxA, contracorriente).</li>
+        <li><strong>Extorsión 304</strong> carpetas — Cuautla concentra 259 (85% regional).</li>
+        <li><strong>HD baja –28%</strong> (364→261), pero la extorsión y el narco siguen al alza.</li>
+        <li><strong>Narcomenudeo 31.9% estatal</strong> · sobre 1.68× · Yautepec rebrote +224% AxA.</li>
+      </ul>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
+        <strong style="color:#fbbf24;">Pregunta editorial 2026:</strong> ¿la extorsión sigue en Cuautla o se replica a Yautepec y Ayala?
+      </div>
+    </div>
+
+    <!-- SUR -->
+    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(248,81,73,0.55);border-left:5px solid #f85149;border-radius:12px;padding:22px 24px;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+        <h2 style="font-size:22px;font-weight:800;color:#f85149;margin:0;letter-spacing:-0.3px;">Sur</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS</span>
+      </div>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Jojutla cabecera + corredor agroindustrial. Con 13.6% de la población aporta 24.7% del narcomenudeo estatal — sobre 1.82×. Es el <strong>polo del narcomenudeo</strong> del estado.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>4,549 carpetas 2025</strong> (+9.0% AxA) · 183 HD · tasa 66/100K.</li>
+        <li><strong>Narcomenudeo 261 carpetas</strong> — Jojutla 120, Tlaltizapán 36, Puente Ixtla 30.</li>
+        <li><strong>Puente de Ixtla:</strong> 42 desapariciones década (3° estatal absoluto).</li>
+        <li><strong>Tlaltizapán:</strong> narcomenudeo +350% AxA, paso del bajo Amacuzac.</li>
+      </ul>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
+        <strong style="color:#f85149;">Pregunta editorial 2026:</strong> ¿el narco Sur consolida ruta Guerrero-CdMx o se fragmenta?
+      </div>
+    </div>
+
+    <!-- NORTE -->
+    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(132,204,22,0.55);border-left:5px solid #84cc16;border-radius:12px;padding:22px 24px;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+        <h2 style="font-size:22px;font-weight:800;color:#84cc16;margin:0;letter-spacing:-0.3px;">Norte</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">5 MUNICIPIOS</span>
+      </div>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Sierra alta y Pueblos Mágicos (Tepoztlán, Tlayacapan). Pocas carpetas en absoluto pero <strong>tasa HD elevada</strong> (83/100K) — sobre 1.22×. Tlalnepantla genera escala anormal por base poblacional reducida.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>1,998 carpetas 2025</strong> (–1.1% AxA) · 100 HD · tasa 83/100K.</li>
+        <li><strong>Tlalnepantla:</strong> 12 HD en 7K hab → tasa 171/100K. Crisis institucional abril 2026.</li>
+        <li><strong>Atlatlahucan:</strong> HD bajó –58% (33→14) — única baja real regional.</li>
+        <li><strong>Tepoztlán:</strong> Pueblo Mágico con tasa HD 91/100K — desproporcionado.</li>
+      </ul>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
+        <strong style="color:#84cc16;">Pregunta editorial 2026:</strong> ¿la sierra alta replica la firma de Huitzilac o tiene patrón propio?
+      </div>
+    </div>
+
+    <!-- NORESTE -->
+    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(20,184,166,0.55);border-left:5px solid #14b8a6;border-radius:12px;padding:22px 24px;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+        <h2 style="font-size:22px;font-weight:800;color:#14b8a6;margin:0;letter-spacing:-0.3px;">Noreste</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS</span>
+      </div>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Ladera del Popocatépetl. La única región con <strong>HD al alza interanual</strong> (+41.7%). Yecapixtla concentra. Extorsión modesta pero presente. Ocuituco con cero HD por segundo año.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>1,422 carpetas 2025</strong> (+4.7% AxA) · 51 HD · <strong>+41.7% AxA en HD</strong>.</li>
+        <li><strong>Yecapixtla:</strong> 41 HD en 53K hab — tasa 77/100K (top 10 estatal).</li>
+        <li><strong>Cero feminicidios</strong> en toda la región (única en este indicador).</li>
+        <li><strong>Sobre extorsión 1.15×</strong> moderada · 29 carpetas repartidas.</li>
+      </ul>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
+        <strong style="color:#14b8a6;">Pregunta editorial 2026:</strong> ¿el alza +42% del HD es Yecapixtla aislado o señal regional?
       </div>
     </div>
 
     <!-- ORIENTE -->
-    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(110,118,129,0.55);border-left:5px solid #6e7681;border-radius:12px;padding:24px 26px;">
+    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(163,113,247,0.55);border-left:5px solid #a371f7;border-radius:12px;padding:22px 24px;">
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
-        <h2 style="font-size:22px;font-weight:800;color:#c9d1d9;margin:0;letter-spacing:-0.3px;">Región Oriente</h2>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">11 MUNICIPIOS</span>
+        <h2 style="font-size:22px;font-weight:800;color:#a371f7;margin:0;letter-spacing:-0.3px;">Oriente</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">4 MUNICIPIOS</span>
       </div>
-      <p style="color:#c9d1d9;font-size:14.5px;margin-bottom:16px;line-height:1.5;">Sierra norte y sur-oriente agrícola. La zona más pequeña por carga delictiva. Casos puntuales pesan estadísticamente por la base baja.</p>
-      <ul style="color:#c9d1d9;font-size:13.5px;line-height:1.65;padding-left:18px;margin:0;">
-        <li><strong style="color:#c9d1d9;">9.5% de la población</strong> del estado, <strong>3.7%</strong> de las carpetas SESNSP.</li>
-        <li><strong>Infraproporción en todos los indicadores graves</strong> excepto homicidio doloso (8.9% vs 9.5% peso = casi en línea).</li>
-        <li><strong>Tlalnepantla: homicidio +300% (3→12 casos)</strong>, tasa 171/100K — caso extremo del año.</li>
-        <li><strong>Jantetelco: tasa homicidio 106/100K</strong> · 18 casos en 17K hab — top 5 estatal por tasa.</li>
-        <li><strong>Ocuituco con 0 homicidios dolosos en 2025</strong> — único municipio del estado con cero, por segundo año.</li>
-        <li><strong>Narcomenudeo 5.7% estatal</strong> con 9.5% peso — infraproporción real, no es zona de plaza.</li>
-        <li>Solo <strong>2 feminicidios</strong> en toda la región (Jonacatepec y Tepalcingo).</li>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Tepalcingo + Jantetelco + Jonacatepec + Axochiapan. La región más pequeña por carga delictiva (2.0% estatal). Casi nula extorsión (sobre 0.10×). Pero Jantetelco y Tepalcingo tienen tasas HD altas.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>910 carpetas 2025</strong> · 61 HD · <strong>–27% AxA</strong> (mayor baja regional).</li>
+        <li><strong>Jantetelco:</strong> tasa HD 106/100K — top 5 estatal · 5 años al alza.</li>
+        <li><strong>Tepalcingo:</strong> tasa HD 67/100K. T1 2026 con cinco alzas simultáneas.</li>
+        <li><strong>Sólo 2 carpetas de extorsión</strong> en toda la región.</li>
       </ul>
       <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
-        <strong style="color:#c9d1d9;">Pregunta editorial 2026:</strong> ¿Tlalnepantla y Mazatepec dejan de ser outliers o se confirman como polos rurales con escalada propia?
+        <strong style="color:#a371f7;">Pregunta editorial 2026:</strong> ¿el HD Oriente se enfría o Jantetelco continúa la escalada?
+      </div>
+    </div>
+
+    <!-- PONIENTE -->
+    <div style="background:rgba(22,27,34,0.85);border:1.5px solid rgba(236,72,153,0.55);border-left:5px solid #ec4899;border-radius:12px;padding:22px 24px;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;">
+        <h2 style="font-size:22px;font-weight:800;color:#ec4899;margin:0;letter-spacing:-0.3px;">Poniente</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b949e;letter-spacing:1.5px;">6 MUNICIPIOS</span>
+      </div>
+      <p style="color:#c9d1d9;font-size:14px;margin-bottom:14px;line-height:1.5;">Corredor Mazatepec-Tetecala-Coatlán del Río. Con 4.1% de la población, <strong>tasa HD más alta del estado</strong> (107/100K) — sobre 1.59×. Munis chiquitos con tasas extremas. HD subió +32% en 2025.</p>
+      <ul style="color:#c9d1d9;font-size:13px;line-height:1.6;padding-left:18px;margin:0 0 12px;">
+        <li><strong>936 carpetas 2025</strong> · 90 HD · <strong>+32.4% AxA en HD</strong>.</li>
+        <li><strong>Mazatepec:</strong> tasa HD 127/100K (#3 estatal). Rebote 2024-2025 sostenido.</li>
+        <li><strong>Tetecala:</strong> tasa HD 188/100K (#2 estatal). 15 HD en muni de 8K hab.</li>
+        <li><strong>Amacuzac:</strong> frontera con Guerrero, ratio desap/letal alto.</li>
+      </ul>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(48,54,61,0.6);font-size:12px;color:#8b949e;line-height:1.5;">
+        <strong style="color:#ec4899;">Pregunta editorial 2026:</strong> ¿el corredor Poniente consolida ruta Guerrero o se enfría?
       </div>
     </div>
 
   </div>
 
-  <!-- Cierre comparativo -->
+  <!-- Cierre comparativo · 7 regiones PED -->
   <div class="simple-box" style="margin-top:36px;">
-    <div class="simple-tag">La lectura del estado en 4 zonas</div>
-    <p>Las cuatro zonas no son intercambiables. <strong>ZM Cuernavaca</strong> concentra volumen y violencia patrimonial. <strong>ZM Cuautla</strong> es la capital de la extorsión y del narco emergente. <strong>Sur-Poniente</strong> es polo histórico (Jojutla) con municipios chicos de tasas extremas. <strong>Oriente</strong> queda por debajo en casi todo, con casos puntuales que destacan por base baja.</p>
-    <p>La política de seguridad estatal trata al estado como unidad, pero los datos muestran <strong>cuatro problemas distintos que requieren cuatro estrategias distintas</strong>. La ZM Cuernavaca necesita patrullaje patrimonial; la ZM Cuautla, atención a extorsión; el Sur-Poniente, cobertura territorial dispersa; el Oriente, alertas tempranas para los outliers.</p>
+    <div class="simple-tag">La lectura del estado en 7 regiones PED</div>
+    <p>Las siete regiones del Plan Estatal de Desarrollo 2025-2030 muestran <strong>siete firmas criminales distintas</strong>. <strong>Noroeste</strong> concentra volumen patrimonial (54.7% de carpetas). <strong>Centro</strong> es la capital de la extorsión (72.6%). <strong>Sur</strong> domina el narcomenudeo (24.7%). <strong>Norte</strong> y <strong>Poniente</strong> exhiben tasas HD elevadas por base poblacional reducida con outliers (Tlalnepantla, Tetecala, Mazatepec). <strong>Noreste</strong> es la única región con HD al alza interanual (+41.7%). <strong>Oriente</strong> es la más pequeña en carga delictiva con la mayor baja de HD (–27%).</p>
+    <p>La política de seguridad estatal trata al estado como unidad, pero los datos muestran <strong>siete problemas distintos que requieren siete estrategias distintas</strong>. El PED 2025-2030 ya reconoce esa heterogeneidad en su diseño regional — la pregunta es si los programas operativos siguen esa lógica o vuelven al "promedio estatal" que oculta lo que pasa en cada zona.</p>
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Fuentes y método.</strong> Agregados calculados desde SESNSP corte mar-2026 — los 36 municipios del estado clasificados en 4 zonas. Definición ZM oficial SEDATU-CONAPO 2020 (con la salvedad de incluir Huitzilac en ZM Cuernavaca por contigüidad y patrón de violencia). Las regiones Sur-Poniente y Oriente son agregados geográficos no oficiales — facilitan lectura pero no equivalen a divisiones administrativas. Población CONAPO 2025. Datos derivados regenerables con `scripts/build_zm_aggregates.js` → `scripts/zm_aggregates.json`.
+    <strong>Fuentes y método.</strong> Agregados calculados desde SESNSP corte mar-2026 sobre los 36 municipios de Morelos. <strong>División regional:</strong> Plan Estatal de Desarrollo Morelos 2025-2030, admin Margarita González Saravia (Foros Regionales de Consulta Ciudadana, nov 2024 · <a href="https://www.morelos.gob.mx/links-de-interes/ped2025-2030" target="_blank" style="color:#58a6ff;text-decoration:none;">morelos.gob.mx/ped2025-2030</a>). <strong>ZM SEDATU-CONAPO 2020</strong> se preservan como agregados analíticos complementarios — ver secciones sZM1-3 (Cuernavaca) y sZMC1-3 (Cuautla). Población CONAPO 2025.
   </div>
 </section>
 
@@ -22587,7 +22606,7 @@ function populateNavPendientes() {
   ).join("");
 }
 
-// Toggle del botón "Ver 34 pendientes"
+// Toggle del botón "Ver 15 pendientes"
 function wireNavToggle() {
   const btn = document.getElementById("toggleOtros");
   const list = document.getElementById("navPendientesList");
@@ -22595,7 +22614,7 @@ function wireNavToggle() {
   btn.addEventListener("click", () => {
     const open = list.classList.toggle("open");
     btn.setAttribute("aria-expanded", String(open));
-    btn.querySelector(".toggle-label").textContent = open ? "Ocultar pendientes" : "Ver 34 pendientes";
+    btn.querySelector(".toggle-label").textContent = open ? "Ocultar pendientes" : "Ver 15 pendientes";
   });
 }
 
@@ -22782,10 +22801,23 @@ function renderRanking(sortKey) {
   const key = sortKey.replace("-asc","");
   const data = [...MORELOS_RANKING].filter(r => r[key] !== null && r[key] !== undefined);
   data.sort((a,b) => asc ? a[key] - b[key] : b[key] - a[key]);
-  // Municipios con análisis completo
-  const completos = { "Cuautla": "s1", "Ayala": "sA1", "Cuernavaca": "sC1", "Jiutepec": "sJ1", "Temixco": "sT1" };
+  // Municipios con análisis completo (todos los 21 con target)
+  const completos = {
+    "Cuautla":"s1","Ayala":"sA1","Yautepec":"sYa1","Yecapixtla":"sYe1","Tlayacapan":"sTla1","Atlatlahucan":"sAt1",
+    "Cuernavaca":"sC1","Jiutepec":"sJ1","Temixco":"sT1","Emiliano Zapata":"sEz1","Xochitepec":"sXoc1","Tepoztlán":"sTep1","Tlaltizapán":"sTlz1","Huitzilac":"sHz1",
+    "Tepalcingo":"sTpa1","Jojutla":"sJo1","Tlalnepantla":"sTln1","Mazatepec":"sMz1","Jantetelco":"sJt1","Puente de Ixtla":"sPi1","Tetecala":"sTtc1"
+  };
+  // Mapa muni → región PED + color (PED 2025-2030)
+  const PED_REGIONS = {
+    "Cuernavaca":["Noroeste","#58a6ff"],"Jiutepec":["Noroeste","#58a6ff"],"Temixco":["Noroeste","#58a6ff"],"Xochitepec":["Noroeste","#58a6ff"],"Emiliano Zapata":["Noroeste","#58a6ff"],"Huitzilac":["Noroeste","#58a6ff"],
+    "Cuautla":["Centro","#fbbf24"],"Yautepec":["Centro","#fbbf24"],"Ayala":["Centro","#fbbf24"],
+    "Atlatlahucan":["Norte","#84cc16"],"Tlayacapan":["Norte","#84cc16"],"Tepoztlán":["Norte","#84cc16"],"Tlalnepantla":["Norte","#84cc16"],"Totolapan":["Norte","#84cc16"],
+    "Yecapixtla":["Noreste","#14b8a6"],"Ocuituco":["Noreste","#14b8a6"],"Tetela del Volcán":["Noreste","#14b8a6"],"Hueyapan":["Noreste","#14b8a6"],"Zacualpan de Amilpas":["Noreste","#14b8a6"],"Temoac":["Noreste","#14b8a6"],
+    "Jonacatepec":["Oriente","#a371f7"],"Jantetelco":["Oriente","#a371f7"],"Axochiapan":["Oriente","#a371f7"],"Tepalcingo":["Oriente","#a371f7"],
+    "Jojutla":["Sur","#f85149"],"Puente de Ixtla":["Sur","#f85149"],"Tlaltizapán":["Sur","#f85149"],"Xoxocotla":["Sur","#f85149"],"Zacatepec":["Sur","#f85149"],"Tlaquiltenango":["Sur","#f85149"],
+    "Mazatepec":["Poniente","#ec4899"],"Coatetelco":["Poniente","#ec4899"],"Miacatlán":["Poniente","#ec4899"],"Tetecala":["Poniente","#ec4899"],"Coatlán del Río":["Poniente","#ec4899"],"Amacuzac":["Poniente","#ec4899"]
+  };
   tbody.innerHTML = data.map((r, i) => {
-    const munCve = r.n === "Cuautla" ? "006" : (r.n === "Ayala" ? "004" : (r.n === "Cuernavaca" ? "007" : (r.n === "Jiutepec" ? "011" : (r.n === "Temixco" ? "018" : ""))));
     const varCell = r.vart === null
       ? "<td class=\"num\" style=\"color:#6e7681;\">—</td>"
       : `<td class="num ${r.vart >= 0 ? "var-up" : "var-down"}">${r.vart >= 0 ? "+" : ""}${r.vart.toFixed(1)}%</td>`;
@@ -22794,12 +22826,14 @@ function renderRanking(sortKey) {
       : `<td class="num ${r.varh >= 0 ? "var-up" : "var-down"}">${r.varh >= 0 ? "+" : ""}${r.varh.toFixed(1)}%</td>`;
     const muniCls = completos[r.n] ? "muni completo" : "muni";
     const targetAttr = completos[r.n] ? `data-target="${completos[r.n]}" style="cursor:pointer;"` : "";
-    // Estilo para destacar homicidios absolutos altos
     const homStyle = r.h25 >= 100 ? "color:#f85149;font-weight:700;" : (r.h25 >= 50 ? "color:#fbbf24;font-weight:600;" : "");
     const thomStyle = r.thom >= 80 ? "color:#f85149;font-weight:700;" : (r.thom >= 40 ? "color:#fbbf24;font-weight:600;" : "");
+    const reg = PED_REGIONS[r.n] || ["—","#8b949e"];
+    const regionCell = `<td style="font-size:10.5px;font-family:'JetBrains Mono',monospace;letter-spacing:0.8px;color:${reg[1]};font-weight:700;text-transform:uppercase;">${reg[0]}</td>`;
     return `<tr>
       <td class="pos">${i+1}</td>
       <td class="${muniCls}" ${targetAttr}>${completos[r.n] ? "● " : ""}${r.n}</td>
+      ${regionCell}
       <td class="num">${r.pop}</td>
       <td class="num"><strong>${r.t25.toLocaleString()}</strong></td>
       ${varCell}
@@ -23651,7 +23685,7 @@ function wireZMToggle() {
     btn.classList.toggle("active", active);
     btn.setAttribute("aria-pressed", String(active));
     const span = btn.querySelector("span:last-child");
-    if (span) span.textContent = active ? "Quitar resaltado ZMs" : "Resaltar ambas ZM";
+    if (span) span.textContent = active ? "Quitar resaltado ZMs" : "Resaltar ZMs SEDATU";
   });
 }
 
