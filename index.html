@@ -2453,22 +2453,54 @@
   }
   .mun-label.zm-label { fill: #ff7b72; font-weight: 700; }
   .mun-label.zm-label-cua { fill: #fbbf24; font-weight: 700; }
-  /* Perímetros Región Sur-Poniente (gris claro) y Oriente (gris medio) */
+  /* ============================================================ */
+  /* TINTES REGIONALES POR ZONA ANALÍTICA                          */
+  /* Se aplican sólo en pendientes (para no competir con el verde  */
+  /* fuerte de "completo" ni el ámbar de "en-progreso").           */
+  /* Borde de la región siempre visible en todas las munis.        */
+  /* ============================================================ */
+  /* Sur-poniente · rojo */
   .mun-region.region-sur {
-    stroke: #8b949e !important;
+    stroke: rgba(248,81,73,0.7) !important;
     stroke-width: 1.4 !important;
-    stroke-dasharray: 3 2;
-    filter: drop-shadow(0 0 3px rgba(139,148,158,0.25));
+    stroke-dasharray: 4 2;
   }
+  .mun-region.region-sur.status-pendiente {
+    fill: rgba(248,81,73, 0.20) !important;
+    stroke: rgba(248,81,73, 0.85) !important;
+  }
+  /* Oriente · morado */
   .mun-region.region-oriente {
-    stroke: #6e7681 !important;
+    stroke: rgba(163,113,247,0.7) !important;
     stroke-width: 1.4 !important;
-    stroke-dasharray: 5 2;
-    filter: drop-shadow(0 0 3px rgba(110,118,129,0.25));
+    stroke-dasharray: 4 2;
   }
-  /* En modo toggle ZM — las regiones grises se atenúan aún más */
+  .mun-region.region-oriente.status-pendiente {
+    fill: rgba(163,113,247, 0.22) !important;
+    stroke: rgba(163,113,247, 0.85) !important;
+  }
+  /* Altos de Morelos · verde teal */
+  .mun-region.region-altos {
+    stroke: rgba(63,185,80,0.7) !important;
+    stroke-width: 1.4 !important;
+    stroke-dasharray: 4 2;
+  }
+  .mun-region.region-altos.status-pendiente {
+    fill: rgba(63,185,80, 0.20) !important;
+    stroke: rgba(63,185,80, 0.85) !important;
+  }
+  /* Los munis con análisis completo conservan su fill verde fuerte
+     pero usan el borde de la región para señalar pertenencia. */
+  .mun-region.status-completo.region-sur { stroke: #f85149 !important; stroke-dasharray: none; }
+  .mun-region.status-completo.region-oriente { stroke: #a371f7 !important; stroke-dasharray: none; }
+  .mun-region.status-completo.region-altos { stroke: #3fb950 !important; stroke-dasharray: none; }
+  /* Las ZMs (cuernavaca/cuautla) tienen su propio styling con stroke amber/rojo,
+     mantenido en sus rules específicas más arriba. No se sobrescriben aquí. */
+
+  /* En modo toggle ZM — las regiones no-ZM se atenúan aún más */
   .morelos-map.show-zm .mun-region.region-sur,
-  .morelos-map.show-zm .mun-region.region-oriente {
+  .morelos-map.show-zm .mun-region.region-oriente,
+  .morelos-map.show-zm .mun-region.region-altos {
     opacity: 0.18;
     filter: saturate(0.25) brightness(0.7);
   }
@@ -6401,19 +6433,26 @@
           <text class="zm-title-sub" x="998" y="128" font-size="9" text-anchor="end">6 MUNICIPIOS · 27% ESTADO</text>
           <line x1="888" y1="135" x2="998" y2="135" stroke="#fbbf24" stroke-width="1.2" opacity="0.6"/>
         </g>
-        <!-- Región Sur-Poniente · abajo izquierda -->
+        <!-- Región Sur-Poniente · abajo izquierda · rojo -->
         <g>
-          <line x1="20" y1="555" x2="140" y2="555" stroke="#8b949e" stroke-width="1" opacity="0.45" stroke-dasharray="3 2"/>
+          <line x1="20" y1="555" x2="140" y2="555" stroke="#f85149" stroke-width="1.4" opacity="0.55" stroke-dasharray="4 2"/>
           <text class="zm-title-sub" x="20" y="575" font-size="9">11 MUNICIPIOS</text>
-          <text class="zm-title-label region-sur" x="20" y="600" font-size="18" fill="#8b949e">REGIÓN</text>
-          <text class="zm-title-label region-sur" x="20" y="624" font-size="18" fill="#8b949e">SUR-PONIENTE</text>
+          <text class="zm-title-label" x="20" y="600" font-size="18" fill="#f85149">REGIÓN</text>
+          <text class="zm-title-label" x="20" y="624" font-size="18" fill="#f85149">SUR-PONIENTE</text>
         </g>
-        <!-- Región Oriente · abajo derecha -->
+        <!-- Región Oriente · abajo derecha · morado -->
         <g>
-          <line x1="870" y1="555" x2="998" y2="555" stroke="#6e7681" stroke-width="1" opacity="0.45" stroke-dasharray="5 2"/>
-          <text class="zm-title-sub" x="998" y="575" font-size="9" text-anchor="end">11 MUNICIPIOS</text>
-          <text class="zm-title-label region-oriente" x="998" y="600" font-size="18" text-anchor="end" fill="#8b949e">REGIÓN</text>
-          <text class="zm-title-label region-oriente" x="998" y="624" font-size="18" text-anchor="end" fill="#8b949e">ORIENTE</text>
+          <line x1="870" y1="555" x2="998" y2="555" stroke="#a371f7" stroke-width="1.4" opacity="0.55" stroke-dasharray="4 2"/>
+          <text class="zm-title-sub" x="998" y="575" font-size="9" text-anchor="end">5 MUNICIPIOS</text>
+          <text class="zm-title-label" x="998" y="600" font-size="18" text-anchor="end" fill="#a371f7">REGIÓN</text>
+          <text class="zm-title-label" x="998" y="624" font-size="18" text-anchor="end" fill="#a371f7">ORIENTE</text>
+        </g>
+        <!-- Altos de Morelos · centro inferior · verde -->
+        <g>
+          <line x1="430" y1="555" x2="570" y2="555" stroke="#3fb950" stroke-width="1.4" opacity="0.55" stroke-dasharray="4 2"/>
+          <text class="zm-title-sub" x="500" y="575" font-size="9" text-anchor="middle">6 MUNICIPIOS</text>
+          <text class="zm-title-label" x="500" y="600" font-size="18" text-anchor="middle" fill="#3fb950">ALTOS DE</text>
+          <text class="zm-title-label" x="500" y="624" font-size="18" text-anchor="middle" fill="#3fb950">MORELOS</text>
         </g>
       </g>
       <!-- Fuente -->
@@ -6442,10 +6481,11 @@
 
   <div class="hub-legend">
     <div class="item"><span class="dot green"></span> Análisis completo <span class="count">(haz clic para abrir)</span></div>
-    <div class="item"><span class="dot" style="background:#ff7b72;"></span> ZM Cuernavaca <span class="count">(8 municipios · contorno rojo)</span></div>
-    <div class="item"><span class="dot" style="background:#fbbf24;"></span> ZM Cuautla <span class="count">(6 municipios · contorno ámbar)</span></div>
-    <div class="item"><span class="dot" style="background:#8b949e;"></span> Región Sur-Poniente <span class="count">(11 municipios · contorno gris claro)</span></div>
-    <div class="item"><span class="dot" style="background:#6e7681;"></span> Región Oriente <span class="count">(11 municipios · contorno gris medio)</span></div>
+    <div class="item"><span class="dot" style="background:#ff7b72;"></span> ZM Cuernavaca <span class="count">(8 munis · contorno rojo)</span></div>
+    <div class="item"><span class="dot" style="background:#fbbf24;"></span> ZM Cuautla <span class="count">(6 munis · contorno ámbar)</span></div>
+    <div class="item"><span class="dot" style="background:#f85149;"></span> Sur-Poniente <span class="count">(11 munis · tinte rojo)</span></div>
+    <div class="item"><span class="dot" style="background:#a371f7;"></span> Oriente <span class="count">(5 munis · tinte morado)</span></div>
+    <div class="item"><span class="dot" style="background:#3fb950;"></span> Altos de Morelos <span class="count">(6 munis · tinte verde)</span></div>
   </div>
   <div class="hub-instructions">El tamaño del círculo es proporcional a la población del municipio. Pasa el cursor para ver el nombre; haz clic para abrir la ficha.</div>
 </section>
@@ -22193,27 +22233,27 @@ const MUN_META = {
   "013": { pop:  16, status: "pendiente", region: "oriente" },  // Jonacatepec
   "014": { pop:  11, status: "completo", region: "sur", target: "sMz1" },  // Mazatepec
   "015": { pop:  27, status: "pendiente", region: "sur" },  // Miacatlán
-  "016": { pop:  18, status: "pendiente", region: "oriente" },  // Ocuituco
+  "016": { pop:  18, status: "pendiente", region: "altos" },  // Ocuituco
   "017": { pop:  67, status: "completo", region: "sur", target: "sPi1" },  // Puente de Ixtla
   "018": { pop: 130, status: "completo", zm: "cuernavaca", target: "sT1" },  // Temixco
   "019": { pop:  27, status: "completo", region: "oriente", target: "sTpa1" },  // Tepalcingo
   "020": { pop:  55, status: "completo", zm: "cuernavaca", target: "sTep1" },  // Tepoztlán
   "021": { pop:   8, status: "completo", region: "sur", target: "sTtc1" },  // Tetecala
-  "022": { pop:  20, status: "pendiente", region: "oriente" },  // Tetela del Volcán
+  "022": { pop:  20, status: "pendiente", region: "altos" },  // Tetela del Volcán
   "023": { pop:   7, status: "completo", region: "oriente", target: "sTln1" },  // Tlalnepantla
   "024": { pop:  54, status: "completo", zm: "cuernavaca", target: "sTlz1" },  // Tlaltizapán
   "025": { pop:  34, status: "pendiente", region: "sur" },  // Tlaquiltenango
   "026": { pop:  17, status: "completo", zm: "cuautla", target: "sTla1" },  // Tlayacapan
-  "027": { pop:  11, status: "pendiente", region: "oriente" },  // Totolapan
+  "027": { pop:  11, status: "pendiente", region: "altos" },  // Totolapan
   "028": { pop:  79, status: "completo", zm: "cuernavaca", target: "sXoc1" },  // Xochitepec
   "029": { pop: 110, status: "completo", zm: "cuautla", target: "sYa1" },  // Yautepec
   "030": { pop:  53, status: "completo", zm: "cuautla", target: "sYe1" },  // Yecapixtla
   "031": { pop:  36, status: "pendiente", region: "sur" },  // Zacatepec
-  "032": { pop:  10, status: "pendiente", region: "oriente" },  // Zacualpan de Amilpas
-  "033": { pop:  15, status: "pendiente", region: "oriente" },  // Temoac
+  "032": { pop:  10, status: "pendiente", region: "altos" },  // Zacualpan de Amilpas
+  "033": { pop:  15, status: "pendiente", region: "altos" },  // Temoac
   "034": { pop:  11, status: "pendiente", region: "sur" },  // Coatetelco
   "035": { pop:  30, status: "pendiente", region: "sur" },  // Xoxocotla
-  "036": { pop:   7, status: "pendiente", region: "oriente" }   // Hueyapan
+  "036": { pop:   7, status: "pendiente", region: "altos" }   // Hueyapan
 };
 
 function computeBbox(features) {
@@ -22310,9 +22350,10 @@ function renderMorelosMap() {
     const d = featureToPath(f, proj);
     const targetAttr = meta.target ? `data-target="${meta.target}"` : "";
     const zmClass = meta.zm ? ` zm-${meta.zm}` : "";
-    const zmInfo = meta.zm === "cuernavaca" ? " · ZM Cuernavaca" : "";
+    const regionClass = meta.region ? ` region-${meta.region}` : "";
+    const zmInfo = meta.zm === "cuernavaca" ? " · ZM Cuernavaca" : (meta.zm === "cuautla" ? " · ZM Cuautla" : "");
     const ariaLabel = `${name} · ${meta.pop} mil habitantes · ${statusLabel(meta.status)}${zmInfo}${meta.target ? ' · Enter para abrir análisis' : ''}`;
-    pathsHTML += `<path class="mun-region status-${meta.status}${zmClass}" d="${d}" data-n="${name}" data-cve="${cve}" data-pop="${meta.pop}" data-status="${meta.status}" ${targetAttr} tabindex="0" role="button" aria-label="${ariaLabel.replace(/"/g, '&quot;')}"><title>${name} — ${meta.pop}K hab · ${statusLabel(meta.status)}${zmInfo}</title></path>`;
+    pathsHTML += `<path class="mun-region status-${meta.status}${zmClass}${regionClass}" d="${d}" data-n="${name}" data-cve="${cve}" data-pop="${meta.pop}" data-status="${meta.status}" ${targetAttr} tabindex="0" role="button" aria-label="${ariaLabel.replace(/"/g, '&quot;')}"><title>${name} — ${meta.pop}K hab · ${statusLabel(meta.status)}${zmInfo}</title></path>`;
   });
 
   // Labels solo para municipios con status o suficientemente grandes
