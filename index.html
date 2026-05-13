@@ -14,7 +14,7 @@
 <meta name="version" content="2.2-draft">
 <meta name="generated" content="2026-04-19">
 <meta name="changelog" content="v2.7: auditoria integral cifras + ranking nacional T1 2026 (sNAC6) - Morelos #1 nacional en tasa per capita anualizada de extorsion, feminicidio y robo de vehiculo; #2 en homicidio doloso solo debajo de Colima. Cobertura completa 36 munis con T1 2026 (se anaden Cuernavaca, Ayala, Yautepec, Atlatlahucan, Tlaltizapan, Tlayacapan). Correcciones graves: Jojutla HD 2024 61->47 y HD 2025 43->31 tabla letal reescrita, Tlalnepantla HC 2024 4->2 cambio +100->+300%, Tepalcingo 95 homicidios decada->104 muertes violentas. Nomenclatura 14 ZM->14 munis de 2 ZM oficiales. Records.json historicos extraidos desde SESNSP corte dic-2025 para Jojutla, Tepalcingo, Tlalnepantla, Tepoztan y 32 munis mas. Nuevo regiones_ped_aggregates_2025.json reproduce cifras sZE al 100%. v2.6: expansion 21 analisis municipales completos + reestructura regional al Plan Estatal de Desarrollo Morelos 2025-2030 (7 regiones PED), eliminadas secciones meta SEDATU. v2.5: seccion sTep10 Q1 2026 La Respuesta - confrontacion editorial con datos al alcalde de Tepoztlan tras declaracion publica del 28-abr-2026. 5 charts especificos: comparativa Q1 25 vs Q1 26 los 36 delitos, lesiones doloso vs culposo, lesiones culposas mes a mes, violencia sexual emergente x4.5, narcomenudeo decenal 2016-2026. Botones de zoom in/out con scrollbars en modo expandido. v2.4: seccion Decada Nacional (sNAC1-5). v2.3: actualización SESNSP corte mar-2026 (Q1 2026 parcial). v2.2: charts ZM con sobreproporción + ZM Cuautla agregada (sZMC1-3). v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
-<title>Morelos: Seguridad municipal — Hub de investigación (v2.7)</title>
+<title>Morelos: Seguridad municipal — Hub de investigación (v2.7.1)</title>
 <!-- Tipografía editorial -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -5700,7 +5700,7 @@
   </div>
 
   <div class="nav-footer">
-    <span style="color:#f85149;">v2.7 · 13-may-2026</span><br>
+    <span style="color:#f85149;">v2.7.1 · 13-may-2026</span><br>
     SESNSP · Mar 2026<br>
     RNPDNO · Dic 2025<br>
     Regiones · PED 2025-2030<br>
@@ -21467,6 +21467,14 @@
 </section>
 
 <!-- sAx4 — Decadal HD -->
+
+<style>
+  .mini-chart-block { margin: 22px 0 8px; padding: 18px 20px; background: rgba(13,17,23,0.55); border: 1px solid rgba(48,54,61,0.6); border-radius: 12px; }
+  .mini-chart-block h4 { font-family:'Fraunces',Georgia,serif; font-size:17px; font-weight:700; color:#e6edf3; margin-bottom:6px; letter-spacing:-0.3px; }
+  .mini-chart-block .mc-sub { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:1px; color:#8b949e; text-transform:uppercase; margin-bottom:14px; }
+  .mini-chart-block .mc-canvas-wrap { position: relative; width: 100%; height: 280px; padding: 6px 0; }
+  .mini-chart-block .mc-footnote { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6e7681; margin-top:10px; letter-spacing:0.3px; text-align:center; }
+</style>
 <section id="sAx4">
   <h3>04 — Serie decadal · homicidio doloso 2016-2025</h3>
   <h1>El trienio en máximos · y la caída de 2025</h1>
@@ -21500,6 +21508,51 @@
       </table>
     </div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">AXOCHIAPAN · MÁX 2023=41 · CIERRE 2025: 8 (TASA 22/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_axochiapan"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 18.7/año · tasa decenal 50.5/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_axochiapan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [13,18,9,18,17,7,29,41,27,8],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,4,6,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <!-- sAx5 — Reclasificación espejo -->
@@ -21723,6 +21776,41 @@
   <div class="footer-note" style="margin-top:24px;">
     <strong>Metodología T1 2026 · Axochiapan.</strong> Una alza pasa criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5): RV (z=3.93, 2.66× media, &gt;máx histórico T1). Tres honorable mentions: HD (rebote +200% pero base baja), <em>tentativa de feminicidio</em> (aparición desde cero), EXT (aparición desde cero anual). La caída anual del HD –70% queda como flag abierto pendiente de explicación institucional.
   </div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">AXOCHIAPAN · 5 suben · 1 bajan · 0 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_axochiapan"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_axochiapan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [2,0,4,6,3,8], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [6,3,3,14,8,16], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -21917,6 +22005,51 @@
       </table>
     </div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">ZACATEPEC · MÁX 2021=23 · CIERRE 2025: 13 (TASA 36/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_zacatepec"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 16.1/año · tasa decenal 44.7/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_zacatepec');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [9,13,17,20,10,23,16,21,19,13],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,6,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <!-- sZc5 -->
@@ -22140,6 +22273,41 @@
   <div class="footer-note" style="margin-top:24px;">
     <strong>Metodología T1 2026 · Zacatepec.</strong> Una alza pasa criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5): VL (z=2.06, 3.44× media, &gt;máx hist T1). Dos honorable mentions: VF (+77%) y DP (+200%) — no alcanzan z≥2.5 pero las subidas absolutas merecen documentación. El NM T1 26 baja vs T1 25, pero el anual 2025 cerró con +208% AxA.
   </div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">ZACATEPEC · 3 suben · 3 bajan · 0 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_zacatepec"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_zacatepec');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [4,0,16,5,13,12], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [5,2,8,3,23,11], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -22324,6 +22492,51 @@
       </table>
     </div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">TLAQUILTENANGO · MÁX 2022=30 · CIERRE 2025: 16 (TASA 47/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_tlaquiltenango"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 19.4/año · tasa decenal 57.1/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_tlaquiltenango');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [14,19,16,13,19,29,30,22,16,16],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,6,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <!-- sTq5 -->
@@ -22544,6 +22757,41 @@
   <div class="footer-note" style="margin-top:24px;">
     <strong>Metodología T1 2026 · Tlaquiltenango.</strong> Dos alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5): NM (z=7.34, 7.07× media, supera máximo decenal T1) y RV (z=3.49, 2.52× media, supera máximo histórico T1). Honorable mentions: RN (1→4), DP (4→9, z=2.43). Único muni Tier A con dos alzas estrictas simultáneas en T1 26.
   </div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">TLAQUILTENANGO · 5 suben · 1 bajan · 0 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_tlaquiltenango"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_tlaquiltenango');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [6,0,2,6,11,4], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [3,2,9,14,13,7], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -22712,6 +22960,51 @@
       </table>
     </div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">XOXOCOTLA · MÁX 2024=21 · CIERRE 2025: 13 (TASA 45/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_xoxocotla"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 6.2/año · tasa decenal 21.4/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_xoxocotla');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [0,0,0,0,0,5,12,11,21,13],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,4,4,6,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sXx5">
@@ -22927,6 +23220,41 @@
   <div class="footer-note" style="margin-top:24px;">
     <strong>Metodología T1 2026 · Xoxocotla.</strong> Cero alzas pasan criterio estricto. Patrón general de baja vs T1 25. Honorable mentions: AM (2→5) y FR (1→2). Único muni Tier A sin alzas estrictas en T1 26. Datos solo desde 2021 — análisis decenal robusto requiere combinar con registros Puente de Ixtla pre-2017.
   </div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">XOXOCOTLA · 1 suben · 5 bajan · 0 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_xoxocotla"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_xoxocotla');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [5,0,3,4,6,3], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [1,1,1,2,4,2], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -23111,6 +23439,51 @@
       </table>
     </div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">MIACATLÁN · MÁX 2019=29 · CIERRE 2025: 13 (TASA 48/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_miacatlan"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 17.2/año · tasa decenal 63.7/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_miacatlan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [27,23,25,29,10,10,12,7,16,13],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,6,4,4,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sMc5">
@@ -23326,6 +23699,41 @@
   <div class="footer-note" style="margin-top:24px;">
     <strong>Metodología T1 2026 · Miacatlán.</strong> Cero alzas pasan criterio estricto. Patrón general de estabilidad o baja en T1 26 vs T1 25. Discordancia con el ciclo anual 2025 (+129% HD). El muni cierra Tier A con perfil de menor actividad delictiva T1 — único Tier A junto a Xoxocotla sin alzas estrictas.
   </div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">MIACATLÁN · 2 suben · 2 bajan · 2 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_miacatlan"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_miacatlan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [1,0,0,3,6,1], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [1,0,2,0,3,3], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -23423,6 +23831,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">1</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">3</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">TETELA DEL VOLCÁN · MÁX 2018=2 · CIERRE 2025: 1 (TASA 5/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_tetela"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 1/año · tasa decenal 5/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_tetela');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [1,1,2,2,0,1,0,2,0,1],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,6,4,4,4,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sTtv5">
@@ -23559,6 +24012,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 0 casos década. Cero registros formales — capacidad de denuncia institucional reducida. Reportería con familias y comisión de búsqueda indispensable.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Tetela del Volcán.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 1 honorable mentions (suben pero no alcanzan umbral). Muni mediano con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">TETELA DEL VOLCÁN · 1 suben · 3 bajan · 2 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_tetela"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_tetela');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [1,0,1,0,7,4], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [0,1,1,0,6,0], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -23656,6 +24144,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">OCUITUCO · MÁX 2019=4 · CIERRE 2025: 0 (TASA 0/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_ocuituco"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 2.3/año · tasa decenal 12.8/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_ocuituco');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [2,2,2,4,3,3,3,3,1,0],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,6,4,4,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sOc5">
@@ -23798,6 +24331,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 3 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Ocuituco.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 2 honorable mentions (suben pero no alcanzan umbral). Muni mediano con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">OCUITUCO · 1 suben · 4 bajan · 1 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_ocuituco"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_ocuituco');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [0,1,7,5,12,5], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [1,1,1,3,4,4], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -23895,6 +24463,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">12</td><td style="text-align:right;">3</td><td style="text-align:right;">0</td><td style="text-align:right;">15</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">AMACUZAC · MÁX 2020=30 · CIERRE 2025: 12 (TASA 67/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_amacuzac"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 14.4/año · tasa decenal 80/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_amacuzac');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [17,5,13,17,30,15,26,5,4,12],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,6,4,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sAm5">
@@ -24043,6 +24656,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 15 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Amacuzac.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 3 honorable mentions (suben pero no alcanzan umbral). Muni mediano con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">AMACUZAC · 2 suben · 1 bajan · 3 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_amacuzac"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_amacuzac');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [1,1,1,3,3,1], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [4,1,1,2,4,1], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -24140,6 +24788,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">8</td><td style="text-align:right;">2</td><td style="text-align:right;">1</td><td style="text-align:right;">11</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">JONACATEPEC · MÁX 2023=13 · CIERRE 2025: 8 (TASA 50/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_jonacatepec"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 4.9/año · tasa decenal 30.6/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_jonacatepec');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [3,2,1,3,4,2,6,13,7,8],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,4,6,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sJn5">
@@ -24294,6 +24987,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 4 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Jonacatepec.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 4 honorable mentions (suben pero no alcanzan umbral). Muni mediano con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">JONACATEPEC · 3 suben · 2 bajan · 1 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_jonacatepec"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_jonacatepec');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [3,0,2,2,6,2], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [4,0,1,5,4,6], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -24391,6 +25119,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">4</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">TEMOAC · MÁX 2020=9 · CIERRE 2025: 2 (TASA 13/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_temoac"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 5.8/año · tasa decenal 38.7/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_temoac');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [2,7,7,8,9,3,9,7,4,2],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,6,4,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sTmc5">
@@ -24533,6 +25306,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 3 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Temoac.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 2 honorable mentions (suben pero no alcanzan umbral). Muni mediano con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">TEMOAC · 1 suben · 2 bajan · 3 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_temoac"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_temoac');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [0,1,0,8,5,9], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [2,1,0,4,5,3], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -24630,6 +25438,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">6</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">6</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">TOTOLAPAN · MÁX 2023=8 · CIERRE 2025: 6 (TASA 55/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_totolapan"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 2.7/año · tasa decenal 24.5/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_totolapan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [1,2,1,0,1,2,0,8,6,6],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,4,6,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sTot5">
@@ -24784,6 +25637,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 7 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Totolapan.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 4 honorable mentions (suben pero no alcanzan umbral). Muni pequeño con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">TOTOLAPAN · 5 suben · 0 bajan · 1 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_totolapan"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_totolapan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [0,0,0,0,5,3], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [0,2,1,1,8,6], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -24876,6 +25764,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">8</td><td style="text-align:right;">4</td><td style="text-align:right;">0</td><td style="text-align:right;">12</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">COATETELCO · MÁX 2023=12 · CIERRE 2025: 8 (TASA 50/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_coatetelco"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 3.3/año · tasa decenal 20.6/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_coatetelco');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [0,0,0,0,0,1,5,12,7,8],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,4,6,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sCtc5">
@@ -25018,6 +25951,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 0 casos década. Cero registros formales — capacidad de denuncia institucional reducida. Reportería con familias y comisión de búsqueda indispensable.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Coatetelco.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 2 honorable mentions (suben pero no alcanzan umbral). Muni pequeño con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">COATETELCO · 0 suben · 4 bajan · 2 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_coatetelco"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_coatetelco');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [4,0,2,1,3,1], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [2,0,0,0,2,1], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -25115,6 +26083,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">13</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">15</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">COATLÁN DEL RÍO · MÁX 2023=18 · CIERRE 2025: 13 (TASA 118/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_coatlandelrio"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 10.8/año · tasa decenal 98.2/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_coatlandelrio');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [12,6,4,14,6,5,17,18,13,13],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,4,6,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sCdr5">
@@ -25251,6 +26264,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 10 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Coatlán del Río.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 1 honorable mentions (suben pero no alcanzan umbral). Muni pequeño con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">COATLÁN DEL RÍO · 0 suben · 3 bajan · 3 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_coatlandelrio"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_coatlandelrio');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [3,0,1,0,3,11], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [1,0,1,0,1,4], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -25348,6 +26396,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">1</td><td style="text-align:right;">0</td><td style="text-align:right;">0</td><td style="text-align:right;">1</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">ZACUALPAN · MÁX 2019=2 · CIERRE 2025: 1 (TASA 10/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_zacualpan"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 0.6/año · tasa decenal 6/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_zacualpan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [0,0,0,2,0,0,1,1,1,1],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,6,4,4,4,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sZa5">
@@ -25490,6 +26583,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 2 casos década. La proporción y temporalidad merecen reportería específica.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Zacualpan.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5). 2 honorable mentions (suben pero no alcanzan umbral). Muni pequeño con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">ZACUALPAN · 2 suben · 1 bajan · 3 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_zacualpan"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_zacualpan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [0,0,0,0,1,0], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [0,0,1,0,0,3], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -25582,6 +26710,51 @@
           <tr style="background:rgba(248,81,73,0.06);"><td>2025</td><td style="text-align:right;">1</td><td style="text-align:right;">1</td><td style="text-align:right;">0</td><td style="text-align:right;">2</td></tr>
         </tbody></table></div>
   </div>
+
+<div class="mini-chart-block">
+  <h4>Serie decenal · homicidio doloso 2016-2025</h4>
+  <div class="mc-sub">HUEYAPAN · MÁX 2022=1 · CIERRE 2025: 1 (TASA 14/100K)</div>
+  <div class="mc-canvas-wrap"><canvas id="c1_hueyapan"></canvas></div>
+  <div class="mc-footnote">Promedio decenal 0.2/año · tasa decenal 2.9/100K · SESNSP corte mar-2026</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c1_hueyapan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+      datasets: [{
+        label: 'Homicidio doloso',
+        data: [0,0,0,0,0,0,1,0,0,1],
+        borderColor: '#f85149',
+        backgroundColor: 'rgba(248,81,73,0.16)',
+        fill: true,
+        tension: 0.32,
+        pointBackgroundColor: ["#f85149","#f85149","#f85149","#f85149","#f85149","#f85149","#fbbf24","#f85149","#f85149","#f85149"],
+        pointBorderColor: '#0d1117',
+        pointBorderWidth: 1.5,
+        pointRadius: [4,4,4,4,4,4,6,4,4,4],
+        pointHoverRadius: 7,
+        borderWidth: 2.4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.3)' } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 <section id="sHy5">
@@ -25718,6 +26891,41 @@
     <p><strong>Tercero — sobre las desapariciones.</strong> 0 casos década. Cero registros formales — capacidad de denuncia institucional reducida. Reportería con familias y comisión de búsqueda indispensable.</p>
   </div>
   <div class="footer-note" style="margin-top:24px;"><strong>Metodología T1 2026 · Hueyapan.</strong> Cero alzas pasan criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5).  Muni pequeño con varianza estadística alta — interpretación cuidadosa de cualquier porcentaje.</div>
+
+<div class="mini-chart-block" style="margin-top:24px;">
+  <h4>T1 2025 vs T1 2026 · seis indicadores graves</h4>
+  <div class="mc-sub">HUEYAPAN · 1 suben · 3 bajan · 2 sin cambio · CORTE SESNSP MAR-2026</div>
+  <div class="mc-canvas-wrap"><canvas id="c2_hueyapan"></canvas></div>
+  <div class="mc-footnote">Cifras absolutas del primer trimestre · sin proyección anual · compara mismos meses (ene-feb-mar) entre años</div>
+</div>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  const ctx = document.getElementById('c2_hueyapan');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Homicidio doloso","Extorsión","Narcomenudeo","Robo de vehículo","Violencia familiar","Lesiones culposas"],
+      datasets: [
+        { label: 'T1 2025', data: [1,0,0,3,1,0], backgroundColor: 'rgba(139,148,158,0.55)', borderColor: '#8b949e', borderWidth: 1, borderRadius: 3 },
+        { label: 'T1 2026', data: [0,0,0,0,0,1], backgroundColor: 'rgba(248,81,73,0.65)', borderColor: '#f85149', borderWidth: 1, borderRadius: 3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 11 }, boxWidth: 14, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(13,17,23,0.96)', borderColor: '#30363d', borderWidth: 1, titleColor: '#c9d1d9', bodyColor: '#fff', padding: 10 }
+      },
+      scales: {
+        y: { beginAtZero: true, ticks: { color: '#8b949e', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { color: 'rgba(48,54,61,0.45)' } },
+        x: { ticks: { color: '#c9d1d9', font: { family: "'JetBrains Mono',monospace", size: 10 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
 </section>
 
 
@@ -27044,6 +28252,8 @@
   <div class="glo-group" style="margin-top:32px;">
     <div class="glo-cat">Historial de versiones</div>
     <dl class="glo-list">
+      <div class="glo-item"><dt>v2.7.1 · 13 de mayo de 2026</dt>
+        <dd style="text-align:justify;"><strong>Charts canónicos para los 15 munis que solo tenían tablas.</strong> Se inyectaron dos visualizaciones por muni en Axochiapan, Zacatepec, Tlaquiltenango, Xoxocotla, Miacatlán, Tetela del Volcán, Ocuituco, Amacuzac, Jonacatepec, Temoac, Totolapan, Coatetelco, Coatlán del Río, Zacualpan y Hueyapan: <strong>(1) Línea decenal HD 2016-2025</strong> al final de la sección 4 — destaca el año máximo en amarillo y muestra promedio decenal + tasa por 100K; <strong>(2) Barras agrupadas T1 2025 vs T1 2026</strong> al final de la sección 10 — compara seis indicadores graves (HD, extorsión, narcomenudeo, robo vehículo, violencia familiar, lesiones culposas) con conteos absolutos del trimestre. Total: 30 charts Chart.js nuevos. Cierra la asimetría visual con los munis Tier A grandes (Cuernavaca, Cuautla, Jiutepec, Temixco, Ayala, Tepoztán, Huitzilac, Mazatepec, Tetecala, Yecapixtla, Emiliano Zapata, Xochitepec, Tlaltizapán, Tlayacapan, Atlatlahucan) que ya tenían visualizaciones custom desde su construcción inicial. Datos extraídos de records_full.json (histórico 2016-2025 desde cache SESNSP corte dic-2025) + records.json (Q1 2026 desde cache mar-2026). Versión anterior: <a href="versiones/v2.7-2026-05-13/" style="color:#58a6ff;">v2.7 (13-may-2026 sin charts en Tier B/C)</a>.</dd></div>
       <div class="glo-item"><dt>v2.7 · 13 de mayo de 2026</dt>
         <dd style="text-align:justify;"><strong>Auditoría integral de cifras + ranking nacional T1 2026.</strong> Tres cosas pasaron en esta versión: (1) <strong>Cobertura completa a 36 munis</strong> — se publican secciones T1 2026 para los seis municipios que faltaban (Cuernavaca, Ayala, Yautepec, Atlatlahucan, Tlaltizapán, Tlayacapan) con datos extraídos directamente del cache SESNSP corte marzo 2026 y verificación de alza estricta por z-score, ratio sobre media histórica y máximo decenal T1. Hallazgos: Cuernavaca aparece HD_T 0→16 + PIL 0→13 desde cero (recategorización ministerial), Ayala consolida alza RV 4→16 que antecede el evento de "El Rincón de la Banda" (abril 18), Yautepec ratifica firma extorsiva con EXT 9→12 superando máximo histórico T1. (2) <strong>Auditoría exhaustiva de cifras</strong>: tres agentes paralelos validaron T1 2026 contra records.json (33 munis, 0 discrepancias graves), trazabilidad de Jojutla/Tepalcingo/Tlalnepantla (50% de cifras anuales sin respaldo local → corregidas extrayendo records históricos directos del SESNSP), y agregados sZE/sQ1/sNAC (matemática 100% sana). Correcciones graves aplicadas: Jojutla HD 2024 61→47 y HD 2025 43→31 con tabla letal completa reescrita y tasa 72→53/100K; Tlalnepantla HC 2024 4→2 con cambio +100→+300%; Tepalcingo "95 homicidios década"→"104 muertes violentas (78 dolosos)". Nomenclatura sQ1 "14 ZM"→"14 munis de las 2 ZM oficiales (Cuernavaca + Cuautla)". Axochiapan card feminicidio→tentativa de feminicidio. sNAC1/sNAC5 frase "sube cada año"→"tendencia creciente sostenida con interrupciones puntuales" (cierre 2025 cayó −25%). sNAC5 footer aclara que 21.13/100K es media simple no ponderada (vs 19.18 ponderada). Tepoztán narcomenudeo 0→22 verificado contra cache SESNSP. Nuevo archivo replicable <code>regiones_ped_aggregates_2025.json</code> reproduce las cifras del sZE al 100%. (3) <strong>sNAC6 · Ranking T1 2026 vs 32 entidades</strong>: nueva sección con 4 podium cards, 5 mini-ladders visuales y tabla resumen. Hallazgo nuclear: <strong>Morelos es #1 nacional en tasa per cápita anualizada de extorsión (31.84/100K), feminicidio (3.27/100K) y robo de vehículo (199.39/100K), #2 en homicidio doloso (52.04/100K, solo Colima por encima), y #1 en ratio T1 vs total anual 2025 de violencia familiar</strong>. La narrativa federal de −41% nacional en HD no incluye a Morelos. Versión anterior: <a href="versiones/v2.6-2026-05-12/" style="color:#58a6ff;">v2.6 (12-may-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.6 · 12 de mayo de 2026</dt>
@@ -27068,7 +28278,7 @@
     </p>
   </div>
 
-  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.7 (corte SESNSP marzo 2026 · 36 análisis municipales completos · 7 regiones PED 2025-2030 · ranking T1 2026 vs 32 entidades). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
+  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.7.1 (corte SESNSP marzo 2026 · 36 análisis municipales completos con charts Chart.js · 7 regiones PED 2025-2030 · ranking T1 2026 vs 32 entidades). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
 </section>
 
 <script>
