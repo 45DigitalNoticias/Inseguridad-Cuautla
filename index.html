@@ -13,8 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="version" content="2.2-draft">
 <meta name="generated" content="2026-04-19">
-<meta name="changelog" content="v2.5: seccion sTep10 Q1 2026 La Respuesta - confrontacion editorial con datos al alcalde de Tepoztlan tras declaracion publica del 28-abr-2026. 5 charts especificos: comparativa Q1 25 vs Q1 26 los 36 delitos, lesiones doloso vs culposo, lesiones culposas mes a mes, violencia sexual emergente x4.5, narcomenudeo decenal 2016-2026. Botones de zoom in/out con scrollbars en modo expandido. v2.4: seccion Decada Nacional (sNAC1-5). v2.3: actualización SESNSP corte mar-2026 (Q1 2026 parcial). v2.2: charts ZM con sobreproporción + ZM Cuautla agregada (sZMC1-3). v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
-<title>Morelos: Seguridad municipal — Hub de investigación (v2.6)</title>
+<meta name="changelog" content="v2.7: auditoria integral cifras + ranking nacional T1 2026 (sNAC6) - Morelos #1 nacional en tasa per capita anualizada de extorsion, feminicidio y robo de vehiculo; #2 en homicidio doloso solo debajo de Colima. Cobertura completa 36 munis con T1 2026 (se anaden Cuernavaca, Ayala, Yautepec, Atlatlahucan, Tlaltizapan, Tlayacapan). Correcciones graves: Jojutla HD 2024 61->47 y HD 2025 43->31 tabla letal reescrita, Tlalnepantla HC 2024 4->2 cambio +100->+300%, Tepalcingo 95 homicidios decada->104 muertes violentas. Nomenclatura 14 ZM->14 munis de 2 ZM oficiales. Records.json historicos extraidos desde SESNSP corte dic-2025 para Jojutla, Tepalcingo, Tlalnepantla, Tepoztan y 32 munis mas. Nuevo regiones_ped_aggregates_2025.json reproduce cifras sZE al 100%. v2.6: expansion 21 analisis municipales completos + reestructura regional al Plan Estatal de Desarrollo Morelos 2025-2030 (7 regiones PED), eliminadas secciones meta SEDATU. v2.5: seccion sTep10 Q1 2026 La Respuesta - confrontacion editorial con datos al alcalde de Tepoztlan tras declaracion publica del 28-abr-2026. 5 charts especificos: comparativa Q1 25 vs Q1 26 los 36 delitos, lesiones doloso vs culposo, lesiones culposas mes a mes, violencia sexual emergente x4.5, narcomenudeo decenal 2016-2026. Botones de zoom in/out con scrollbars en modo expandido. v2.4: seccion Decada Nacional (sNAC1-5). v2.3: actualización SESNSP corte mar-2026 (Q1 2026 parcial). v2.2: charts ZM con sobreproporción + ZM Cuautla agregada (sZMC1-3). v2.1: hub interactivo de municipios Morelos al inicio, nueva seccion El detalle mensual, matriz homicidio x desaparicion, glosario, explicaciones en palabras simples. v2.0: seccion Desapariciones (RNPDNO), correcciones numericas, conclusion matizada.">
+<title>Morelos: Seguridad municipal — Hub de investigación (v2.7)</title>
 <!-- Tipografía editorial -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -5700,7 +5700,7 @@
   </div>
 
   <div class="nav-footer">
-    <span style="color:#f85149;">v2.6 · 12-may-2026</span><br>
+    <span style="color:#f85149;">v2.7 · 13-may-2026</span><br>
     SESNSP · Mar 2026<br>
     RNPDNO · Dic 2025<br>
     Regiones · PED 2025-2030<br>
@@ -6237,7 +6237,7 @@
   <div class="nac-hero-eyebrow">SECCIÓN ESPECIAL · COHORTE NACIONAL</div>
   <h1 class="nac-hero-headline">Diez años después: la trayectoria de Morelos en homicidio doloso <em>es la peor de México</em></h1>
   <p class="nac-hero-lead">
-    En el periodo 2015 a 2025, Morelos subió el indicador de homicidio doloso prácticamente cada año, a un ritmo promedio de <strong>+8.76% anual</strong> — la pendiente decenal más alta de las 32 entidades del país. La tasa promedio del decenio (45.2 por 100K habitantes) es la tercera más alta a nivel nacional, más del doble del promedio del país. <strong>La trayectoria está desacoplada del comportamiento nacional</strong>: mientras varios estados mejoraron en el decenio o se mantuvieron estables, Morelos no detuvo el alza.
+    En el periodo 2015 a 2025, Morelos imprimió al indicador de homicidio doloso una tendencia creciente sostenida — con interrupciones puntuales (2020, 2021 y 2025 cerraron por debajo del pico previo) pero un ritmo promedio decenal de <strong>+8.76% anual</strong>: la pendiente más alta de las 32 entidades del país. La tasa promedio del decenio (45.2 por 100K habitantes) es la tercera más alta a nivel nacional, más del doble del promedio del país. <strong>La trayectoria está desacoplada del comportamiento nacional</strong>: mientras varios estados mejoraron en el decenio o se mantuvieron estables, Morelos no detuvo el alza estructural.
   </p>
 
   <div class="chart-zoomable nac-spiral-stage">
@@ -6372,7 +6372,7 @@
   <div class="nac-act-eyebrow"><span class="num">04</span>El cohorte · cómo se ve Morelos vs sus pares</div>
   <h2 class="nac-act-title">Cinco estados de tamaño similar · <em>una década paralela</em></h2>
   <p class="nac-act-lead">
-    Para responder a la crítica natural de que "Morelos es chico, no se compara con estados grandes", aquí están los cinco estados con población más cercana a Morelos (entre 1.4 y 3.2 millones de habitantes, todos del centro-sur de México): <strong>Querétaro</strong>, <strong>San Luis Potosí</strong>, <strong>Hidalgo</strong>, <strong>Tlaxcala</strong> y <strong>Aguascalientes</strong>. Ninguno tuvo la trayectoria de Morelos. Cuatro mantuvieron tasas estables; uno (San Luis Potosí) subió y luego bajó. Solo Morelos sube prácticamente cada año.
+    Para responder a la crítica natural de que "Morelos es chico, no se compara con estados grandes", aquí están los cinco estados con población más cercana a Morelos (entre 1.4 y 3.2 millones de habitantes, todos del centro-sur de México): <strong>Querétaro</strong>, <strong>San Luis Potosí</strong>, <strong>Hidalgo</strong>, <strong>Tlaxcala</strong> y <strong>Aguascalientes</strong>. Ninguno tuvo la trayectoria de Morelos. Cuatro mantuvieron tasas estables; uno (San Luis Potosí) subió y luego bajó. Solo Morelos sostiene una tendencia creciente decenal con bajas puntuales que no alcanzan a revertirla.
   </p>
   <div class="nac-cohort-wrap">
     <div style="position:relative;height:460px;margin:16px 0 8px;padding:12px 16px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.6);border-radius:10px;">
@@ -6413,7 +6413,7 @@
       Lo que muestran estos diez años de datos es que <strong>la trayectoria de Morelos está desacoplada del promedio nacional</strong> en los indicadores más graves del fuero común. La tasa decenal de homicidio doloso es la tercera del país. La tendencia anual — el ritmo al que el indicador empeora cada año — es la primera de 32 entidades. La extorsión creció 144% (vs 75% nacional). El robo de vehículo subió 23% mientras el país bajó 29%. La tasa de feminicidio del decenio es la más alta de México.
     </p>
     <p>
-      No es un fenómeno coyuntural. No es un año específico. No es una administración aislada — la serie atraviesa tres administraciones estatales y dos federales. La trayectoria es <strong>estructural y consistente</strong>: Morelos sube prácticamente todos los años, mientras el promedio nacional oscila o, en algunos indicadores, mejora.
+      No es un fenómeno coyuntural. No es un año específico. No es una administración aislada — la serie atraviesa tres administraciones estatales y dos federales. La trayectoria es <strong>estructural y consistente</strong>: Morelos sostiene una tendencia creciente decenal con interrupciones puntuales (2020 −12%, 2021 +28%, 2025 −25%) que no revierten el resultado neto +107.7%, mientras el promedio nacional oscila o, en algunos indicadores, mejora.
     </p>
     <p>
       Esta sección documenta la trayectoria de larga duración. Para el comportamiento puntual del primer trimestre 2026 — donde, predeciblemente, Morelos tampoco siguió la baja nacional del homicidio doloso — el dashboard cuenta con una <a href="#sQ1" style="color:#f85149;text-decoration:underline;">sección dedicada</a> que aterriza la coyuntura. La línea decenal y el último trimestre cuentan la misma historia desde escalas distintas.
@@ -6423,9 +6423,327 @@
   <div class="footer-note" style="text-align:justify;">
     <strong>Fuentes y método.</strong> SESNSP · Tabla Dinámica RNID Municipal Delitos · cortes diciembre 2025 (publicación febrero 2026) y marzo 2026 (publicación abril 2026). CONAPO 2025 para denominadores poblacionales. Tasas calculadas como (carpetas / población × 100,000).
     <br><br>
-    <strong>Métricas explicadas.</strong> <strong>Tasa promedio decenal:</strong> promedio anual de carpetas 2015-2025 dividido entre población × 100K. <strong>Tendencia anual (slope%):</strong> regresión lineal sobre la serie 2015-2025, expresada como porcentaje del promedio anual. <strong>Cambio 2015→2025:</strong> variación porcentual del valor inicial al final del decenio.
+    <strong>Métricas explicadas.</strong> <strong>Tasa promedio decenal:</strong> promedio anual de carpetas 2015-2025 dividido entre población × 100K. <strong>Tendencia anual (slope%):</strong> regresión lineal sobre la serie 2015-2025, expresada como porcentaje del promedio anual. <strong>Cambio 2015→2025:</strong> variación porcentual del valor inicial al final del decenio. <strong>Promedio nacional 21.13/100K:</strong> media aritmética simple de las 32 tasas estatales decenales (no ponderada por población; la versión ponderada equivale a ~19.18/100K — se usa la simple para que cada entidad pese igual al evaluar la posición relativa).
     <br><br>
     <strong>Lo que esta sección NO afirma.</strong> No atribuye responsabilidad a una administración específica — los datos cubren tres administraciones estatales y dos federales. No proyecta el comportamiento futuro. No afirma que Morelos sea "el peor estado del país" — es de los peores en algunos indicadores y se ve mejor en otros (notablemente narcomenudeo y violencia familiar, donde Morelos creció menos que el promedio nacional). La trayectoria estructural es lo que la data sostiene; las causas son materia de investigación posterior.
+  </div>
+</section>
+
+<!-- sNAC6 — La coyuntura T1 2026 nacional · Morelos vs 32 entidades -->
+<style>
+  #sNAC6 .nac6-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px; letter-spacing: 3px;
+    color: #f85149; font-weight: 800; text-transform: uppercase;
+    display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+  }
+  #sNAC6 .nac6-eyebrow::before {
+    content: ''; width: 36px; height: 2px; background: #f85149;
+  }
+  #sNAC6 .nac6-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.05; font-weight: 800; letter-spacing: -1.2px;
+    color: #e6edf3; margin-bottom: 18px; max-width: 22ch;
+  }
+  #sNAC6 .nac6-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #f85149 0%, #fbbf24 50%, #58a6ff 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  #sNAC6 .nac6-lead {
+    font-size: 17px; line-height: 1.6; color: #c9d1d9;
+    max-width: 78ch; text-align: justify; hyphens: auto;
+    margin-bottom: 28px;
+  }
+  #sNAC6 .nac6-lead strong { color: #e6edf3; }
+  #sNAC6 .nac6-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+
+  #sNAC6 .nac6-podium {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px; margin: 22px 0 32px;
+  }
+  #sNAC6 .nac6-pcard {
+    background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6));
+    border: 1px solid rgba(48,54,61,0.7);
+    border-radius: 12px; padding: 18px 20px;
+    position: relative; overflow: hidden;
+  }
+  #sNAC6 .nac6-pcard::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #f85149, #fbbf24);
+  }
+  #sNAC6 .nac6-pcard.silver::before { background: linear-gradient(90deg, #fbbf24, #58a6ff); }
+  #sNAC6 .nac6-pcard .nac6-rank-pill {
+    display: inline-block; font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 1.4px; font-weight: 800;
+    color: #ff7b72; background: rgba(248,81,73,0.18);
+    padding: 3px 9px; border-radius: 8px; margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  #sNAC6 .nac6-pcard.silver .nac6-rank-pill { color: #fbbf24; background: rgba(251,191,36,0.18); }
+  #sNAC6 .nac6-pcard h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 21px; color: #e6edf3; font-weight: 700;
+    margin-bottom: 4px;
+  }
+  #sNAC6 .nac6-pcard .nac6-position {
+    display: flex; align-items: baseline; gap: 12px; margin: 10px 0 8px;
+  }
+  #sNAC6 .nac6-pcard .nac6-pos-num {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 56px; font-weight: 900;
+    line-height: 1; letter-spacing: -2px;
+    color: #f85149;
+  }
+  #sNAC6 .nac6-pcard.silver .nac6-pos-num { color: #fbbf24; }
+  #sNAC6 .nac6-pcard .nac6-pos-of {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: #8b949e; font-weight: 600;
+  }
+  #sNAC6 .nac6-pcard .nac6-rate {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: #c9d1d9; font-weight: 700;
+    margin-bottom: 8px;
+  }
+  #sNAC6 .nac6-pcard .nac6-rate strong { color: #ff7b72; }
+  #sNAC6 .nac6-pcard.silver .nac6-rate strong { color: #fbbf24; }
+  #sNAC6 .nac6-pcard .nac6-note {
+    font-size: 12.5px; color: #c9d1d9; line-height: 1.55;
+    padding-top: 8px; border-top: 1px solid rgba(48,54,61,0.6);
+    text-align: justify;
+  }
+  #sNAC6 .nac6-pcard .nac6-note strong { color: #e6edf3; }
+
+  #sNAC6 .nac6-ladder-wrap {
+    background: rgba(13,17,23,0.55);
+    border: 1px solid rgba(48,54,61,0.6);
+    border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 22px;
+  }
+  #sNAC6 .nac6-ladder-wrap h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 19px; font-weight: 700; color: #e6edf3;
+    margin-bottom: 8px;
+  }
+  #sNAC6 .nac6-ladder-wrap .nac6-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 1.2px;
+    color: #8b949e; text-transform: uppercase; margin-bottom: 14px;
+  }
+  #sNAC6 .nac6-ladder {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  #sNAC6 .nac6-row {
+    display: grid;
+    grid-template-columns: 28px 1.5fr 5fr 90px;
+    gap: 10px; align-items: center;
+    padding: 4px 8px; border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11.5px;
+  }
+  #sNAC6 .nac6-row.morelos {
+    background: rgba(248,81,73,0.12);
+    border-left: 3px solid #f85149;
+  }
+  #sNAC6 .nac6-row .nac6-pos {
+    color: #6e7681; font-weight: 700; text-align: center;
+  }
+  #sNAC6 .nac6-row .nac6-ent { color: #c9d1d9; font-weight: 600; font-size: 12px; }
+  #sNAC6 .nac6-row.morelos .nac6-ent { color: #f85149; font-weight: 800; }
+  #sNAC6 .nac6-row .nac6-bar-wrap {
+    height: 14px; background: rgba(48,54,61,0.4); border-radius: 3px;
+    position: relative; overflow: hidden;
+  }
+  #sNAC6 .nac6-row .nac6-bar {
+    position: absolute; top: 0; left: 0; height: 100%;
+    background: linear-gradient(90deg, rgba(248,81,73,0.7), #f85149);
+    border-radius: 3px;
+  }
+  #sNAC6 .nac6-row.morelos .nac6-bar {
+    background: linear-gradient(90deg, #fbbf24, #f85149);
+    box-shadow: 0 0 10px rgba(248,81,73,0.4);
+  }
+  #sNAC6 .nac6-row.podium .nac6-bar {
+    background: linear-gradient(90deg, rgba(88,166,255,0.6), #58a6ff);
+  }
+  #sNAC6 .nac6-row .nac6-val {
+    text-align: right; color: #c9d1d9; font-weight: 700;
+  }
+  #sNAC6 .nac6-row.morelos .nac6-val { color: #f85149; }
+  #sNAC6 .nac6-grid-2 {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    margin-bottom: 22px;
+  }
+  @media (max-width: 880px) { #sNAC6 .nac6-grid-2 { grid-template-columns: 1fr; } }
+
+  #sNAC6 .nac6-closing {
+    background: linear-gradient(135deg, rgba(248,81,73,0.10) 0%, rgba(13,17,23,0.5) 100%);
+    border: 1px solid rgba(248,81,73,0.4);
+    border-left: 4px solid #f85149;
+    border-radius: 14px; padding: 24px 28px; margin-top: 8px;
+  }
+  #sNAC6 .nac6-closing h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(22px, 3vw, 28px); line-height: 1.2;
+    color: #e6edf3; font-weight: 800; margin-bottom: 14px;
+  }
+  #sNAC6 .nac6-closing h2 em { color: #f85149; font-style: italic; }
+  #sNAC6 .nac6-closing p {
+    font-size: 14.5px; color: #c9d1d9; line-height: 1.65;
+    margin-bottom: 10px; text-align: justify; hyphens: auto;
+  }
+  #sNAC6 .nac6-closing p strong { color: #e6edf3; }
+</style>
+
+<section id="sNAC6">
+  <div class="nac6-eyebrow"><span style="background:rgba(248,81,73,0.15);padding:3px 9px;border-radius:8px;font-weight:900;">06</span>· La coyuntura T1 2026 · Morelos vs las 32 entidades</div>
+  <h1 class="nac6-title">El trimestre que el país <em>presumió</em> y Morelos <em>no pudo presumir</em></h1>
+  <p class="nac6-lead">
+    El 14 de abril de 2026 el SESNSP publicó el corte trimestral de incidencia delictiva. La narrativa federal celebra <strong>−41% en el promedio diario nacional de homicidios dolosos</strong> respecto a septiembre 2024, con siete entidades destacadas en mañanera (Guanajuato −59%, Sinaloa −63%, Nuevo León −69%, Quintana Roo −63%, Zacatecas −71%, Baja California −44%, San Luis Potosí −87%). <strong>Morelos no aparece en ese conteo.</strong> Si la trayectoria decenal ya nos dijo que Morelos está desacoplado en el largo plazo, el T1 2026 ratifica el desacoplamiento en la coyuntura: cuando el promedio nacional baja, Morelos <em>se sostiene en la cabeza del ranking</em> en cuatro indicadores graves.
+  </p>
+
+  <!-- Podium: 4 indicadores donde Morelos lidera o queda segundo -->
+  <div class="nac6-podium">
+    <article class="nac6-pcard silver">
+      <span class="nac6-rank-pill">Homicidio doloso · Q1 2026</span>
+      <h4>Solo Colima por encima</h4>
+      <div class="nac6-position"><span class="nac6-pos-num">#2</span><span class="nac6-pos-of">de 32 entidades</span></div>
+      <div class="nac6-rate"><strong>52.04 / 100K</strong> · tasa Q1 anualizada · Morelos 255 carpetas</div>
+      <p class="nac6-note">Morelos cerró T1 2026 con <strong>255 carpetas</strong> (vs 256 en T1 2025, −0.4%). Mientras siete estados se desplomaron, Morelos quedó plano. La caída del 41% nacional no incluye a este estado. <strong>Colima lidera</strong> con 78.02/100K — Morelos triplica al cuarto lugar (Sinaloa 32.33).</p>
+    </article>
+    <article class="nac6-pcard">
+      <span class="nac6-rank-pill">Extorsión · Q1 2026</span>
+      <h4>Capital nacional de la extorsión</h4>
+      <div class="nac6-position"><span class="nac6-pos-num">#1</span><span class="nac6-pos-of">de 32 entidades</span></div>
+      <div class="nac6-rate"><strong>31.84 / 100K</strong> · tasa Q1 anualizada · Morelos 156 carpetas</div>
+      <p class="nac6-note">Pasó de 59 a 156 carpetas entre T1 2025 y T1 2026 — <strong>+164.4%</strong>. Zacatecas, segundo lugar nacional, queda en 27.15/100K. <strong>Cuautla concentra 60 de esas 156 carpetas</strong> (43%); Xochitepec aparece como nuevo polo con 24 en T1 (vs 4 anual 2025).</p>
+    </article>
+    <article class="nac6-pcard">
+      <span class="nac6-rank-pill">Feminicidio · Q1 2026</span>
+      <h4>Primer lugar nacional</h4>
+      <div class="nac6-position"><span class="nac6-pos-num">#1</span><span class="nac6-pos-of">de 32 entidades</span></div>
+      <div class="nac6-rate"><strong>3.27 / 100K</strong> · tasa Q1 anualizada · Morelos 16 carpetas</div>
+      <p class="nac6-note">Pasó de 7 a 16 feminicidios entre T1 2025 y T1 2026 — <strong>+128.6%</strong>. Sonora queda en 3.21/100K (segundo). El indicador donde Morelos era #1 decenal en tasa promedio (1.67/100K) <strong>se mantiene en el primer lugar nacional</strong> también en el trimestre.</p>
+    </article>
+    <article class="nac6-pcard">
+      <span class="nac6-rank-pill">Robo de vehículo · Q1 2026</span>
+      <h4>Primer lugar nacional</h4>
+      <div class="nac6-position"><span class="nac6-pos-num">#1</span><span class="nac6-pos-of">de 32 entidades</span></div>
+      <div class="nac6-rate"><strong>199.39 / 100K</strong> · tasa Q1 anualizada · Morelos 977 carpetas</div>
+      <p class="nac6-note">Aunque Morelos cayó −20.9% (1,235→977), Baja California cayó más fuerte (−42%) y Sinaloa también, dejando a Morelos en el primer lugar nacional por tasa per cápita. <strong>El robo de vehículo del decenio aquí seguía subiendo</strong> mientras el país bajaba; la inercia del stock lo conserva en la cima.</p>
+    </article>
+  </div>
+
+  <!-- Mini ranking: HD top 8 entidades por tasa Q1 anualizada -->
+  <div class="nac6-ladder-wrap">
+    <h3>Homicidio doloso · top 8 por tasa Q1 2026 anualizada</h3>
+    <div class="nac6-sub">Cada estado escala su barra al máximo (Colima 78.02/100K). La fila de Morelos resalta en rojo.</div>
+    <div class="nac6-ladder">
+      <div class="nac6-row podium"><span class="nac6-pos">1</span><span class="nac6-ent">Colima</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:100%;"></div></div><span class="nac6-val">78.02</span></div>
+      <div class="nac6-row morelos"><span class="nac6-pos">2</span><span class="nac6-ent">Morelos</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:66.7%;"></div></div><span class="nac6-val">52.04</span></div>
+      <div class="nac6-row"><span class="nac6-pos">3</span><span class="nac6-ent">Chihuahua</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:42.5%;"></div></div><span class="nac6-val">33.19</span></div>
+      <div class="nac6-row"><span class="nac6-pos">4</span><span class="nac6-ent">Sinaloa</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:41.4%;"></div></div><span class="nac6-val">32.33</span></div>
+      <div class="nac6-row"><span class="nac6-pos">5</span><span class="nac6-ent">Baja California</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:40.9%;"></div></div><span class="nac6-val">31.90</span></div>
+      <div class="nac6-row"><span class="nac6-pos">6</span><span class="nac6-ent">Sonora</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:30.7%;"></div></div><span class="nac6-val">23.97</span></div>
+      <div class="nac6-row"><span class="nac6-pos">7</span><span class="nac6-ent">Guerrero</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:28.1%;"></div></div><span class="nac6-val">21.93</span></div>
+      <div class="nac6-row"><span class="nac6-pos">8</span><span class="nac6-ent">Zacatecas</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:25.6%;"></div></div><span class="nac6-val">19.97</span></div>
+    </div>
+  </div>
+
+  <!-- Grid 2 cols: Extorsion y Feminicidio top 6 -->
+  <div class="nac6-grid-2">
+    <div class="nac6-ladder-wrap" style="margin-bottom:0;">
+      <h3>Extorsión · top 6 por tasa Q1 2026</h3>
+      <div class="nac6-sub">Morelos #1 con 31.84/100K. Cuautla concentra 43% del total estatal.</div>
+      <div class="nac6-ladder">
+        <div class="nac6-row morelos"><span class="nac6-pos">1</span><span class="nac6-ent">Morelos</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:100%;"></div></div><span class="nac6-val">31.84</span></div>
+        <div class="nac6-row"><span class="nac6-pos">2</span><span class="nac6-ent">Zacatecas</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:85.3%;"></div></div><span class="nac6-val">27.15</span></div>
+        <div class="nac6-row"><span class="nac6-pos">3</span><span class="nac6-ent">Ciudad de México</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:76.3%;"></div></div><span class="nac6-val">24.28</span></div>
+        <div class="nac6-row"><span class="nac6-pos">4</span><span class="nac6-ent">Colima</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:71.4%;"></div></div><span class="nac6-val">22.72</span></div>
+        <div class="nac6-row"><span class="nac6-pos">5</span><span class="nac6-ent">Guanajuato</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:60.2%;"></div></div><span class="nac6-val">19.16</span></div>
+        <div class="nac6-row"><span class="nac6-pos">6</span><span class="nac6-ent">Querétaro</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:57.8%;"></div></div><span class="nac6-val">18.39</span></div>
+      </div>
+    </div>
+    <div class="nac6-ladder-wrap" style="margin-bottom:0;">
+      <h3>Feminicidio · top 6 por tasa Q1 2026</h3>
+      <div class="nac6-sub">Morelos #1 con 3.27/100K. Sonora 0.06 abajo. Diferencia mínima → ratifica el liderato.</div>
+      <div class="nac6-ladder">
+        <div class="nac6-row morelos"><span class="nac6-pos">1</span><span class="nac6-ent">Morelos</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:100%;"></div></div><span class="nac6-val">3.27</span></div>
+        <div class="nac6-row"><span class="nac6-pos">2</span><span class="nac6-ent">Sonora</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:98.2%;"></div></div><span class="nac6-val">3.21</span></div>
+        <div class="nac6-row"><span class="nac6-pos">3</span><span class="nac6-ent">Nuevo León</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:80.7%;"></div></div><span class="nac6-val">2.64</span></div>
+        <div class="nac6-row"><span class="nac6-pos">4</span><span class="nac6-ent">Tabasco</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:58.1%;"></div></div><span class="nac6-val">1.90</span></div>
+        <div class="nac6-row"><span class="nac6-pos">5</span><span class="nac6-ent">Quintana Roo</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:57.2%;"></div></div><span class="nac6-val">1.87</span></div>
+        <div class="nac6-row"><span class="nac6-pos">6</span><span class="nac6-ent">Sinaloa</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:54.7%;"></div></div><span class="nac6-val">1.79</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Robo de vehículo + tabla resumen Morelos en 6 indicadores -->
+  <div class="nac6-grid-2">
+    <div class="nac6-ladder-wrap" style="margin-bottom:0;">
+      <h3>Robo de vehículo · top 6 por tasa Q1 2026</h3>
+      <div class="nac6-sub">Morelos #1 a pesar de caer −20.9% YoY. La inercia del decenio lo conserva.</div>
+      <div class="nac6-ladder">
+        <div class="nac6-row morelos"><span class="nac6-pos">1</span><span class="nac6-ent">Morelos</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:100%;"></div></div><span class="nac6-val">199.4</span></div>
+        <div class="nac6-row"><span class="nac6-pos">2</span><span class="nac6-ent">Baja California</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:93.4%;"></div></div><span class="nac6-val">186.2</span></div>
+        <div class="nac6-row"><span class="nac6-pos">3</span><span class="nac6-ent">Sinaloa</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:80.5%;"></div></div><span class="nac6-val">160.5</span></div>
+        <div class="nac6-row"><span class="nac6-pos">4</span><span class="nac6-ent">Puebla</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:66.3%;"></div></div><span class="nac6-val">132.2</span></div>
+        <div class="nac6-row"><span class="nac6-pos">5</span><span class="nac6-ent">Quintana Roo</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:61.7%;"></div></div><span class="nac6-val">123.1</span></div>
+        <div class="nac6-row"><span class="nac6-pos">6</span><span class="nac6-ent">Querétaro</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:58.9%;"></div></div><span class="nac6-val">117.4</span></div>
+      </div>
+    </div>
+    <div class="nac6-ladder-wrap" style="margin-bottom:0;">
+      <h3>Violencia familiar · ratio T1 26 vs anual 2025</h3>
+      <div class="nac6-sub">Morelos #1 nacional en el cociente "ritmo T1 26 anualizado / total 2025". Solo lugar donde Morelos lidera por aceleración.</div>
+      <div class="nac6-ladder">
+        <div class="nac6-row morelos"><span class="nac6-pos">1</span><span class="nac6-ent">Morelos</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:100%;"></div></div><span class="nac6-val">1.11×</span></div>
+        <div class="nac6-row"><span class="nac6-pos">2</span><span class="nac6-ent">Guerrero</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:97.4%;"></div></div><span class="nac6-val">1.08×</span></div>
+        <div class="nac6-row"><span class="nac6-pos">3</span><span class="nac6-ent">Michoacán</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:96.1%;"></div></div><span class="nac6-val">1.07×</span></div>
+        <div class="nac6-row"><span class="nac6-pos">4</span><span class="nac6-ent">Puebla</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:92.3%;"></div></div><span class="nac6-val">1.02×</span></div>
+        <div class="nac6-row"><span class="nac6-pos">5</span><span class="nac6-ent">Sinaloa</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:91.2%;"></div></div><span class="nac6-val">1.01×</span></div>
+        <div class="nac6-row"><span class="nac6-pos">6</span><span class="nac6-ent">Baja California</span><div class="nac6-bar-wrap"><div class="nac6-bar" style="width:91.0%;"></div></div><span class="nac6-val">1.01×</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resumen Morelos en los 6 indicadores T1 2026 nacional -->
+  <div class="nac6-ladder-wrap">
+    <h3>Resumen · posición nacional de Morelos en T1 2026</h3>
+    <div class="nac6-sub">Seis indicadores graves del fuero común · posición por tasa Q1 anualizada (1 = más alto, 32 = más bajo).</div>
+    <div style="overflow-x:auto;margin-top:6px;">
+      <table class="rk-table" style="min-width:560px;">
+        <thead><tr><th>Indicador</th><th style="text-align:right;">Q1 2025</th><th style="text-align:right;">Q1 2026</th><th style="text-align:right;">Δ%</th><th style="text-align:right;">Tasa Q1 anu /100K</th><th style="text-align:right;">Pos / 32</th></tr></thead>
+        <tbody>
+          <tr style="background:rgba(248,81,73,0.10);"><td><strong>Extorsión</strong></td><td style="text-align:right;">59</td><td style="text-align:right;color:#f85149;"><strong>156</strong></td><td style="text-align:right;color:#f85149;"><strong>+164.4%</strong></td><td style="text-align:right;color:#f85149;"><strong>31.84</strong></td><td style="text-align:right;color:#f85149;font-weight:800;">#1</td></tr>
+          <tr style="background:rgba(248,81,73,0.10);"><td><strong>Feminicidio</strong></td><td style="text-align:right;">7</td><td style="text-align:right;color:#f85149;"><strong>16</strong></td><td style="text-align:right;color:#f85149;"><strong>+128.6%</strong></td><td style="text-align:right;color:#f85149;"><strong>3.27</strong></td><td style="text-align:right;color:#f85149;font-weight:800;">#1</td></tr>
+          <tr style="background:rgba(248,81,73,0.10);"><td><strong>Robo de vehículo</strong></td><td style="text-align:right;">1,235</td><td style="text-align:right;"><strong>977</strong></td><td style="text-align:right;color:#79c0ff;">−20.9%</td><td style="text-align:right;color:#f85149;"><strong>199.39</strong></td><td style="text-align:right;color:#f85149;font-weight:800;">#1</td></tr>
+          <tr style="background:rgba(251,191,36,0.08);"><td><strong>Homicidio doloso</strong></td><td style="text-align:right;">256</td><td style="text-align:right;"><strong>255</strong></td><td style="text-align:right;color:#8b949e;">−0.4%</td><td style="text-align:right;color:#fbbf24;"><strong>52.04</strong></td><td style="text-align:right;color:#fbbf24;font-weight:800;">#2</td></tr>
+          <tr><td>Violencia familiar</td><td style="text-align:right;">1,370</td><td style="text-align:right;"><strong>1,612</strong></td><td style="text-align:right;color:#ff7b72;">+17.7%</td><td style="text-align:right;">328.98</td><td style="text-align:right;">#7</td></tr>
+          <tr><td>Narcomenudeo</td><td style="text-align:right;">245</td><td style="text-align:right;"><strong>297</strong></td><td style="text-align:right;color:#ff7b72;">+21.2%</td><td style="text-align:right;">60.61</td><td style="text-align:right;">#15</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="nac6-closing">
+    <h2>Un trimestre nacional que celebra · <em>una entidad que no puede celebrar</em></h2>
+    <p>
+      La administración federal puso a marzo 2026 como el mes con menos homicidios dolosos desde 2016 — un dato real a nivel agregado. Pero <strong>la baja nacional no es uniforme</strong>: siete estados pulverizaron sus indicadores, otros se mantuvieron estables, y un grupo pequeño no acompañó el descenso. Morelos pertenece a este último grupo, no como excepción coyuntural sino como <strong>continuación del desacoplamiento decenal</strong> que documentamos en las secciones anteriores.
+    </p>
+    <p>
+      En tasa per cápita anualizada del primer trimestre, <strong>Morelos es número uno nacional en tres de los seis indicadores graves del fuero común</strong> (extorsión, feminicidio, robo de vehículo). En homicidio doloso queda segundo, solo por debajo de Colima. En violencia familiar el muni queda séptimo pero lidera el ratio T1 vs total anual 2025 (1.11×) — es decir, va al ritmo más rápido del país en esa categoría. Solo en narcomenudeo (posición 15) Morelos queda por debajo de los promedios graves.
+    </p>
+    <p>
+      La lectura editorial: cuando la conversación nacional gira en torno a un éxito federal, <strong>Morelos exige una conversación propia</strong>. Las cifras del decenio (sNAC1-sNAC5) explicaron la trayectoria de larga duración. Las cifras de este trimestre (sNAC6) explican la coyuntura. <em>Coinciden en sentido y en magnitud</em>: el estado no sigue la curva nacional ni en la década ni en el primer trimestre del año en curso. El segundo trimestre del 2026 dirá si esto es la inercia de una estructura o el inicio de una corrección.
+    </p>
+  </div>
+
+  <div class="footer-note" style="text-align:justify;margin-top:18px;">
+    <strong>Fuentes y método.</strong> SESNSP · Tabla Dinámica RNID Estatal Delitos · corte marzo 2026 (publicación 14 abril 2026). CONAPO 2025 para denominadores poblacionales. <strong>Tasa Q1 anualizada:</strong> carpetas T1 2026 × 4 / población × 100,000. Equivale a la tasa anual que resultaría si el ritmo del trimestre se sostuviera todo el año. No es proyección — es comparación a tasa anualizada equivalente, métrica usada por SESNSP para comparar trimestres con periodos anuales.
+    <br><br>
+    <strong>Por qué tasas anualizadas y no totales T1.</strong> Los estados grandes (México, CDMX) tienen mucho más volumen absoluto por aritmética poblacional, lo cual sesga rankings por totales. La tasa per cápita anualizada equipara escalas y compara intensidad estructural por habitante. Es la métrica estándar de comparación interestatal.
+    <br><br>
+    <strong>Replicación.</strong> Los datos están en <code>scripts/auditoria/cohorte_nacional_q1.json</code> (32 estados, 7 indicadores, Q1 25 vs Q1 26) y <code>scripts/auditoria/ranking_t1_2026_full.json</code> (rankings derivados). El cómputo está en <code>scripts/cohorte_nacional_q1.js</code>.
   </div>
 </section>
 
@@ -9124,6 +9442,96 @@
   </div>
 </section>
 
+<!-- sA10 — T1 2026 · ROBO DE VEHÍCULO DISPARA -->
+<style>
+  #sA10 .a10-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 3px; color: #f85149; font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #sA10 .a10-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
+  #sA10 .a10-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -1.2px; color: #e6edf3; margin-bottom: 18px; max-width: 22ch; }
+  #sA10 .a10-title em { font-style: normal; background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #a371f7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  #sA10 .a10-lead { font-size: 17px; line-height: 1.6; color: #c9d1d9; max-width: 78ch; text-align: justify; hyphens: auto; margin-bottom: 28px; }
+  #sA10 .a10-lead strong { color: #e6edf3; }
+  #sA10 .a10-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+  #sA10 .a10-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  #sA10 .a10-card { background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6)); border: 1px solid rgba(48,54,61,0.7); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+  #sA10 .a10-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  #sA10 .a10-card.warm::before { background: linear-gradient(90deg, #f85149, #fbbf24); }
+  #sA10 .a10-card.cool::before { background: linear-gradient(90deg, #a371f7, #58a6ff); }
+  #sA10 .a10-card .pill { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.2px; font-weight: 800; padding: 2px 7px; border-radius: 8px; margin-bottom: 8px; text-transform: uppercase; }
+  #sA10 .a10-card.warm .pill { color: #ff7b72; background: rgba(248,81,73,0.15); }
+  #sA10 .a10-card.cool .pill { color: #d2a8ff; background: rgba(163,113,247,0.15); }
+  #sA10 .a10-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; color: #e6edf3; font-weight: 700; margin-bottom: 6px; }
+  #sA10 .a10-card .quote { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  #sA10 .a10-card .quote .from { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6e7681; }
+  #sA10 .a10-card .quote .arr { color: #6e7681; font-size: 12px; }
+  #sA10 .a10-card .quote .to { font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+  #sA10 .a10-card.warm .quote .to { color: #f85149; }
+  #sA10 .a10-card.cool .quote .to { color: #a371f7; }
+  #sA10 .a10-card .stat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #8b949e; margin-top: 4px; }
+  #sA10 .a10-card .stat strong { color: #c9d1d9; }
+  #sA10 .a10-card .note { font-size: 12.5px; color: #c9d1d9; line-height: 1.5; margin-top: 8px; text-align: justify; hyphens: auto; }
+  #sA10 .a10-cierre { background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%); border: 1px solid rgba(248,81,73,0.4); border-left: 4px solid #f85149; border-radius: 14px; padding: 24px 28px; }
+  #sA10 .a10-cierre h3 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #e6edf3; font-weight: 800; margin-bottom: 14px; }
+  #sA10 .a10-cierre h3 em { color: #f85149; font-style: italic; }
+  #sA10 .a10-cierre p { font-size: 14.5px; color: #c9d1d9; line-height: 1.65; margin-bottom: 10px; text-align: justify; hyphens: auto; }
+  #sA10 .a10-cierre p strong { color: #e6edf3; }
+</style>
+
+<section id="sA10" style="border-left:4px solid #f85149;padding-left:24px;">
+  <div class="a10-eyebrow">10 · T1 2026 · CORREDOR REACTIVADO</div>
+  <h1 class="a10-title">Ayala · <em>el robo de vehículo</em> rebasa el máximo decenal en un solo trimestre</h1>
+  <p class="a10-lead">
+    Ayala entra en T1 2026 con una alza estricta brutal: <strong>robo de vehículo pasa de 4 a 16 carpetas</strong> (z = 2.59, ratio 2.84× la media histórica, supera el maxHist anterior de 15). El indicador rebasa, en un solo trimestre, el máximo decadal del muni. La firma del corredor Cuautla-Ayala se reactiva con violencia patrimonial: <em>homicidio doloso también sube</em> (11 → 14, +27%) y la <strong>extorsión se mantiene alta</strong> (7 → 5 con ratio 2.89× sobre media). Cuatro meses antes del operativo del bar "El Rincón de la Banda" (abr-2026, 8 asesinados), las firmas estadísticas del muni ya anticipaban la reactivación.
+  </p>
+
+  <div class="a10-cards">
+    <article class="a10-card warm">
+      <span class="pill">RV · Robo de vehículo ★ ALZA ESTRICTA</span>
+      <h4>2.84× sobre media · rebasa maxHist</h4>
+      <div class="quote"><span class="from">4</span><span class="arr">→</span><span class="to">16</span></div>
+      <div class="stat"><strong>+12</strong> carpetas · z = 2.59 · 2.84× media · maxHist T1 anterior = 15</div>
+      <p class="note">Pasa de 4 a 16 carpetas en un solo trimestre. Supera el máximo decenal T1 (15) del muni. La firma del corredor Cuautla-Ayala vuelve a la mesa con violencia patrimonial activa.</p>
+    </article>
+    <article class="a10-card warm">
+      <span class="pill">HD · Homicidio doloso</span>
+      <h4>11 → 14 · +27%</h4>
+      <div class="quote"><span class="from">11</span><span class="arr">→</span><span class="to">14</span></div>
+      <div class="stat"><strong>+3</strong> carpetas · z = 1.49 · 1.69× media · iguala maxHist T1</div>
+      <p class="note">Sin alza estricta (z &lt; 2.5), pero iguala el máximo histórico T1 del muni. Anticipa, en datos del corte SESNSP marzo, lo que cuatro semanas después se materializaría en el bar de El Rincón de la Banda.</p>
+    </article>
+    <article class="a10-card warm">
+      <span class="pill">NM · Narcomenudeo</span>
+      <h4>3 → 4 · ratio 2.93×</h4>
+      <div class="quote"><span class="from">3</span><span class="arr">→</span><span class="to">4</span></div>
+      <div class="stat"><strong>+1</strong> carpeta · z = 2.85 · 2.93× media · maxHist T1 = 3</div>
+      <p class="note">No alcanza umbral de 5 carpetas para alza estricta, pero el z = 2.85 es de los más altos de la serie. Mercado local persistente, congruente con la trayectoria 2022-2025 del muni.</p>
+    </article>
+    <article class="a10-card cool">
+      <span class="pill">EXT · Extorsión</span>
+      <h4>2.89× sobre media histórica</h4>
+      <div class="quote"><span class="from">7</span><span class="arr">→</span><span class="to">5</span></div>
+      <div class="stat"><strong>−2</strong> carpetas · z = 1.20 · 2.89× media · maxHist T1 = 7</div>
+      <p class="note">Baja vs T1 2025 pero sigue 2.89× sobre media histórica. La extorsión no se descomprime: solo desacelera respecto al pico T1 2025.</p>
+    </article>
+  </div>
+
+  <div class="a10-cierre">
+    <h3>¿Qué deberíamos exigir <em>en Ayala</em>?</h3>
+    <p>
+      La alza estricta del robo de vehículo es la entrada editorial central. <strong>Tres preguntas a Fiscalía Regional.</strong> Primero, modalidad de las 16 carpetas: con violencia o sin violencia, vehículos comerciales o particulares, recuperación temprana o pérdida total. Segundo, cruce con el operativo del bar "El Rincón de la Banda" del 18-abr-2026: ¿los 5 motociclistas fueron rastreables a vehículos reportados en T1? Tercero, sobre las 14 HD T1: vinculación con disputa entre "La Familia Michoacana" y grupos locales.
+    </p>
+    <p>
+      <strong>Lo que dicen los números.</strong> Ayala T1 2026 muestra la firma típica del corredor en fase activa: robo de vehículo como antesala (movilidad criminal), homicidio doloso al alza (resolución violenta), extorsión sostenida (cobro económico). La proyección 2027 de extorsión (50+/año) que se planteó en sección 9 ya tiene su base estadística en este trimestre. El muni se inscribe en el patrón ZM Cuautla con velocidad propia.
+    </p>
+    <p>
+      <strong>Qué seguir en T2.</strong> Si junio confirma 16+ RV trimestrales, Ayala cierra 2026 con 60+ robos de vehículo — cuatro veces el rango histórico. Si HD se queda en 14 trimestral, el año cierra con 56 homicidios dolosos, superando el peor año decadal del muni. La ventana de prevención que se planteaba en sección 9 ya se está cerrando.
+    </p>
+  </div>
+
+  <div class="footer-note" style="margin-top:24px;">
+    <strong>Metodología T1 2026 · Ayala.</strong> Datos SESNSP corte marzo 2026 contra los 11 primeros trimestres anteriores del muni. <strong>Una alza estricta detectada</strong>: RV con z = 2.59 y ratio = 2.84× rebasando maxHist T1 decenal (15). Señales honorables: HD iguala maxHist T1; NM z = 2.85 (pero abs &lt; 5); EXT ratio 2.89× con base alta. Cruce editorial con el operativo del bar "El Rincón de la Banda" (18-abr-2026, posterior al corte SESNSP) que materializó la firma estadística del trimestre en evento público.
+  </div>
+</section>
+
 <!-- ============================================================ -->
 <!-- CUERNAVACA · 9 SECCIONES (sC1-sC9)                           -->
 <!-- Fuente: SESNSP corte mar-2026, RNPDNO abr-2026, CONAPO 2025  -->
@@ -9811,6 +10219,96 @@
 
   <div class="footer-note" style="margin-top:24px;">
     <strong>Fuentes consolidadas sección Cuernavaca.</strong> SESNSP Tabla Dinámica Municipal corte mar-2026 (publicación abril 2026). RNPDNO corte nov-2025 vía <code>lapanquecita/personas-desaparecidas</code>. CONAPO proyecciones poblacionales 2025. Administración: José Luis Uriostegui (2022-2025, reelecto en 2024).
+  </div>
+</section>
+
+<!-- sC10 — T1 2026 · CAPITAL FRÍA, CATEGORÍAS NUEVAS -->
+<style>
+  #sC10 .c10-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 3px; color: #f85149; font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #sC10 .c10-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
+  #sC10 .c10-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -1.2px; color: #e6edf3; margin-bottom: 18px; max-width: 22ch; }
+  #sC10 .c10-title em { font-style: normal; background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #58a6ff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  #sC10 .c10-lead { font-size: 17px; line-height: 1.6; color: #c9d1d9; max-width: 78ch; text-align: justify; hyphens: auto; margin-bottom: 28px; }
+  #sC10 .c10-lead strong { color: #e6edf3; }
+  #sC10 .c10-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+  #sC10 .c10-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  #sC10 .c10-card { background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6)); border: 1px solid rgba(48,54,61,0.7); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+  #sC10 .c10-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  #sC10 .c10-card.warm::before { background: linear-gradient(90deg, #f85149, #fbbf24); }
+  #sC10 .c10-card.cool::before { background: linear-gradient(90deg, #58a6ff, #3fb950); }
+  #sC10 .c10-card .pill { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.2px; font-weight: 800; padding: 2px 7px; border-radius: 8px; margin-bottom: 8px; text-transform: uppercase; }
+  #sC10 .c10-card.warm .pill { color: #ff7b72; background: rgba(248,81,73,0.15); }
+  #sC10 .c10-card.cool .pill { color: #79c0ff; background: rgba(88,166,255,0.15); }
+  #sC10 .c10-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; color: #e6edf3; font-weight: 700; margin-bottom: 6px; }
+  #sC10 .c10-card .quote { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  #sC10 .c10-card .quote .from { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6e7681; }
+  #sC10 .c10-card .quote .arr { color: #6e7681; font-size: 12px; }
+  #sC10 .c10-card .quote .to { font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+  #sC10 .c10-card.warm .quote .to { color: #f85149; }
+  #sC10 .c10-card.cool .quote .to { color: #58a6ff; }
+  #sC10 .c10-card .stat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #8b949e; margin-top: 4px; }
+  #sC10 .c10-card .stat strong { color: #c9d1d9; }
+  #sC10 .c10-card .note { font-size: 12.5px; color: #c9d1d9; line-height: 1.5; margin-top: 8px; text-align: justify; hyphens: auto; }
+  #sC10 .c10-cierre { background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%); border: 1px solid rgba(248,81,73,0.4); border-left: 4px solid #f85149; border-radius: 14px; padding: 24px 28px; }
+  #sC10 .c10-cierre h3 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #e6edf3; font-weight: 800; margin-bottom: 14px; }
+  #sC10 .c10-cierre h3 em { color: #f85149; font-style: italic; }
+  #sC10 .c10-cierre p { font-size: 14.5px; color: #c9d1d9; line-height: 1.65; margin-bottom: 10px; text-align: justify; hyphens: auto; }
+  #sC10 .c10-cierre p strong { color: #e6edf3; }
+</style>
+
+<section id="sC10" style="border-left:4px solid #f85149;padding-left:24px;">
+  <div class="c10-eyebrow">10 · T1 2026 · CAPITAL FRÍA · CATEGORÍAS NUEVAS</div>
+  <h1 class="c10-title">Cuernavaca · <em>16 tentativas y 13 privaciones</em> desde cero histórico</h1>
+  <p class="c10-lead">
+    La capital se enfría en agregado y la lectura simple celebraría: <strong>HD baja a 33</strong> (de 36 en T1 2025), <strong>HC cae a 13</strong> (de 41, −68%), <strong>VF baja a 484</strong> (de 604, −20%), <strong>AM cae a 305</strong> (de 467, −35%). Cuatro indicadores principales en regresión. Pero en T1 2026 aparecen <em>dos categorías nuevas desde cero histórico</em>: <strong>16 tentativas de homicidio doloso</strong> (HD_T) y <strong>13 privaciones ilegales de libertad</strong> (PIL). Ninguna existía en la serie del muni hasta este corte. Las dos clasifican como alza estricta — no por z-score (la base es cero), sino por aparición estructural. Cuernavaca no es ciudad más segura: es ciudad con tipificación activa.
+  </p>
+
+  <div class="c10-cards">
+    <article class="c10-card warm">
+      <span class="pill">HD_T · Tentativa HD ★ ALZA ESTRICTA</span>
+      <h4>De cero histórico a 16</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">16</span></div>
+      <div class="stat"><strong>+16</strong> carpetas · media histórica = 0 · maxHist = 0 · primera aparición</div>
+      <p class="note">Categoría que no aparecía en la serie del muni. 16 tentativas en un solo trimestre. Si se sostiene, la proyección anual es 60+ — más del doble de homicidios consumados. La tentativa entra como tipificación activa en la capital.</p>
+    </article>
+    <article class="c10-card warm">
+      <span class="pill">PIL · Privación ilegal libertad ★ ALZA ESTRICTA</span>
+      <h4>De cero histórico a 13</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">13</span></div>
+      <div class="stat"><strong>+13</strong> carpetas · media histórica = 0 · maxHist = 0 · primera aparición</div>
+      <p class="note">Categoría que no figuraba como denuncia activa. 13 carpetas en T1 2026. Cruza con el patrón estatal de secuestro/desaparición — pendiente verificar si son secuestros con corta duración o categorías de extorsión.</p>
+    </article>
+    <article class="c10-card warm">
+      <span class="pill">EXT · Extorsión</span>
+      <h4>0 → 11 · ratio 2.37×</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">11</span></div>
+      <div class="stat"><strong>+11</strong> carpetas · z = 1.82 · 2.37× media · iguala maxHist T1 = 11</div>
+      <p class="note">Casi alza estricta (z &lt; 2). Iguala el máximo histórico T1 del muni. Cuernavaca importa la firma extorsiva del corredor.</p>
+    </article>
+    <article class="c10-card cool">
+      <span class="pill">HD · Homicidio doloso</span>
+      <h4>36 → 33 · baja modesta</h4>
+      <div class="quote"><span class="from">36</span><span class="arr">→</span><span class="to">33</span></div>
+      <div class="stat"><strong>−3</strong> carpetas · z = −0.05 · 0.97× media</div>
+      <p class="note">Baja −8% vs T1 2025. Pero si se suman las 16 tentativas, la violencia letal "intentada o consumada" suma 49 carpetas — el doble del rango histórico T1.</p>
+    </article>
+  </div>
+
+  <div class="c10-cierre">
+    <h3>¿Qué deberíamos exigir <em>en Cuernavaca</em>?</h3>
+    <p>
+      La narrativa fácil sería: "la capital se enfrió 20%". Los números desmienten esa narrativa con dos categorías nuevas desde cero. <strong>Tres puntos para Fiscalía Estatal.</strong> Primero, sobre las 16 tentativas de homicidio: ¿qué porcentaje son ataques fallidos con arma de fuego (alta letalidad evitada por suerte) versus lesiones graves recalificadas? Segundo, sobre las 13 privaciones ilegales: duración promedio, modalidad, vínculo con extorsión telefónica. Tercero, sobre el descenso de homicidio culposo (−68% en T1): ¿bajaron los accidentes viales letales o cambió el criterio de tipificación en peritajes?
+    </p>
+    <p>
+      <strong>Lo que dicen los números.</strong> Cuernavaca abre 2026 con dos categorías delictivas que no existían como conteo activo en el muni. La aparición simultánea desde cero histórico de HD_T y PIL no es ruido estadístico — es decisión institucional de tipificación. Cualquiera de las dos lecturas es noticia: o bien la fiscalía empezó a registrar categorías que antes diluía en otros delitos, o bien hay alza real coincidente en dos categorías que antes no se denunciaban.
+    </p>
+    <p>
+      <strong>Qué seguir en T2.</strong> Si junio cierra con 30+ tentativas y 25+ PIL, el 2026 marca cambio de criterio ministerial o explosión real de las categorías. Si las dos vuelven a cero, fue brote de tres meses. La diferencia define si la capital se "enfrió" o solo redistribuyó su violencia entre categorías visibles.
+    </p>
+  </div>
+
+  <div class="footer-note" style="margin-top:24px;">
+    <strong>Metodología T1 2026 · Cuernavaca.</strong> Datos SESNSP corte marzo 2026 contra los 11 primeros trimestres anteriores del muni. <strong>Dos alzas estrictas detectadas</strong>: HD_T (0 → 16) y PIL (0 → 13), ambas con aparición estructural desde cero histórico. Señales honorables: EXT iguala maxHist T1 (11), HOST sube a 10 (1.77 z). Lecturas de descompresión: HD −8%, HC −68%, VF −20%, AM −35%, AS −32%. La paradoja editorial: el agregado se enfría mientras aparecen tipificaciones nuevas. Verificación pendiente con prensa estatal sobre operativos T1 2026 en la ZM Cuernavaca y detenciones por extorsión vinculadas a grupos del centro-occidente.
   </div>
 </section>
 
@@ -13756,7 +14254,7 @@
 
   <!-- Stats hero · 4 cards comparativas -->
   <div class="cards" style="margin-top:14px;">
-    <div class="card" style="border-color:#3fb950;background:rgba(63,185,80,0.10);" onclick="showExplain('Homicidio doloso · la baja real','Tepoztlán pasó de 10 carpetas de homicidio doloso en el primer trimestre 2025 a una sola en el primer trimestre 2026 — una caída del 90 por ciento. Es la baja más fuerte de las 14 zonas metropolitanas analizadas. Sin embargo, conviene contextualizar: el cierre 2025 fue 50 dolosos anuales (récord decenal). Una sola carpeta en Q1 podría ser tendencia o piso anómalo. Pendiente Q2 para confirmar.')">
+    <div class="card" style="border-color:#3fb950;background:rgba(63,185,80,0.10);" onclick="showExplain('Homicidio doloso · la baja real','Tepoztlán pasó de 10 carpetas de homicidio doloso en el primer trimestre 2025 a una sola en el primer trimestre 2026 — una caída del 90 por ciento. Es la baja más fuerte de los 14 munis de las 2 ZM oficiales analizados. Sin embargo, conviene contextualizar: el cierre 2025 fue 50 dolosos anuales (récord decenal). Una sola carpeta en Q1 podría ser tendencia o piso anómalo. Pendiente Q2 para confirmar.')">
       <div class="num" style="color:#3fb950;">−90%</div><div class="lbl">Homicidio doloso<br>(de 10 a 1 · Q1 25→26)</div>
     </div>
     <div class="card" style="border-color:#f85149;background:rgba(248,81,73,0.12);" onclick="showExplain('Violencia familiar al alza','Tepoztlán pasó de 26 a 44 carpetas de violencia familiar entre Q1 2025 y Q1 2026 — un alza de 69 por ciento. La violencia familiar es delito de denuncia: si la captura del MP fuera el problema, este indicador bajaría también. Que SUBA confirma que el sistema de denuncia opera, lo que a su vez exige explicar por qué otros delitos sí bajan dramáticamente.')">
@@ -15823,6 +16321,96 @@
   </div>
 </section>
 
+<!-- sTlz10 — T1 2026 · VALLE DE TLALTIZAPÁN EN PAUSA -->
+<style>
+  #sTlz10 .tlz10-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 3px; color: #f85149; font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #sTlz10 .tlz10-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
+  #sTlz10 .tlz10-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -1.2px; color: #e6edf3; margin-bottom: 18px; max-width: 22ch; }
+  #sTlz10 .tlz10-title em { font-style: normal; background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #58a6ff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  #sTlz10 .tlz10-lead { font-size: 17px; line-height: 1.6; color: #c9d1d9; max-width: 78ch; text-align: justify; hyphens: auto; margin-bottom: 28px; }
+  #sTlz10 .tlz10-lead strong { color: #e6edf3; }
+  #sTlz10 .tlz10-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+  #sTlz10 .tlz10-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  #sTlz10 .tlz10-card { background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6)); border: 1px solid rgba(48,54,61,0.7); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+  #sTlz10 .tlz10-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  #sTlz10 .tlz10-card.warm::before { background: linear-gradient(90deg, #f85149, #fbbf24); }
+  #sTlz10 .tlz10-card.cool::before { background: linear-gradient(90deg, #58a6ff, #a371f7); }
+  #sTlz10 .tlz10-card .pill { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.2px; font-weight: 800; padding: 2px 7px; border-radius: 8px; margin-bottom: 8px; text-transform: uppercase; }
+  #sTlz10 .tlz10-card.warm .pill { color: #ff7b72; background: rgba(248,81,73,0.15); }
+  #sTlz10 .tlz10-card.cool .pill { color: #79c0ff; background: rgba(88,166,255,0.15); }
+  #sTlz10 .tlz10-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; color: #e6edf3; font-weight: 700; margin-bottom: 6px; }
+  #sTlz10 .tlz10-card .quote { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  #sTlz10 .tlz10-card .quote .from { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6e7681; }
+  #sTlz10 .tlz10-card .quote .arr { color: #6e7681; font-size: 12px; }
+  #sTlz10 .tlz10-card .quote .to { font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+  #sTlz10 .tlz10-card.warm .quote .to { color: #f85149; }
+  #sTlz10 .tlz10-card.cool .quote .to { color: #58a6ff; }
+  #sTlz10 .tlz10-card .stat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #8b949e; margin-top: 4px; }
+  #sTlz10 .tlz10-card .stat strong { color: #c9d1d9; }
+  #sTlz10 .tlz10-card .note { font-size: 12.5px; color: #c9d1d9; line-height: 1.5; margin-top: 8px; text-align: justify; hyphens: auto; }
+  #sTlz10 .tlz10-cierre { background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%); border: 1px solid rgba(248,81,73,0.4); border-left: 4px solid #f85149; border-radius: 14px; padding: 24px 28px; }
+  #sTlz10 .tlz10-cierre h3 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #e6edf3; font-weight: 800; margin-bottom: 14px; }
+  #sTlz10 .tlz10-cierre h3 em { color: #f85149; font-style: italic; }
+  #sTlz10 .tlz10-cierre p { font-size: 14.5px; color: #c9d1d9; line-height: 1.65; margin-bottom: 10px; text-align: justify; hyphens: auto; }
+  #sTlz10 .tlz10-cierre p strong { color: #e6edf3; }
+</style>
+
+<section id="sTlz10" style="border-left:4px solid #f85149;padding-left:24px;">
+  <div class="tlz10-eyebrow">10 · T1 2026 · CERO ALZAS ESTRICTAS</div>
+  <h1 class="tlz10-title">Tlaltizapán · <em>la pausa</em> después del rebrote de narcomenudeo</h1>
+  <p class="tlz10-lead">
+    El sur del valle de Tlaltizapán entra en T1 2026 sin alzas estrictas y con composición consistente con el patrón histórico del muni: <strong>24 carpetas de violencia familiar, 20 amenazas, 6 narcomenudeo, 6 robos de vehículo, 6 robos a casa habitación, 4 homicidios dolosos</strong>. Después de un 2025 con narcomenudeo en máximo decenal (+350%) y sobreproporción 2.06× en feminicidio acumulado, el primer trimestre 2026 funciona como <em>pausa estadística</em>: ningún indicador estricto se dispara, pero la VF y AM se mantienen arriba del promedio histórico. La pregunta editorial es si esta pausa es real o es retraso de captura — pendiente verificar en T2.
+  </p>
+
+  <div class="tlz10-cards">
+    <article class="tlz10-card warm">
+      <span class="pill">VF · Violencia familiar</span>
+      <h4>24 carpetas T1</h4>
+      <div class="quote"><span class="from">T1·25</span><span class="arr">→</span><span class="to">24</span></div>
+      <div class="stat"><strong>24</strong> carpetas · ranking #1 del muni este T1</div>
+      <p class="note">Primer delito del muni en T1 2026. Mantiene la trayectoria sostenida que se ha visto desde 2022 en la ZM Cuernavaca. No clasifica como alza estricta, pero es el indicador con más volumen del trimestre.</p>
+    </article>
+    <article class="tlz10-card warm">
+      <span class="pill">NM · Narcomenudeo</span>
+      <h4>6 carpetas · ¿pausa o caída?</h4>
+      <div class="quote"><span class="from">2025·anual=36</span><span class="arr">→</span><span class="to">6</span></div>
+      <div class="stat"><strong>6</strong> carpetas T1 · proyección anual ~24 si se sostiene</div>
+      <p class="note">Tras el rebrote 2025 (+350%), el T1 2026 abre con 6 carpetas. Si se mantiene el ritmo trimestral, cierra 2026 en ~24 anual — debajo del pico 2025 pero arriba del promedio decenal. Pendiente: si es retraso de registro o desaceleración real.</p>
+    </article>
+    <article class="tlz10-card cool">
+      <span class="pill">HD · Homicidio doloso</span>
+      <h4>4 carpetas T1</h4>
+      <div class="quote"><span class="from">T1</span><span class="arr">→</span><span class="to">4</span></div>
+      <div class="stat"><strong>4</strong> carpetas · rango histórico T1 = 2-5</div>
+      <p class="note">Dentro del rango histórico T1 del muni. Sin alza estricta. Proyección anual ~16 si se sostiene — consistente con la meseta sur-poniente.</p>
+    </article>
+    <article class="tlz10-card cool">
+      <span class="pill">FM · Feminicidio</span>
+      <h4>Cero en T1 2026</h4>
+      <div class="quote"><span class="from">2025·anual=2</span><span class="arr">→</span><span class="to">0</span></div>
+      <div class="stat">Sobreproporción decenal 2.06× peso demográfico</div>
+      <p class="note">Sin registros este trimestre. La sobreproporción histórica de feminicidio no se relaja automáticamente: el indicador acumulado 2016-2025 sigue marcando estructura. La pausa T1 2026 no resuelve el problema; lo aplaza.</p>
+    </article>
+  </div>
+
+  <div class="tlz10-cierre">
+    <h3>¿Qué deberíamos exigir <em>en Tlaltizapán</em>?</h3>
+    <p>
+      <strong>Tres preguntas pertinentes.</strong> Primero, sobre los 6 narcomenudeos T1 2026: ¿se desaceleró el flujo o se retrasó la captura ministerial? Cruzar contra operativos federales y detenciones públicas en la ZM Cuernavaca. Segundo, sobre las 24 carpetas de VF y 20 de AM: ¿qué porcentaje con medida de protección emitida? El sur del valle no se descomprime estructuralmente. Tercero, sobre los 17 feminicidios acumulados 2016-2025: estatus procesal por carpeta.
+    </p>
+    <p>
+      <strong>Lo que dicen los números.</strong> Cero alzas estrictas en T1 2026 no es buena noticia limpia. Es lectura de pausa que coexiste con base alta de VF/AM y con sobreproporción histórica de feminicidio. El muni opera por debajo de su peor año (2025) y por encima de su promedio decenal.
+    </p>
+    <p>
+      <strong>Qué seguir en T2.</strong> Si junio confirma 6 NM trimestrales, fue desaceleración real. Si vuelve a 9+, el 2025 era la nueva normalidad. Si aparece 1+ feminicidio, la sobreproporción estructural se reactiva. La firma del sur-poniente está en pausa, no en reversión.
+    </p>
+  </div>
+
+  <div class="footer-note" style="margin-top:24px;">
+    <strong>Metodología T1 2026 · Tlaltizapán.</strong> Datos SESNSP corte marzo 2026 (T1: enero-marzo) contra los 11 primeros trimestres anteriores del mismo muni. Sin alzas estrictas (T1 26 ≥ 5 carpetas con z ≥ 2.5 o ratio ≥ 2.5). Lectura como pausa después del rebrote 2025 de narcomenudeo. Indicadores VF (24) y AM (20) son los más altos del trimestre por volumen — sostenidos respecto al patrón ZM Cuernavaca pero sin acelerar. Verificación cruzada con prensa local sur 2025-2026.
+  </div>
+</section>
+
 
 <!-- =============================================================== -->
 <!-- YAUTEPEC · 9 SECCIONES (sYa1-sYa9) · CVE 17029                   -->
@@ -16237,6 +16825,96 @@
 
   <div class="footer-note" style="margin-top:24px;">
     <strong>Fuentes Yautepec.</strong> SESNSP dic-2025, RNPDNO nov-2025, CONAPO 2025. CVE 17029. Zona Metropolitana de Cuautla (definición SEDATU-CONAPO).
+  </div>
+</section>
+
+<!-- sYa10 — T1 2026 · EXTORSIÓN REBASA MÁXIMO -->
+<style>
+  #sYa10 .ya10-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 3px; color: #f85149; font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #sYa10 .ya10-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
+  #sYa10 .ya10-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -1.2px; color: #e6edf3; margin-bottom: 18px; max-width: 22ch; }
+  #sYa10 .ya10-title em { font-style: normal; background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #a371f7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  #sYa10 .ya10-lead { font-size: 17px; line-height: 1.6; color: #c9d1d9; max-width: 78ch; text-align: justify; hyphens: auto; margin-bottom: 28px; }
+  #sYa10 .ya10-lead strong { color: #e6edf3; }
+  #sYa10 .ya10-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+  #sYa10 .ya10-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  #sYa10 .ya10-card { background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6)); border: 1px solid rgba(48,54,61,0.7); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+  #sYa10 .ya10-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  #sYa10 .ya10-card.warm::before { background: linear-gradient(90deg, #f85149, #fbbf24); }
+  #sYa10 .ya10-card.cool::before { background: linear-gradient(90deg, #a371f7, #58a6ff); }
+  #sYa10 .ya10-card .pill { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.2px; font-weight: 800; padding: 2px 7px; border-radius: 8px; margin-bottom: 8px; text-transform: uppercase; }
+  #sYa10 .ya10-card.warm .pill { color: #ff7b72; background: rgba(248,81,73,0.15); }
+  #sYa10 .ya10-card.cool .pill { color: #d2a8ff; background: rgba(163,113,247,0.15); }
+  #sYa10 .ya10-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; color: #e6edf3; font-weight: 700; margin-bottom: 6px; }
+  #sYa10 .ya10-card .quote { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  #sYa10 .ya10-card .quote .from { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6e7681; }
+  #sYa10 .ya10-card .quote .arr { color: #6e7681; font-size: 12px; }
+  #sYa10 .ya10-card .quote .to { font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+  #sYa10 .ya10-card.warm .quote .to { color: #f85149; }
+  #sYa10 .ya10-card.cool .quote .to { color: #a371f7; }
+  #sYa10 .ya10-card .stat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #8b949e; margin-top: 4px; }
+  #sYa10 .ya10-card .stat strong { color: #c9d1d9; }
+  #sYa10 .ya10-card .note { font-size: 12.5px; color: #c9d1d9; line-height: 1.5; margin-top: 8px; text-align: justify; hyphens: auto; }
+  #sYa10 .ya10-cierre { background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%); border: 1px solid rgba(248,81,73,0.4); border-left: 4px solid #f85149; border-radius: 14px; padding: 24px 28px; }
+  #sYa10 .ya10-cierre h3 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #e6edf3; font-weight: 800; margin-bottom: 14px; }
+  #sYa10 .ya10-cierre h3 em { color: #f85149; font-style: italic; }
+  #sYa10 .ya10-cierre p { font-size: 14.5px; color: #c9d1d9; line-height: 1.65; margin-bottom: 10px; text-align: justify; hyphens: auto; }
+  #sYa10 .ya10-cierre p strong { color: #e6edf3; }
+</style>
+
+<section id="sYa10" style="border-left:4px solid #f85149;padding-left:24px;">
+  <div class="ya10-eyebrow">10 · T1 2026 · FIRMA EXTORSIVA RATIFICADA</div>
+  <h1 class="ya10-title">Yautepec · <em>la extorsión</em> rebasa el máximo histórico T1</h1>
+  <p class="ya10-lead">
+    El puente de la ZM Cuernavaca-Cuautla repite su firma. <strong>La extorsión pasa de 9 a 12 carpetas en T1 2026</strong> (z = 2.31, ratio 3.07× la media histórica, supera el máximo decenal T1 de 9). Es la única alza estricta del trimestre — y es la categoría que articula la narrativa Yautepec desde 2022: <em>corredor activo, plaza con cobro</em>. El homicidio doloso también sube (15 → 19, +27%) sin clasificar como alza estricta pero refrendando la meseta letal sostenida. Yautepec entra en T1 2026 como nodo confirmado, no como satélite.
+  </p>
+
+  <div class="ya10-cards">
+    <article class="ya10-card warm">
+      <span class="pill">EXT · Extorsión ★ ALZA ESTRICTA</span>
+      <h4>3.07× sobre media histórica</h4>
+      <div class="quote"><span class="from">9</span><span class="arr">→</span><span class="to">12</span></div>
+      <div class="stat"><strong>+3</strong> carpetas · z = 2.31 · 3.07× media · maxHist T1 = 9</div>
+      <p class="note">Rebasa el máximo T1 decenal del muni. Categoría que cumple el criterio estricto (z &gt; 2 y ratio &gt; 2.5 con base &gt; 5). La firma del corredor opera: cobro de derecho de piso sin enfriarse.</p>
+    </article>
+    <article class="ya10-card warm">
+      <span class="pill">HD · Homicidio doloso</span>
+      <h4>15 → 19 · +27%</h4>
+      <div class="quote"><span class="from">15</span><span class="arr">→</span><span class="to">19</span></div>
+      <div class="stat"><strong>+4</strong> carpetas · z = 0.54 · 1.21× media · maxHist T1 = 26</div>
+      <p class="note">Sin alza estricta, pero el dato direccional importa: 19 HD en un trimestre, en muni de 110K, ratifica que la baja anual 2025 no era estructural.</p>
+    </article>
+    <article class="ya10-card warm">
+      <span class="pill">VF · Violencia familiar</span>
+      <h4>50 → 75 · +50%</h4>
+      <div class="quote"><span class="from">50</span><span class="arr">→</span><span class="to">75</span></div>
+      <div class="stat"><strong>+25</strong> carpetas · z = 0.72 · 1.21× media · maxHist T1 = 98</div>
+      <p class="note">Crece +50% vs T1 2025. Sin alcanzar el máximo histórico, pero el delta absoluto es relevante: 25 carpetas más en un trimestre.</p>
+    </article>
+    <article class="ya10-card cool">
+      <span class="pill">HD_T · Tentativa homicidio</span>
+      <h4>0 → 4 · nueva categoría</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">4</span></div>
+      <div class="stat"><strong>+4</strong> carpetas · maxHist = 0 · aparición desde cero</div>
+      <p class="note">La tentativa entra como tipificación activa por primera vez en la serie del muni. Cuatro carpetas en un solo trimestre. Patrón compartido con Cuernavaca (16 tentativas T1 26) y Yecapixtla.</p>
+    </article>
+  </div>
+
+  <div class="ya10-cierre">
+    <h3>¿Qué deberíamos exigir <em>en Yautepec</em>?</h3>
+    <p>
+      Las 12 carpetas de extorsión T1 2026 son la pregunta editorial central. <strong>Tres puntos a Fiscalía Especializada.</strong> Primero, modalidad: cobro telefónico, cobro presencial de derecho de piso, secuestro virtual. Segundo, sector económico de las víctimas: transporte, comercio, restaurantero. Tercero, vinculación con detenciones recientes en Jojutla/Cuernavaca de presuntos integrantes de "La Familia Michoacana".
+    </p>
+    <p>
+      <strong>Lo que dicen los números.</strong> Yautepec rebasa su máximo decenal T1 de extorsión por primera vez. No es brote: es continuidad de la meseta 2022-2025 ampliada en intensidad. La aparición de 4 tentativas de homicidio desde cero histórico es novedad estructural — el muni se inscribe en el patrón estatal de tipificación activa de tentativa.
+    </p>
+    <p>
+      <strong>Qué seguir en T2.</strong> Si junio cierra con 12+ extorsiones, Yautepec consolida el segundo puesto estatal en tasa per cápita de la categoría. Si HD se queda en 19 trimestral, el muni cierra 2026 con 75+ homicidios — superando el rango histórico. La firma del corredor no se desacelera.
+    </p>
+  </div>
+
+  <div class="footer-note" style="margin-top:24px;">
+    <strong>Metodología T1 2026 · Yautepec.</strong> Datos SESNSP corte marzo 2026 contra los 11 primeros trimestres anteriores. <strong>Una alza estricta detectada</strong> (EXT con z = 2.31 y ratio = 3.07× rebasando maxHist T1). Señales honorables: HD +27% sin cumplir umbral z; VF +50% con maxHist aún superior; HD_T desde cero histórico. Análisis cruzado con prensa estatal sobre operativos del corredor Cuernavaca-Cuautla y la presencia documentada de grupos del centro-occidente.
   </div>
 </section>
 
@@ -17049,6 +17727,96 @@
   <div class="footer-note" style="margin-top:24px;"><strong>Fuentes Tlayacapan.</strong> SESNSP dic-2025, RNPDNO nov-2025, CONAPO 2025. CVE 17026. Pueblo Mágico desde 2011. Zona Metropolitana de Cuautla.</div>
 </section>
 
+<!-- sTla10 — T1 2026 · DESPUÉS DEL FEMINICIDIO -->
+<style>
+  #sTla10 .tla10-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 3px; color: #f85149; font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #sTla10 .tla10-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
+  #sTla10 .tla10-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -1.2px; color: #e6edf3; margin-bottom: 18px; max-width: 22ch; }
+  #sTla10 .tla10-title em { font-style: normal; background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #a371f7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  #sTla10 .tla10-lead { font-size: 17px; line-height: 1.6; color: #c9d1d9; max-width: 78ch; text-align: justify; hyphens: auto; margin-bottom: 28px; }
+  #sTla10 .tla10-lead strong { color: #e6edf3; }
+  #sTla10 .tla10-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+  #sTla10 .tla10-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  #sTla10 .tla10-card { background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6)); border: 1px solid rgba(48,54,61,0.7); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+  #sTla10 .tla10-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  #sTla10 .tla10-card.warm::before { background: linear-gradient(90deg, #f85149, #fbbf24); }
+  #sTla10 .tla10-card.cool::before { background: linear-gradient(90deg, #58a6ff, #3fb950); }
+  #sTla10 .tla10-card .pill { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.2px; font-weight: 800; padding: 2px 7px; border-radius: 8px; margin-bottom: 8px; text-transform: uppercase; }
+  #sTla10 .tla10-card.warm .pill { color: #ff7b72; background: rgba(248,81,73,0.15); }
+  #sTla10 .tla10-card.cool .pill { color: #79c0ff; background: rgba(88,166,255,0.15); }
+  #sTla10 .tla10-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; color: #e6edf3; font-weight: 700; margin-bottom: 6px; }
+  #sTla10 .tla10-card .quote { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  #sTla10 .tla10-card .quote .from { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6e7681; }
+  #sTla10 .tla10-card .quote .arr { color: #6e7681; font-size: 12px; }
+  #sTla10 .tla10-card .quote .to { font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+  #sTla10 .tla10-card.warm .quote .to { color: #f85149; }
+  #sTla10 .tla10-card.cool .quote .to { color: #58a6ff; }
+  #sTla10 .tla10-card .stat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #8b949e; margin-top: 4px; }
+  #sTla10 .tla10-card .stat strong { color: #c9d1d9; }
+  #sTla10 .tla10-card .note { font-size: 12.5px; color: #c9d1d9; line-height: 1.5; margin-top: 8px; text-align: justify; hyphens: auto; }
+  #sTla10 .tla10-cierre { background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%); border: 1px solid rgba(248,81,73,0.4); border-left: 4px solid #f85149; border-radius: 14px; padding: 24px 28px; }
+  #sTla10 .tla10-cierre h3 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #e6edf3; font-weight: 800; margin-bottom: 14px; }
+  #sTla10 .tla10-cierre h3 em { color: #f85149; font-style: italic; }
+  #sTla10 .tla10-cierre p { font-size: 14.5px; color: #c9d1d9; line-height: 1.65; margin-bottom: 10px; text-align: justify; hyphens: auto; }
+  #sTla10 .tla10-cierre p strong { color: #e6edf3; }
+</style>
+
+<section id="sTla10" style="border-left:4px solid #f85149;padding-left:24px;">
+  <div class="tla10-eyebrow">10 · T1 2026 · DESPUÉS DEL FEMINICIDIO</div>
+  <h1 class="tla10-title">Tlayacapan · <em>cero feminicidios</em> en T1 pero el HD vuelve y la VF sube</h1>
+  <p class="tla10-lead">
+    Tlayacapan cerró 2025 con <strong>2 feminicidios</strong> (sobreproporción 6.55× peso demográfico, primer lugar estatal) tras siete años en cero. T1 2026 trae la primera respuesta cuantitativa a la pregunta editorial: <strong>cero feminicidios en el trimestre</strong>. Pero el patrón no se relaja: <em>la violencia familiar sube de 11 a 16 carpetas</em> (38% sobre media histórica, maxHist 21), <em>aparece una tentativa de homicidio doloso desde cero</em>, y los <em>9 robos de vehículo en tres meses</em> ya superan el total anual histórico promedio. El Pueblo Mágico no se descomprime: cambia de etiqueta.
+  </p>
+
+  <div class="tla10-cards">
+    <article class="tla10-card warm">
+      <span class="pill">VF · Violencia familiar</span>
+      <h4>11 → 16 · 1.38× media</h4>
+      <div class="quote"><span class="from">11</span><span class="arr">→</span><span class="to">16</span></div>
+      <div class="stat"><strong>+5</strong> carpetas · z = 0.65 · 1.38× media · maxHist T1 = 21</div>
+      <p class="note">Sube +45% vs T1 2025. Sin alza estricta por criterio z/ratio, pero la lectura editorial pesa: en muni de 17K habitantes con 2 feminicidios recientes, la curva VF al alza es la antesala.</p>
+    </article>
+    <article class="tla10-card warm">
+      <span class="pill">RV · Robo de vehículo</span>
+      <h4>0 → 9 carpetas</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">9</span></div>
+      <div class="stat"><strong>+9</strong> carpetas · supera media anual (1.6) en un solo T1 · maxHist anual = 6</div>
+      <p class="note">El indicador formal queda en 1 en alto-impacto, pero el conteo directo de la tabla T1 2026 reporta 9 RV. Si se confirma, el trimestre solo supera el máximo anual decenal del muni. Patrón compartido con la ZM Cuautla 2026.</p>
+    </article>
+    <article class="tla10-card warm">
+      <span class="pill">HD_T · Tentativa HD</span>
+      <h4>De cero histórico a 1</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">1</span></div>
+      <div class="stat"><strong>+1</strong> carpeta · maxHist = 0 · primera aparición</div>
+      <p class="note">Categoría que no aparecía en la serie histórica del muni. Una sola carpeta en absoluto, pero novedad estructural: la tentativa entra como tipificación activa.</p>
+    </article>
+    <article class="tla10-card cool">
+      <span class="pill">FM · Feminicidio</span>
+      <h4>0 en T1 2026 · pausa tras pico</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">0</span></div>
+      <div class="stat">2025 cerró con 2 feminicidios · sobreproporción 6.55× · maxHist = 0 T1</div>
+      <p class="note">Cero en este trimestre. La pregunta editorial sigue abierta hasta T2: si junio 2026 registra 1+, el 2025 fue inicio de patrón; si sigue en cero, fue pico aislado. Por ahora, pausa.</p>
+    </article>
+  </div>
+
+  <div class="tla10-cierre">
+    <h3>¿Qué deberíamos exigir <em>en Tlayacapan</em>?</h3>
+    <p>
+      Tres preguntas para Fiscalía y para la administración Pueblo Mágico. <strong>Primero</strong>, sobre los expedientes de los 2 feminicidios 2025: vinculación a proceso, perfil víctima-agresor, modalidad. <strong>Segundo</strong>, sobre las 16 carpetas de violencia familiar T1 2026: ¿cuántas con medida de protección emitida, cuántas con seguimiento ministerial activo? <strong>Tercero</strong>, sobre los 9 robos de vehículo: modalidad (violencia o sin violencia) y conexión con plazas vecinas.
+    </p>
+    <p>
+      <strong>Lo que dicen los números.</strong> Cero feminicidios en T1 2026 es buena noticia aislada. Pero la violencia familiar sube, la tentativa de homicidio aparece desde cero histórico, y el robo de vehículo dispara. Esto no es relajamiento del patrón letal: es <em>diversificación</em>. El muni se moviliza en categorías nuevas.
+    </p>
+    <p>
+      <strong>Qué seguir en T2.</strong> Si junio cierra con 0 feminicidios y la VF baja, el patrón 2025 fue brote. Si VF sigue arriba de 14 y aparece 1+ feminicidio, Tlayacapan entra al cluster norte de munis con identidad turística y violencia letal sobre el promedio per cápita.
+    </p>
+  </div>
+
+  <div class="footer-note" style="margin-top:24px;">
+    <strong>Metodología T1 2026 · Tlayacapan.</strong> Datos SESNSP corte marzo 2026 vs 11 primeros trimestres anteriores. Cero alzas estrictas (umbral T1 26 ≥ 5 carpetas con z ≥ 2.5 o ratio ≥ 2.5). Tres señales honorables: VF sube 1.38× sobre media; HD_T aparece desde cero histórico; RV conteo directo 9 supera el máximo anual histórico del muni. Análisis cruzado con el patrón 2011-2025 del Pueblo Mágico.
+  </div>
+</section>
+
 
 <!-- =============================================================== -->
 <!-- ATLATLAHUCAN · 9 SECCIONES (sAt1-sAt9) · CVE 17002               -->
@@ -17320,6 +18088,96 @@
   <div class="footer-note" style="margin-top:24px;"><strong>Fuentes Atlatlahucan.</strong> SESNSP dic-2025, RNPDNO nov-2025, CONAPO 2025. CVE 17002. Zona Metropolitana de Cuautla.</div>
 </section>
 
+<!-- sAt10 — T1 2026 · REGRESO EN COMPOSICIÓN -->
+<style>
+  #sAt10 .at10-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 3px; color: #f85149; font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #sAt10 .at10-eyebrow::before { content: ''; width: 36px; height: 2px; background: #f85149; }
+  #sAt10 .at10-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; font-weight: 800; letter-spacing: -1.2px; color: #e6edf3; margin-bottom: 18px; max-width: 22ch; }
+  #sAt10 .at10-title em { font-style: normal; background: linear-gradient(135deg, #f85149 0%, #fbbf24 60%, #58a6ff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  #sAt10 .at10-lead { font-size: 17px; line-height: 1.6; color: #c9d1d9; max-width: 78ch; text-align: justify; hyphens: auto; margin-bottom: 28px; }
+  #sAt10 .at10-lead strong { color: #e6edf3; }
+  #sAt10 .at10-lead em { font-style: normal; color: #fbbf24; font-weight: 600; }
+  #sAt10 .at10-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  #sAt10 .at10-card { background: linear-gradient(160deg, rgba(22,27,34,0.95), rgba(22,27,34,0.6)); border: 1px solid rgba(48,54,61,0.7); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+  #sAt10 .at10-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  #sAt10 .at10-card.warm::before { background: linear-gradient(90deg, #f85149, #fbbf24); }
+  #sAt10 .at10-card.cool::before { background: linear-gradient(90deg, #a371f7, #58a6ff); }
+  #sAt10 .at10-card .pill { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.2px; font-weight: 800; padding: 2px 7px; border-radius: 8px; margin-bottom: 8px; text-transform: uppercase; }
+  #sAt10 .at10-card.warm .pill { color: #ff7b72; background: rgba(248,81,73,0.15); }
+  #sAt10 .at10-card.cool .pill { color: #d2a8ff; background: rgba(163,113,247,0.15); }
+  #sAt10 .at10-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 16px; color: #e6edf3; font-weight: 700; margin-bottom: 6px; }
+  #sAt10 .at10-card .quote { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  #sAt10 .at10-card .quote .from { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6e7681; }
+  #sAt10 .at10-card .quote .arr { color: #6e7681; font-size: 12px; }
+  #sAt10 .at10-card .quote .to { font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+  #sAt10 .at10-card.warm .quote .to { color: #f85149; }
+  #sAt10 .at10-card.cool .quote .to { color: #a371f7; }
+  #sAt10 .at10-card .stat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #8b949e; margin-top: 4px; }
+  #sAt10 .at10-card .stat strong { color: #c9d1d9; }
+  #sAt10 .at10-card .note { font-size: 12.5px; color: #c9d1d9; line-height: 1.5; margin-top: 8px; text-align: justify; hyphens: auto; }
+  #sAt10 .at10-cierre { background: linear-gradient(135deg, rgba(248,81,73,0.08) 0%, rgba(13,17,23,0.5) 100%); border: 1px solid rgba(248,81,73,0.4); border-left: 4px solid #f85149; border-radius: 14px; padding: 24px 28px; }
+  #sAt10 .at10-cierre h3 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #e6edf3; font-weight: 800; margin-bottom: 14px; }
+  #sAt10 .at10-cierre h3 em { color: #f85149; font-style: italic; }
+  #sAt10 .at10-cierre p { font-size: 14.5px; color: #c9d1d9; line-height: 1.65; margin-bottom: 10px; text-align: justify; hyphens: auto; }
+  #sAt10 .at10-cierre p strong { color: #e6edf3; }
+</style>
+
+<section id="sAt10" style="border-left:4px solid #f85149;padding-left:24px;">
+  <div class="at10-eyebrow">10 · T1 2026 · REGRESO EN COMPOSICIÓN</div>
+  <h1 class="at10-title">Atlatlahucan · <em>el homicidio vuelve</em> tras la caída del 73%</h1>
+  <p class="at10-lead">
+    En 2025 Atlatlahucan registró <strong>la mayor caída anual de homicidio doloso del estado</strong> (de 22 a 6, −73%). El T1 2026 contradice esa narrativa con un dato seco: <strong>cinco homicidios dolosos en tres meses</strong>, igualando el máximo T1 decenal del municipio. Sin alzas estrictas por el criterio z≥2.5/ratio≥2.5 (la base histórica es demasiado pequeña), pero con dos señales honorables que merecen vigilancia: <em>HD pasa de 0 a 5</em> y <em>RV salta de 0 a 4</em> (3.67× la media histórica). En municipios chicos, esto es la firma estadística de un reacomodo, no de ruido.
+  </p>
+
+  <div class="at10-cards">
+    <article class="at10-card warm">
+      <span class="pill">HD · Homicidio doloso</span>
+      <h4>0 → 5 · iguala máximo T1</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">5</span></div>
+      <div class="stat"><strong>+5</strong> carpetas · z = 1.60 · 2.39× media histórica · maxHist T1 = 5</div>
+      <p class="note">T1 2025 cerró en cero homicidios. T1 2026 iguala el máximo trimestral histórico. Si la baja anual 2025 era regresión a la media, el T1 2026 sugiere que la "nueva normalidad" sigue siendo 2024 (22 anuales).</p>
+    </article>
+    <article class="at10-card warm">
+      <span class="pill">RV · Robo de vehículo</span>
+      <h4>0 → 4 · ratio 3.67×</h4>
+      <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">4</span></div>
+      <div class="stat"><strong>+4</strong> carpetas · z = 2.01 · 3.67× media histórica · maxHist T1 = 4</div>
+      <p class="note">No clasifica como alza estricta porque el absoluto queda en 4 (umbral 5). Pero el ratio 3.67× y el match con maxHist T1 dicen lo mismo que en otros munis de la ZM Cuautla: el robo de vehículo se reactiva en el corredor.</p>
+    </article>
+    <article class="at10-card cool">
+      <span class="pill">AM · Amenazas</span>
+      <h4>Baja a 10 desde 12</h4>
+      <div class="quote"><span class="from">12</span><span class="arr">→</span><span class="to">10</span></div>
+      <div class="stat"><strong>−2</strong> carpetas · z = 1.13 · 1.62× media histórica</div>
+      <p class="note">Aún por encima del promedio (6.2), pero baja vs T1 2025. La presión declarativa no se desacopla del fenómeno letal — simplemente no se acelera.</p>
+    </article>
+    <article class="at10-card cool">
+      <span class="pill">LC · Lesiones culposas</span>
+      <h4>Duplica · 5 → 10</h4>
+      <div class="quote"><span class="from">5</span><span class="arr">→</span><span class="to">10</span></div>
+      <div class="stat"><strong>+5</strong> carpetas · z = 0.72 · 1.39× media histórica · maxHist = 15</div>
+      <p class="note">Duplica el T1 anterior. Pendiente revisar la modalidad: si replica el patrón estatal "no especificado", entra como bolsa diagnóstica más que como fenómeno vial discreto.</p>
+    </article>
+  </div>
+
+  <div class="at10-cierre">
+    <h3>¿Qué deberíamos exigir <em>en Atlatlahucan</em>?</h3>
+    <p>
+      El T1 2026 deja la pregunta editorial abierta: <strong>¿2024 era la nueva normalidad o el atípico?</strong> Cinco homicidios dolosos en un trimestre, en un muni de 30K habitantes, devuelve a Atlatlahucan al rango 2024 (22 anuales) si el patrón se sostiene. La "mayor caída del estado" se vuelve, retrospectivamente, un valle de un solo año.
+    </p>
+    <p>
+      <strong>Tres preguntas concretas.</strong> Primero, sobre los cinco HD: ¿cuántos están vinculados a líneas de investigación con grupos del oriente (la firma compartida con Yecapixtla y Tepalcingo)? Segundo, sobre los cuatro RV: ¿modalidad con violencia o sin violencia? Si es con violencia, conecta con extorsión vehicular del corredor Cuautla. Tercero, sobre las 10 LC: porcentaje "no especificado". Si supera 80%, la categoría es bolsa.
+    </p>
+    <p>
+      <strong>Lo que seguir en T2.</strong> Si junio 2026 registra otros 5 HD, Atlatlahucan se inscribe en el cluster norte-oriente con Yecapixtla y Tepalcingo. Si baja a 1-2, fue brote de tres meses. La diferencia define si el muni es nodo emergente o ruido en el corredor.
+    </p>
+  </div>
+
+  <div class="footer-note" style="margin-top:24px;">
+    <strong>Metodología T1 2026 · Atlatlahucan.</strong> Datos SESNSP corte marzo 2026 (T1: enero-marzo) contra los 11 primeros trimestres anteriores. Alza estricta: T1 26 ≥ 5 carpetas con ratio ≥ 2.5× o z ≥ 2.5. <strong>Cero alzas estrictas detectadas</strong> (HD y RV cumplen ratio pero RV se queda en 4 carpetas). Dos señales honorables (HD iguala maxHist T1; RV multiplica por 3.67× la media). En municipios con base pequeña, alzas absolutas pueden no superar umbrales por ruido estadístico — pero el match con máximos históricos sí es señal.
+  </div>
+</section>
+
 
 <!-- =============================================================== -->
 <!-- TEPALCINGO · 10 SECCIONES (sTpa1-sTpa10) · CVE 17019              -->
@@ -17445,21 +18303,21 @@
         <tr><th>#</th><th>Delito</th><th style="text-align:right;">2024</th><th style="text-align:right;">2025</th><th style="text-align:right;">Δ%</th><th style="text-align:right;">tasa 100K</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>Daño a la propiedad</td><td style="text-align:right;">24</td><td style="text-align:right;"><strong>23</strong></td><td style="text-align:right;color:#79c0ff;">−4%</td><td style="text-align:right;">85</td></tr>
+        <tr><td>1</td><td>Daño a la propiedad</td><td style="text-align:right;">28</td><td style="text-align:right;"><strong>23</strong></td><td style="text-align:right;color:#79c0ff;">−18%</td><td style="text-align:right;">85</td></tr>
         <tr><td>2</td><td>Amenazas</td><td style="text-align:right;">19</td><td style="text-align:right;"><strong>19</strong></td><td style="text-align:right;color:#8b949e;">0%</td><td style="text-align:right;">70</td></tr>
-        <tr style="background:rgba(248,81,73,0.08);"><td>3</td><td><strong>Homicidio doloso</strong></td><td style="text-align:right;">16</td><td style="text-align:right;color:#f85149;"><strong>15</strong></td><td style="text-align:right;color:#79c0ff;">−6%</td><td style="text-align:right;color:#f85149;"><strong>55</strong></td></tr>
-        <tr><td>4</td><td>Lesiones culposas</td><td style="text-align:right;">13</td><td style="text-align:right;"><strong>12</strong></td><td style="text-align:right;color:#79c0ff;">−8%</td><td style="text-align:right;">44</td></tr>
-        <tr><td>5</td><td>Otros del Fuero Común</td><td style="text-align:right;">9</td><td style="text-align:right;"><strong>11</strong></td><td style="text-align:right;color:#ff7b72;">+22%</td><td style="text-align:right;">41</td></tr>
-        <tr><td>6</td><td>Violencia familiar</td><td style="text-align:right;">11</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#79c0ff;">−9%</td><td style="text-align:right;">37</td></tr>
-        <tr><td>7</td><td>Lesiones dolosas</td><td style="text-align:right;">8</td><td style="text-align:right;"><strong>7</strong></td><td style="text-align:right;color:#79c0ff;">−13%</td><td style="text-align:right;">26</td></tr>
-        <tr><td>8</td><td>Robo de vehículo automotor</td><td style="text-align:right;">6</td><td style="text-align:right;"><strong>6</strong></td><td style="text-align:right;color:#8b949e;">0%</td><td style="text-align:right;">22</td></tr>
-        <tr><td>9</td><td>Otros robos</td><td style="text-align:right;">4</td><td style="text-align:right;"><strong>5</strong></td><td style="text-align:right;color:#ff7b72;">+25%</td><td style="text-align:right;">19</td></tr>
+        <tr style="background:rgba(248,81,73,0.08);"><td>3</td><td><strong>Homicidio doloso</strong></td><td style="text-align:right;">16</td><td style="text-align:right;color:#f85149;"><strong>15</strong></td><td style="text-align:right;color:#79c0ff;">−6%</td><td style="text-align:right;color:#f85149;"><strong>56</strong></td></tr>
+        <tr><td>4</td><td>Lesiones culposas</td><td style="text-align:right;">10</td><td style="text-align:right;"><strong>12</strong></td><td style="text-align:right;color:#ff7b72;">+20%</td><td style="text-align:right;">44</td></tr>
+        <tr style="background:rgba(248,81,73,0.06);"><td>5</td><td><strong>Otros del Fuero Común</strong></td><td style="text-align:right;">4</td><td style="text-align:right;color:#f85149;"><strong>11</strong></td><td style="text-align:right;color:#f85149;"><strong>+175%</strong></td><td style="text-align:right;">41</td></tr>
+        <tr><td>6</td><td>Otros robos</td><td style="text-align:right;">28</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#79c0ff;">−64%</td><td style="text-align:right;">37</td></tr>
+        <tr><td>7</td><td>Violencia familiar</td><td style="text-align:right;">11</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#79c0ff;">−9%</td><td style="text-align:right;">37</td></tr>
+        <tr><td>8</td><td>Lesiones dolosas</td><td style="text-align:right;">11</td><td style="text-align:right;"><strong>7</strong></td><td style="text-align:right;color:#79c0ff;">−36%</td><td style="text-align:right;">26</td></tr>
+        <tr><td>9</td><td>Robo de vehículo</td><td style="text-align:right;">11</td><td style="text-align:right;"><strong>6</strong></td><td style="text-align:right;color:#79c0ff;">−45%</td><td style="text-align:right;">22</td></tr>
         <tr><td>10</td><td>Abuso sexual</td><td style="text-align:right;">3</td><td style="text-align:right;"><strong>4</strong></td><td style="text-align:right;color:#ff7b72;">+33%</td><td style="text-align:right;">15</td></tr>
       </tbody>
     </table>
   </div>
   <p style="margin-top:18px;color:#8b949e;font-size:13px;max-width:780px;text-align:justify;hyphens:auto;">
-    El ranking de Tepalcingo está dominado por delitos <strong style="color:#c9d1d9;">no patrimoniales</strong>: el primer delito patrimonial (robo de vehículo) está en octavo lugar. Es un perfil distinto al del resto del estado donde los robos suelen encabezar. Lo que predomina aquí son <strong style="color:#c9d1d9;">delitos de relación</strong>: daño a la propiedad (frecuentemente vinculado a disputas), amenazas, violencia familiar. Y por encima, sostenida desde 2022, la <strong style="color:#f85149;">violencia letal</strong>.
+    El ranking de Tepalcingo está dominado por delitos <strong style="color:#c9d1d9;">no patrimoniales</strong>: el primer delito patrimonial (otros robos) está en sexto lugar y los tres primeros son daño a propiedad, amenazas y <strong style="color:#f85149;">homicidio doloso</strong>. Es un perfil distinto al del resto del estado donde los robos suelen encabezar. Lo predomina aquí son <strong style="color:#c9d1d9;">delitos de relación</strong>: daño a la propiedad (frecuentemente vinculado a disputas), amenazas, violencia familiar. Y por encima, sostenida desde 2022, la <strong style="color:#f85149;">violencia letal</strong>. El cambio más fuerte es <strong style="color:#f85149;">otros del fuero común +175%</strong> (4 → 11 carpetas), una categoría residual que merece desglose por la Fiscalía.
   </p>
 </section>
 
@@ -17610,7 +18468,7 @@
   <div class="conclusion-grid">
     <div class="conclusion-card accent-red"><div class="hero">55/100K</div><div class="hero-sub">Tasa hom doloso 2025</div><p>Equiparable a Yecapixtla (62/100K). Dos veces el promedio estatal. Tres años consecutivos en zona alta tras un decenio que promediaba 5-9/año.</p></div>
     <div class="conclusion-card accent-orange"><div class="hero">2022</div><div class="hero-sub">Año del quiebre</div><p>Antes de 2022, Tepalcingo promediaba 5/año en hom doloso. Desde 2022 promedia 13/año. Tres veces el nivel anterior. La meseta nueva ya cumple cuatro años.</p></div>
-    <div class="conclusion-card accent-yellow"><div class="hero">0.006</div><div class="hero-sub">Ratio desap / letal</div><p>El más bajo del estado. Una sola desaparición registrada en una década donde han ocurrido 95 homicidios totales. El sistema formal de búsqueda no opera.</p></div>
+    <div class="conclusion-card accent-yellow"><div class="hero">0.010</div><div class="hero-sub">Ratio desap / letal</div><p>De los más bajos del estado. Una sola desaparición registrada en una década donde han ocurrido 104 muertes violentas (78 homicidios dolosos, 24 culposos, 2 feminicidios). El sistema formal de búsqueda apenas opera.</p></div>
     <div class="conclusion-card accent-blue"><div class="hero">5</div><div class="hero-sub">Delitos en alza T1 2026</div><p>Violencia familiar (2→21), amenazas (3→20), lesiones culposas (2→13), homicidio doloso (1→7), narcomenudeo (0→6). El municipio con más alzas simultáneas del estado.</p></div>
     <div class="conclusion-card accent-gradient"><div class="hero">→</div><div class="hero-sub">La firma que sigue</div><p>Si Tepalcingo sostiene el patrón de T1 2026, deja de ser muni "estable rural" y se vuelve foco activo del oriente. La meseta de 2022-2025 podría no ser meseta sino plataforma de escalada.</p></div>
   </div>
@@ -17905,7 +18763,7 @@
     <div class="card" style="border-color:#fbbf24;background:rgba(251,191,36,0.08);" onclick="showExplain('Reclasificación espejo en sexuales · única en el estado','En T1 2026, abuso sexual sube de 5 a 11 carpetas y violación cae de 8 a 5 simultáneamente. Es el <strong>único caso de reclasificación espejo en delitos sexuales detectado en Morelos</strong>. Patrón sugiere degradación de tipificación: violación es jurídicamente más grave que abuso. Coincide con vinculación a proceso en diciembre 2025 por abuso y violación en Jojutla.')">
       <div class="num">AS↑VL↓</div><div class="lbl">Sexual T1 2026<br>reclasificación espejo</div>
     </div>
-    <div class="card" style="border-color:#58a6ff;background:rgba(88,166,255,0.08);" onclick="showExplain('Homicidio: nivel medio-alto sostenido','Total letal Jojutla 2025: 48 (43 doloso + 5 culposo). Pico decadal en 2024: 68. Promedio decenal: ~46/año. Tasa letal 2025 = 81/100K, por encima del promedio estatal. Desapariciones decadal: 24 documentadas en RNPDNO. Ratio D/L promedio: 0.05.')">
+    <div class="card" style="border-color:#58a6ff;background:rgba(88,166,255,0.08);" onclick="showExplain('Homicidio: nivel medio-alto sostenido','Total letal Jojutla 2025: 48 (31 doloso + 17 culposo). Pico decadal en 2024: 68 (47 HD + 18 HC + 3 fem). Promedio decenal letal: ~46/año. Tasa letal 2025 = 81/100K, por encima del promedio estatal. Desapariciones decadal: 24 documentadas en RNPDNO. Ratio D/L promedio: 0.05.')">
       <div class="num">48</div><div class="lbl">Total letal 2025<br>tasa 81/100K</div>
     </div>
   </div>
@@ -17963,21 +18821,21 @@
         <tr><th>#</th><th>Delito</th><th style="text-align:right;">2024</th><th style="text-align:right;">2025</th><th style="text-align:right;">Δ%</th><th style="text-align:right;">tasa 100K</th></tr>
       </thead>
       <tbody>
-        <tr style="background:rgba(248,81,73,0.06);"><td>1</td><td><strong>Violencia familiar</strong></td><td style="text-align:right;">270</td><td style="text-align:right;color:#f85149;"><strong>290</strong></td><td style="text-align:right;color:#ff7b72;">+7%</td><td style="text-align:right;color:#f85149;"><strong>492</strong></td></tr>
-        <tr><td>2</td><td>Amenazas</td><td style="text-align:right;">225</td><td style="text-align:right;"><strong>240</strong></td><td style="text-align:right;color:#ff7b72;">+7%</td><td style="text-align:right;">407</td></tr>
-        <tr><td>3</td><td>Otros del Fuero Común</td><td style="text-align:right;">210</td><td style="text-align:right;"><strong>229</strong></td><td style="text-align:right;color:#ff7b72;">+9%</td><td style="text-align:right;">388</td></tr>
-        <tr><td>4</td><td>Lesiones culposas</td><td style="text-align:right;">181</td><td style="text-align:right;"><strong>192</strong></td><td style="text-align:right;color:#ff7b72;">+6%</td><td style="text-align:right;">325</td></tr>
-        <tr><td>5</td><td>Otros robos</td><td style="text-align:right;">165</td><td style="text-align:right;"><strong>177</strong></td><td style="text-align:right;color:#ff7b72;">+7%</td><td style="text-align:right;">300</td></tr>
-        <tr><td>6</td><td>Narcomenudeo</td><td style="text-align:right;">98</td><td style="text-align:right;"><strong>120</strong></td><td style="text-align:right;color:#ff7b72;">+22%</td><td style="text-align:right;">203</td></tr>
-        <tr><td>7</td><td>Fraude</td><td style="text-align:right;">102</td><td style="text-align:right;"><strong>115</strong></td><td style="text-align:right;color:#ff7b72;">+13%</td><td style="text-align:right;">195</td></tr>
-        <tr><td>8</td><td>Daño a la propiedad</td><td style="text-align:right;">95</td><td style="text-align:right;"><strong>102</strong></td><td style="text-align:right;color:#ff7b72;">+7%</td><td style="text-align:right;">173</td></tr>
-        <tr><td>9</td><td>Robo de vehículo</td><td style="text-align:right;">80</td><td style="text-align:right;"><strong>75</strong></td><td style="text-align:right;color:#79c0ff;">−6%</td><td style="text-align:right;">127</td></tr>
-        <tr><td>10</td><td>Robo a casa habitación</td><td style="text-align:right;">68</td><td style="text-align:right;"><strong>63</strong></td><td style="text-align:right;color:#79c0ff;">−7%</td><td style="text-align:right;">107</td></tr>
+        <tr style="background:rgba(248,81,73,0.06);"><td>1</td><td><strong>Violencia familiar</strong></td><td style="text-align:right;">253</td><td style="text-align:right;color:#f85149;"><strong>290</strong></td><td style="text-align:right;color:#ff7b72;">+15%</td><td style="text-align:right;color:#f85149;"><strong>492</strong></td></tr>
+        <tr><td>2</td><td>Amenazas</td><td style="text-align:right;">321</td><td style="text-align:right;"><strong>240</strong></td><td style="text-align:right;color:#79c0ff;">−25%</td><td style="text-align:right;">407</td></tr>
+        <tr><td>3</td><td>Otros del Fuero Común</td><td style="text-align:right;">164</td><td style="text-align:right;"><strong>229</strong></td><td style="text-align:right;color:#ff7b72;">+40%</td><td style="text-align:right;">388</td></tr>
+        <tr><td>4</td><td>Otros robos</td><td style="text-align:right;">154</td><td style="text-align:right;"><strong>201</strong></td><td style="text-align:right;color:#ff7b72;">+31%</td><td style="text-align:right;">341</td></tr>
+        <tr><td>5</td><td>Lesiones culposas</td><td style="text-align:right;">205</td><td style="text-align:right;"><strong>192</strong></td><td style="text-align:right;color:#79c0ff;">−6%</td><td style="text-align:right;">325</td></tr>
+        <tr><td>6</td><td><strong>Narcomenudeo</strong></td><td style="text-align:right;">78</td><td style="text-align:right;color:#f85149;"><strong>120</strong></td><td style="text-align:right;color:#f85149;"><strong>+54%</strong></td><td style="text-align:right;">203</td></tr>
+        <tr><td>7</td><td>Fraude</td><td style="text-align:right;">110</td><td style="text-align:right;"><strong>115</strong></td><td style="text-align:right;color:#ff7b72;">+5%</td><td style="text-align:right;">195</td></tr>
+        <tr><td>8</td><td>Daño a la propiedad</td><td style="text-align:right;">112</td><td style="text-align:right;"><strong>102</strong></td><td style="text-align:right;color:#79c0ff;">−9%</td><td style="text-align:right;">173</td></tr>
+        <tr><td>9</td><td>Robo de vehículo</td><td style="text-align:right;">86</td><td style="text-align:right;"><strong>75</strong></td><td style="text-align:right;color:#79c0ff;">−13%</td><td style="text-align:right;">127</td></tr>
+        <tr><td>10</td><td>Robo a casa habitación</td><td style="text-align:right;">59</td><td style="text-align:right;"><strong>63</strong></td><td style="text-align:right;color:#ff7b72;">+7%</td><td style="text-align:right;">107</td></tr>
       </tbody>
     </table>
   </div>
   <p style="margin-top:18px;color:#8b949e;font-size:13px;max-width:880px;text-align:justify;hyphens:auto;">
-    Ocho de los diez delitos suben respecto a 2024. Solo bajan los dos delitos de robo patrimonial. El crecimiento más fuerte es <strong style="color:#c9d1d9;">narcomenudeo (+22%)</strong>, alineado con las detenciones de "La Familia Michoacana" reportadas en el municipio. <strong style="color:#f85149;">Violencia familiar (290)</strong> es el delito más reportado del municipio — tasa 492/100K, casi el doble del promedio estatal.
+    <strong>Seis de los diez delitos suben</strong> respecto a 2024 (violencia familiar, otros del fuero común, otros robos, narcomenudeo, fraude, robo a casa) y cuatro bajan (amenazas, lesiones culposas, daño a propiedad, robo de vehículo). El crecimiento más fuerte es <strong style="color:#f85149;">narcomenudeo (+54%)</strong>, alineado con las detenciones de "La Familia Michoacana" reportadas en el municipio. <strong style="color:#f85149;">Violencia familiar (290)</strong> es el delito más reportado del municipio — tasa 492/100K, casi el doble del promedio estatal.
   </p>
 </section>
 
@@ -18024,15 +18882,15 @@
   <div class="conf-grid">
     <div class="conf-alert">
       <div class="pct-box"><div class="pct-huge">290</div><div class="pct-lbl">Violencia familiar 2025</div></div>
-      <div class="conf-text">Trayectoria 178 → 230 → 270 → 290 desde 2022. <strong>Subida monotónica</strong>. Tasa 492/100K — segundo lugar estatal después de Cuernavaca capital. La denuncia por VF crece, lo cual puede leerse como mayor reportabilidad o mayor incidencia real. Tres puntos a verificar: campañas locales, cobertura del Centro de Justicia para Mujeres, y conteo de medidas de protección emitidas.</div>
+      <div class="conf-text">Trayectoria 200 → 232 → 253 → 290 desde 2022. <strong>Subida monotónica</strong>. Tasa 492/100K — segundo lugar estatal después de Cuernavaca capital. La denuncia por VF crece, lo cual puede leerse como mayor reportabilidad o mayor incidencia real. Tres puntos a verificar: campañas locales, cobertura del Centro de Justicia para Mujeres, y conteo de medidas de protección emitidas.</div>
     </div>
     <div class="conf-alert" style="border-color:#fbbf24;background:rgba(251,191,36,0.06);">
       <div class="pct-box" style="background:rgba(251,191,36,0.12);border-color:#fbbf24;"><div class="pct-huge" style="color:#fbbf24;">240</div><div class="pct-lbl">Amenazas 2025</div></div>
-      <div class="conf-text">+7% vs 2024. Tasa 407/100K. Patrón de crecimiento alineado con violencia familiar — ambas son delitos de relación. En municipios con cabecera regional, las amenazas suelen incluir cobro de derecho de piso. Pendiente conocer porcentaje vinculado a actividad criminal organizada.</div>
+      <div class="conf-text"><strong>−25% vs 2024</strong> (321 → 240). Tasa 407/100K. Contraría la dirección de violencia familiar — y eso amerita lectura cuidadosa: o hay descenso real de amenazas o hay reclasificación. En municipios con cabecera regional, las amenazas suelen incluir cobro de derecho de piso. Pendiente conocer porcentaje vinculado a actividad criminal organizada y si la baja se mantiene en T2 2026.</div>
     </div>
     <div class="conf-alert" style="border-color:#a371f7;background:rgba(163,113,247,0.06);">
       <div class="pct-box" style="background:rgba(163,113,247,0.12);border-color:#a371f7;"><div class="pct-huge" style="color:#a371f7;">120</div><div class="pct-lbl">Narcomenudeo 2025</div></div>
-      <div class="conf-text"><strong>+22% vs 2024</strong>, la mayor variación del top 10. Coincide con detenciones públicas de presuntos miembros de "La Familia Michoacana" en el municipio en 2025. El tema cruza con consumo, distribución y la disputa entre grupos del centro-occidente y los locales. Tasa 203/100K.</div>
+      <div class="conf-text"><strong>+54% vs 2024</strong> (78 → 120), la mayor alza del top 10 entre los delitos que crecen. Coincide con detenciones públicas de presuntos miembros de "La Familia Michoacana" en el municipio en 2025. El tema cruza con consumo, distribución y la disputa entre grupos del centro-occidente y los locales. Tasa 203/100K.</div>
     </div>
     <div class="conf-alert" style="border-color:#58a6ff;background:rgba(88,166,255,0.06);">
       <div class="pct-box" style="background:rgba(88,166,255,0.12);border-color:#58a6ff;"><div class="pct-huge" style="color:#58a6ff;">48</div><div class="pct-lbl">Letal total 2025</div></div>
@@ -18070,16 +18928,16 @@
     <table class="rk-table">
       <thead><tr><th>Año</th><th style="text-align:right;">Doloso</th><th style="text-align:right;">Culposo</th><th style="text-align:right;">Fem</th><th style="text-align:right;">Letal total</th><th style="text-align:right;">Desap</th><th style="text-align:right;">Ratio D/L</th></tr></thead>
       <tbody>
-        <tr><td>2016</td><td style="text-align:right;">25</td><td style="text-align:right;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">29</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
-        <tr><td>2017</td><td style="text-align:right;">26</td><td style="text-align:right;">2</td><td style="text-align:right;">4</td><td style="text-align:right;">32</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
-        <tr><td>2018</td><td style="text-align:right;">53</td><td style="text-align:right;">3</td><td style="text-align:right;">1</td><td style="text-align:right;">57</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
-        <tr><td>2019</td><td style="text-align:right;">42</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td><td style="text-align:right;">44</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
-        <tr><td>2020</td><td style="text-align:right;">23</td><td style="text-align:right;">3</td><td style="text-align:right;">0</td><td style="text-align:right;">26</td><td style="text-align:right;">4</td><td style="text-align:right;">0.15</td></tr>
-        <tr><td>2021</td><td style="text-align:right;">49</td><td style="text-align:right;">4</td><td style="text-align:right;">0</td><td style="text-align:right;">53</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
-        <tr><td>2022</td><td style="text-align:right;">31</td><td style="text-align:right;">3</td><td style="text-align:right;">2</td><td style="text-align:right;">36</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
-        <tr style="background:rgba(248,81,73,0.06);"><td>2023</td><td style="text-align:right;">60</td><td style="text-align:right;">5</td><td style="text-align:right;">0</td><td style="text-align:right;">65</td><td style="text-align:right;">7</td><td style="text-align:right;">0.11</td></tr>
-        <tr style="background:rgba(248,81,73,0.08);"><td><strong>2024</strong></td><td style="text-align:right;color:#f85149;"><strong>61</strong></td><td style="text-align:right;">4</td><td style="text-align:right;">3</td><td style="text-align:right;"><strong>68</strong></td><td style="text-align:right;">7</td><td style="text-align:right;">0.10</td></tr>
-        <tr><td><strong>2025</strong></td><td style="text-align:right;">43</td><td style="text-align:right;">5</td><td style="text-align:right;">0</td><td style="text-align:right;">48</td><td style="text-align:right;">6</td><td style="text-align:right;">0.13</td></tr>
+        <tr><td>2016</td><td style="text-align:right;">14</td><td style="text-align:right;">13</td><td style="text-align:right;">2</td><td style="text-align:right;">29</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
+        <tr><td>2017</td><td style="text-align:right;">17</td><td style="text-align:right;">11</td><td style="text-align:right;">4</td><td style="text-align:right;">32</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
+        <tr><td>2018</td><td style="text-align:right;">45</td><td style="text-align:right;">11</td><td style="text-align:right;">1</td><td style="text-align:right;">57</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
+        <tr><td>2019</td><td style="text-align:right;">32</td><td style="text-align:right;">12</td><td style="text-align:right;">0</td><td style="text-align:right;">44</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
+        <tr><td>2020</td><td style="text-align:right;">19</td><td style="text-align:right;">7</td><td style="text-align:right;">0</td><td style="text-align:right;">26</td><td style="text-align:right;">4</td><td style="text-align:right;">0.15</td></tr>
+        <tr><td>2021</td><td style="text-align:right;">36</td><td style="text-align:right;">17</td><td style="text-align:right;">0</td><td style="text-align:right;">53</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
+        <tr><td>2022</td><td style="text-align:right;">14</td><td style="text-align:right;">20</td><td style="text-align:right;">2</td><td style="text-align:right;">36</td><td style="text-align:right;">0</td><td style="text-align:right;">0.00</td></tr>
+        <tr style="background:rgba(248,81,73,0.06);"><td>2023</td><td style="text-align:right;">45</td><td style="text-align:right;">20</td><td style="text-align:right;">0</td><td style="text-align:right;">65</td><td style="text-align:right;">7</td><td style="text-align:right;">0.11</td></tr>
+        <tr style="background:rgba(248,81,73,0.08);"><td><strong>2024</strong></td><td style="text-align:right;color:#f85149;"><strong>47</strong></td><td style="text-align:right;">18</td><td style="text-align:right;">3</td><td style="text-align:right;"><strong>68</strong></td><td style="text-align:right;">7</td><td style="text-align:right;">0.10</td></tr>
+        <tr><td><strong>2025</strong></td><td style="text-align:right;">31</td><td style="text-align:right;">17</td><td style="text-align:right;">0</td><td style="text-align:right;">48</td><td style="text-align:right;">6</td><td style="text-align:right;">0.13</td></tr>
       </tbody>
     </table>
   </div>
@@ -18095,7 +18953,7 @@
         <tr><th>Municipio</th><th style="text-align:right;">Pob.</th><th style="text-align:right;">Total delitos 2025</th><th style="text-align:right;">Tasa /100K</th><th style="text-align:right;">Hom doloso 2025</th><th style="text-align:right;">Desap decenal</th></tr>
       </thead>
       <tbody>
-        <tr style="background:rgba(248,81,73,0.08);"><td><strong>Jojutla</strong></td><td style="text-align:right;">59,000</td><td style="text-align:right;color:#f85149;"><strong>2,053</strong></td><td style="text-align:right;color:#f85149;"><strong>3,480</strong></td><td style="text-align:right;">43</td><td style="text-align:right;">24</td></tr>
+        <tr style="background:rgba(248,81,73,0.08);"><td><strong>Jojutla</strong></td><td style="text-align:right;">59,000</td><td style="text-align:right;color:#f85149;"><strong>2,053</strong></td><td style="text-align:right;color:#f85149;"><strong>3,480</strong></td><td style="text-align:right;">31</td><td style="text-align:right;">24</td></tr>
         <tr><td>Zacatepec</td><td style="text-align:right;">36,000</td><td style="text-align:right;">880</td><td style="text-align:right;">2,444</td><td style="text-align:right;">12</td><td style="text-align:right;">~8</td></tr>
         <tr><td>Puente de Ixtla</td><td style="text-align:right;">65,000</td><td style="text-align:right;">1,205</td><td style="text-align:right;">1,854</td><td style="text-align:right;">11</td><td style="text-align:right;">~5</td></tr>
         <tr><td>Tlaquiltenango</td><td style="text-align:right;">34,000</td><td style="text-align:right;">450</td><td style="text-align:right;">1,324</td><td style="text-align:right;">3</td><td style="text-align:right;">~2</td></tr>
@@ -18107,7 +18965,7 @@
     Jojutla tiene la <strong>tasa de denuncia más alta de su cohorte sur-poniente</strong> y supera incluso a Cuernavaca capital (que es siete veces más grande). Esto es esperable por ser cabecera regional: la Fiscalía Sur-Poniente y la Fiscalía Especializada en Delitos Sexuales y Familiares están en Jojutla, lo que concentra la denuncia regional ahí.
   </p>
   <p style="color:#c9d1d9;font-size:14.5px;line-height:1.65;margin-top:10px;max-width:880px;text-align:justify;hyphens:auto;">
-    En homicidio doloso absoluto, Jojutla (43) cuadruplica al siguiente del sur (Zacatepec con 12). Pero al ajustar por población, la tasa de hom doloso es <strong>72/100K</strong> — mayor que Cuernavaca (22/100K) y comparable con Yecapixtla y Tepalcingo del oriente. El sur-poniente tiene su propio nodo activo.
+    En homicidio doloso absoluto, Jojutla (31) duplica con holgura al siguiente del sur (Zacatepec con 12). Al ajustar por población, la tasa de hom doloso es <strong>53/100K</strong> — más del doble que Cuernavaca (22/100K) y comparable con Yecapixtla y Tepalcingo del oriente. El sur-poniente tiene su propio nodo activo.
   </p>
 </section>
 
@@ -18481,20 +19339,20 @@
       </thead>
       <tbody>
         <tr style="background:rgba(248,81,73,0.06);"><td>1</td><td><strong>Lesiones culposas</strong></td><td style="text-align:right;">8</td><td style="text-align:right;color:#f85149;"><strong>13</strong></td><td style="text-align:right;color:#ff7b72;">+63%</td><td style="text-align:right;">186</td></tr>
-        <tr><td>2</td><td>Daño a la propiedad</td><td style="text-align:right;">9</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#ff7b72;">+11%</td><td style="text-align:right;">143</td></tr>
-        <tr><td>3</td><td>Violencia familiar</td><td style="text-align:right;">8</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#ff7b72;">+25%</td><td style="text-align:right;">143</td></tr>
-        <tr style="background:rgba(248,81,73,0.08);"><td>4</td><td><strong>Homicidio culposo</strong></td><td style="text-align:right;">4</td><td style="text-align:right;color:#f85149;"><strong>8</strong></td><td style="text-align:right;color:#ff7b72;">+100%</td><td style="text-align:right;color:#f85149;"><strong>114</strong></td></tr>
-        <tr><td>5</td><td>Despojo</td><td style="text-align:right;">7</td><td style="text-align:right;"><strong>8</strong></td><td style="text-align:right;color:#ff7b72;">+14%</td><td style="text-align:right;">114</td></tr>
-        <tr><td>6</td><td>Robo de vehículo</td><td style="text-align:right;">5</td><td style="text-align:right;"><strong>7</strong></td><td style="text-align:right;color:#ff7b72;">+40%</td><td style="text-align:right;">100</td></tr>
-        <tr><td>7</td><td>Amenazas</td><td style="text-align:right;">6</td><td style="text-align:right;"><strong>7</strong></td><td style="text-align:right;color:#ff7b72;">+17%</td><td style="text-align:right;">100</td></tr>
-        <tr><td>8</td><td>Otros robos</td><td style="text-align:right;">4</td><td style="text-align:right;"><strong>5</strong></td><td style="text-align:right;color:#ff7b72;">+25%</td><td style="text-align:right;">71</td></tr>
-        <tr><td>9</td><td>Otros del Fuero Común</td><td style="text-align:right;">5</td><td style="text-align:right;"><strong>5</strong></td><td style="text-align:right;color:#8b949e;">0%</td><td style="text-align:right;">71</td></tr>
+        <tr><td>2</td><td>Daño a la propiedad</td><td style="text-align:right;">15</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#79c0ff;">−33%</td><td style="text-align:right;">143</td></tr>
+        <tr><td>3</td><td>Violencia familiar</td><td style="text-align:right;">11</td><td style="text-align:right;"><strong>10</strong></td><td style="text-align:right;color:#79c0ff;">−9%</td><td style="text-align:right;">143</td></tr>
+        <tr style="background:rgba(248,81,73,0.08);"><td>4</td><td><strong>Homicidio culposo</strong></td><td style="text-align:right;">2</td><td style="text-align:right;color:#f85149;"><strong>8</strong></td><td style="text-align:right;color:#ff7b72;">+300%</td><td style="text-align:right;color:#f85149;"><strong>114</strong></td></tr>
+        <tr style="background:rgba(248,81,73,0.06);"><td>5</td><td><strong>Despojo</strong></td><td style="text-align:right;">2</td><td style="text-align:right;color:#f85149;"><strong>8</strong></td><td style="text-align:right;color:#f85149;"><strong>+300%</strong></td><td style="text-align:right;">114</td></tr>
+        <tr style="background:rgba(248,81,73,0.06);"><td>6</td><td><strong>Robo de vehículo</strong></td><td style="text-align:right;">2</td><td style="text-align:right;color:#f85149;"><strong>7</strong></td><td style="text-align:right;color:#f85149;"><strong>+250%</strong></td><td style="text-align:right;">100</td></tr>
+        <tr><td>7</td><td>Amenazas</td><td style="text-align:right;">16</td><td style="text-align:right;"><strong>7</strong></td><td style="text-align:right;color:#79c0ff;">−56%</td><td style="text-align:right;">100</td></tr>
+        <tr><td>8</td><td>Otros robos</td><td style="text-align:right;">4</td><td style="text-align:right;"><strong>6</strong></td><td style="text-align:right;color:#ff7b72;">+50%</td><td style="text-align:right;">86</td></tr>
+        <tr style="background:rgba(248,81,73,0.06);"><td>9</td><td><strong>Otros del Fuero Común</strong></td><td style="text-align:right;">1</td><td style="text-align:right;color:#f85149;"><strong>5</strong></td><td style="text-align:right;color:#f85149;"><strong>+400%</strong></td><td style="text-align:right;">71</td></tr>
         <tr style="background:rgba(248,81,73,0.06);"><td>10</td><td><strong>Homicidio doloso</strong></td><td style="text-align:right;">1</td><td style="text-align:right;color:#f85149;"><strong>4</strong></td><td style="text-align:right;color:#ff7b72;">+300%</td><td style="text-align:right;color:#f85149;"><strong>57</strong></td></tr>
       </tbody>
     </table>
   </div>
   <p style="margin-top:18px;color:#8b949e;font-size:13px;max-width:880px;text-align:justify;hyphens:auto;">
-    Nueve de los diez delitos suben respecto a 2024. <strong style="color:#f85149;">El homicidio doloso pasa de 1 a 4 (+300%)</strong> y el <strong style="color:#f85149;">homicidio culposo de 4 a 8 (+100%)</strong>. Las cifras absolutas son pequeñas — propias de un muni de 7,000 habitantes — pero las tasas per cápita son altas: 114/100K en hom culposo, 57/100K en hom doloso. Tasas comparables o superiores a la media nacional.
+    <strong>Siete de los diez delitos suben</strong> respecto a 2024 (lesiones culposas, homicidio culposo, despojo, robo de vehículo, otros robos, otros del fuero común, homicidio doloso) y tres bajan (daño a propiedad, violencia familiar, amenazas). <strong style="color:#f85149;">El homicidio doloso pasa de 1 a 4 (+300%)</strong> y el <strong style="color:#f85149;">homicidio culposo de 2 a 8 (+300%)</strong>. <strong style="color:#f85149;">Despojo y robo de vehículo también triplican</strong> sus cifras (2→8 y 2→7 respectivamente). Las cifras absolutas son pequeñas — propias de un muni de 7,000 habitantes — pero las tasas per cápita son altas: 114/100K en hom culposo, 57/100K en hom doloso, comparables o superiores a la media nacional.
   </p>
 </section>
 
@@ -20815,7 +21673,7 @@
   <div class="ax10-eyebrow">10 · T1 2026 · ROBO DE VEHÍCULO AL ALZA + REBOTE DE HD</div>
   <h1 class="ax10-title">Axochiapan · <em>el rebote temprano</em> tras la caída más fuerte del estado</h1>
   <p class="ax10-lead">
-    Tras la caída del HD anual –70% (de 27 a 8 carpetas), el primer trimestre 2026 muestra señales mixtas. <strong>Una alza pasa criterio estricto</strong>: robo de vehículo (6→14, z=3.93, 2.66× media). El HD pasa de 2 a 6 (+200%) — base baja pero rebote claro. Aparece 1 feminicidio (cero en T1 25). El muni no consolida una baja sostenida — la pausa parece estar terminando.
+    Tras la caída del HD anual –70% (de 27 a 8 carpetas), el primer trimestre 2026 muestra señales mixtas. <strong>Una alza pasa criterio estricto</strong>: robo de vehículo (6→14, z=3.93, 2.66× media). El HD pasa de 2 a 6 (+200%) — base baja pero rebote claro. Aparece 1 <em>tentativa de feminicidio</em> (cero en T1 25; feminicidio consumado se mantiene en 0). El muni no consolida una baja sostenida — la pausa parece estar terminando.
   </p>
 
   <div class="ax10-cards">
@@ -20834,11 +21692,11 @@
       <p class="note">Triplica T1 25 pero no llega al umbral z≥2.5. Sin embargo, en muni que cerró 2025 con 8 dolosos, ya tener 6 en el primer trimestre es señal de rebote. Proyección anual conservadora: 20-25.</p>
     </article>
     <article class="ax10-card">
-      <span class="pill">FEM · Feminicidio</span>
+      <span class="pill">FEM · Tentativa de feminicidio</span>
       <h4>Aparición desde cero</h4>
       <div class="quote"><span class="from">0</span><span class="arr">→</span><span class="to">1</span></div>
       <div class="stat"><strong>+1</strong> carpeta · z=3.16</div>
-      <p class="note">T1 25 cerró con cero feminicidios. T1 26 ya tiene uno. En base pequeña la cifra absoluta es baja, pero junto con el patrón de 4 mujeres desaparecidas en la década, amerita verificación.</p>
+      <p class="note">T1 25 cerró con cero tentativas. T1 26 ya tiene una. <strong>SESNSP la clasifica como "tentativa de feminicidio", no como feminicidio consumado</strong> — distinción jurídica relevante. En base pequeña la cifra absoluta es baja, pero junto con el patrón de 4 mujeres desaparecidas en la década, amerita verificación.</p>
     </article>
     <article class="ax10-card">
       <span class="pill">EXT · Extorsión</span>
@@ -20858,12 +21716,12 @@
       <strong>Segundo — sobre el robo de vehículo.</strong> La alza estricta T1 26 (6→14) en RV sugiere una red de robo activa o paso reciente. La pregunta editorial: ¿hay denuncia de robadero o desmantelamiento en la zona? La frontera con Puebla facilita movilidad.
     </p>
     <p>
-      <strong>Tercero — sobre el patrón de víctimas mujeres.</strong> 4 mujeres desaparecidas en 6 totales de la década + 1 feminicidio que aparece en T1 26. En muni de 37K, la sobrerrepresentación de víctimas femeninas necesita reportería específica con la Fiscalía Especializada en Delitos Sexuales y Violencia Familiar.
+      <strong>Tercero — sobre el patrón de víctimas mujeres.</strong> 4 mujeres desaparecidas en 6 totales de la década + 1 tentativa de feminicidio que aparece en T1 26. En muni de 37K, la sobrerrepresentación de víctimas femeninas necesita reportería específica con la Fiscalía Especializada en Delitos Sexuales y Violencia Familiar.
     </p>
   </div>
 
   <div class="footer-note" style="margin-top:24px;">
-    <strong>Metodología T1 2026 · Axochiapan.</strong> Una alza pasa criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5): RV (z=3.93, 2.66× media, &gt;máx histórico T1). Tres honorable mentions: HD (rebote +200% pero base baja), FEM (aparición), EXT (aparición desde cero anual). La caída anual del HD –70% queda como flag abierto pendiente de explicación institucional.
+    <strong>Metodología T1 2026 · Axochiapan.</strong> Una alza pasa criterio estricto (T1 26 ≥ 5 + ≥2.5× media o z ≥ 2.5): RV (z=3.93, 2.66× media, &gt;máx histórico T1). Tres honorable mentions: HD (rebote +200% pero base baja), <em>tentativa de feminicidio</em> (aparición desde cero), EXT (aparición desde cero anual). La caída anual del HD –70% queda como flag abierto pendiente de explicación institucional.
   </div>
 </section>
 
@@ -24927,12 +25785,12 @@
   <!-- Badge -->
   <div style="display:inline-flex;gap:10px;align-items:center;padding:8px 18px;background:rgba(13,17,23,0.85);border:1.5px solid rgba(63,185,80,0.55);border-radius:24px;margin-bottom:18px;backdrop-filter:blur(8px);">
     <span style="width:9px;height:9px;background:#3fb950;border-radius:50%;box-shadow:0 0 10px rgba(63,185,80,0.85);animation:pulse 2s infinite;"></span>
-    <span style="color:#3fb950;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800;">Q1 2026 · 14 ZM · datos parciales</span>
+    <span style="color:#3fb950;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800;">Q1 2026 · 14 MUNIS · 2 ZM OFICIALES · datos parciales</span>
   </div>
 
   <h1 style="background:linear-gradient(135deg,#3fb950 0%,#58a6ff 50%,#fbbf24 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 4px 30px rgba(0,0,0,0.5);">EL PRIMER TRIMESTRE 2026<br>QUE ROMPIÓ LA NARRATIVA</h1>
   <p class="subtitle" style="max-width:880px;text-align:justify;">
-    El gobierno federal celebra una caída del 41% en el promedio diario nacional de homicidios dolosos. En las 14 zonas metropolitanas de Morelos, el indicador se mantuvo plano (+1.6%) mientras la extorsión se multiplicó por 2.5 en un solo trimestre. Esta sección integra el corte SESNSP marzo 2026 como capa adicional — sin modificar las cifras 2015-2025 publicadas previamente.
+    El gobierno federal celebra una caída del 41% en el promedio diario nacional de homicidios dolosos. En los 14 municipios que conforman las dos zonas metropolitanas oficiales de Morelos (ZM Cuernavaca + ZM Cuautla, según SEDATU-CONAPO-INEGI), el indicador se mantuvo plano (+1.6%) mientras la extorsión se multiplicó por 2.5 en un solo trimestre. Esta sección integra el corte SESNSP marzo 2026 como capa adicional — sin modificar las cifras 2015-2025 publicadas previamente.
   </p>
 </section>
 
@@ -24945,7 +25803,7 @@
   </p>
 
   <!-- Cards de comparativa Q1 2025 vs Q1 2026 (14 munis ZM agregadas) -->
-  <h3 style="margin-top:24px;">Q1 2026 · agregado de las 14 ZM</h3>
+  <h3 style="margin-top:24px;">Q1 2026 · agregado de los 14 munis (ZM Cuernavaca + ZM Cuautla)</h3>
   <style>
     .q1-hero-grid {
       display: grid;
@@ -25049,9 +25907,9 @@
   <div class="q1-hero-grid">
 
     <!-- Card 1 · Homicidio doloso (PLANO) -->
-    <div class="q1-hero-card flat" onclick="showExplain('Homicidio doloso plano: la anomalía Morelos','Mientras el SESNSP nacional reportó marzo 2026 como el mes con menos homicidios dolosos desde 2016 (caída de 41% en el promedio diario respecto a septiembre 2024), las 14 ZM de Morelos registraron solo +1.6% interanual (de 190 a 193 carpetas Q1 2025→Q1 2026). Las 7 entidades destacadas en mañanera (Guanajuato −63%, Baja California −42%, Sinaloa −63%, Estado de México, Nuevo León −74%, Quintana Roo −74%, Zacatecas −89%) sí registraron caídas dramáticas; Morelos no apareció en ese conteo.')">
+    <div class="q1-hero-card flat" onclick="showExplain('Homicidio doloso plano: la anomalía Morelos','Mientras el SESNSP nacional reportó marzo 2026 como el mes con menos homicidios dolosos desde 2016 (caída de 41% en el promedio diario respecto a septiembre 2024), los 14 munis de las dos ZM oficiales de Morelos (Cuernavaca + Cuautla) registraron solo +1.6% interanual (de 190 a 193 carpetas Q1 2025→Q1 2026). Las 7 entidades destacadas en mañanera (Guanajuato −63%, Baja California −42%, Sinaloa −63%, Estado de México, Nuevo León −74%, Quintana Roo −74%, Zacatecas −89%) sí registraron caídas dramáticas; Morelos no apareció en ese conteo.')">
       <div class="q1-hero-head">
-        <span class="q1-hero-title">Homicidio doloso · 14 ZM</span>
+        <span class="q1-hero-title">Homicidio doloso · 14 munis ZM</span>
         <span class="q1-hero-icon flat">▬</span>
       </div>
       <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="none">
@@ -25076,9 +25934,9 @@
     </div>
 
     <!-- Card 2 · Extorsión (ALZA EXTREMA) -->
-    <div class="q1-hero-card alza" onclick="showExplain('Extorsión multiplicada por 2.5','Las 14 ZM Morelos pasaron de 55 a 138 carpetas de extorsión entre Q1 2025 y Q1 2026 (+150.9%). Cuautla cabecera concentra 60 de esas 138 carpetas (43.5% de la nueva extorsión) — manteniendo su firma como capital nacional del cobro de piso. Pero el hallazgo más relevante es que Xochitepec, que cerró 2025 con solo 4 extorsiones anuales, registró 24 en el solo Q1 2026 — un nuevo polo emergente. La tendencia contradice la narrativa nacional de baja generalizada.')">
+    <div class="q1-hero-card alza" onclick="showExplain('Extorsión multiplicada por 2.5','Los 14 munis de las 2 ZM oficiales de Morelos pasaron de 55 a 138 carpetas de extorsión entre Q1 2025 y Q1 2026 (+150.9%). Cuautla cabecera concentra 60 de esas 138 carpetas (43.5% de la nueva extorsión) — manteniendo su firma como capital nacional del cobro de piso. Pero el hallazgo más relevante es que Xochitepec, que cerró 2025 con solo 4 extorsiones anuales, registró 24 en el solo Q1 2026 — un nuevo polo emergente. La tendencia contradice la narrativa nacional de baja generalizada.')">
       <div class="q1-hero-head">
-        <span class="q1-hero-title">Extorsión · 14 ZM</span>
+        <span class="q1-hero-title">Extorsión · 14 munis ZM</span>
         <span class="q1-hero-icon alza">▲</span>
       </div>
       <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="none">
@@ -25102,9 +25960,9 @@
     </div>
 
     <!-- Card 3 · Violencia familiar (ALZA · denuncia operativa) -->
-    <div class="q1-hero-card up" onclick="showExplain('Violencia familiar al alza: el delito de denuncia funciona','Las 14 ZM Morelos registraron 1,373 carpetas de violencia familiar en Q1 2026 vs 1,171 en Q1 2025 (+17.3%). Es un dato editorialmente importante: si el sistema de captura del Ministerio Público estuviera fallando (subregistro), todos los delitos bajarían — incluyendo violencia familiar y feminicidio (estos suben +66.7%). El que estos delitos SUBAN dice que el sistema de denuncia opera. Por lo tanto, las bajas que sí ocurrieron en otras categorías (lesiones dolosas −31%, amenazas −18%) ameritan auditoría: pueden ser reales o reclasificación de tipificación.')">
+    <div class="q1-hero-card up" onclick="showExplain('Violencia familiar al alza: el delito de denuncia funciona','Los 14 munis de las 2 ZM oficiales de Morelos registraron 1,373 carpetas de violencia familiar en Q1 2026 vs 1,171 en Q1 2025 (+17.3%). Es un dato editorialmente importante: si el sistema de captura del Ministerio Público estuviera fallando (subregistro), todos los delitos bajarían — incluyendo violencia familiar y feminicidio (estos suben +66.7%). El que estos delitos SUBAN dice que el sistema de denuncia opera. Por lo tanto, las bajas que sí ocurrieron en otras categorías (lesiones dolosas −31%, amenazas −18%) ameritan auditoría: pueden ser reales o reclasificación de tipificación.')">
       <div class="q1-hero-head">
-        <span class="q1-hero-title">Violencia familiar · 14 ZM</span>
+        <span class="q1-hero-title">Violencia familiar · 14 munis ZM</span>
         <span class="q1-hero-icon up">▲</span>
       </div>
       <svg class="q1-hero-mini" viewBox="0 0 280 70" preserveAspectRatio="none">
@@ -25175,8 +26033,8 @@
   <!-- ========================== -->
   <!-- CHART A · Diverging bar Δ% -->
   <!-- ========================== -->
-  <h3 style="margin-top:44px;">Qué subió y qué bajó · Q1 2025 → Q1 2026 · agregado 14 ZM</h3>
-  <p style="text-align:justify;">Para cada delito, el porcentaje de cambio entre el primer trimestre 2025 y el primer trimestre 2026 al agregar las 14 zonas metropolitanas. Las barras a la derecha (rojo) representan alzas — el delito creció en el trimestre. Las barras a la izquierda (azul) representan bajas. Las cifras anualizadas equivalentes están entre paréntesis: nada se proyectó al año completo, solo se cita el cambio interanual del mismo trimestre.</p>
+  <h3 style="margin-top:44px;">Qué subió y qué bajó · Q1 2025 → Q1 2026 · agregado 14 munis (ZM Cuernavaca + ZM Cuautla)</h3>
+  <p style="text-align:justify;">Para cada delito, el porcentaje de cambio entre el primer trimestre 2025 y el primer trimestre 2026 al agregar los 14 municipios que conforman las dos zonas metropolitanas oficiales de Morelos. Las barras a la derecha (rojo) representan alzas — el delito creció en el trimestre. Las barras a la izquierda (azul) representan bajas. Las cifras anualizadas equivalentes están entre paréntesis: nada se proyectó al año completo, solo se cita el cambio interanual del mismo trimestre.</p>
 
   <div class="chart-zoomable" style="margin:22px 0 18px;">
     <div class="chart-canvas-frame" style="position:relative;height:480px;padding:14px 16px 12px;background:rgba(13,17,23,0.55);border:1px solid rgba(48,54,61,0.7);border-radius:10px;">
@@ -25241,7 +26099,7 @@
   <!-- ============================ -->
   <!-- CHART B · Q1 histórico decenal -->
   <!-- ============================ -->
-  <h3 style="margin-top:44px;">Q1 en perspectiva decenal · 2016 a 2026 · 14 ZM agregadas</h3>
+  <h3 style="margin-top:44px;">Q1 en perspectiva decenal · 2016 a 2026 · 14 munis ZM agregados</h3>
   <p style="text-align:justify;">El primer trimestre de cada año desde 2016, sumando los 14 municipios analizados. Permite ubicar el Q1 2026 dentro del rango histórico observado del decenio. La línea sólida marca el indicador completo de cada serie; el punto 2026 corresponde al primer trimestre del año que recién publicó el SESNSP. Es la única manera honesta de verificar si una "baja" o "alza" del trimestre actual sale del comportamiento esperable de la última década.</p>
 
   <div class="chart-zoomable" style="margin:22px 0 18px;">
@@ -25501,13 +26359,13 @@
           <text x="80" y="55" font-family="JetBrains Mono, monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">−41%</text>
           <!-- Bar Morelos +1.6% (apenas arriba) -->
           <rect x="180" y="38.5" width="60" height="2" fill="#fbbf24"/>
-          <text x="210" y="84" font-family="JetBrains Mono, monospace" font-size="9" fill="#fbbf24" text-anchor="middle" font-weight="800">14 ZM MORELOS</text>
+          <text x="210" y="84" font-family="JetBrains Mono, monospace" font-size="9" fill="#fbbf24" text-anchor="middle" font-weight="800">14 MUNIS ZM</text>
           <text x="210" y="32" font-family="JetBrains Mono, monospace" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="800">+1.6%</text>
           <!-- Annotation gap -->
           <text x="160" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#d2a8ff" text-anchor="middle" font-weight="700" letter-spacing="0.6">BRECHA: 42.6 PUNTOS PORCENTUALES</text>
         </svg>
       </div>
-      <p>El gobierno federal celebra <strong>−41% en el promedio diario nacional</strong> de homicidios dolosos sept-2024 → mar-2026, con 7 entidades destacadas (Guanajuato, Baja California, Sinaloa, Edo. México, Nuevo León, Quintana Roo, Zacatecas). <strong>Morelos no aparece en ese conteo.</strong> Las 14 ZM mantuvieron el indicador plano (+1.6%). La narrativa de éxito federal no aplica al estado.</p>
+      <p>El gobierno federal celebra <strong>−41% en el promedio diario nacional</strong> de homicidios dolosos sept-2024 → mar-2026, con 7 entidades destacadas (Guanajuato, Baja California, Sinaloa, Edo. México, Nuevo León, Quintana Roo, Zacatecas). <strong>Morelos no aparece en ese conteo.</strong> Los 14 munis de las 2 ZM oficiales mantuvieron el indicador plano (+1.6%). La narrativa de éxito federal no aplica al estado.</p>
     </div>
 
   </div>
@@ -26186,12 +27044,14 @@
   <div class="glo-group" style="margin-top:32px;">
     <div class="glo-cat">Historial de versiones</div>
     <dl class="glo-list">
+      <div class="glo-item"><dt>v2.7 · 13 de mayo de 2026</dt>
+        <dd style="text-align:justify;"><strong>Auditoría integral de cifras + ranking nacional T1 2026.</strong> Tres cosas pasaron en esta versión: (1) <strong>Cobertura completa a 36 munis</strong> — se publican secciones T1 2026 para los seis municipios que faltaban (Cuernavaca, Ayala, Yautepec, Atlatlahucan, Tlaltizapán, Tlayacapan) con datos extraídos directamente del cache SESNSP corte marzo 2026 y verificación de alza estricta por z-score, ratio sobre media histórica y máximo decenal T1. Hallazgos: Cuernavaca aparece HD_T 0→16 + PIL 0→13 desde cero (recategorización ministerial), Ayala consolida alza RV 4→16 que antecede el evento de "El Rincón de la Banda" (abril 18), Yautepec ratifica firma extorsiva con EXT 9→12 superando máximo histórico T1. (2) <strong>Auditoría exhaustiva de cifras</strong>: tres agentes paralelos validaron T1 2026 contra records.json (33 munis, 0 discrepancias graves), trazabilidad de Jojutla/Tepalcingo/Tlalnepantla (50% de cifras anuales sin respaldo local → corregidas extrayendo records históricos directos del SESNSP), y agregados sZE/sQ1/sNAC (matemática 100% sana). Correcciones graves aplicadas: Jojutla HD 2024 61→47 y HD 2025 43→31 con tabla letal completa reescrita y tasa 72→53/100K; Tlalnepantla HC 2024 4→2 con cambio +100→+300%; Tepalcingo "95 homicidios década"→"104 muertes violentas (78 dolosos)". Nomenclatura sQ1 "14 ZM"→"14 munis de las 2 ZM oficiales (Cuernavaca + Cuautla)". Axochiapan card feminicidio→tentativa de feminicidio. sNAC1/sNAC5 frase "sube cada año"→"tendencia creciente sostenida con interrupciones puntuales" (cierre 2025 cayó −25%). sNAC5 footer aclara que 21.13/100K es media simple no ponderada (vs 19.18 ponderada). Tepoztán narcomenudeo 0→22 verificado contra cache SESNSP. Nuevo archivo replicable <code>regiones_ped_aggregates_2025.json</code> reproduce las cifras del sZE al 100%. (3) <strong>sNAC6 · Ranking T1 2026 vs 32 entidades</strong>: nueva sección con 4 podium cards, 5 mini-ladders visuales y tabla resumen. Hallazgo nuclear: <strong>Morelos es #1 nacional en tasa per cápita anualizada de extorsión (31.84/100K), feminicidio (3.27/100K) y robo de vehículo (199.39/100K), #2 en homicidio doloso (52.04/100K, solo Colima por encima), y #1 en ratio T1 vs total anual 2025 de violencia familiar</strong>. La narrativa federal de −41% nacional en HD no incluye a Morelos. Versión anterior: <a href="versiones/v2.6-2026-05-12/" style="color:#58a6ff;">v2.6 (12-may-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.6 · 12 de mayo de 2026</dt>
         <dd style="text-align:justify;">Expansión a <strong>21 análisis municipales completos</strong> (de 14 previos): se publican Yecapixtla, Tepalcingo, Jojutla, Tlalnepantla, Mazatepec, Jantetelco, Puente de Ixtla, Tetecala como secciones completas con 10 apartados c/u, más actualizaciones T1 2026 para Jiutepec, Temixco, Emiliano Zapata, Xochitepec, Huitzilac, Cuautla. <strong>Reestructura regional al Plan Estatal de Desarrollo Morelos 2025-2030</strong> (admin Margarita González Saravia): el dashboard adopta la división oficial en 7 regiones (Noroeste, Centro, Norte, Noreste, Oriente, Sur, Poniente) que reemplaza la taxonomía anterior basada en SEDATU + agregados ad-hoc. Mapa con tintes por región oficial, navegación lateral reagrupada en super-grupos colapsables, ranking estatal con columna región, sZE rehecho en 7 tarjetas comparativas. Eliminadas las secciones meta SEDATU sZM1-3 y sZMC1-3 para evitar confusión taxonómica. Versión anterior: <a href="versiones/v2.5-2026-04-28/" style="color:#58a6ff;">v2.5 (28-abr-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.5 · 28 de abril de 2026</dt>
         <dd style="text-align:justify;">Nueva sección <strong>sTep10 · Q1 2026 · La Respuesta</strong> dentro del bloque de Tepoztlán. Confrontación editorial documentada al pronunciamiento público del alcalde Roberto Yáñez (28-abr-2026) sobre que el municipio fue "el que tuvo la mayor disminución en cualquier índice que tú veas" en Q1 2026. La sección verifica los 36 tipos de delito SESNSP municipal: 17 subieron o aparecieron donde antes no había (violencia familiar +69%, lesiones culposas +188%, abuso sexual y violación apareciendo, allanamiento de morada +250%, "otros delitos contra la sociedad" 0→18, narcomenudeo decenal 0→22 en cierre 2025), 18 bajaron (homicidio doloso −90%, robo vehículo −68%, fraude −88%, etc.). Detalle revelador: las 23 lesiones culposas Q1 2026 están todas clasificadas en modalidad "No especificado" — la modalidad "accidente de tránsito" aparece en cero. Adicionalmente: zoom in/out con scrollbars en modo expandido para todos los charts del dashboard. Versión anterior: <a href="versiones/v2.4-2026-04-28/" style="color:#58a6ff;">v2.4 (28-abr-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.4 · 28 de abril de 2026</dt>
-        <dd style="text-align:justify;">Sección dedicada <strong>Década Nacional</strong> (sNAC1-sNAC5) con análisis cohorte de Morelos vs los 32 estados de México durante el decenio 2015-2025. Cinco actos: portada con espiral SVG decenal Morelos vs nacional · ranking de cuatro métricas con escalas visuales · slope ladder de las 32 entidades ordenadas por tendencia anual · diverging bars Morelos vs nacional en seis indicadores graves · cohorte de cinco estados de tamaño similar (Querétaro, San Luis Potosí, Hidalgo, Tlaxcala, Aguascalientes) · heatmap nacional 32 estados × 11 años. El argumento central: la trayectoria de Morelos en homicidio doloso es la peor del país en pendiente decenal (#1 de 32 con +8.76% anual sostenido), tercera tasa más alta nacional (45.2/100K). El Q1 2026 deja de ser headline y queda como coyuntura tangencial. Versión anterior: <a href="versiones/v2.3-2026-04-28/" style="color:#58a6ff;">v2.3 (28-abr-2026)</a>.</dd></div>
+        <dd style="text-align:justify;">Sección dedicada <strong>Década Nacional</strong> (sNAC1-sNAC6) con análisis cohorte de Morelos vs los 32 estados de México durante el decenio 2015-2025 + coyuntura T1 2026 nacional. Seis actos: portada con espiral SVG decenal Morelos vs nacional · ranking de cuatro métricas con escalas visuales · slope ladder de las 32 entidades ordenadas por tendencia anual · diverging bars Morelos vs nacional en seis indicadores graves · cohorte de cinco estados de tamaño similar (Querétaro, San Luis Potosí, Hidalgo, Tlaxcala, Aguascalientes) · heatmap nacional 32 estados × 11 años · <strong>ranking T1 2026 vs 32 entidades</strong> (sNAC6): Morelos #1 en tasa per cápita anualizada de extorsión, feminicidio y robo de vehículo · #2 en homicidio doloso (solo Colima) · #1 nacional en ratio de aceleración de violencia familiar. El argumento central: Morelos no sigue la curva nacional ni en la década ni en el trimestre actual. Versión anterior: <a href="versiones/v2.3-2026-04-28/" style="color:#58a6ff;">v2.3 (28-abr-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.3 · 28 de abril de 2026</dt>
         <dd style="text-align:justify;">Integración del corte SESNSP marzo 2026 (datos parciales Q1 2026 — enero, febrero y marzo). Nueva sección "Q1 2026 · Actualización" con la comparativa Q1 2025 vs Q1 2026, tabla maestra por municipio, y cuatro hallazgos editoriales (Xochitepec polo extorsionario emergente; Emiliano Zapata ruptura de meseta; Tlayacapan feminicidio Q1 sin casos; Morelos no siguió la baja nacional del 41%). Auditoría sistemática reproducible (16 hallazgos rojos · 6 reclasificaciones potenciales · 23 bajas grandes · 53 alzas notables). <strong>Las cifras 2015-2025 publicadas en versiones anteriores se mantienen idénticas — esta versión agrega información, no modifica la histórica.</strong> Versión anterior: <a href="versiones/v2.2-2026-04-25/" style="color:#58a6ff;">v2.2 (25-abr-2026)</a>.</dd></div>
       <div class="glo-item"><dt>v2.2 · 25 de abril de 2026</dt>
@@ -26208,7 +27068,7 @@
     </p>
   </div>
 
-  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.6 (corte SESNSP marzo 2026 · 21 análisis municipales · 7 regiones PED 2025-2030). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
+  <div class="footer-note">Glosario del dashboard · 45 Digital Noticias · v2.7 (corte SESNSP marzo 2026 · 36 análisis municipales completos · 7 regiones PED 2025-2030 · ranking T1 2026 vs 32 entidades). Si un término que usamos no está aquí, escríbenos para incluirlo.</div>
 </section>
 
 <script>
